@@ -1,0 +1,384 @@
+openapi: 3.0.0
+info:
+  title: API Documentation
+  description: Documentation for the API endpoints.
+  version: 1.0.0
+servers:
+  - url: http://localhost:5000
+    description: Local development server
+paths:
+  /api/user/register:
+    post:
+      summary: Register a new user
+      tags:
+        - Users
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                email:
+                  type: string
+                password:
+                  type: string
+      responses:
+        201:
+          description: User registered successfully
+  /api/user/login:
+    post:
+      summary: User login
+      tags:
+        - Users
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+      responses:
+        200:
+          description: Login successful
+  /api/user/profile/{user_id}:
+    get:
+      summary: Get user profile
+      tags:
+        - Users
+      parameters:
+        - name: user_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: User profile retrieved
+    put:
+      summary: Update user profile
+      tags:
+        - Users
+      parameters:
+        - name: user_id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        200:
+          description: Profile updated successfully
+    delete:
+      summary: Delete user profile
+      tags:
+        - Users
+      parameters:
+        - name: user_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: User deleted successfully
+  /api/user/subscriptions:
+    get:
+      summary: Get user subscriptions
+      tags:
+        - Users
+      responses:
+        200:
+          description: Subscriptions retrieved
+  /api/user/subscriptions/{subscription_id}:
+    put:
+      summary: Update user subscription
+      tags:
+        - Users
+      parameters:
+        - name: subscription_id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        200:
+          description: Subscription updated
+    delete:
+      summary: Delete user subscription
+      tags:
+        - Users
+      parameters:
+        - name: subscription_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: Subscription deleted
+  /api/content:
+    post:
+      summary: Create new content
+      tags:
+        - Content
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                author:
+                  type: string
+                description:
+                  type: string
+      responses:
+        201:
+          description: Content created
+    get:
+      summary: Retrieve all content
+      tags:
+        - Content
+      responses:
+        200:
+          description: List of content
+  /api/content/{content_id}:
+    get:
+      summary: Get content details
+      tags:
+        - Content
+      parameters:
+        - name: content_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: Content details retrieved
+    put:
+      summary: Update content
+      tags:
+        - Content
+      parameters:
+        - name: content_id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        200:
+          description: Content updated
+    delete:
+      summary: Delete content
+      tags:
+        - Content
+      parameters:
+        - name: content_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: Content deleted
+  /api/notifications:
+    get:
+      summary: Get notifications
+      tags:
+        - Notifications
+      responses:
+        200:
+          description: Notifications retrieved
+  /api/notifications/read/{notification_id}:
+    put:
+      summary: Mark notification as read
+      tags:
+        - Notifications
+      parameters:
+        - name: notification_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: Notification marked as read
+  /api/notifications/{notification_id}:
+    delete:
+      summary: Delete notification
+      tags:
+        - Notifications
+      parameters:
+        - name: notification_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: Notification deleted
+  /api/reviews/{content_id}:
+    post:
+      summary: Add a review
+      tags:
+        - Reviews
+      parameters:
+        - name: content_id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                content_id:
+                  type: string
+                user_id:
+                  type: string
+                review:
+                  type: string
+      responses:
+        201:
+          description: Review added
+    get:
+      summary: Get reviews for content
+      tags:
+        - Reviews
+      parameters:
+        - name: content_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: Reviews retrieved
+  /api/ratings/{content_id}:
+    post:
+      summary: Add a rating
+      tags:
+        - Ratings
+      parameters:
+        - name: content_id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_id:
+                  type: string
+                rating:
+                  type: integer
+      responses:
+        201:
+          description: Rating added
+    get:
+      summary: Get ratings for content
+      tags:
+        - Ratings
+      parameters:
+        - name: content_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: Ratings retrieved
+  /api/search:
+    get:
+      summary: Search content
+      tags:
+        - Search
+      parameters:
+        - name: query
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: Search results
+  /api/stream/{content_id}:
+    post:
+      summary: Start a stream
+      tags:
+        - Streaming
+      parameters:
+        - name: content_id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        200:
+          description: Streaming started
+    get:
+      summary: Get stream details
+      tags:
+        - Streaming
+      parameters:
+        - name: content_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: Stream details retrieved
+    delete:
+      summary: Stop a stream
+      tags:
+        - Streaming
+      parameters:
+        - name: content_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: Streaming stopped
