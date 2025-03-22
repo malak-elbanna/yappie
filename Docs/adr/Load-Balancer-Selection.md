@@ -1,4 +1,4 @@
-# ADR: Load Balancer Selection
+# ADR: Decision to choose HAProxy as system's load balancer
 
 ## Context
 For our Microservices based architecture, we will create several instances for each service for better system performance and to avoid single point of failure. Distributing Users requests between these instances is crucial, hence whey we need to choose a load balancer.
