@@ -10,15 +10,13 @@ Flask for Authentication: Simple and lightweight, with strong libraries for hand
 
 Go for Streaming Services: Optimized for high-performance, low-latency concurrent processing, making it ideal for real-time audio streaming.
 
-Node.js for Content Management: Handles multiple user requests efficiently, making it a good fit for managing books, user interactions, and search features.
+Node.js for Content Management: Handles multiple user requests efficiently, making it good  for managing books, user interactions, and search features.
 
 ## Consequences
 Pros:
 Optimized Performance: Each service uses the best-suited technology for its function.
 
 Scalability: Services can be scaled independently based on demand.
-
-Flexibility: Teams can work on different services using the most appropriate tools.
 
 Cons:
 Increased Complexity: Requires maintaining multiple codebases with different languages.

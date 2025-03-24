@@ -1,30 +1,29 @@
-## ADR: Decision to Use AWS S3 and Firebase for Storage
+## ADR: Choosing AWS S3 and Firebase for Storage
 ## Context
-Our platform needs a reliable way to store and serve large amounts of audiobook and podcast content. The storage system must be scalable, and capable of handling high user traffic. Additionally, it should support fast access and integration with our backend services.
+Our platform needs a place to store and serve a lot of audiobook and podcast files. It should be reliable, able to handle many users at once, and work well with our backend. Fast access is also important, especially for mobile users.
 
 ## Decision
-We chose AWS S3 as our primary storage solution and Firebase Storage as a secondary option, mainly for mobile users.
+We decided to use AWS S3 as our main storage and Firebase Storage as a backup, especially for mobile users.
 
-## Justification
-- **Scalability:** AWS S3 can store as much data as we need and handle a lot of users at the same time without slowing down.  
-- **Reliability:** Our files are stored in multiple locations, so even if something goes wrong in one place, we don’t lose data.  
-- **Easy Integration:** AWS S3 works well with our backend and supports CDN caching, which makes content load faster for users.  
-- **Why Firebase Storage?** It’s great for mobile users because it’s optimized for real-time access and comes with built-in authentication, making things simpler.
+Justification
+scalability: AWS S3 can store unlimited data and handle high traffic without slowing down.
+
+reliability: It stores files in multiple locations, so even if one goes down, our content is still available.
+
+ AWS S3 integrates with our backend and supports CDN caching, which helps content load faster.
+
+Why Firebase? It’s great for mobile users because it offers real-time access and built-in authentication, making things easier to manage.
 
 ## Consequences
 ## Pros:
-High Availability: Ensures data is always accessible, even if one storage node fails.
-
-Security: Supports encryption and access control, preventing unauthorized access.
-
-Global Access: Allows users to stream content from anywhere with minimal delay.
+Users can access content anytime, even if part of the system has issues.
+Supports encryption and access control to protect files.
+Users can stream content smoothly from anywhere.
 
 ## Cons:
-Latency for Large Files: AWS S3 might introduce slight delays for large file retrievals unless optimized.
-
-Storage Costs: Expenses increase as more content is uploaded, requiring cost monitoring.
-
-Firebase Limitations: Firebase has storage limits and might not be as cost-effective for high-bandwidth use cases.
+ Can Be Slow for Large Files: AWS S3 might take longer to load big files unless optimized.
+ Costs Add Up: Storing more files increases expenses, so we need to monitor costs.
+ Firebase Has Limits: Not ideal for high-bandwidth needs due to storage restrictions.
 
 ## Status
-Accepted
+Accepted 
