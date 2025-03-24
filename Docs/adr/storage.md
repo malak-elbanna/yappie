@@ -6,13 +6,10 @@ Our platform needs a reliable way to store and serve large amounts of audiobook 
 We chose AWS S3 as our primary storage solution and Firebase Storage as a secondary option, mainly for mobile users.
 
 ## Justification
-Scalability: AWS S3 can handle unlimited storage and high traffic without performance issues.
-
-Reliability: Data is stored across multiple regions, reducing the risk of data loss.
-
-Integration: AWS S3 integrates well with our backend and supports CDN caching for faster access.
-
-Firebase Storage: Useful for mobile users due to its optimized real-time access and built-in authentication.
+- **Scalability:** AWS S3 can store as much data as we need and handle a lot of users at the same time without slowing down.  
+- **Reliability:** Our files are stored in multiple locations, so even if something goes wrong in one place, we don’t lose data.  
+- **Easy Integration:** AWS S3 works well with our backend and supports CDN caching, which makes content load faster for users.  
+- **Why Firebase Storage?** It’s great for mobile users because it’s optimized for real-time access and comes with built-in authentication, making things simpler.
 
 ## Consequences
 ## Pros:
