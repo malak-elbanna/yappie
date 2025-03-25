@@ -1,7 +1,7 @@
-## User Sign-in
+## User Sign-in/Sign-up
 **Type**: Synchronous
 
-**Reason**: Need to wait for sign-in request to be authenticated first through google, then user can access the platform.
+**Reason**: Need to wait for Sign-In request to be authenticated first, then user can access the platform. Need to finish Sign-Up first before attempting Sign-In. 
 
 ## Podcast Stream Creation
 **Type**: Synchronous
@@ -27,7 +27,7 @@
 ## Audio book / Podcast Streaming
 **Type**: Asynchronous
 
-**Reason**: Streaming in background while user browses the website. Audio is Outputted when recieved in buffer. 
+**Reason**: Streaming in background while user browses the website. Audio is outputted when recieved in buffer. 
 
 ## Audio book / Podcast Downloading
 **Type**: Asynchronous
