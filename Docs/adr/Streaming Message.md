@@ -15,6 +15,7 @@ We decided to use Apache kafka as the message broker for this feature.
 Pros
 - High throughput: ensures smooth streaming experience to a large amount of concurrent users.
 - Easy to scale: can integrate more brokers smoothly.
+
 Cons
 - Small data latency: not optimized for low-traffic scenarios. Better alternatives exist.
 - Increased storage costs: Kafka retains data for a certain period of time. This leads to storing large amounts of persistent data.
