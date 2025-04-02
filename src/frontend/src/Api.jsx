@@ -3,15 +3,15 @@ import axios from "axios";
 const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:5000"; 
 
 export const login = async (email, password) => {
-    return axios.post(`${API_URL}/auth/login`, { email, password });
+    return axios.post(`${API_URL}/user-service/auth/login`, { email, password });
 };
 
 export const register = async (email, password, name) => {
-    return axios.post(`${API_URL}/auth/register`, { email, password, name });
+    return axios.post(`${API_URL}/user-service/auth/register`, { email, password, name });
 };
 
 export const googleLogin = async () => {
-    window.location.href = `${API_URL}/auth/google-login`;
+    window.location.href = `${API_URL}/user-service/auth/google-login`;
 };
 
 export const logout = async () => {
@@ -19,7 +19,7 @@ export const logout = async () => {
     if (token) {
         try {
             await axios.post(
-                `${API_URL}/auth/logout`,
+                `${API_URL}/user-service/auth/logout`,
                 {}, 
                 {
                     headers: {
