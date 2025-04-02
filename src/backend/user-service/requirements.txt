@@ -1,0 +1,12 @@
+Flask
+Flask-JWT-Extended
+Flask-Migrate
+Flask-SQLAlchemy
+Flask-Cors
+Flask-Bcrypt
+python-dotenv
+Authlib
+psycopg2-binary
+requests
+redis
+datetime
