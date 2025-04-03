@@ -91,7 +91,7 @@ def init_oauth(app):
 
 @auth_bp.route('/google-login')
 def google_login():
-    redirect_uri = request.url_root + 'auth/google-callback'
+    redirect_uri = "http://localhost:8000/user-service/auth/google-callback"
     return oauth.google.authorize_redirect(redirect_uri)
 
 @auth_bp.route('/google-callback')
