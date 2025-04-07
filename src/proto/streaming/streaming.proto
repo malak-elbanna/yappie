@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "github.com/malak-elbanna/yappie/grpc-go-trial/proto/streaming;streaming";
+
+package streaming;
+
+message StreamRequest {
+    string audio_id = 1;
+}
+
+message AudioChuck {
+    bytes data = 1;
+}
+
+service AudioStreamer {
+    rpc StreamAudio(StreamRequest) returns (AudioChuck);
+}
