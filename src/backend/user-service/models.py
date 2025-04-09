@@ -8,9 +8,13 @@ class User(db.Model):
     password_hash = db.Column(db.String(128), nullable=True)  
     name = db.Column(db.String(100), nullable=False)
     subscription_plan = db.Column(db.String(50), default="free")
+    admin = db.Column(db.Boolean, default=False)
 
     def set_password(self, password):
         self.password_hash = generate_password_hash(password).decode('utf-8')
 
     def check_password(self, password):
         return check_password_hash(self.password_hash, password)
+    
+    def check_authority(self):
+        return self.admin
