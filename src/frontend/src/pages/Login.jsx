@@ -128,7 +128,7 @@ const Login = () => {
 
           <div className="text-center mt-4">
             <a href="/login-admin" className="text-gray-400 hover:text-purple-400 text-sm">
-              Login as Admin habibi
+              Login as Admin
             </a>
           </div>
 
