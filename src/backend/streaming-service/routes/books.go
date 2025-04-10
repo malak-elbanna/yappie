@@ -9,5 +9,6 @@ func BookRoutes(router *gin.Engine) {
 	books := router.Group("/books")
 	{
 		books.GET("/", controllers.GetAllBooks)
+		books.GET("/:id", controllers.GetBookByID)
 	}
 }
