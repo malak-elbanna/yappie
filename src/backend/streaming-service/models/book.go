@@ -14,6 +14,7 @@ type Book struct {
 	Description string             `bson:"description" json:"description"`
 	Author      string             `bson:"author" json:"author"`
 	Language    string             `bson:"language" json:"language"`
+	Category    string             `bson:"category" json:"category"`
 	URLRss      string             `bson:"url_rss" json:"url_rss"`
 	URLLibriVox string             `bson:"url_librivox" json:"url_librivox"`
 	TotalTime   string             `bson:"totaltime" json:"totaltime"`
