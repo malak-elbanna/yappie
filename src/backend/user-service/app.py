@@ -1,5 +1,5 @@
 import os
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, send_from_directory
 from flask_pymongo import PyMongo
 from pymongo import MongoClient
 from extensions import jwt, redis_client  
@@ -7,12 +7,24 @@ from auth import auth_bp, init_oauth
 from flask_cors import CORS
 from dotenv import load_dotenv  
 import random
+from werkzeug.utils import secure_filename
 from bson import ObjectId
 
 load_dotenv()
 
+# Configure upload settings
+UPLOAD_FOLDER = 'uploads/covers'
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'webp'}
+
+# Create uploads directory if it doesn't exist
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+
 app = Flask(__name__)
 CORS(app)
+
+# Configure upload settings
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max file size
 
 mongo_uri = os.getenv('MONGODB_URI')
 print(f"Attempting to connect to MongoDB with URI: {mongo_uri}")
@@ -149,6 +161,51 @@ def get_book_details(book_id):
         return jsonify(book_data)
     except Exception as e:
         print(f"Error fetching book details: {str(e)}")
+        return jsonify({"error": str(e)}), 500
+
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+@app.route('/uploads/covers/<filename>')
+def serve_cover(filename):
+    """Serve uploaded cover images"""
+    return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
+
+@app.route('/api/books/<book_id>/cover', methods=['POST'])
+def upload_cover(book_id):
+    """Upload a cover image for a specific book"""
+    try:
+        if 'cover' not in request.files:
+            return jsonify({"error": "No cover file provided"}), 400
+            
+        file = request.files['cover']
+        if file.filename == '':
+            return jsonify({"error": "No selected file"}), 400
+            
+        if not allowed_file(file.filename):
+            return jsonify({"error": "File type not allowed"}), 400
+
+        # Create a secure filename using book_id and original extension
+        extension = file.filename.rsplit('.', 1)[1].lower()
+        filename = f"{book_id}.{extension}"
+        filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+        
+        # Save the file
+        file.save(filepath)
+        
+        # Update the book record with the cover URL
+        cover_url = f"/uploads/covers/{filename}"
+        db.books.update_one(
+            {'_id': ObjectId(book_id)},
+            {'$set': {'cover_url': cover_url}}
+        )
+        
+        return jsonify({
+            "message": "Cover uploaded successfully",
+            "cover_url": cover_url
+        })
+    except Exception as e:
+        print(f"Error uploading cover: {str(e)}")
         return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
