@@ -17,5 +17,7 @@ func main() {
 
 	routes.BookRoutes(router)
 
+	config.InitRedis()
+
 	router.Run(":8080")
 }
