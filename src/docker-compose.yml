@@ -13,6 +13,15 @@ services:
       - db
       - redis  
 
+  cms-service:
+    build: 
+      context: ./backend/content-management-service
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend/content-management-service/.env
+    ports:
+      - "5001:5001"
+
   db:
     image: postgres:13
     environment:

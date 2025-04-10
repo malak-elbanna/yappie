@@ -42,3 +42,13 @@ export const logout = async () => {
         console.warn("No token found in localStorage");
     }
 };
+
+export const add_book = async(bookData) => {
+    try {
+        const response = await axios.post(`${API_URL}/audiobooks`, bookData);
+        return response.data;
+    } catch (error) {
+        console.error("error adding book: ", error);
+        throw error;
+    }
+}   
