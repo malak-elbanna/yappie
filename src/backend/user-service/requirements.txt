@@ -1,12 +1,15 @@
-Flask
+Flask==2.0.1
 Flask-JWT-Extended
 Flask-Migrate
 Flask-SQLAlchemy
 Flask-Cors
 Flask-Bcrypt
-python-dotenv
+python-dotenv==0.19.0
 Authlib
 psycopg2-binary
 requests
 redis
 datetime
+pymongo==4.6.1
+dnspython==2.4.2
+Flask-PyMongo==2.3.0
