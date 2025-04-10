@@ -26,21 +26,18 @@ func GetAllBooks(c *gin.Context) {
 		return
 	}
 
-	var rawBooks []map[string]interface{}
-	if err := cursor.All(ctx, &rawBooks); err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "Error decoding raw books"})
-		return
-	}
-
-	cursor, err = bookCollection.Find(ctx, map[string]interface{}{})
-	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "Error refetching for decoding"})
-		return
-	}
-
 	var books []models.Book
+
 	if err := cursor.All(ctx, &books); err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Error decoding books into model.Book"})
+
+		cursor, _ := bookCollection.Find(context.Background(), map[string]interface{}{})
+		var rawBooks []map[string]interface{}
+		_ = cursor.All(context.Background(), &rawBooks)
+
+		if len(rawBooks) > 0 {
+			c.JSON(http.StatusInternalServerError, gin.H{"first_book": rawBooks[0]})
+		}
 		return
 	}
 
