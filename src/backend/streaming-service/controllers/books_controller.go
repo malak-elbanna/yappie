@@ -2,10 +2,14 @@ package controllers
 
 import (
 	"context"
+	"encoding/json"
+	"log"
 	"net/http"
+	"net/url"
 	"time"
 
 	"github.com/gin-gonic/gin"
+	"github.com/malak-elbanna/streaming-service/config"
 	"github.com/malak-elbanna/streaming-service/models"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
@@ -23,21 +27,28 @@ func GetAllBooks(c *gin.Context) {
 	defer cancel()
 
 	filter := make(map[string]interface{})
+	queryParams := c.Request.URL.Query()
 
-	if title := c.Query("title"); title != "" {
-		filter["title"] = map[string]interface{}{"$regex": title, "$options": "i"}
+	for key, values := range queryParams {
+		if len(values) > 0 && values[0] != "" {
+			switch key {
+			case "title", "author", "category":
+				filter[key] = bson.M{"$regex": values[0], "$options": "i"}
+			default:
+				filter[key] = values[0]
+			}
+		}
 	}
 
-	if author := c.Query("author"); author != "" {
-		filter["author"] = map[string]interface{}{"$regex": author, "$options": "i"}
-	}
+	cachingKey := "books:" + url.QueryEscape(c.Request.URL.RawQuery)
 
-	if language := c.Query("language"); language != "" {
-		filter["language"] = language
-	}
-
-	if category := c.Query("category"); category != "" {
-		filter["category"] = map[string]interface{}{"$regex": category, "$options": "i"}
+	cachedBooks, err := config.RedisClient.Get(ctx, cachingKey).Result()
+	if err == nil {
+		var books []models.Book
+		if err := json.Unmarshal([]byte(cachedBooks), &books); err == nil {
+			c.JSON(http.StatusOK, books)
+			return
+		}
 	}
 
 	cursor, err := bookCollection.Find(ctx, filter)
@@ -50,6 +61,17 @@ func GetAllBooks(c *gin.Context) {
 	if err := cursor.All(ctx, &books); err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Error decoding books into model.Book"})
 		return
+	}
+
+	bytes, err := json.Marshal(books)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Error processing books"})
+		return
+	}
+
+	err = config.RedisClient.Set(ctx, cachingKey, bytes, time.Hour).Err()
+	if err != nil {
+		log.Printf("Error setting cache in Redis: %v", err)
 	}
 
 	c.JSON(http.StatusOK, books)
