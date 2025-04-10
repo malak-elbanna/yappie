@@ -50,6 +50,17 @@ def login():
     token = create_access_token(identity=str(user.id))
     return jsonify({"access_token": token})
 
+@auth_bp.route('/login-admin', methods=['POST'])
+def login_admin():
+    data = request.get_json()
+    admin = User.query.filter_by(email=data['email']).first()
+    if not admin or not admin.check_password(data['password']):
+        return jsonify({"message": "Invalid credentials"}), 401
+    if not admin.check_authority():
+        return jsonify({"message": "Unauthorized access"}), 403
+    token = create_access_token(identity=str(admin.id))
+    return jsonify({"access_token": token}), 200
+
 @auth_bp.route('/logout', methods=['POST'])
 @jwt_required()
 def logout():
