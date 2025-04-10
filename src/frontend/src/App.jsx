@@ -1,25 +1,23 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import React from "react";  
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
-import LoginAdmin from "./pages/LoginAdmin";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
-import DashboardAdmin from "./pages/DashboardAdmin";
-import Home from "./pages/Home"; 
+import Home from "./pages/Home";
+import Categories from "./pages/Categories";
 
-function App() {
+const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Navigate to="/login" />} />
+        <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Register />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/login-admin" element={<LoginAdmin />} />
-        <Route path="/dashboard-admin" element={<DashboardAdmin />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/categories" element={<Categories />} />
       </Routes>
     </Router>
   );
-}
+};
 
 export default App;
