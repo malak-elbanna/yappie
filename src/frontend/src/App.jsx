@@ -1,22 +1,23 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import Login from "./pages/Login";
+import LoginAdmin from "./pages/LoginAdmin";
+import Register from "./pages/Register";
+import Dashboard from "./pages/Dashboard";
+import DashboardAdmin from "./pages/DashboardAdmin";
+import Home from "./pages/Home"; 
 
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-900">
-        <Navbar />
-        <main className="pt-16"> {/* Added padding-top to account for fixed navbar */}
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/books/:id" element={<BookDetails />} />
-            <Route path="/categories" element={<div className="text-white p-8">Categories Page (Coming Soon)</div>} />
-            <Route path="/authors" element={<div className="text-white p-8">Authors Page (Coming Soon)</div>} />
-            <Route path="/search" element={<div className="text-white p-8">Search Results (Coming Soon)</div>} />
-          </Routes>
-        </main>
-      </div>
+      <Routes>
+        <Route path="/" element={<Navigate to="/login" />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Register />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/login-admin" element={<LoginAdmin />} />
+        <Route path="/dashboard-admin" element={<DashboardAdmin />} />
+        <Route path="/home" element={<Home />} />
+      </Routes>
     </Router>
   );
 }
