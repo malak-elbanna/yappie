@@ -59,3 +59,13 @@ export const get_CMS = async () => {
         throw error;
     }
 };
+
+export const getBooks = async () => {
+    try {
+        const response = await axios.get(`${API_URL}/streaming-service/books`);
+        return response.data;
+    } catch (error) {
+        console.error("Error fetching books:", error);
+        throw error;
+    }
+};

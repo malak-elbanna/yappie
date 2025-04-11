@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"github.com/malak-elbanna/streaming-service/config"
 	"github.com/malak-elbanna/streaming-service/controllers"
@@ -9,6 +10,9 @@ import (
 
 func main() {
 	router := gin.Default()
+
+	router.Use(cors.Default())
+
 	client := config.ConnectDB()
 	defer client.Disconnect(nil)
 
