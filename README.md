@@ -34,3 +34,11 @@ curl -i -X POST http://localhost:8001/services/cms-service/routes \
 curl -i http://localhost:8000/admin-cms/health
 
 curl http://5001/audiobooks
+
+curl -i -X POST http://localhost:8001/services/ \
+  --data name=streaming-service \
+  --data url=http://streaming-service:8080
+
+curl -i -X POST http://localhost:8001/services/streaming-service/routes \
+  --data name=streaming-service-route \
+  --data paths[]=/streaming-service

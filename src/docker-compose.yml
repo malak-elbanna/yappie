@@ -22,6 +22,17 @@ services:
     ports:
       - "5001:5001"
 
+  streaming-service:
+    build:
+      context: ./backend/streaming-service
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend/streaming-service/.env
+    ports:
+      - "8080:8080"
+    depends_on:
+      - redis
+
   db:
     image: postgres:13
     environment:
