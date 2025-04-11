@@ -38,3 +38,15 @@ python app.py
 4. Update content (PUT ```api/content/{content_id}```)
 5. Delete content (DELETE ```api/content/{content_id}```)
 
+## Screenshots
+Home Page
+
+![alt text](screenshots/image.png)
+
+Add Content
+
+![alt text](screenshots\Screenshot_11-4-2025_155816_localhost.jpeg)
+
+Edit Content
+
+![alt text](screenshots/Screenshot_11-4-2025_16025_localhost.jpeg)
