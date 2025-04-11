@@ -43,17 +43,12 @@ export const logout = async () => {
     }
 };
 
-export const add_book = async(bookData) => {
+export const getCmsPage = async () => {
     try {
-        const response = await axios.post("http://localhost:8000/audiobooks/", bookData, {
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            withCredentials: true  // Only if you're using cookies/sessions
-        });
+        const response = await axios.get(`${API_URL}/admin-cms`);
         return response.data;
     } catch (error) {
-        console.error("error adding book: ", error);
+        console.error("Error fetching CMS page:", error);
         if (error.response) {
             console.error("Server responded with:", error.response.status, error.response.data);
         } else if (error.request) {
@@ -63,4 +58,4 @@ export const add_book = async(bookData) => {
         }
         throw error;
     }
-}
+};

@@ -23,14 +23,14 @@ curl -i -X POST http://localhost:8001/services/user-service/routes \
 
 curl -i http://localhost:8000/user-service/health
 
-curl -i -X POST http://localhost:8001/services/ \
+curl -i -X POST http://localhost:8001/services \
   --data name=cms-service \
   --data url=http://cms-service:5001
 
 curl -i -X POST http://localhost:8001/services/cms-service/routes \
-  --data 'paths[]=/cms-service'
+  --data name=cms-service-route \
+  --data paths[]=/admin-cms
 
-curl -i -X POST http://localhost:8001/services/cms-service/routes \
-  --data "paths[]=/audiobooks"
+curl -i http://localhost:8000/admin-cms/health
 
 curl http://5001/audiobooks
