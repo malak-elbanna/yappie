@@ -1,6 +1,14 @@
 from flask import request, jsonify, render_template, redirect, url_for
 from services.db import mongo
 from bson.objectid import ObjectId
+from werkzeug.utils import secure_filename
+from gridfs import GridFS
+
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'mp4', 'm4a', 'mp3'}
+
+def allowed_file(filename):
+    return '.' in filename and \
+        filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 not_found = "audiobook not found"
 
@@ -28,40 +36,46 @@ def get_audiobook(id):
         return jsonify({"error": not_found}), 404
 
 def add_audiobook():
-    data = {
-        "title": request.form.get("title"),
-        "author": request.form.get("author"),
-        "description": request.form.get("description"),
-        "language": request.form.get("language"),
-        "url_rss": request.form.get("url_rss"),
-        "url_librivox": request.form.get("url_librivox"),
-        "totaltime": request.form.get("totaltime"),
-        "cover_url": request.form.get("cover_url"),
-        "chapters": request.form.get("chapters"),
-        "category": request.form.get("category")
-    }
-    collection = get_collection()
-    result = collection.insert_one(data)
+    db = mongo.cx["audiobooks_db"]
+    fs = GridFS(db)
+
+    data = request.form.to_dict()
+    files = request.files
+    if 'cover_image' in files:
+        cover_image = files['cover_image']
+        if cover_image and allowed_file(cover_image.filename):
+            cover_id = fs.put(cover_image, filename=secure_filename(cover_image.filename))
+            data['cover_id'] = str(cover_id) 
+
+    if 'audio_file' in files:
+        audio_file = files['audio_file']
+        if audio_file and allowed_file(audio_file.filename):
+            audio_id = fs.put(audio_file, filename=secure_filename(audio_file.filename))
+            data['audio_id'] = str(audio_id)
+    
+    result = db.books.insert_one(data)
     return jsonify({"_id": str(result.inserted_id)}), 201
 
 
 def update_audiobook(id):
-    data = request.form
-    updated_data = {
-        "title": data.get("title"),
-        "author": data.get("author"),
-        "description": data.get("description"),
-        "language": data.get("language"),
-        "url_rss": data.get("url_rss"),
-        "url_librivox": data.get("url_librivox"),
-        "totaltime": data.get("totaltime"),
-        "cover_url": data.get("cover_url"),
-        "chapters": data.get("chapters"),
-        "category": data.get("category")
-    }
+    db = mongo.cx["audiobooks_db"]
+    fs = GridFS(db)
 
-    collection = get_collection()
-    collection.update_one({"_id": ObjectId(id)}, {"$set": updated_data})
+    data = request.form.to_dict()
+    files = request.files
+    if 'cover_image' in files:
+        cover_image = files['cover_image']
+        if cover_image and allowed_file(cover_image.filename):
+            cover_id = fs.put(cover_image, filename=secure_filename(cover_image.filename))
+            data['cover_id'] = str(cover_id) 
+
+    if 'audio_file' in files:
+        audio_file = files['audio_file']
+        if audio_file and allowed_file(audio_file.filename):
+            audio_id = fs.put(audio_file, filename=secure_filename(audio_file.filename))
+            data['audio_id'] = str(audio_id)
+    
+    db.books.update_one({"_id": ObjectId(id)}, {"$set": data})
     return jsonify({"message": "audiobook updated"}), 200
 
 
