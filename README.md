@@ -17,11 +17,17 @@ Search Service : Responsible for advanced search options (like searching by auth
 
 ## Technologies ##
 Frontend: HTML, JavaScript
+
 User Service: Flask, PostgreSQL, JWT + OAuth2
+
 Content Management Service: Flask, MongoDB, AWS S3 or Firebase
+
 Streaming Service: Go, Redis
+
 Notification Service: Node.js, WebSockets, Kafka/RabbitMQ
+
 Review & Rating Service: Express.js, MongoDB
+
 Search Service: MongoDB Atlas Search
 
 ## Pre-requisites ##
