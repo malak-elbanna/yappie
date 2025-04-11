@@ -45,7 +45,7 @@ Home Page
 
 Add Content
 
-![alt text](screenshots\Screenshot_11-4-2025_155816_localhost.jpeg)
+![alt text](screenshots/Screenshot_11-4-2025_155816_localhost.jpeg)
 
 Edit Content
 
