@@ -9,10 +9,10 @@ const BooksByCategory = () => {
   useEffect(() => {
     const fetchBooks = async () => {
       try {
-        const response = await fetch(`http://127.0.0.1:8000/api/books?category=${category}`); // Backend endpoint
+        const response = await fetch(`http://localhost:8080/books?category=${category}`); // Backend endpoint
         const data = await response.json();
         console.log('Fetched books:', data); // Debugging log
-        setBooks(data.books); // Assuming the API returns { books: [...] }
+        setBooks(data); // Assuming the API returns an array of books
       } catch (error) {
         console.error('Error fetching books:', error);
       } finally {
