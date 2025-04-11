@@ -12,7 +12,8 @@ def handle_options():
     return response
 
 audiobook_bp.route('/', methods=['GET'])(get_audiobooks)
+audiobook_bp.route('/edit/<id>', methods=['GET'])(get_audiobook_update)
 audiobook_bp.route('/<id>', methods=['GET'])(get_audiobook)
-audiobook_bp.route('/', methods=['POST'])(add_audiobook)
+audiobook_bp.route('/add', methods=['POST'])(add_audiobook)
 audiobook_bp.route('/<id>', methods=['PUT'])(update_audiobook)
 audiobook_bp.route('/<id>', methods=['DELETE'])(delete_audiobook)
