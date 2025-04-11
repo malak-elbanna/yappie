@@ -125,6 +125,12 @@ const Login = () => {
               Forgot your password?
             </a>
           </div>
+          
+          <div className="text-center mt-4">
+            <a href="/login-admin" className="text-gray-400 hover:text-purple-400 text-sm">
+              Login as Admin
+            </a>
+          </div>
 
           <div className="border-t border-gray-800 mt-8 pt-6">
             <p className="text-gray-400 text-center text-sm">

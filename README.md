@@ -8,6 +8,8 @@ docker-compose exec user-service flask db migrate -m "Initial migration"
 
 docker-compose exec user-service flask db upgrade
 
+docker-compose exec user-service python admin_setup.py
+
 docker-compose run --rm kong kong migrations up
 
 curl -i -X POST http://localhost:8001/services/ \
