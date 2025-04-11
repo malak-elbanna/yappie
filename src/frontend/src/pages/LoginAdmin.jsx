@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { login_admin, getCmsPage } from "../Api"; // Import getCmsPage
+import { login_admin, get_CMS } from "../Api"; // Import get_CMS
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const LoginAdmin = () => {
@@ -8,7 +8,7 @@ const LoginAdmin = () => {
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
     const [showPassword, setShowPassword] = useState(false);
-    const [cmsData, setCmsData] = useState(null); // To store the CMS page data
+    const [cmsData, setCmsData] = useState(null);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -27,12 +27,13 @@ const LoginAdmin = () => {
         try {
             const response = await login_admin(email, password);
             localStorage.setItem("token", response.data.access_token);
-            navigate("/admin-cms");
 
-            // Call getCmsPage after login
-            const cmsResponse = await getCmsPage();
-            setCmsData(cmsResponse); // Store CMS data in state (or handle it as needed)
-            console.log("CMS Data:", cmsResponse); // Optionally log or use the data
+            const cmsResponse = await get_CMS();
+            const cmsUrl = cmsResponse.url;
+
+            navigate(cmsUrl);
+            setCmsData(cmsResponse);
+            console.log("CMS Data:", cmsResponse);
 
         } catch (err) {
             setError(err.response?.data?.message || "Login failed");

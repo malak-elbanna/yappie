@@ -43,7 +43,7 @@ export const logout = async () => {
     }
 };
 
-export const getCmsPage = async () => {
+export const get_CMS = async () => {
     try {
         const response = await axios.get(`${API_URL}/admin-cms`);
         return response.data;
