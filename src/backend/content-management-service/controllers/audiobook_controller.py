@@ -31,10 +31,7 @@ def add_audiobook():
     return jsonify({"_id": str(result.inserted_id)}), 201
 
 def update_audiobook(id):
-    # Get the data from the form
     data = request.form
-
-    # Prepare the updated data dictionary with all the fields
     updated_data = {
         "title": data.get("title"),
         "author": data.get("author"),
@@ -48,15 +45,10 @@ def update_audiobook(id):
         "category": data.get("category")
     }
 
-    # Update the audiobook in the database using the provided ID
     collection = get_collection()
-    collection.update_one(
-        {"_id": ObjectId(id)},
-        {"$set": updated_data}
-    )
+    collection.update_one({"_id": ObjectId(id)}, {"$set": updated_data})
+    return jsonify({"message": "audiobook updated"}), 200
 
-    # Redirect to the route that displays all audiobooks or the updated book's detail page
-    return redirect(url_for('audiobook_bp.get_audiobooks'))
 
 def delete_audiobook(id):
     collection = get_collection()

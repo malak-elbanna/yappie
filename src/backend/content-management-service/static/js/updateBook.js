@@ -1,35 +1,18 @@
-const updateAudiobook = () => {
-    const id = window.location.pathname.split("/").pop();
-
-    if (!id || id === 'undefined') {
-        alert('Invalid audiobook ID');
-        return;
-    }
-
-    const updatedData = {
-        title: "Updated title",
-        author: "Updated author",
-        description: "Updated description",
-        language: "Updated language",
-        url_rss: "Updated URL RSS",
-        url_librivox: "Updated URL Librivox",
-        totaltime: "Updated Total Time",
-        cover_url: "Updated Cover URL",
-        chapters: "Updated Chapters",
-        category: "Updated Category"
-    };
+function updateAudiobook() {
+    const id = document.getElementById("audiobook_id").value;
+    const form = document.getElementById("edit-audiobook-form");
+    const formData = new FormData(form);
 
     fetch(`/api/content/${id}`, {
-        method: 'PUT',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(updatedData)
+        method: "PUT",
+        body: formData
     })
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-        window.location.href = '/api/content';
+    .then(response => {
+        if (response.ok) {
+            window.location.href = "/api/content";
+        } else {
+            alert("Failed to update audiobook.");
+        }
     })
-    .catch(error => console.error('Error:', error));
-};
+    .catch(error => console.error("Error:", error));
+}
