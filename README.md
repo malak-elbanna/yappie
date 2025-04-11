@@ -3,13 +3,13 @@
 ### Desription ###
 This document outlines specifications about Yappie, a web application designed for audiobook and podcast streaming. The document will serve as a reference point that connects development personnel with stakeholders and testers to ensure the understatement of the system functionality and design following Microservices Architecture.
 
-## Services##
-# User Service # :Responsible for user authentication and profile management.
-# Content Management Service #: Responsible for managing audiobooks, podcasts and web app content management in general (e.g., CRUD operations for Admin).
-# Streaming Management Service # : Responsible for streaming and managing playback for audiobooks/podcasts. Supports offline mode (downloads).
-# Notification Service #:Responsible for sending real-time notifications to users for new episodes, reviews, and subscriptions.
-# Review & Rating Service #: Responsible for allowing users to review/rate content and display engagement stats.
-# Search Service #: Responsible for advanced search options (like searching by author, genre, or rating) and filters. 
+## Services ##
+ User Service :Responsible for user authentication and profile management.
+Content Management Service : Responsible for managing audiobooks, podcasts and web app content management in general (e.g., CRUD operations for Admin).
+Streaming Management Service : Responsible for streaming and managing playback for audiobooks/podcasts. Supports offline mode (downloads).
+Notification Service :Responsible for sending real-time notifications to users for new episodes, reviews, and subscriptions.
+Review & Rating Service : Responsible for allowing users to review/rate content and display engagement stats.
+Search Service : Responsible for advanced search options (like searching by author, genre, or rating) and filters. 
 
 
 ## Technologies ##
