@@ -16,6 +16,9 @@ func main() {
 	controllers.InitBookController(bookCollection)
 
 	routes.BookRoutes(router)
+	routes.PlaybackRoutes(router)
+
+	config.InitRedis()
 
 	router.Run(":8080")
 }
