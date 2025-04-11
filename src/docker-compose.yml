@@ -12,12 +12,32 @@ services:
     depends_on:
       - redis
 
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: user_db
+    ports:
+      - "5432:5432"
+
   redis:
     image: redis:latest  
     container_name: redis_container
     restart: always
     ports:
       - "6379:6379"
+
+  kong-migrations:
+    image: kong:3.3
+    command: kong migrations bootstrap
+    environment:
+      KONG_DATABASE: postgres
+      KONG_PG_HOST: kong-database
+      KONG_PG_USER: kong
+      KONG_PG_PASSWORD: kong
+    depends_on:
+      - kong-database
 
   kong-database:
     image: postgres:13

@@ -6,6 +6,10 @@ export const login = async (email, password) => {
     return axios.post(`${API_URL}/user-service/auth/login`, { email, password });
 };
 
+export const login_admin = async (email, password) => {
+    return axios.post(`${API_URL}/user-service/auth/login-admin`, { email, password });
+};
+
 export const register = async (email, password, name) => {
     return axios.post(`${API_URL}/user-service/auth/register`, { email, password, name });
 };
@@ -38,3 +42,25 @@ export const logout = async () => {
         console.warn("No token found in localStorage");
     }
 };
+
+export const add_book = async(bookData) => {
+    try {
+        const response = await axios.post("http://localhost:8000/audiobooks/", bookData, {
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            withCredentials: true  // Only if you're using cookies/sessions
+        });
+        return response.data;
+    } catch (error) {
+        console.error("error adding book: ", error);
+        if (error.response) {
+            console.error("Server responded with:", error.response.status, error.response.data);
+        } else if (error.request) {
+            console.error("No response received:", error.request);
+        } else {
+            console.error("Request setup error:", error.message);
+        }
+        throw error;
+    }
+}
