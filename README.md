@@ -1,7 +1,12 @@
 # Yappie
 
-### Desription ###
+## Desription ##
 This document outlines specifications about Yappie, a web application designed for audiobook and podcast streaming. The document will serve as a reference point that connects development personnel with stakeholders and testers to ensure the understatement of the system functionality and design following Microservices Architecture.
+
+## Intended Audience ##
+Yappie is designed for:
+- Users who enjoy listening to audiobooks and podcasts can visit the platform to stream or download them. They seek easy navigation through the platform and personalized content as well as the ability to listen offline.
+- Administrators, as they are responsible for controlling the content displayed, managing user roles, ensuring that the displayed content complies with the platform’s regulations. 
 
 ## Services ##
  User Service :Responsible for user authentication and profile management.
@@ -18,13 +23,13 @@ Search Service : Responsible for advanced search options (like searching by auth
 
 
 ## Technologies ##
-Frontend: HTML, JavaScript
+Frontend: React, Tailwind
 
 User Service: Flask, PostgreSQL, JWT + OAuth2
 
-Content Management Service: Flask, MongoDB, AWS S3 or Firebase
+Content Management Service: Flask, MongoDB
 
-Streaming Service: Go, Redis
+Streaming Service: Go, MongoDB, Redis
 
 Notification Service: Node.js, WebSockets, Kafka/RabbitMQ
 
@@ -39,21 +44,11 @@ MongoDB
 Redis
 
 
-
-## Contributing ## 
-Follow these steps to contribute:
-Fork the repository.
-Create a new branch:
-Make your changes and commit them:
-Push to your branch:
-Open a pull request.
-
-
 ## Acknowledgment ##
 Malak Elbanna
 
-Salama Ayman
+Salma Ayman
 
-El -hussain shalaby
+El-hussain shalaby
 
 Merna Ahmed
