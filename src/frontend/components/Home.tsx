@@ -18,7 +18,7 @@ const Home = () => {
   useEffect(() => {
     const fetchBooks = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/list-books');
+        const response = await fetch('http://localhost:8000/api/list-books');
         const data = await response.json();
         setBooks(data.books);
       } catch (error) {
@@ -85,4 +85,4 @@ const Home = () => {
   );
 };
 
-export default Home; 
+export default Home;
