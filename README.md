@@ -1,44 +1,59 @@
-# yappie
-docker-compose up --build
+# Yappie
 
-docker-compose exec user-service rm -rf migrations (only if there already exists a migrations folder in the container)
+### Desription ###
+This document outlines specifications about Yappie, a web application designed for audiobook and podcast streaming. The document will serve as a reference point that connects development personnel with stakeholders and testers to ensure the understatement of the system functionality and design following Microservices Architecture.
 
-docker-compose exec user-service flask db init
+## Services ##
+ User Service :Responsible for user authentication and profile management.
+ 
+Content Management Service : Responsible for managing audiobooks, podcasts and web app content management in general (e.g., CRUD operations for Admin).
 
-docker-compose exec user-service flask db migrate -m "Initial migration"
+Streaming Management Service : Responsible for streaming and managing playback for audiobooks/podcasts. Supports offline mode (downloads).
 
-docker-compose exec user-service flask db upgrade
+Notification Service :Responsible for sending real-time notifications to users for new episodes, reviews, and subscriptions.
 
-docker-compose exec user-service python admin_setup.py
+Review & Rating Service : Responsible for allowing users to review/rate content and display engagement stats.
 
-docker-compose run --rm kong kong migrations up
+Search Service : Responsible for advanced search options (like searching by author, genre, or rating) and filters. 
 
-curl -i -X POST http://localhost:8001/services/ \
-  --data name=user-service \
-  --data url=http://user-service:5000
 
-curl -i -X POST http://localhost:8001/services/user-service/routes \
-  --data name=user-service-route \
-  --data paths[]=/user-service
+## Technologies ##
+Frontend: HTML, JavaScript
 
-curl -i http://localhost:8000/user-service/health
+User Service: Flask, PostgreSQL, JWT + OAuth2
 
-curl -i -X POST http://localhost:8001/services \
-  --data name=cms-service \
-  --data url=http://cms-service:5001
+Content Management Service: Flask, MongoDB, AWS S3 or Firebase
 
-curl -i -X POST http://localhost:8001/services/cms-service/routes \
-  --data name=cms-service-route \
-  --data paths[]=/admin-cms
+Streaming Service: Go, Redis
 
-curl -i http://localhost:8000/admin-cms/health
+Notification Service: Node.js, WebSockets, Kafka/RabbitMQ
 
-curl http://5001/audiobooks
+Review & Rating Service: Express.js, MongoDB
 
-curl -i -X POST http://localhost:8001/services/ \
-  --data name=streaming-service \
-  --data url=http://streaming-service:8080
+Search Service: MongoDB Atlas Search
 
-curl -i -X POST http://localhost:8001/services/streaming-service/routes \
-  --data name=streaming-service-route \
-  --data paths[]=/streaming-service
+## Pre-requisites ##
+Go (1.18 or later)
+Node.js (16.x or later) 
+MongoDB
+Redis
+
+
+
+## Contributing ## 
+Follow these steps to contribute:
+Fork the repository.
+Create a new branch:
+Make your changes and commit them:
+Push to your branch:
+Open a pull request.
+
+
+## Acknowledgment ##
+Malak Elbanna
+
+Salama Ayman
+
+El -hussain shalaby
+
+Merna Ahmed
