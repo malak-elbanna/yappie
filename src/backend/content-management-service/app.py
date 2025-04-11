@@ -1,6 +1,6 @@
 from flask import Flask
-from routes.audiobook_routes import audiobook_bp
 from flask_cors import CORS
+from routes.audiobook_routes import audiobook_bp
 from services.db import init_db
 from dotenv import load_dotenv
 import os
@@ -8,7 +8,16 @@ import os
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app)
+
+# More comprehensive CORS configuration
+CORS(app, resources={
+    r"/audiobooks/*": {
+        "origins": "http://localhost:5173",
+        "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+        "allow_headers": ["Content-Type"],
+        "supports_credentials": True
+    }
+})
 
 app.config["MONGO_URI"] = os.getenv("MONGO_URI", "mongodb+srv://salmaayman:LgFYRUMZ3iuGPyzD@cluster0.ufjw6qu.mongodb.net/?retryWrites=true&w=majority")
 

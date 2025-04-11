@@ -45,10 +45,22 @@ export const logout = async () => {
 
 export const add_book = async(bookData) => {
     try {
-        const response = await axios.post(`${API_URL}/audiobooks`, bookData);
+        const response = await axios.post("http://localhost:8000/audiobooks/", bookData, {
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            withCredentials: true  // Only if you're using cookies/sessions
+        });
         return response.data;
     } catch (error) {
         console.error("error adding book: ", error);
+        if (error.response) {
+            console.error("Server responded with:", error.response.status, error.response.data);
+        } else if (error.request) {
+            console.error("No response received:", error.request);
+        } else {
+            console.error("Request setup error:", error.message);
+        }
         throw error;
     }
-}   
+}
