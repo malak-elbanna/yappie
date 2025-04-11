@@ -9,10 +9,14 @@ function updateAudiobook() {
     })
     .then(response => {
         if (response.ok) {
+            alert("Audiobook updated successfully.");
             window.location.href = "/api/content";
         } else {
             alert("Failed to update audiobook.");
         }
     })
-    .catch(error => console.error("Error:", error));
+    .catch(error => {
+        console.error("Error:", error);
+        alert("An error occured while updating the audiobook.");
+    });
 }

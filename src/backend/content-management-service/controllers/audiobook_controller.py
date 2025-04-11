@@ -8,6 +8,9 @@ def get_collection():
     db = mongo.cx["audiobooks_db"]
     return db["books"]
 
+def add_page():
+    return render_template("addBook.html")
+
 def get_audiobooks():
     collection = get_collection()
     result = list(collection.find())
@@ -25,10 +28,22 @@ def get_audiobook(id):
         return jsonify({"error": not_found}), 404
 
 def add_audiobook():
-    data = request.get_json()
+    data = {
+        "title": request.form.get("title"),
+        "author": request.form.get("author"),
+        "description": request.form.get("description"),
+        "language": request.form.get("language"),
+        "url_rss": request.form.get("url_rss"),
+        "url_librivox": request.form.get("url_librivox"),
+        "totaltime": request.form.get("totaltime"),
+        "cover_url": request.form.get("cover_url"),
+        "chapters": request.form.get("chapters"),
+        "category": request.form.get("category")
+    }
     collection = get_collection()
     result = collection.insert_one(data)
     return jsonify({"_id": str(result.inserted_id)}), 201
+
 
 def update_audiobook(id):
     data = request.form

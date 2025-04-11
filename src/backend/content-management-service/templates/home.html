@@ -2,15 +2,25 @@
 <html lang="en">
 <head>
     <title>Yappie - Admin</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <div class="container">
-        <div class="header">
+    <div class="header">
+        <div class="container">
             <h1 class="text-center">Yappie Audiobooks</h1>
             <h5 class="text-center">Admin Dashboard</h5>
         </div>
+    </div>
+    
+    <div class="container">
+        <a href="{{ url_for('audiobook_bp.add_page') }}" class="add-book-btn">
+            <i class="fas fa-plus"></i> Add New Book
+        </a>
         
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
             {% if result %}
@@ -24,8 +34,12 @@
                         </div>
                         <div class="card-footer bg-transparent border-top-0">
                             <div class="d-flex justify-content-between">
-                                <a href="{{ url_for('audiobook_bp.get_audiobook_update', id=book._id) }}" class="btn btn-sm btn-outline-secondary">Edit</a>
-                                <button class="btn btn-sm btn-outline-danger" onclick="deleteAudiobook('{{ book._id }}')">Delete</button>
+                                <a href="{{ url_for('audiobook_bp.get_audiobook_update', id=book._id) }}" class="btn-edit">
+                                    <i class="fas fa-edit"></i> Edit
+                                </a>
+                                <button class="btn-delete" onclick="deleteAudiobook('{{ book._id }}')">
+                                    <i class="fas fa-trash-alt"></i> Delete
+                                </button>
                             </div>
                         </div>                        
                     </div>
@@ -35,8 +49,10 @@
                 <div class="col-12">
                     <div class="no-books">
                         <h4>No books available</h4>
-                        <p>Add audiobooks</p>
-                        <button class="btn btn-primary mt-3">Add New Audiobook</button>
+                        <p>Get started by adding your first audiobook</p>
+                        <a href="{{ url_for('audiobook_bp.add_page') }}" class="empty-state-btn">
+                            <i class="fas fa-plus"></i> Add New Audiobook
+                        </a>
                     </div>
                 </div>
             {% endif %}
@@ -45,6 +61,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{ url_for('static', filename='js/home.js') }}"></script>
-
 </body>
 </html>
