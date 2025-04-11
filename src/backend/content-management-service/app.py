@@ -22,7 +22,7 @@ CORS(app, resources={
 app.config["MONGO_URI"] = os.getenv("MONGO_URI", "mongodb+srv://salmaayman:LgFYRUMZ3iuGPyzD@cluster0.ufjw6qu.mongodb.net/?retryWrites=true&w=majority")
 
 init_db(app)
-app.register_blueprint(audiobook_bp, url_prefix="/audiobooks")
+app.register_blueprint(audiobook_bp, url_prefix="/api/content")
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000, debug=True)
