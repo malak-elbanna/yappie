@@ -1,0 +1,114 @@
+:root {
+    --dark-purple: #2a1b3d;
+    --dark-purple-light: #3b2a4a;
+    --dark-grey: #1a1a1a;
+    --dark-grey-light: #2d2d2d;
+    --accent: #8265a7;
+    --accent-light: #aa95c5;
+    --text-light: #e0e0e0;
+    --text-muted: #9e9e9e;
+    --danger: #d32f2f;
+    --black: #000000;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    /* background: linear-gradient(135deg, var(--dark-grey-light) 0%, var(--dark-grey) 50%); */
+    background-color: var(--dark-grey);
+    color: var(--text-light);
+    min-height: 100vh;
+}
+
+.header {
+    background: linear-gradient(135deg, var(--dark-purple) 0%, var(--dark-grey) 100%);
+    color: white;
+    padding: 2.5rem 0;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 20px 20px;
+}
+
+.header h1 {
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#add-audiobook-form {
+    background-color: var(--dark-grey-light);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    border-left: 4px solid var(--accent);
+}
+
+.form-label {
+    color: var(--accent-light);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    background-color:var(--dark-grey-light);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-light);
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+}
+
+.form-control:focus {
+    background-color: var(--dark-purple-light);
+    color: var(--text-light);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 0.25rem rgba(130, 101, 167, 0.25);
+}
+
+textarea.form-control {
+    min-height: 120px;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    border: none;
+    padding: 0.75rem 1.75rem;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(130, 101, 167, 0.3);
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-light);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(130, 101, 167, 0.4);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark-grey);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-light);
+}
+
+@media (min-width: 768px) {
+    #add-audiobook-form {
+        padding: 2.5rem;
+    }
+    
+    .btn-primary {
+        width: auto;
+    }
+}
