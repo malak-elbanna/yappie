@@ -16,7 +16,7 @@ const LoginAdmin = () => {
         const token = params.get("token");
         if (token) {
             localStorage.setItem("token", token);
-            navigate("/admin-cms");
+            navigate(`${import.meta.env.VITE_API_URL}/admin-cms`);
         }
     }, [navigate]);
 
@@ -28,12 +28,7 @@ const LoginAdmin = () => {
             const response = await login_admin(email, password);
             localStorage.setItem("token", response.data.access_token);
 
-            const cmsResponse = await get_CMS();
-            const cmsUrl = cmsResponse.url;
-
-            navigate(cmsUrl);
-            setCmsData(cmsResponse);
-            console.log("CMS Data:", cmsResponse);
+            window.location.href = `${import.meta.env.VITE_API_URL}/admin-cms`;
 
         } catch (err) {
             setError(err.response?.data?.message || "Login failed");
