@@ -29,7 +29,19 @@ curl -i -X POST http://localhost:8001/services \
 
 curl -i -X POST http://localhost:8001/services/cms-service/routes \
   --data name=cms-service-route \
-  --data paths[]=/admin-cms
+  --data paths[]=/admin-cms \
+  --data strip_path=true
+
+curl -i -X POST http://localhost:8001/services/cms-service/routes \
+  --data 'paths[]=/add' \
+  --data 'strip_path=false' \
+  --data 'name=cms-add-route'
+
+curl -i -X POST http://localhost:8001/services/cms-service/routes \
+  --data 'paths[]=/edit' \
+  --data 'strip_path=false' \
+  --data 'name=cms-edit-route'
+
 
 curl -i http://localhost:8000/admin-cms/health
 
