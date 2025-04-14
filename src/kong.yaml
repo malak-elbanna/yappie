@@ -1,0 +1,31 @@
+_format_version: "3.0"
+services:
+  - name: cms-service
+    url: http://cms-service:5001
+    routes:
+      - name: cms-service-route
+        paths:
+          - /admin-cms
+        strip_path: true
+      - name: cms-add-route
+        paths:
+          - /add
+        strip_path: false
+      - name: cms-edit-route
+        paths:
+          - /edit
+        strip_path: false
+
+  - name: user-service
+    url: http://user-service:5000
+    routes:
+      - name: user-service-route
+        paths:
+          - /user-service
+
+  - name: streaming-service
+    url: http://streaming-service:8080
+    routes:
+      - name: streaming-service-route
+        paths:
+          - /streaming-service
