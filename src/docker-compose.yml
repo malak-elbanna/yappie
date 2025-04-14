@@ -1,12 +1,12 @@
 version: "3.8"
 
 services:
-  user-service:  
+  auth-service:  
     build:
-      context: ./backend/user-service
+      context: ./backend/auth-service
       dockerfile: Dockerfile
     env_file:
-      - ./backend/user-service/.env  
+      - ./backend/auth-service/.env  
     ports:
       - "5000:5000"
     depends_on:
