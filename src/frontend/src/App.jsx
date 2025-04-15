@@ -7,6 +7,7 @@ import DashboardAdmin from "./pages/DashboardAdmin";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Categories from "./pages/Categories";
+import NotificationsTest from "./pages/Notifications-test";
 
 const App = () => {
   return (
@@ -20,6 +21,8 @@ const App = () => {
         <Route path="/login-admin" element={<LoginAdmin />} />
         <Route path="/dashboard-admin" element={<DashboardAdmin />} />
         <Route path="/categories" element={<Categories />} />
+        <Route path="/notifications" element={<NotificationsTest />} />
+
       </Routes>
     </Router>
   );
