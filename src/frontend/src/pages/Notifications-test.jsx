@@ -13,6 +13,8 @@ const NotificationsTest = () => {
         if(!socket) return;
         socket.on('connect', () => {
             console.log('Connected to server with ID:', socket.id);
+            
+            subscribe();
         });
     },[socket]);
     
@@ -24,7 +26,6 @@ const NotificationsTest = () => {
     <div>
       <h1>Notifications</h1>
       <p>This is the notifications page.</p>
-      <button onClick={subscribe}>Subscribe</button>
     </div>
   );
 }
