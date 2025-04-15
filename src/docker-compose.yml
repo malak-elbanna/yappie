@@ -1,6 +1,7 @@
 version: "3.8"
 
 services:
+
   auth-service:  
     build:
       context: ./backend/auth-service
@@ -14,7 +15,6 @@ services:
       - redis
     volumes:
       - ./backend/auth-service:/app  
-      - /app/node_modules  # Prevent overwriting node_modules
 
   cms-service:
     build: 
@@ -24,9 +24,6 @@ services:
       - ./backend/content-management-service/.env
     ports:
       - "5001:5001"
-    volumes:
-      - ./backend/content-management-service:/app
-      - /app/node_modules
 
   streaming-service:
     build:
@@ -38,9 +35,6 @@ services:
       - "8080:8080"
     depends_on:
       - redis
-    volumes:
-      - ./backend/streaming-service:/app
-      - /app/node_modules
 
   notification-service:
     build:
@@ -51,9 +45,6 @@ services:
     ports:
       - "4000:4000"
     command: ["node", "server"]
-    volumes:
-      - ./backend/notification-service:/app
-      - /app/node_modules
 
   db:
     image: postgres:13
@@ -125,11 +116,27 @@ services:
       - ./frontend/.env  
     ports:
       - "5173:5173"
+    command: ["npm", "run", "dev"]
+
+  rabbitmq:
+    image: rabbitmq:management
+    container_name: rabbitmq
+    restart: always
+    environment:
+      RABBITMQ_DEFAULT_USER: yap
+      RABBITMQ_DEFAULT_PASS: yap
+    ports:
+      - 5672:5672
+      - 15672:15672
     volumes:
-      - ./frontend:/app
-      - /app/node_modules
+      - rabbitmq-lib:/var/lib/rabbitmq/
+      - rabbitmq-log:/var/log/rabbitmq
 
 volumes:
+  rabbitmq-lib:
+    driver: local
+  rabbitmq-log:
+    driver: local
   user_data:
   kong_data:
 
