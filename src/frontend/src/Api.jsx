@@ -36,7 +36,7 @@ export const logout = async () => {
                 }
             );
             
-            localStorage.removeItem("token"); 
+            sessionStorage.removeItem("token"); 
         } catch (err) {
             console.error("Logout failed", err);
             throw err; 
