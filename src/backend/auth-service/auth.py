@@ -7,6 +7,10 @@ import requests
 import datetime
 from extensions import redis_client  
 import re  
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 auth_bp = Blueprint('auth', __name__)
 
@@ -102,7 +106,7 @@ def init_oauth(app):
 
 @auth_bp.route('/google-login')
 def google_login():
-    redirect_uri = "http://localhost:8000/user-service/auth/google-callback"
+    redirect_uri = os.getenv('GOOGLE_REDIRECT_URI')
     return oauth.google.authorize_redirect(redirect_uri)
 
 @auth_bp.route('/google-callback')

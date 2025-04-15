@@ -16,12 +16,12 @@ services:
           - /edit
         strip_path: false
 
-  - name: user-service
-    url: http://user-service:5000
+  - name: auth-service
+    url: http://auth-service:5000
     routes:
-      - name: user-service-route
+      - name: auth-service-route
         paths:
-          - /user-service
+          - /auth-service
 
   - name: streaming-service
     url: http://streaming-service:8080
