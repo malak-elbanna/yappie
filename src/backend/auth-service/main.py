@@ -1,7 +1,7 @@
 import os
 from flask import Flask
 from flask_migrate import Migrate
-from extensions import db, jwt, redis_client  
+from app.core.extensions import db, jwt, redis_client  
 from app.auth.routes import auth_bp
 from app.auth.oauth import init_oauth
 from flask_cors import CORS
