@@ -13,7 +13,7 @@ RUN chmod +x entrypoint.sh
 EXPOSE 5000
 
 ENV PYTHONPATH=/app
-ENV FLASK_APP=app.py
+ENV FLASK_APP=main.py
 
 ENTRYPOINT ["./entrypoint.sh"]
 CMD ["flask", "run", "--host=0.0.0.0"]

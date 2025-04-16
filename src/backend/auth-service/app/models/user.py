@@ -1,4 +1,4 @@
-from extensions import db
+from app.core.extensions import db
 from flask_bcrypt import generate_password_hash, check_password_hash
 
 class User(db.Model):
