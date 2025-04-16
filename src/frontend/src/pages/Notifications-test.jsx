@@ -19,7 +19,7 @@ const NotificationsTest = () => {
     
     const subscribe = () => {
         subscribeTo.splice(1,1);
-        socket.emit('SUBSCRIBE',subscribeTo);
+        socket.emit('SUBSCRIBE','husseain');
     };
 
   return (

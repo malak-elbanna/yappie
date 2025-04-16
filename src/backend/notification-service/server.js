@@ -12,23 +12,23 @@ io.on('connection', async (socket) => {
     var exchange = 'topic_logs';
     var connection;
     var channel;
+    var consumerTag;
     socket.on('SUBSCRIBE',async (message)=>{
         console.log("Refreshing")
-        await channel.close();
-        channel = await connection.createChannel();
-        await channel.assertExchange(exchange,'topic',{
-            durable:false
-        });
-        queue = (await channel.assertQueue('',{exclusive:true})).queue;
-        message.forEach(function(key){
-            channel.bindQueue(queue,exchange,key)
-        })
+        console.log(consumerTag)
+        // channel = await connection.createChannel();
+        // await channel.assertExchange(exchange,'topic',{
+        //     durable:false
+        // });
+        // queue = (await channel.assertQueue('',{exclusive:true})).queue;
+        // message.forEach(function(key){
+        //     channel.bindQueue(queue,exchange,key)
+        // })
+        // await channel.cancel(consumerTag);
+        await channel.bindQueue(queue,exchange,message);
         channel.consume(queue,function(msg){
             console.log(`Message recieved ! : ${msg.content.toString()} `);
-        },{noAck:true});
-        message.forEach(function(key){
-            channel.bindQueue(queue,exchange,key)
-        })
+        },{noAck:false}).then((result)=>{consumerTag = result.consumerTag});
     })
     socket.on('STARTED',async (message)=>{
         console.log('New client connected:', socket.id);
@@ -41,10 +41,23 @@ io.on('connection', async (socket) => {
         await message.forEach(function(key){
             channel.bindQueue(queue,exchange,key)
         })
+        tempChannel = channel;
         channel.consume(queue,function(msg){
             console.log(`Message recieved ! : ${msg.content.toString()} `);
-        },{noAck:true});
+        },{noAck:false}).then((result)=>{consumerTag = result.consumerTag});
 
+    })
+
+    socket.on('disconnect',()=>{
+        console.log(`${socket.id} disconnected`)
+        if(channel) {
+            channel.close();
+            console.log("Channel Closed");
+        }
+        if(connection) {
+            connection.close();
+            console.log("Connection Closed");
+        }
     })
 
 
