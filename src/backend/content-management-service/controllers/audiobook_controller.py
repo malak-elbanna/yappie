@@ -54,6 +54,7 @@ def add_audiobook():
             data['audio_id'] = str(audio_id)
     
     result = db.books.insert_one(data)
+    
     return jsonify({"_id": str(result.inserted_id)}), 201
 
 
