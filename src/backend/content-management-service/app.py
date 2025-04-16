@@ -1,12 +1,18 @@
 from flask import Flask
 from flask_cors import CORS
 from routes.audiobook_routes import audiobook_bp
-from services.db import init_db
-from config import Config
+from db import init_db
+from config import HOST, PORT, DEBUG, MONGO_URI, SECRET_KEY
 
 app = Flask(__name__)
 
-app.config.from_object(Config)
+app.config.update(
+    SECRET_KEY=SECRET_KEY,
+    MONGO_URI=MONGO_URI,
+    HOST=HOST,
+    PORT=PORT,
+    DEBUG=DEBUG
+)
 
 CORS(app)
 init_db(app)
