@@ -30,19 +30,23 @@ exports.create = async (req,res)=>{
 }
 
 exports.publish = async (req,res)=>{
-    const{message} = req.body;
-    connection = await amqp.connect('amqp://rabbitmq:5672')
-    channel = await connection.createChannel();
-    await channel.assertExchange(exchange,'topic',{
-        durable:false
+    try{
+        message = req.body;
+        connection = await amqp.connect('amqp://rabbitmq:5672')
+        channel = await connection.createChannel();
+        await channel.assertExchange('author','topic',{
+            durable:false
     });
-    queue = (await channel.assertQueue('',{exclusive:true})).queue;
-    await message.forEach(function(key){
-        channel.bindQueue(queue,exchange,key)
-    })
-    tempChannel = channel;
-    channel.consume(queue,function(msg){
-        console.log(`Message recieved ! : ${msg.content.toString()} `);
-    },{noAck:false}).then((result)=>{consumerTag = result.consumerTag});
+    channel.publish('author', req.body.author, req.body.title);
+    console.log(" [x] Sent %s:'%s'", routingKeys, text);
+    await channel.close();
+    }
+    catch (err) {
+    console.warn(err);
+    }
+    finally {
+        if (connection) await connection.close();
+    };
+
 
 }
