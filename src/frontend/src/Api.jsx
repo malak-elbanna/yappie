@@ -22,7 +22,7 @@ export const googleLogin = async () => {
 };
 
 export const logout = async () => {
-    const token = localStorage.getItem("token"); 
+    const token = sessionStorage.getItem("token"); 
     if (token) {
         try {
             await axios.post(
@@ -42,7 +42,7 @@ export const logout = async () => {
             throw err; 
         }
     } else {
-        console.warn("No token found in localStorage");
+        console.warn("No token found in sessionStorage");
     }
 };
 

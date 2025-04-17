@@ -1,10 +1,27 @@
-import React from 'react';
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import { useNavigate, useLocation } from "react-router-dom";
+import { logout } from "../Api";
 
 export default function Navbar() {
     const navigate = useNavigate();
+    const location = useLocation(); 
+    const [isLoggedIn, setIsLoggedIn] = useState(!!sessionStorage.getItem("token"));
 
-    return ( 
+    useEffect(() => {
+        setIsLoggedIn(!!sessionStorage.getItem("token"));
+    }, [location]); 
+
+    const handleLogout = async () => {
+        try {
+            await logout(); 
+            setIsLoggedIn(false); 
+            navigate("/login");
+        } catch (err) {
+            console.error("Logout failed", err);
+        }
+    };
+
+    return (
         <header className="bg-black p-4">
             <div className="container mx-auto flex flex-wrap items-center justify-between text-white">
                 <div className="flex items-center">
@@ -18,18 +35,29 @@ export default function Navbar() {
                     </nav>
                 </div>
                 <div className="flex items-center space-x-4">
-                    <button 
-                        onClick={() => navigate("/signup")}
-                        className="md:block hover:text-purple-400"
-                    > 
-                        Sign up
-                    </button>
-                    <button 
-                        onClick={() => navigate("/login")}
-                        className="md:block hover:text-purple-400"
-                    > 
-                        Login
-                    </button>
+                    {!isLoggedIn ? (
+                        <>
+                            <button 
+                                onClick={() => navigate("/signup")}
+                                className="md:block hover:text-purple-400"
+                            >
+                                Sign up
+                            </button>
+                            <button 
+                                onClick={() => navigate("/login")}
+                                className="md:block hover:text-purple-400"
+                            >
+                                Login
+                            </button>
+                        </>
+                    ) : (
+                        <button
+                            onClick={handleLogout}
+                            className="md:block hover:text-purple-400"
+                        >
+                            Logout
+                        </button>
+                    )}
                     <button className="bg-purple-700 hover:bg-purple-800 text-white py-1 px-4 rounded">
                         Subscribe
                     </button>
