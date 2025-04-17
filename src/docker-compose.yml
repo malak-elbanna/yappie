@@ -59,6 +59,17 @@ services:
     depends_on:
       - rabbitmq
 
+  profile-service:
+    build: 
+      context: ./backend/profile-management-service
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend/profile-management-service/.env
+    ports:
+      - "5002:5002"
+    depends_on:
+      - profile_db
+
   db:
     image: postgres:13
     environment:
@@ -67,6 +78,17 @@ services:
       POSTGRES_DB: user_db
     ports:
       - "5432:5432"
+    volumes:
+      - user_data:/var/lib/postgresql/data
+
+  profile-db:
+    image: postgres:13
+    environment:
+      - POSTGRES_USER: pmsuser
+      - POSTGRES_PASSWORD: pmspass
+      - POSTGRES_DB: profile_db
+    ports:
+      - "5433:5432"
     volumes:
       - user_data:/var/lib/postgresql/data
 

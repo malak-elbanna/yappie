@@ -29,3 +29,10 @@ services:
       - name: streaming-service-route
         paths:
           - /streaming-service
+
+  - name: profile-service
+    url: http://profile-service:5002
+    routes:
+      - name: profile-service-route
+        paths:
+          - /profile-page
