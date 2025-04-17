@@ -14,8 +14,6 @@ import (
 func main() {
 	router := gin.Default()
 
-	router.Use(cors.Default())
-
 	client := config.ConnectDB()
 	defer client.Disconnect(nil)
 
@@ -27,6 +25,7 @@ func main() {
 	bookCollection := config.GetCollection(client, "books")
 	controllers.InitBookController(bookCollection)
 
+	router.Use(cors.Default())
 	routes.BookRoutes(router)
 	routes.PlaybackRoutes(router)
 	routes.DownloadRoutes(router)
