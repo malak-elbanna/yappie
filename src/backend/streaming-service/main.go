@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/gin-contrib/cors"
+	cors "github.com/rs/cors/wrapper/gin"
 	"github.com/gin-gonic/gin"
 	"github.com/malak-elbanna/streaming-service/config"
 	"github.com/malak-elbanna/streaming-service/controllers"
@@ -15,7 +15,8 @@ func main() {
 
 	client := config.ConnectDB()
 	defer client.Disconnect(nil)
-
+	
+	
 	bookCollection := config.GetCollection(client, "books")
 	controllers.InitBookController(bookCollection)
 

@@ -1,6 +1,6 @@
 from flask import jsonify, request
 from flask_jwt_extended import create_access_token, get_jwt, get_jwt_identity, unset_jwt_cookies
-from models import User, db
+from app.models import user as User
 from app.core.extensions import redis_client
 import datetime
 import re
