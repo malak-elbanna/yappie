@@ -11,7 +11,7 @@ const StartSocket = (app)=>{
   }
 });
     io.on('connection', async (socket) => {
-    var exchange = 'topic_logs';
+    var exchange = 'subscription';
     var connection;
     var channel;
     var consumerTag;
@@ -29,7 +29,7 @@ const StartSocket = (app)=>{
         connection = await amqp.connect('amqp://rabbitmq:5672')
         channel = await connection.createChannel();
         await channel.assertExchange(exchange,'topic',{
-            durable:false
+            durable:true
         });
         queue = (await channel.assertQueue('',{exclusive:true})).queue;
         await message.forEach(function(key){

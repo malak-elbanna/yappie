@@ -6,8 +6,6 @@ router.get('/',nfController.getAll);
 
 router.post('/',nfController.create);
 
-router.post('/admin',(req,res)=>{
-    console.log(req.body)
-});
+router.post('/admin',nfController.publish);
 
 module.exports = router;

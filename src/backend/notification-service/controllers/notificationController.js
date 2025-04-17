@@ -34,11 +34,11 @@ exports.publish = async (req,res)=>{
         message = req.body;
         connection = await amqp.connect('amqp://rabbitmq:5672')
         channel = await connection.createChannel();
-        await channel.assertExchange('author','topic',{
-            durable:false
+        await channel.assertExchange('subscription','topic',{
+            durable:true
     });
-    channel.publish('author', req.body.author, req.body.title);
-    console.log(" [x] Sent %s:'%s'", routingKeys, text);
+    channel.publish('subscription', message.author, Buffer.from(message.title));
+    console.log(" [x] Sent %s:'%s'", message.author, message.title);
     await channel.close();
     }
     catch (err) {
