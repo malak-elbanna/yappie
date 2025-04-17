@@ -7,7 +7,7 @@ const connectToMongo = require('./models')
 const notificationRouter = require('./routes/notificationRouter.js')
 const subscriptionRouter = require('./routes/notificationRouter.js')
 
-var allowedOrigins = ['http://localhost:50001','http://localhost:5173'];
+var allowedOrigins = ['http://localhost:5001','http://localhost:5173'];
 connectToMongo();
 app.use(cors({
   origin: function(origin, callback){
