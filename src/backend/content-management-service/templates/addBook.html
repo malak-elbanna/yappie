@@ -207,22 +207,43 @@ textarea.form-control {
         function addAudiobook() {
     const form = document.getElementById("add-audiobook-form");
     const formData = new FormData(form);
-
-    fetch("/admin-cms/", {
+    console.log(formData);
+    fetch("/", {
         method: "POST",
         body: formData
     })
     .then(response => {
         if (response.ok) {
+            alert(formData);
             alert("Audiobook added successfully.");
-            window.location.href = "/admin-cms";
         } else {
+            alert(error)
             alert("Failed to add audiobook.");
         }
     })
     .catch(error => {
         console.error("Error:", error);
-        alert("An error occured while adding the audiobook.");
+        alert(error)
+        alert(`An error occured while adding the audiobook.`);
+    });
+    var object = {};
+    formData.forEach((value, key) => object[key] = value);
+    var json = JSON.stringify(object);
+    console.log(json)
+    fetch("http://localhost:4000/notification/admin", {
+        method: "POST",
+        body: json,
+        headers: new Headers({'content-type': 'application/json'})
+    })
+    .then(response => {
+        if (response.ok) {
+            window.location.href = "/";
+        } else {
+            alert("Failed to add notification.");
+        }
+    })
+    .catch(error => {
+        console.error("Error:", error);
     });
 }
     </script>

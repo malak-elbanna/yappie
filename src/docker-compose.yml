@@ -1,6 +1,18 @@
 version: "3.8"
 
 services:
+
+  rabbitmq:
+    image: rabbitmq:management
+    container_name: rabbitmq
+    restart: always
+    ports:
+      - 5672:5672
+      - 15672:15672
+    volumes:
+      - rabbitmq-lib:/var/lib/rabbitmq/
+      - rabbitmq-log:/var/log/rabbitmq
+
   auth-service:  
     build:
       context: ./backend/auth-service
@@ -13,8 +25,7 @@ services:
       - db
       - redis
     volumes:
-      - ./backend/auth-service:/app
-  
+      - ./backend/auth-service:/app  
 
   cms-service:
     build: 
@@ -35,6 +46,18 @@ services:
       - "8080:8080"
     depends_on:
       - redis
+
+  notification-service:
+    build:
+      context: ./backend/notification-service
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend/notification-service/.env  
+    ports:
+      - "4000:4000"
+    command: ["node", "server"]
+    depends_on:
+      - rabbitmq
 
   db:
     image: postgres:13
@@ -104,10 +127,17 @@ services:
       dockerfile: Dockerfile
     env_file:
       - ./frontend/.env  
+    depends_on:
+      - notification-service
     ports:
       - "5173:5173"
     command: ["npm", "run", "dev"]
 
 volumes:
+  rabbitmq-lib:
+    driver: local
+  rabbitmq-log:
+    driver: local
   user_data:
   kong_data:
+

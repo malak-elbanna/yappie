@@ -6,7 +6,7 @@ const STREAMING_URL = import.meta.env.VITE_STREAMING_SERVICE;
 const CMS_URL = import.meta.env.VITE_CMS_SERVICE || "http://127.0.0.1:5001";
 
 export const login = async (email, password) => {
-    return axios.post(`${API_URL}/user-service/auth/login`, { email, password });
+    return axios.post(`${API_URL}/${AUTH_URL}/auth/login`, { email, password });
 };
 
 export const login_admin = async (email, password) => {
@@ -22,7 +22,7 @@ export const googleLogin = async () => {
 };
 
 export const logout = async () => {
-    const token = localStorage.getItem("token"); 
+    const token = sessionStorage.getItem("token"); 
     if (token) {
         try {
             await axios.post(
@@ -36,13 +36,13 @@ export const logout = async () => {
                 }
             );
             
-            localStorage.removeItem("token"); 
+            sessionStorage.removeItem("token"); 
         } catch (err) {
             console.error("Logout failed", err);
             throw err; 
         }
     } else {
-        console.warn("No token found in localStorage");
+        console.warn("No token found in sessionStorage");
     }
 };
 
@@ -65,7 +65,7 @@ export const get_CMS = async () => {
 
 export const getBooks = async () => {
     try {
-        const response = await axios.get(`${API_URL}/streaming-service/books`);
+        const response = await axios.get(`${API_URL}/books/`);
         return response.data;
     } catch (error) {
         console.error("Error fetching books:", error);

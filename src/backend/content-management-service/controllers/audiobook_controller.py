@@ -1,8 +1,10 @@
+import json
 from flask import request, jsonify, render_template, redirect, url_for
-from services.db import mongo
+from db import mongo
 from bson.objectid import ObjectId
 from werkzeug.utils import secure_filename
 from gridfs import GridFS
+from config import DATABASE_NAME, COLLECTION
 
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'mp4', 'm4a', 'mp3'}
 
@@ -13,8 +15,8 @@ def allowed_file(filename):
 not_found = "audiobook not found"
 
 def get_collection():
-    db = mongo.cx["audiobooks_db"]
-    return db["books"]
+    db = mongo.cx[DATABASE_NAME]
+    return db[COLLECTION]
 
 def add_page():
     return render_template("addBook.html")
@@ -36,7 +38,7 @@ def get_audiobook(id):
         return jsonify({"error": not_found}), 404
 
 def add_audiobook():
-    db = mongo.cx["audiobooks_db"]
+    db = mongo.cx[DATABASE_NAME]
     fs = GridFS(db)
 
     data = request.form.to_dict()
@@ -46,19 +48,17 @@ def add_audiobook():
         if cover_image and allowed_file(cover_image.filename):
             cover_id = fs.put(cover_image, filename=secure_filename(cover_image.filename))
             data['cover_id'] = str(cover_id) 
-
     if 'audio_file' in files:
         audio_file = files['audio_file']
         if audio_file and allowed_file(audio_file.filename):
             audio_id = fs.put(audio_file, filename=secure_filename(audio_file.filename))
             data['audio_id'] = str(audio_id)
-    
     result = db.books.insert_one(data)
     return jsonify({"_id": str(result.inserted_id)}), 201
 
 
 def update_audiobook(id):
-    db = mongo.cx["audiobooks_db"]
+    db = mongo.cx[DATABASE_NAME]
     fs = GridFS(db)
 
     data = request.form.to_dict()
