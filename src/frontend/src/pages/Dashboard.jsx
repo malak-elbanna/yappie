@@ -1,9 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import { logout } from "../Api";
+import { useEffect, useState } from "react";
 
 const Dashboard = () => {
     const navigate = useNavigate();
-
+    const [value, setValue] = useState('');
     const handleLogout = async () => {
         try {
             await logout();
@@ -13,6 +14,21 @@ const Dashboard = () => {
         }
     };
 
+    useEffect(() => {
+        let userId = null;
+        try {
+            const token = sessionStorage.getItem("token");
+            if (token) {
+                const payloadBase64 = token.split('.')[1];
+                const decodedPayload = JSON.parse(atob(payloadBase64));
+                userId = decodedPayload.sub;
+                setValue(userId);
+            }
+        } catch (error) {
+        console.error("Invalid token:", error);
+        }
+
+    });
     return (
         <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-800 to-black">
             <div className="bg-gray-900 p-8 rounded-2xl shadow-lg max-w-md w-full">
