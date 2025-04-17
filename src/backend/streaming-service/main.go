@@ -36,6 +36,7 @@ func main() {
 	routes.BookRoutes(router)
 	routes.PlaybackRoutes(router)
 	routes.DownloadRoutes(router)
+	routes.StreamRoutes(router)
 
 	config.InitRedis()
 
