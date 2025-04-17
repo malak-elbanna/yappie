@@ -35,29 +35,37 @@ export default function Navbar() {
                     </nav>
                 </div>
                 <div className="flex items-center space-x-4">
-                    {!isLoggedIn ? (
-                        <>
-                            <button 
-                                onClick={() => navigate("/signup")}
-                                className="md:block hover:text-purple-400"
-                            >
-                                Sign up
-                            </button>
-                            <button 
-                                onClick={() => navigate("/login")}
-                                className="md:block hover:text-purple-400"
-                            >
-                                Login
-                            </button>
-                        </>
-                    ) : (
+                {!isLoggedIn ? (
+                    <>
+                        <button 
+                            onClick={() => navigate("/signup")}
+                            className="md:block hover:text-purple-400"
+                        >
+                            Sign up
+                        </button>
+                        <button 
+                            onClick={() => navigate("/login")}
+                            className="md:block hover:text-purple-400"
+                        >
+                            Login
+                        </button>
+                    </>
+                ) : (
+                    <>
+                        <button
+                            onClick={() => navigate("/profile")}
+                            className="md:block hover:text-purple-400"
+                        >
+                            Profile
+                        </button>
                         <button
                             onClick={handleLogout}
                             className="md:block hover:text-purple-400"
                         >
                             Logout
                         </button>
-                    )}
+                    </>
+                )}
                     <button className="bg-purple-700 hover:bg-purple-800 text-white py-1 px-4 rounded">
                         Subscribe
                     </button>
