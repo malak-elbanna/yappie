@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:5000"; 
+const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8080"; 
 const AUTH_URL = import.meta.env.VITE_AUTH_SERVICE;
 const STREAMING_URL = import.meta.env.VITE_STREAMING_SERVICE;
 const CMS_URL = import.meta.env.VITE_CMS_SERVICE;
@@ -22,7 +22,7 @@ export const googleLogin = async () => {
 };
 
 export const logout = async () => {
-    const token = localStorage.getItem("token"); 
+    const token = sessionStorage.getItem("token"); 
     if (token) {
         try {
             await axios.post(
@@ -42,7 +42,7 @@ export const logout = async () => {
             throw err; 
         }
     } else {
-        console.warn("No token found in localStorage");
+        console.warn("No token found in sessionStorage");
     }
 };
 
@@ -65,7 +65,7 @@ export const get_CMS = async () => {
 
 export const getBooks = async () => {
     try {
-        const response = await axios.get(`${API_URL}/${STREAMING_URL}/books`);
+        const response = await axios.get(`${API_URL}/books/`);
         return response.data;
     } catch (error) {
         console.error("Error fetching books:", error);

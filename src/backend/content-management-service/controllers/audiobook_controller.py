@@ -1,3 +1,4 @@
+import json
 from flask import request, jsonify, render_template, redirect, url_for
 from db import mongo
 from bson.objectid import ObjectId
@@ -47,13 +48,11 @@ def add_audiobook():
         if cover_image and allowed_file(cover_image.filename):
             cover_id = fs.put(cover_image, filename=secure_filename(cover_image.filename))
             data['cover_id'] = str(cover_id) 
-
     if 'audio_file' in files:
         audio_file = files['audio_file']
         if audio_file and allowed_file(audio_file.filename):
             audio_id = fs.put(audio_file, filename=secure_filename(audio_file.filename))
             data['audio_id'] = str(audio_id)
-    
     result = db.books.insert_one(data)
     return jsonify({"_id": str(result.inserted_id)}), 201
 

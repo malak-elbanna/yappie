@@ -204,14 +204,14 @@ textarea.form-control {
     const form = document.getElementById("edit-audiobook-form");
     const formData = new FormData(form);
 
-    fetch(`/admin-cms/${id}`, {
+    fetch(`/${id}`, {
         method: "PUT",
         body: formData
     })
     .then(response => {
         if (response.ok) {
             alert("Audiobook updated successfully.");
-            window.location.href = "/admin-cms";
+            window.location.href = "/";
         } else {
             alert("Failed to update audiobook.");
         }
