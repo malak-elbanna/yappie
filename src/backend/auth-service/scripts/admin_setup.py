@@ -1,9 +1,9 @@
 import os
 from dotenv import load_dotenv
-from extensions import db
+from app.core.extensions import db
 from flask_bcrypt import generate_password_hash
-from models import User
-from app import app
+from app.models.user import User
+from main import app
 
 load_dotenv()
 

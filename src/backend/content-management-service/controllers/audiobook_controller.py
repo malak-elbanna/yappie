@@ -4,7 +4,7 @@ from services.db import mongo
 from bson.objectid import ObjectId
 from werkzeug.utils import secure_filename
 from gridfs import GridFS
-import requests as rq
+from config import DATABASE_NAME, COLLECTION
 
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'mp4', 'm4a', 'mp3'}
 
@@ -15,8 +15,8 @@ def allowed_file(filename):
 not_found = "audiobook not found"
 
 def get_collection():
-    db = mongo.cx["audiobooks_db"]
-    return db["books"]
+    db = mongo.cx[DATABASE_NAME]
+    return db[COLLECTION]
 
 def add_page():
     return render_template("addBook.html")
@@ -38,7 +38,7 @@ def get_audiobook(id):
         return jsonify({"error": not_found}), 404
 
 def add_audiobook():
-    db = mongo.cx["audiobooks_db"]
+    db = mongo.cx[DATABASE_NAME]
     fs = GridFS(db)
 
     data = request.form.to_dict()
@@ -58,7 +58,7 @@ def add_audiobook():
 
 
 def update_audiobook(id):
-    db = mongo.cx["audiobooks_db"]
+    db = mongo.cx[DATABASE_NAME]
     fs = GridFS(db)
 
     data = request.form.to_dict()
