@@ -20,7 +20,8 @@ def google_login_redirect():
     return oauth.google.authorize_redirect(redirect_uri)
 
 def google_callback_handler():
-    from models.user import User, db
+    from app.models.user import User
+    from app.core.extensions import db
     from flask import redirect
     from flask_jwt_extended import create_access_token
 
