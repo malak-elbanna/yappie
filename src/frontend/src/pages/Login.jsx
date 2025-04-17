@@ -15,7 +15,7 @@ const Login = () => {
     const params = new URLSearchParams(window.location.search);
     const token = params.get("token");
     if (token) {
-      localStorage.setItem("token", token);
+      sessionStorage.setItem("token", token);
       navigate("/dashboard");
     }
   }, [navigate]);
@@ -26,7 +26,7 @@ const Login = () => {
 
     try {
       const response = await login(email, password);
-      localStorage.setItem("token", response.data.access_token);
+      sessionStorage.setItem("token", response.data.access_token);
       navigate("/dashboard");
     } catch (err) {
       setError(err.response?.data?.message || "Login failed");

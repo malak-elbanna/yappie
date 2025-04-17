@@ -15,7 +15,7 @@ const LoginAdmin = () => {
         const params = new URLSearchParams(window.location.search);
         const token = params.get("token");
         if (token) {
-            localStorage.setItem("token", token);
+            sessionStorage.setItem("token", token);
             navigate(`${import.meta.env.VITE_API_URL}/admin-cms`);
         }
     }, [navigate]);
@@ -26,7 +26,7 @@ const LoginAdmin = () => {
 
         try {
             const response = await login_admin(email, password);
-            localStorage.setItem("token", response.data.access_token);
+            sessionStorage.setItem("token", response.data.access_token);
 
             window.location.href = `${import.meta.env.VITE_API_URL}/admin-cms`;
 
