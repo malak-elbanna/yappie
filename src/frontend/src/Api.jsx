@@ -1,21 +1,24 @@
 import axios from "axios";
 
-const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:5000"; 
+const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8080"; 
+const AUTH_URL = import.meta.env.VITE_AUTH_SERVICE;
+const STREAMING_URL = import.meta.env.VITE_STREAMING_SERVICE;
+const CMS_URL = import.meta.env.VITE_CMS_SERVICE || "http://127.0.0.1:5001";
 
 export const login = async (email, password) => {
     return axios.post(`${API_URL}/user-service/auth/login`, { email, password });
 };
 
 export const login_admin = async (email, password) => {
-    return axios.post(`${API_URL}/user-service/auth/login-admin`, { email, password });
+    return axios.post(`${API_URL}/auth/login-admin`, { email, password });
 };
 
 export const register = async (email, password, name) => {
-    return axios.post(`${API_URL}/user-service/auth/register`, { email, password, name });
+    return axios.post(`${API_URL}auth/register`, { email, password, name });
 };
 
 export const googleLogin = async () => {
-    window.location.href = `${API_URL}/user-service/auth/google-login`;
+    window.location.href = `${API_URL}/auth/google-login`;
 };
 
 export const logout = async () => {
@@ -23,7 +26,7 @@ export const logout = async () => {
     if (token) {
         try {
             await axios.post(
-                `${API_URL}/user-service/auth/logout`,
+                `${API_URL}/auth/logout`,
                 {}, 
                 {
                     headers: {
