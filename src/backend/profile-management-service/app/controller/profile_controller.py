@@ -60,7 +60,7 @@ def remove_favorite_podcast(user_id):
         db.session.commit()
     return jsonify({"message": f"{podcast} removed from favorites."}), 200
 
-def update_bio(user_id):
+def edit_bio(user_id):
     data = request.get_json()
     updated_bio = data.get('bio')
     if not updated_bio:
@@ -69,7 +69,7 @@ def update_bio(user_id):
     profile = UserProfile.query.filter_by(user_id=user_id).first()
     if not profile:
         return jsonify({"error": profile_not_found}), 404
-    profile.bio = update_bio
+    profile.bio = updated_bio
     db.session.commit()
     return jsonify({"message": "Bio is updated successfully."}), 200
 
