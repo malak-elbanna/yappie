@@ -11,7 +11,13 @@ import (
 func main() {
 	router := gin.Default()
 
-	router.Use(cors.Default())
+	router.Use(cors.New(cors.Config{
+		AllowOrigins:     []string{"http://localhost:5173"},
+		AllowMethods:     []string{"GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"},
+		AllowHeaders:     []string{"Origin", "Content-Type", "Accept"},
+		ExposeHeaders:    []string{"Content-Length"},
+		AllowCredentials: true,
+	}))
 
 	client := config.ConnectDB()
 	defer client.Disconnect(nil)
@@ -21,6 +27,7 @@ func main() {
 
 	routes.BookRoutes(router)
 	routes.PlaybackRoutes(router)
+	routes.DownloadRoutes(router)
 
 	config.InitRedis()
 
