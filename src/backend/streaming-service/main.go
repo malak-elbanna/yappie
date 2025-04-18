@@ -25,7 +25,7 @@ func main() {
 	bookCollection := config.GetCollection(client, "books")
 	controllers.InitBookController(bookCollection)
 
-	router.Use(cors.Default())
+	router.Use(cors.AllowAll())
 	routes.BookRoutes(router)
 	routes.PlaybackRoutes(router)
 	routes.DownloadRoutes(router)

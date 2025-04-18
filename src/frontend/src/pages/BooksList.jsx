@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import axios from "axios";
+import API from '../Stream';
 
 const BooksList = () => {
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:8080/books/')
+    API.get('/books/')
       .then(res => setBooks(res.data))
       .catch(err => console.error(err));
   }, []);
