@@ -13,9 +13,12 @@ const Login = () => {
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    const token = params.get("token");
-    if (token) {
-      sessionStorage.setItem("access_token", token);
+    const accessToken = params.get("access_token");
+    const refreshToken = params.get("refresh_token");
+
+    if (accessToken && refreshToken) {
+      sessionStorage.setItem("access_token", accessToken);
+      sessionStorage.setItem("refresh_token", refreshToken);
       navigate("/dashboard");
     }
   }, [navigate]);
@@ -136,7 +139,7 @@ const Login = () => {
               Log In
             </button>
           </form>
-          
+
           <div className="text-center mt-4">
             <a href="/login-admin" className="text-gray-400 hover:text-purple-400 text-sm">
               Login as Admin

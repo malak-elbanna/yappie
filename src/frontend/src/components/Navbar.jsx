@@ -4,17 +4,30 @@ import { logout } from "../Api";
 
 export default function Navbar() {
     const navigate = useNavigate();
-    const location = useLocation(); 
-    const [isLoggedIn, setIsLoggedIn] = useState(!!sessionStorage.getItem("access_token"));
+    const location = useLocation();
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     useEffect(() => {
-        setIsLoggedIn(!!sessionStorage.getItem("access_token"));
-    }, [location]); 
+        const checkAuth = () => {
+            const accessToken = sessionStorage.getItem("access_token");
+            setIsLoggedIn(!!accessToken);
+        };
+
+        checkAuth();
+        // Add event listener for storage changes
+        window.addEventListener('storage', checkAuth);
+
+        return () => {
+            window.removeEventListener('storage', checkAuth);
+        };
+    }, [location]);
 
     const handleLogout = async () => {
         try {
-            await logout(); 
-            setIsLoggedIn(false); 
+            await logout();
+            sessionStorage.removeItem('access_token');
+            sessionStorage.removeItem('refresh_token');
+            setIsLoggedIn(false);
             navigate("/login");
         } catch (err) {
             console.error("Logout failed", err);
@@ -36,37 +49,37 @@ export default function Navbar() {
                     </nav>
                 </div>
                 <div className="flex items-center space-x-4">
-                {!isLoggedIn ? (
-                    <>
-                        <button 
-                            onClick={() => navigate("/signup")}
-                            className="md:block hover:text-purple-400"
-                        >
-                            Sign up
-                        </button>
-                        <button 
-                            onClick={() => navigate("/login")}
-                            className="md:block hover:text-purple-400"
-                        >
-                            Login
-                        </button>
-                    </>
-                ) : (
-                    <>
-                        <button
-                            onClick={() => navigate("/profile")}
-                            className="md:block hover:text-purple-400"
-                        >
-                            Profile
-                        </button>
-                        <button
-                            onClick={handleLogout}
-                            className="md:block hover:text-purple-400"
-                        >
-                            Logout
-                        </button>
-                    </>
-                )}
+                    {isLoggedIn ? (
+                        <>
+                            <button
+                                onClick={() => navigate("/profile")}
+                                className="md:block hover:text-purple-400"
+                            >
+                                Profile
+                            </button>
+                            <button
+                                onClick={handleLogout}
+                                className="md:block hover:text-purple-400"
+                            >
+                                Logout
+                            </button>
+                        </>
+                    ) : (
+                        <>
+                            <button
+                                onClick={() => navigate("/register")}
+                                className="md:block hover:text-purple-400"
+                            >
+                                Sign up
+                            </button>
+                            <button
+                                onClick={() => navigate("/login")}
+                                className="md:block hover:text-purple-400"
+                            >
+                                Login
+                            </button>
+                        </>
+                    )}
                     <button className="bg-purple-700 hover:bg-purple-800 text-white py-1 px-4 rounded">
                         Subscribe
                     </button>

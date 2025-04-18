@@ -57,7 +57,7 @@ def refresh_token():
 
 def revoke_token(request):
     try:
-        jwt_identity = get_jwt_identity()
+        jwt_identity = str(get_jwt_identity())  
         jti = get_jwt()["jti"]
         exp_timestamp = get_jwt()["exp"]
         current_timestamp = datetime.datetime.utcnow().timestamp()
@@ -65,19 +65,11 @@ def revoke_token(request):
 
         redis_client.setex(f"revoked_token:{jti}", ttl, "revoked")
 
-        auth_header = request.headers.get("Authorization")
-        if auth_header and auth_header.startswith("Bearer "):
-            oauth_token = auth_header.split(" ")[1]
-            requests.post(
-                'https://oauth2.googleapis.com/revoke',
-                params={'token': oauth_token},
-                headers={'content-type': 'application/x-www-form-urlencoded'}
-            )
-
         response = jsonify({"message": "Successfully logged out"})
         unset_jwt_cookies(response)
         return response, 200
-    except Exception:
+    except Exception as e:
+        print(f"Logout error: {str(e)}")
         return jsonify({"error": "Invalid or missing token"}), 401
 
 def validate_password(password):
