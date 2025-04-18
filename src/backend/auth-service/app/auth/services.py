@@ -1,5 +1,5 @@
 from flask import jsonify, request
-from flask_jwt_extended import create_access_token, get_jwt, get_jwt_identity, unset_jwt_cookies
+from flask_jwt_extended import create_access_token, create_refresh_token, get_jwt, get_jwt_identity, unset_jwt_cookies, jwt_required
 from app.models.user import User
 from app.core.extensions import redis_client, db
 import datetime
@@ -28,8 +28,12 @@ def login_user(data):
     if not user or not user.check_password(data['password']):
         return jsonify({"message": "Invalid credentials"}), 401
 
-    token = create_access_token(identity=str(user.id))
-    return jsonify({"access_token": token}), 200
+    access_token = create_access_token(identity=str(user.id))
+    refresh_token = create_refresh_token(identity=str(user.id))
+    return jsonify({
+        "access_token": access_token,
+        "refresh_token": refresh_token
+    }), 200
 
 def login_admin_user(data):
     admin = User.query.filter_by(email=data['email']).first()
@@ -38,8 +42,18 @@ def login_admin_user(data):
     if not admin.check_authority():
         return jsonify({"message": "Unauthorized access"}), 403
 
-    token = create_access_token(identity=str(admin.id))
-    return jsonify({"access_token": token}), 200
+    access_token = create_access_token(identity=str(admin.id))
+    refresh_token = create_refresh_token(identity=str(admin.id))
+    return jsonify({
+        "access_token": access_token,
+        "refresh_token": refresh_token
+    }), 200
+
+@jwt_required(refresh=True)
+def refresh_token():
+    current_user = get_jwt_identity()
+    new_access_token = create_access_token(identity=current_user)
+    return jsonify({"access_token": new_access_token}), 200
 
 def revoke_token(request):
     try:
