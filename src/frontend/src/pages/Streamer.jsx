@@ -12,7 +12,7 @@ export default function LiveAudioStreaming() {
   const [emojiQueue, setEmojiQueue] = useState([]);
 
   const getSocketUrl = () =>
-    `ws://localhost:8080/stream/live/${roomId}?userId=${userId}`;
+    `ws://localhost:8000/streaming-service/stream/live/${roomId}?userId=${userId}`;
 
   useEffect(() => {
     return () => {
