@@ -1,5 +1,5 @@
 from flask import request, jsonify
-from models.profile import db, UserProfile
+from app.models.profile import db, UserProfile
 
 profile_not_found = "Profile not found."
 

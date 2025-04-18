@@ -36,3 +36,4 @@ services:
       - name: profile-service-route
         paths:
           - /profile-page
+        strip_path: true

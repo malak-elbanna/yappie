@@ -72,3 +72,13 @@ export const getBooks = async () => {
         throw error;
     }
 };
+
+export const getProfilePage = async(userId) => {
+    try {
+        const response = await axios.get(`${API_URL}/profile-page/${userId}`);
+        return response.data;
+    } catch (error) {
+        console.error("Failed to fetch profile page: ", error);
+        throw error;
+    }
+}

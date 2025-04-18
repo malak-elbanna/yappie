@@ -68,7 +68,7 @@ services:
     ports:
       - "5002:5002"
     depends_on:
-      - profile_db
+      - profile-db
 
   db:
     image: postgres:13
@@ -84,11 +84,11 @@ services:
   profile-db:
     image: postgres:13
     environment:
-      - POSTGRES_USER: pmsuser
-      - POSTGRES_PASSWORD: pmspass
-      - POSTGRES_DB: profile_db
+      POSTGRES_USER: pmsuser
+      POSTGRES_PASSWORD: pmspass
+      POSTGRES_DB: profile_db
     ports:
-      - "5433:5432"
+      - "5434:5432"
     volumes:
       - user_data:/var/lib/postgresql/data
 

@@ -1,7 +1,7 @@
 from flask import Blueprint
-from controller import profile_controller
+from app.controller import profile_controller
 
-profile_bp = Blueprint('profile', __name__, url_prefix='/profile')
+profile_bp = Blueprint('profile', __name__)
 
 profile_bp.route('/<int:user_id>', methods=['GET'])(profile_controller.get_info)
 profile_bp.route('/<int:user_id>/edit-name', methods=['PUT'])(profile_controller.edit_name)
