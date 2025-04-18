@@ -5,10 +5,10 @@ import { logout } from "../Api";
 export default function Navbar() {
     const navigate = useNavigate();
     const location = useLocation(); 
-    const [isLoggedIn, setIsLoggedIn] = useState(!!sessionStorage.getItem("token"));
+    const [isLoggedIn, setIsLoggedIn] = useState(!!sessionStorage.getItem("access_token"));
 
     useEffect(() => {
-        setIsLoggedIn(!!sessionStorage.getItem("token"));
+        setIsLoggedIn(!!sessionStorage.getItem("access_token"));
     }, [location]); 
 
     const handleLogout = async () => {
