@@ -69,6 +69,8 @@ services:
       - "5002:5002"
     depends_on:
       - profile-db
+    volumes:
+      - ./backend/profile-management-service:/app
 
   db:
     image: postgres:13
@@ -90,7 +92,7 @@ services:
     ports:
       - "5434:5432"
     volumes:
-      - user_data:/var/lib/postgresql/profile_data
+      - profile_data:/var/lib/postgresql/data
 
   redis:
     image: redis:latest  
@@ -162,4 +164,4 @@ volumes:
     driver: local
   user_data:
   kong_data:
-
+  profile_data:
