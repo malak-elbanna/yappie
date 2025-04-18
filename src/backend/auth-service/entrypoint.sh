@@ -8,4 +8,7 @@ done
 echo "Running database migrations..."
 flask db upgrade
 
+echo "Creating admin..."
+python scripts/admin_setup.py
+
 exec "$@"

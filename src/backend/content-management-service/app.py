@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_cors import CORS
 from routes.audiobook_routes import audiobook_bp
-from db import init_db
+from services.db import init_db
 from config import HOST, PORT, DEBUG, MONGO_URI, SECRET_KEY
 
 app = Flask(__name__)

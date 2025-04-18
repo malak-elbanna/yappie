@@ -1,6 +1,6 @@
 import json
 from flask import request, jsonify, render_template, redirect, url_for
-from db import mongo
+from services.db import mongo
 from bson.objectid import ObjectId
 from werkzeug.utils import secure_filename
 from gridfs import GridFS
