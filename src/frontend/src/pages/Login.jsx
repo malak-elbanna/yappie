@@ -13,9 +13,12 @@ const Login = () => {
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    const token = params.get("token");
-    if (token) {
-      sessionStorage.setItem("token", token);
+    const accessToken = params.get("access_token");
+    const refreshToken = params.get("refresh_token");
+
+    if (accessToken && refreshToken) {
+      sessionStorage.setItem("access_token", accessToken);
+      sessionStorage.setItem("refresh_token", refreshToken);
       navigate("/dashboard");
     }
   }, [navigate]);
@@ -26,7 +29,8 @@ const Login = () => {
 
     try {
       const response = await login(email, password);
-      sessionStorage.setItem("token", response.data.access_token);
+      sessionStorage.setItem("access_token", response.data.access_token);
+      sessionStorage.setItem("refresh_token", response.data.refresh_token);
       navigate("/dashboard");
     } catch (err) {
       setError(err.response?.data?.message || "Login failed");
@@ -39,7 +43,6 @@ const Login = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-black">
-
       <div className="flex-grow flex items-center justify-center">
         <div className="bg-black p-8 rounded-xl shadow-lg max-w-md w-full border border-gray-800">
           <h2 className="text-white text-3xl font-bold text-center mb-8">
@@ -51,91 +54,102 @@ const Login = () => {
               onClick={googleLogin}
               className="w-full flex items-center justify-center gap-3 bg-black border border-gray-700 hover:bg-gray-900 text-white px-4 py-3 rounded-full transition duration-300"
             >
-              <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" alt="Google" className="w-5 h-5" />
-              <span>Continue with Google</span>
+              <img
+                src="https://www.google.com/favicon.ico"
+                alt="Google"
+                className="w-5 h-5 mr-2"
+              />
+              Continue with Google
             </button>
           </div>
 
-          <div className="my-8 flex items-center">
-            <div className="flex-grow h-px bg-gray-800"></div>
-            <div className="px-4 text-gray-500 text-sm">OR</div>
-            <div className="flex-grow h-px bg-gray-800"></div>
+          <div className="relative my-4">
+            <div className="absolute inset-0 flex items-center">
+              <div className="w-full border-t border-gray-700"></div>
+            </div>
+            <div className="relative flex justify-center text-sm">
+              <span className="px-2 bg-black text-gray-400">Or</span>
+            </div>
           </div>
 
-          <form onSubmit={handleLogin} className="space-y-6">
-            {error && <p className="text-red-500 text-sm">{error}</p>}
-
-            <div>
-              <label className="text-gray-400 text-sm block mb-2">Email or username</label>
+          <form onSubmit={handleLogin}>
+            <div className="mb-4">
+              <label className="block text-gray-400 text-sm font-bold mb-2" htmlFor="email">
+                Email
+              </label>
               <input
+                id="email"
                 type="email"
-                placeholder="Email or username"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                className="w-full bg-gray-900 text-white border border-gray-700 rounded-lg py-2 px-4 focus:outline-none focus:border-blue-500"
                 required
-                className="w-full px-4 py-3 bg-gray-900 text-white rounded-md focus:outline-none focus:ring-1 focus:ring-gray-600 border border-gray-800"
               />
             </div>
 
-            <div>
-              <label className="text-gray-400 text-sm block mb-2">Password</label>
+            <div className="mb-6">
+              <label className="block text-gray-400 text-sm font-bold mb-2" htmlFor="password">
+                Password
+              </label>
               <div className="relative">
                 <input
+                  id="password"
                   type={showPassword ? "text" : "password"}
-                  placeholder="Password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
+                  className="w-full bg-gray-900 text-white border border-gray-700 rounded-lg py-2 px-4 focus:outline-none focus:border-blue-500"
                   required
-                  className="w-full px-4 py-3 bg-gray-900 text-white rounded-md focus:outline-none focus:ring-1 focus:ring-gray-600 border border-gray-800"
                 />
                 <button
                   type="button"
                   onClick={togglePasswordVisibility}
-                  className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400"
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
                 >
                   {showPassword ? <FaEyeSlash /> : <FaEye />}
                 </button>
               </div>
             </div>
 
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <label className="flex items-center text-gray-400 text-sm">
-                  <input 
-                    type="checkbox" 
-                    checked={rememberMe}
-                    onChange={() => setRememberMe(!rememberMe)}
-                    className="mr-2 h-4 w-4 rounded" 
-                  />
-                  <span>Remember me</span>
+            <div className="flex items-center justify-between mb-6">
+              <div className="flex items-center">
+                <input
+                  id="remember-me"
+                  type="checkbox"
+                  checked={rememberMe}
+                  onChange={(e) => setRememberMe(e.target.checked)}
+                  className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-700 rounded bg-gray-900"
+                />
+                <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-400">
+                  Remember me
                 </label>
               </div>
+              <a href="#" className="text-sm text-blue-500 hover:text-blue-400">
+                Forgot password?
+              </a>
             </div>
+
+            {error && (
+              <div className="mb-4 text-red-500 text-sm text-center">{error}</div>
+            )}
 
             <button
               type="submit"
               className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 rounded-full transition duration-300"
             >
-              Log in
+              Log In
             </button>
           </form>
 
-          <div className="text-center mt-4">
-            <a href="/forgot-password" className="text-gray-400 hover:text-purple-400 text-sm">
-              Forgot your password?
-            </a>
-          </div>
-                    
           <div className="text-center mt-4">
             <a href="/login-admin" className="text-gray-400 hover:text-purple-400 text-sm">
               Login as Admin
             </a>
           </div>
 
-          <div className="border-t border-gray-800 mt-8 pt-6">
-            <p className="text-gray-400 text-center text-sm">
+          <div className="mt-6 text-center">
+            <p className="text-gray-400">
               Don't have an account?{" "}
-              <a href="/signup" className="text-purple-500 hover:text-purple-400">
+              <a href="/register" className="text-blue-500 hover:text-blue-400">
                 Sign up
               </a>
             </p>

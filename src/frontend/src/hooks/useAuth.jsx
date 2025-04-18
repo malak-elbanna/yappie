@@ -5,7 +5,7 @@ const useAuth = () => {
   const [userId, setUserId] = useState(null);
 
   useEffect(() => {
-    const token = sessionStorage.getItem('token');
+    const token = sessionStorage.getItem('access_token');
     if (token) {
       try {
         const decoded = jwtDecode(token); 

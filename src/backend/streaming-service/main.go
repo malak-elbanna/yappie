@@ -14,18 +14,18 @@ import (
 func main() {
 	router := gin.Default()
 
-	client := config.ConnectDB()
-	defer client.Disconnect(nil)
-
 	err := godotenv.Load()
 	if err != nil {
 		log.Fatal("Error loading .env file")
 	}
 
+	client := config.ConnectDB()
+	defer client.Disconnect(nil)
+
 	bookCollection := config.GetCollection(client, "books")
 	controllers.InitBookController(bookCollection)
 
-	router.Use(cors.Default())
+	router.Use(cors.AllowAll())
 	routes.BookRoutes(router)
 	routes.PlaybackRoutes(router)
 	routes.DownloadRoutes(router)
