@@ -2,14 +2,19 @@ import React, {useState, useEffect} from "react";
 import { getProfilePage } from "../Api";
 const Profile = () => {
     const [profile, setProfile] = useState(null);
+    const [userInfo, setUserInfo] = useState({name: "", email: ""});
     useEffect(() => {
         let userId = null;
         try {
             const token = sessionStorage.getItem("token");
             if (token) {
-                const payloadBase64 = token.split('.')[1];
-                const decodedPayload = JSON.parse(atob(payloadBase64));
+                const [header, payload, signature] = token.split('.');
+                const decodedPayload = JSON.parse(atob(payload.replace(/-/g, '+').replace(/_/g, '/')));
                 userId = decodedPayload.sub;
+                setUserInfo({
+                    name: decodedPayload.name,
+                    email: decodedPayload.email
+                });
             }
         } catch (error) {
         console.error("Invalid token:", error);
@@ -25,7 +30,8 @@ const Profile = () => {
 
     return (
         <div className="p-6 max-w-xl mx-auto">
-        <h1 className="text-2xl font-bold mb-4">Welcome, {profile.name}</h1>
+        <h1 className="text-2xl font-bold mb-4">Welcome, {userInfo.name}</h1>
+        <p className="mb-2"><strong>Email:</strong> {userInfo.email}</p>
         <p className="mb-4"><strong>Bio:</strong> {profile.bio || "No bio yet"}</p>
             <div className="mb-4">
                 <h2 className="text-xl font-semibold">Favorite Books</h2>
