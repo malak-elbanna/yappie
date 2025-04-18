@@ -58,6 +58,15 @@ services:
     command: ["node", "server"]
     depends_on:
       - rabbitmq
+      
+  review-service:
+    build:
+      context: ./backend/review-service
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend/review-service/.env
+    ports:
+      - "5003:5003"
 
   db:
     image: postgres:13
