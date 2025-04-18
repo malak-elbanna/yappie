@@ -12,7 +12,7 @@ const BookDetails = () => {
 
   const [book, setBook] = useState(null);
   const [positions, setPositions] = useState({});
-  const [currentAudio, setCurrentAudio] = useState(null);
+  // const [currentAudio, setCurrentAudio] = useState(null);
   const [reviews, setReviews] = useState([]);
   const [reviewSummary, setReviewSummary] = useState(null);
   const [newReview, setNewReview] = useState({ rating: 5, comment: '' });
@@ -22,7 +22,6 @@ const BookDetails = () => {
       .then(res => setBook(res.data))
       .catch(err => console.error(err));
 
-    // Fetch reviews and review summary using axios
     axios.get(`${REVIEW_SERVICE_URL}/reviews/${id}`)
       .then(res => setReviews(res.data))
       .catch(err => console.error(err));
