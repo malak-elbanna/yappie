@@ -84,13 +84,13 @@ services:
   profile-db:
     image: postgres:13
     environment:
-      POSTGRES_USER: pmsuser
-      POSTGRES_PASSWORD: pmspass
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
       POSTGRES_DB: profile_db
     ports:
       - "5434:5432"
     volumes:
-      - user_data:/var/lib/postgresql/data
+      - user_data:/var/lib/postgresql/profile_data
 
   redis:
     image: redis:latest  
