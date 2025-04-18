@@ -14,13 +14,13 @@ import (
 func main() {
 	router := gin.Default()
 
-	client := config.ConnectDB()
-	defer client.Disconnect(nil)
-
 	err := godotenv.Load()
 	if err != nil {
 		log.Fatal("Error loading .env file")
 	}
+
+	client := config.ConnectDB()
+	defer client.Disconnect(nil)
 
 	bookCollection := config.GetCollection(client, "books")
 	controllers.InitBookController(bookCollection)
