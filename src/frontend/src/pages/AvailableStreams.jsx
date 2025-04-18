@@ -31,11 +31,11 @@ export default function AvailableStreams() {
         <p>No active streams at the moment.</p>
       ) : (
         <ul className="space-y-4">
-          {rooms.map((room) => (
+          {Object.keys(rooms).map((room) => (
             <li key={room} className="border p-4 rounded shadow flex justify-between items-center">
-              <span className="font-medium">{room}</span> 
+              <span className="font-medium">{room}</span>
               <Link
-                to={`/stream/${room}`}  
+                to={`/stream/${room}`}
                 className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded"
               >
                 Join Stream

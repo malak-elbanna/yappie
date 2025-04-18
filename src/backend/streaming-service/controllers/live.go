@@ -52,11 +52,25 @@ func HandleLiveAudio(c *gin.Context) {
 			break
 		}
 
+		if messageType == websocket.TextMessage {
+			for client := range rooms[roomID] {
+				if client != conn {
+					err := client.WriteMessage(websocket.TextMessage, data)
+					if err != nil {
+						log.Println("Error broadcasting emoji:", err)
+						client.Close()
+						delete(rooms[roomID], client)
+					}
+				}
+			}
+			continue
+		}
+
 		for client := range rooms[roomID] {
 			if client != conn {
 				err := client.WriteMessage(messageType, data)
 				if err != nil {
-					log.Println("Error broadcasting:", err)
+					log.Println("Error broadcasting audio:", err)
 					client.Close()
 					delete(rooms[roomID], client)
 				}
