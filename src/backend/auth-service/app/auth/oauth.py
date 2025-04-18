@@ -1,6 +1,7 @@
 from authlib.integrations.flask_client import OAuth
 import os
 from app.core.config import GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET
+from flask_jwt_extended import create_access_token, create_refresh_token
 
 oauth = OAuth()
 
@@ -23,7 +24,7 @@ def google_callback_handler():
     from app.models.user import User
     from app.core.extensions import db
     from flask import redirect
-    from flask_jwt_extended import create_access_token
+    from flask_jwt_extended import create_access_token, create_refresh_token
 
     token = oauth.google.authorize_access_token()
     user_info = oauth.google.get('userinfo').json()
@@ -34,5 +35,9 @@ def google_callback_handler():
         user = User(email=email, name=user_info.get('name', ''), password_hash=None)
         db.session.add(user)
         db.session.commit()
-    access_token = create_access_token(identity=user.id)
-    return redirect(f"http://localhost:5173/dashboard?token={access_token}")
+
+    user_id = str(user.id)
+    access_token = create_access_token(identity=user_id)
+    refresh_token = create_refresh_token(identity=user_id)
+    
+    return redirect(f"http://localhost:5173/dashboard?access_token={access_token}&refresh_token={refresh_token}")

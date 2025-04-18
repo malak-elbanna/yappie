@@ -26,6 +26,8 @@ func GetAllBooks(c *gin.Context) {
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
 
+	log.Println("GetAllBooks request")
+
 	filter := make(map[string]interface{})
 	queryParams := c.Request.URL.Query()
 
@@ -40,6 +42,7 @@ func GetAllBooks(c *gin.Context) {
 		}
 	}
 
+	log.Println("check redis")
 	cachingKey := "books:" + url.QueryEscape(c.Request.URL.RawQuery)
 
 	cachedBooks, err := config.RedisClient.Get(ctx, cachingKey).Result()
@@ -51,17 +54,23 @@ func GetAllBooks(c *gin.Context) {
 		}
 	}
 
+	log.Println("cache miss")
 	cursor, err := bookCollection.Find(ctx, filter)
 	if err != nil {
+		log.Printf("MongoDB Find error: %v", err)
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Error fetching books"})
 		return
 	}
 
+	log.Println("mongo results")
 	var books []models.Book
 	if err := cursor.All(ctx, &books); err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "Error decoding books into model.Book"})
+		log.Printf("MongoDB cursor.All error: %v", err)
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Error decoding books"})
 		return
 	}
+
+	log.Println("books retrieved")
 
 	bytes, err := json.Marshal(books)
 	if err != nil {
