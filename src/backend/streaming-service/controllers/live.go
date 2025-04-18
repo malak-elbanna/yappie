@@ -1,4 +1,3 @@
-// controllers/stream.go
 package controllers
 
 import (
@@ -9,15 +8,21 @@ import (
 	"github.com/gorilla/websocket"
 )
 
+var rooms = make(map[string]map[*websocket.Conn]bool)
+
 var upgrader = websocket.Upgrader{
 	CheckOrigin: func(r *http.Request) bool {
 		return true
 	},
 }
 
-var clients = make(map[*websocket.Conn]bool)
-
 func HandleLiveAudio(c *gin.Context) {
+	roomID := c.Param("roomId")
+	if roomID == "" {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "roomId is required"})
+		return
+	}
+
 	conn, err := upgrader.Upgrade(c.Writer, c.Request, nil)
 	if err != nil {
 		log.Println("WebSocket upgrade failed:", err)
@@ -25,8 +30,20 @@ func HandleLiveAudio(c *gin.Context) {
 	}
 	defer conn.Close()
 
-	clients[conn] = true
-	defer delete(clients, conn)
+	if _, ok := rooms[roomID]; !ok {
+		rooms[roomID] = make(map[*websocket.Conn]bool)
+	}
+
+	rooms[roomID][conn] = true
+	log.Printf("Client joined room: %s", roomID)
+
+	defer func() {
+		delete(rooms[roomID], conn)
+		if len(rooms[roomID]) == 0 {
+			delete(rooms, roomID)
+		}
+		log.Printf("Client left room: %s", roomID)
+	}()
 
 	for {
 		messageType, data, err := conn.ReadMessage()
@@ -35,15 +52,26 @@ func HandleLiveAudio(c *gin.Context) {
 			break
 		}
 
-		for client := range clients {
+		for client := range rooms[roomID] {
 			if client != conn {
 				err := client.WriteMessage(messageType, data)
 				if err != nil {
 					log.Println("Error broadcasting:", err)
 					client.Close()
-					delete(clients, client)
+					delete(rooms[roomID], client)
 				}
 			}
 		}
 	}
+}
+
+func GetActiveStreams(c *gin.Context) {
+	activeRooms := make(map[string]int)
+	for roomID, clients := range rooms {
+		if len(clients) > 0 {
+			activeRooms[roomID] = len(clients)
+		}
+	}
+
+	c.JSON(http.StatusOK, gin.H{"rooms": activeRooms})
 }

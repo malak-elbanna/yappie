@@ -32,6 +32,7 @@ export default function Navbar() {
                         <a href="/" className="hover:text-purple-400">Home</a>
                         <a href="/books" className="hover:text-purple-400">Books</a>
                         <a href="/categories" className="hover:text-purple-400">Categories</a>
+                        <a href="/streams" className="hover:text-purple-400">Available Streams</a>
                     </nav>
                 </div>
                 <div className="flex items-center space-x-4">

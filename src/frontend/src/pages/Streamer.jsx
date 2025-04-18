@@ -1,12 +1,19 @@
 import React, { useEffect, useRef, useState } from "react";
+import useAuth from "../hooks/useAuth"; 
+import { useParams } from "react-router-dom";
 
 export default function LiveAudioStreaming() {
+  const { roomId } = useParams();
+  console.log("roomId:", roomId);  
+  
+  const { userId } = useAuth();
   const [isBroadcaster, setIsBroadcaster] = useState(false);
   const socketRef = useRef(null);
   const audioContextRef = useRef(null);
   const [status, setStatus] = useState("Disconnected");
 
-  const SERVER_URL = "ws://localhost:8080/stream/live";
+  const getSocketUrl = () =>
+    `ws://localhost:8080/stream/live/${roomId}?userId=${userId}`;    
 
   useEffect(() => {
     return () => {
@@ -17,78 +24,81 @@ export default function LiveAudioStreaming() {
   }, []);
 
   const startBroadcasting = async () => {
-    socketRef.current = new WebSocket(SERVER_URL);
+    if (!userId) return alert("User not authenticated.");
+
+    socketRef.current = new WebSocket(getSocketUrl());
     socketRef.current.binaryType = "arraybuffer";
-  
+
     socketRef.current.onopen = async () => {
       setStatus("Broadcasting...");
-  
+
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
       const audioContext = new (window.AudioContext || window.webkitAudioContext)();
       const source = audioContext.createMediaStreamSource(stream);
-  
       const processor = audioContext.createScriptProcessor(4096, 1, 1);
-  
+
       source.connect(processor);
       processor.connect(audioContext.destination);
-  
+
       processor.onaudioprocess = (e) => {
-        const input = e.inputBuffer.getChannelData(0); 
+        const input = e.inputBuffer.getChannelData(0);
         const pcmData = new Int16Array(input.length);
-  
+
         for (let i = 0; i < input.length; i++) {
           let s = Math.max(-1, Math.min(1, input[i]));
           pcmData[i] = s < 0 ? s * 0x8000 : s * 0x7FFF;
         }
-  
+
         if (socketRef.current.readyState === WebSocket.OPEN) {
           socketRef.current.send(pcmData.buffer);
         }
       };
-  
+
       socketRef.current.onclose = () => {
         processor.disconnect();
         source.disconnect();
         setStatus("Disconnected");
       };
     };
-  };  
+  };
 
   const startListening = () => {
-    socketRef.current = new WebSocket(SERVER_URL);
+    if (!userId) return alert("User not authenticated.");
+
+    socketRef.current = new WebSocket(getSocketUrl());
     socketRef.current.binaryType = "arraybuffer";
     audioContextRef.current = new (window.AudioContext || window.webkitAudioContext)();
-  
+
     socketRef.current.onopen = () => {
       setStatus("Listening...");
     };
-  
+
     socketRef.current.onmessage = (e) => {
       const int16Array = new Int16Array(e.data);
       const float32Array = new Float32Array(int16Array.length);
-  
+
       for (let i = 0; i < int16Array.length; i++) {
         float32Array[i] = int16Array[i] / 0x7FFF;
       }
-  
+
       const buffer = audioContextRef.current.createBuffer(
         1,
         float32Array.length,
         audioContextRef.current.sampleRate
       );
-  
+
       buffer.copyToChannel(float32Array, 0);
-  
+
       const source = audioContextRef.current.createBufferSource();
       source.buffer = buffer;
       source.connect(audioContextRef.current.destination);
       source.start();
     };
-  
+
     socketRef.current.onclose = () => {
       setStatus("Disconnected");
     };
-  };  
+  };
 
   const handleStart = () => {
     isBroadcaster ? startBroadcasting() : startListening();

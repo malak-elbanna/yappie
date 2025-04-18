@@ -9,6 +9,7 @@ func StreamRoutes(router *gin.Engine) {
 	stream := router.Group("/stream")
 	{
 		stream.GET("/:bookId/:chapterIndex", controllers.StreamChapter)
-		stream.GET("/live", controllers.HandleLiveAudio)
+		stream.GET("/live/:roomId", controllers.HandleLiveAudio)
+		stream.GET("/active", controllers.GetActiveStreams)
 	}
 }
