@@ -1,9 +1,9 @@
 from flask import Flask
-from models.profile import db
-from config import SQLALCHEMY_DATABASE_URI
+from .models.profile import db
+from .config import SQLALCHEMY_DATABASE_URI
 from flask_migrate import Migrate
 from flask_cors import CORS
-from routes.profile_routes import profile_bp
+from .routes.profile_routes import profile_bp
 
 
 def create_app():
@@ -15,6 +15,6 @@ def create_app():
     db.init_app(app)
     migrate = Migrate(app, db)
 
-    app.register_blueprint(profile_bp, url_prefix='/profile')
+    app.register_blueprint(profile_bp)
 
     return app

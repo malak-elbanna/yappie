@@ -73,3 +73,67 @@ export const getBooks = async () => {
     throw error;
   }
 };
+
+export const getProfilePage = async(userId) => {
+    try {
+        const response = await axios.get(`${API_URL}/profile-page/${userId}`);
+        return response.data;
+    } catch (error) {
+        console.error("Failed to fetch profile page: ", error);
+        throw error;
+    }
+}
+
+export const editBio = async (userId, bioData) => {
+    try {
+        const token = sessionStorage.getItem("token");
+        const response = await fetch(`${API_URL}/profile-page/${userId}/edit-bio`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            },
+            body: JSON.stringify(bioData)
+        });
+        return await response.json();
+    } catch (error) {
+        console.error("error updating bio: ", error);
+        throw error;
+    }
+};
+
+export const addPreference = async (userId, preferenceData) => {
+    try {
+        const token = sessionStorage.getItem("token");
+        const response = await fetch(`${API_URL}/profile-page/${userId}/add-preference`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            },
+            body: JSON.stringify(preferenceData)
+        });
+        return await response.json();
+    } catch (error) {
+        console.error("error adding preference: ", error);
+        throw error;
+    }
+}
+
+export const removePreference = async (userId, preferenceData) => {
+    try {
+        const token = sessionStorage.getItem("token");
+        const response = await fetch(`${API_URL}/profile-page/${userId}/remove-preference`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            },
+            body: JSON.stringify(preferenceData)
+        });
+        return await response.json();
+    } catch (error) {
+        console.error("error removing preference: ", error);
+        throw error;
+    }
+}

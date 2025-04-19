@@ -1,5 +1,5 @@
 from flask import request, jsonify
-from models.profile import db, UserProfile
+from app.models.profile import db, UserProfile
 
 profile_not_found = "Profile not found."
 
@@ -78,8 +78,8 @@ def add_preference(user_id):
     content_type = data.get('type')
     genre = data.get('genre')
 
-    if content_type not in ["audiobooks", "podcasts"]:
-        return jsonify({"error": "Type must be 'audiobooks' or 'podcasts'"}), 400
+    if content_type != "audiobooks":
+        return jsonify({"error": "Type must be 'audiobooks'"}), 400
     
     profile = UserProfile.query.filter_by(user_id=user_id).first()
     if not profile:
@@ -87,11 +87,11 @@ def add_preference(user_id):
     if not profile.preferences:
         profile.preferences = {}
     
-    if content_type not in profile.preferences:
-        profile.preferences[content_type] = []
+    if "audiobooks" not in profile.preferences:
+        profile.preferences["audiobooks"] = []
     
-    if genre not in profile.preferences[content_type]:
-        profile.preferences[content_type].append(genre)
+    if genre not in profile.preferences["audiobooks"]:
+        profile.preferences["audiobooks"].append(genre)
         db.session.commit()
     
     return jsonify({"message": "New preference is added successfully."}), 200

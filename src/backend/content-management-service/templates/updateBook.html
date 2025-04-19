@@ -175,7 +175,22 @@ textarea.form-control {
 
             <div class="mb-3">
                 <label for="chapters" class="form-label">Chapters</label>
-                <input type="text" class="form-control" id="chapters" name="chapters" value="{{ book.chapters }}">
+                <select class="form-select mb-2" id="chapter-select" onchange="loadChapterTitle()">
+                    <option value="">Select a chapter to edit</option>
+                    {% if book.chapters %}
+                        {% for chapter in book.chapters %}
+                            <option value="{{ loop.index0 }}">Chapter {{ loop.index0 }} - {{ chapter.title }}</option>
+                        {% endfor %}
+                    {% endif %}
+                </select>
+                <div id="chapter-edit-section">
+                    <input type="hidden" id="chapter-index" value="">
+                    <label for="chapter-title" class="form-label">Chapter Title</label>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="chapter-title" name="chapter-title">
+                        <button class="btn btn-outline-primary" type="button" onclick="updateChapterTitle()">Update</button>
+                    </div>
+                </div>
             </div>
 
             <div class="mb-3">
@@ -222,6 +237,55 @@ textarea.form-control {
     });
 }
 
+    function loadChapterTitle() {
+        const select = document.getElementById("chapter-select");
+        const chapterIndex = select.value;
+        const editSection = document.getElementById("chapter-edit-section");
+        
+        if (chapterIndex === "") {
+            editSection.style.display = "none";
+            return;
+        }
+        
+        document.getElementById("chapter-index").value = chapterIndex;
+        document.getElementById("chapter-title").value = JSON.parse('{{ book.chapters|tojson }}')[chapterIndex].title;
+        editSection.style.display = "block";
+    }
+    function updateChapterTitle() {
+        const id = document.getElementById("audiobook_id").value;
+        const chapterIndex = document.getElementById("chapter-index").value;
+        const newTitle = document.getElementById("chapter-title").value;
+        
+        if (!newTitle.trim()) {
+            alert("Chapter title cannot be empty");
+            return;
+        }
+        
+        fetch(`/${id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                chapterIndex: parseInt(chapterIndex),
+                title: newTitle
+            })
+        })
+        .then(response => {
+            if (response.ok) {
+                alert("Chapter title updated successfully");
+                const select = document.getElementById("chapter-select");
+                select.options[parseInt(chapterIndex)+1].text = `Chapter ${parseInt(chapterIndex)+1} - ${newTitle}`;
+                document.getElementById("chapter-title").value = newTitle;
+            } else {
+                alert("Failed to update chapter title");
+            }
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            alert("An error occurred while updating the chapter title");
+        });
+    }
     </script>
 </body>
 </html>

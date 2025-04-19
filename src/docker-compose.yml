@@ -101,6 +101,30 @@ services:
     ports:
       - "4000:4000"
     command: ["node", "server"]
+    depends_on:
+      - rabbitmq
+      
+  review-service:
+    build:
+      context: ./backend/review-service
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend/review-service/.env
+    ports:
+      - "5003:5003"
+
+  profile-service:
+    build: 
+      context: ./backend/profile-management-service
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend/profile-management-service/.env
+    ports:
+      - "5002:5002"
+    depends_on:
+      - profile-db
+    volumes:
+      - ./backend/profile-management-service:/app
 
   db:
     image: postgres:13
@@ -112,6 +136,17 @@ services:
       - "5432:5432"
     volumes:
       - user_data:/var/lib/postgresql/data
+
+  profile-db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: profile_db
+    ports:
+      - "5434:5432"
+    volumes:
+      - profile_data:/var/lib/postgresql/data
 
   redis:
     image: redis:latest  
@@ -232,6 +267,7 @@ volumes:
   user_data:
 
   kong_data:
+  profile_data:
 
   konga_data:
 
