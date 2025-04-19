@@ -7,7 +7,7 @@ export default function AvailableStreams() {
   useEffect(() => {
     const fetchRooms = async () => {
       try {
-        const res = await fetch("http://localhost:8080/stream/active");
+        const res = await fetch("http://localhost:8000/streaming-service/stream/active");
         const data = await res.json();
         setRooms(data.rooms);
       } catch (err) {
