@@ -1,11 +1,8 @@
 from flask_pymongo import PyMongo
-import os 
-from dotenv import load_dotenv
-
-load_dotenv()
+from config import MONGO_URI
 
 mongo = PyMongo()
 
 def init_db(app):
-    app.config["MONGO_URI"] = os.getenv('MONGO_URI')
+    app.config["MONGO_URI"] = MONGO_URI
     mongo.init_app(app)

@@ -4,7 +4,7 @@ from services.db import mongo
 from bson.objectid import ObjectId
 from werkzeug.utils import secure_filename
 from gridfs import GridFS
-from config import DATABASE_NAME, COLLECTION
+
 
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'mp4', 'm4a', 'mp3'}
 
@@ -15,8 +15,8 @@ def allowed_file(filename):
 not_found = "audiobook not found"
 
 def get_collection():
-    db = mongo.cx[DATABASE_NAME]
-    return db[COLLECTION]
+    db = mongo.cx["audiobooks_db"]
+    return db["books"]
 
 def add_page():
     return render_template("addBook.html")
@@ -58,7 +58,7 @@ def add_audiobook():
 
 
 def update_audiobook(id):
-    db = mongo.cx[DATABASE_NAME]
+    db = mongo.cx["audiobooks_db"]
     fs = GridFS(db)
 
     data = request.form.to_dict()
@@ -94,3 +94,18 @@ def get_audiobook_update(id):
         return render_template('updateBook.html', book=book)
     else:
         return "Book not found", 404
+
+def update_chapter(id):
+    collection = get_collection()
+    data = request.get_json()
+    try:
+        result = collection.update_one(
+            {"_id": ObjectId(id)},
+            {"$set": {f"chapters.{data['chapterIndex']}.title": data['title']}}
+        )
+        if result.modified_count:
+            return jsonify({"message": "chapter updated"}), 200
+        else:
+            return jsonify({"error": "failed to update chapter"}), 400
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
