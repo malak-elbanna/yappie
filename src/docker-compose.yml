@@ -120,7 +120,7 @@ services:
     env_file:
       - ./backend/profile-management-service/.env
     ports:
-      - "5002:5002"
+      - "5004:5004"
     depends_on:
       - profile-db
     volumes:
@@ -164,7 +164,8 @@ services:
       KONG_PG_USER: kong
       KONG_PG_PASSWORD: kong
     depends_on:
-      - kong-database
+      kong-database:
+        condition: service_healthy
 
   kong-database:
     image: postgres:13
@@ -172,6 +173,14 @@ services:
       POSTGRES_USER: kong
       POSTGRES_DB: kong
       POSTGRES_PASSWORD: kong
+
+    healthcheck:
+      test: ["CMD", "pg_isready","-q","-U","kong", "-d", "kong"]
+      interval: 30s
+      timeout: 60s
+      retries: 5
+      start_period: 80s
+
     ports:
       - "5433:5432"
     volumes:
@@ -190,7 +199,10 @@ services:
       KONG_ADMIN_ERROR_LOG: /dev/stderr
       KONG_ADMIN_LISTEN: 0.0.0.0:8001, 0.0.0.0:8444 ssl
     depends_on:
-      - kong-migrations
+      kong-migrations:
+        condition: service_completed_successfully
+      kong-database:
+        condition: service_healthy
     ports:
       - "8000:8000" 
       - "8001:8001" 
@@ -203,6 +215,12 @@ services:
       POSTGRES_USER: konga
       POSTGRES_PASSWORD: konga
       POSTGRES_DB: konga
+    healthcheck:
+      test: ["CMD", "pg_isready","-q","-U","konga", "-d", "konga"]
+      interval: 30s
+      timeout: 60s
+      retries: 5
+      start_period: 80s
     volumes:
       - konga_data:/var/lib/postgresql9.6/data
 
@@ -218,8 +236,10 @@ services:
     ports:
       - "1337:1337"
     depends_on:
-      - kong
-      - konga-database
+      kong:
+        condition: service_healthy
+      konga-database:
+        condition: service_healthy
 
   kong-initialiser:
     image: kong/deck:latest
@@ -228,7 +248,8 @@ services:
       - ./kong-config/kong.yml:/config/kong.yml
     command: gateway sync /config/kong.yml --kong-addr=http://kong:8001
     depends_on:
-      - kong
+      kong:
+        condition: service_healthy
 
 
   kong-configurator:
@@ -240,7 +261,6 @@ services:
     volumes:
       - ./kong-config/kong.yml:/config/kong.yml
     command: gateway dump  -o /config/kong.yml --kong-addr=http://kong:8001 --yes && gateway sync /config/kong.yml --kong-addr=http://kong:8001
-    restart: always
 
   frontend:
     build:
