@@ -4,7 +4,8 @@ import useAuth from '../hooks/useAuth';
 import API from '../Stream';
 import axios from 'axios';
 
-const REVIEW_SERVICE_URL = 'http://localhost:5003';
+const REVIEW_SERVICE_URL = 'review-service';
+const API_URL = 'http://localhost:8000'
 
 const BookDetails = () => {
   const { id } = useParams();
@@ -22,11 +23,11 @@ const BookDetails = () => {
       .then(res => setBook(res.data))
       .catch(err => console.error(err));
 
-    axios.get(`${REVIEW_SERVICE_URL}/reviews/${id}`)
+    axios.get(`${API_URL}/${REVIEW_SERVICE_URL}/reviews/${id}`)
       .then(res => setReviews(res.data))
       .catch(err => console.error(err));
 
-    axios.get(`${REVIEW_SERVICE_URL}/reviews/${id}/summary`)
+    axios.get(`${API_URL}/${REVIEW_SERVICE_URL}/reviews/${id}/summary`)
       .then(res => setReviewSummary(res.data))
       .catch(err => console.error(err));
   }, [id]);
@@ -53,18 +54,18 @@ const BookDetails = () => {
 
   const handleSubmitReview = (e) => {
     e.preventDefault();
-    axios.post(`${REVIEW_SERVICE_URL}/reviews`, {
+    axios.post(`${API_URL}/${REVIEW_SERVICE_URL}/reviews`, {
       audiobookId: id,
       userId,
       rating: newReview.rating,
       comment: newReview.comment
     })
       .then(() => {
-        axios.get(`${REVIEW_SERVICE_URL}/reviews/${id}`)
+        axios.get(`${API_URL}/${REVIEW_SERVICE_URL}/reviews/${id}`)
           .then(res => setReviews(res.data))
           .catch(err => console.error(err));
 
-        axios.get(`${REVIEW_SERVICE_URL}/reviews/${id}/summary`)
+        axios.get(`${API_URL}/${REVIEW_SERVICE_URL}/reviews/${id}/summary`)
           .then(res => setReviewSummary(res.data))
           .catch(err => console.error(err));
 
