@@ -104,27 +104,59 @@ services:
     depends_on:
       - rabbitmq
       
-  review-service:
+  review-service-1:
     build:
       context: ./backend/review-service
       dockerfile: Dockerfile
     env_file:
       - ./backend/review-service/.env
+    environment:
+      PORT: 5003
     ports:
       - "5003:5003"
+  
+  review-service-2:
+    build:
+      context: ./backend/review-service
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend/review-service/.env
+    environment:
+      PORT: 5004
+    ports:
+      - "5004:5004"
 
-  profile-service:
+
+  profile-service-1:
     build: 
       context: ./backend/profile-management-service
       dockerfile: Dockerfile
     env_file:
       - ./backend/profile-management-service/.env
+    environment:
+      PORT: 5005
     ports:
-      - "5004:5004"
+      - "5005:5005"
     depends_on:
       - profile-db
     volumes:
       - ./backend/profile-management-service:/app
+
+  profile-service-2:
+    build: 
+      context: ./backend/profile-management-service
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend/profile-management-service/.env
+    environment:
+      PORT: 5006
+    ports:
+      - "5006:5006"
+    depends_on:
+      - profile-db
+    volumes:
+      - ./backend/profile-management-service:/app
+
 
   db:
     image: postgres:13
