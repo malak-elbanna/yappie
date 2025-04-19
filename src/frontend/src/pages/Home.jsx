@@ -15,6 +15,7 @@ export default function Home() {
     const fetchBooks = async () => {
       try {
         const allBooks = await getBooks();
+        console.log(allBooks)
         setBooks(allBooks.slice(0, 4));
       } catch (err) {
         console.error(err);

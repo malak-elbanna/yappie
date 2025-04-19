@@ -31,6 +31,7 @@ const App = () => {
         <Route path="/books" element={<BooksList />} />
         <Route path="/books/:id" element={<BookDetails />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/stream/:roomId" element={<LiveAudioStreaming />} />
         <Route path="/streams" element={<AvailableStreams />} />
         <Route path="/start-stream" element={<StartStream />} />

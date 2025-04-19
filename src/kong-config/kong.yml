@@ -1,31 +1,130 @@
 _format_version: "3.0"
+plugins:
+- config:
+    day: null
+    error_code: 429
+    error_message: API rate limit exceeded
+    fault_tolerant: true
+    header_name: null
+    hide_client_headers: false
+    hour: null
+    limit_by: consumer
+    minute: 5
+    month: null
+    path: null
+    policy: local
+    redis_database: 0
+    redis_host: null
+    redis_password: null
+    redis_port: 6379
+    redis_server_name: null
+    redis_ssl: false
+    redis_ssl_verify: false
+    redis_timeout: 2000
+    redis_username: null
+    second: null
+    year: null
+  enabled: true
+  name: rate-limiting
+  protocols:
+  - grpc
+  - grpcs
+  - http
+  - https
 services:
-  - name: cms-service
-    url: http://cms-service:5001
-    routes:
-      - name: cms-service-route
-        paths:
-          - /admin-cms
-        strip_path: true
-      - name: cms-add-route
-        paths:
-          - /add
-        strip_path: false
-      - name: cms-edit-route
-        paths:
-          - /edit
-        strip_path: false
-
-  - name: auth-service
-    url: http://auth-service:5000
-    routes:
-      - name: auth-service-route
-        paths:
-          - /auth-service
-
-  - name: streaming-service
-    url: http://streaming-service:8080
-    routes:
-      - name: streaming-service-route
-        paths:
-          - /streaming-service
+- connect_timeout: 60000
+  enabled: true
+  host: auth-service
+  name: auth-service
+  port: 5000
+  protocol: http
+  read_timeout: 60000
+  retries: 5
+  routes:
+  - https_redirect_status_code: 426
+    name: auth-service-route
+    path_handling: v0
+    paths:
+    - /auth-service
+    preserve_host: false
+    protocols:
+    - http
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    strip_path: true
+  write_timeout: 60000
+- connect_timeout: 60000
+  enabled: true
+  host: cms-service
+  name: cms-service
+  path: /
+  port: 5001
+  protocol: http
+  read_timeout: 60000
+  retries: 5
+  routes:
+  - https_redirect_status_code: 426
+    name: cms-add-route
+    path_handling: v0
+    paths:
+    - /add
+    preserve_host: false
+    protocols:
+    - http
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    strip_path: false
+  - https_redirect_status_code: 426
+    name: cms-edit-route
+    path_handling: v0
+    paths:
+    - /edit
+    preserve_host: false
+    protocols:
+    - http
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    strip_path: false
+  - https_redirect_status_code: 426
+    name: cms-service-route
+    path_handling: v0
+    paths:
+    - /admin-cms
+    preserve_host: false
+    protocols:
+    - http
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    strip_path: true
+  write_timeout: 60000
+- connect_timeout: 60000
+  enabled: true
+  host: streaming-service
+  name: streaming-service
+  port: 8080
+  protocol: http
+  read_timeout: 60000
+  retries: 5
+  routes:
+  - https_redirect_status_code: 426
+    name: streaming-service-route
+    path_handling: v0
+    paths:
+    - /streaming-service
+    preserve_host: false
+    protocols:
+    - http
+    - https
+    regex_priority: 0
+    request_buffering: true
+    response_buffering: true
+    strip_path: true
+  write_timeout: 60000

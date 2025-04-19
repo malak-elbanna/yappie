@@ -1,9 +1,9 @@
 import axios from "axios";
 
-const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8080";
-const AUTH_URL = import.meta.env.VITE_AUTH_SERVICE || "http://127.0.0.1:5000";
-const STREAMING_URL = import.meta.env.VITE_STREAMING_SERVICE;
-const CMS_URL = import.meta.env.VITE_CMS_SERVICE || "http://127.0.0.1:5001";
+const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
+const AUTH_URL = import.meta.env.VITE_AUTH_SERVICE || "auth-service";
+const STREAMING_URL = import.meta.env.VITE_STREAMING_SERVICE || "streaming-service";
+const CMS_URL = import.meta.env.VITE_CMS_SERVICE || "cms-admin";
 
 export const login = async (email, password) => {
   return axios.post(`${API_URL}/${AUTH_URL}/auth/login`, { email, password });

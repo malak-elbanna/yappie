@@ -56,8 +56,6 @@ services:
     ports:
       - "4000:4000"
     command: ["node", "server"]
-    depends_on:
-      - rabbitmq
 
   db:
     image: postgres:13
@@ -143,14 +141,25 @@ services:
       - kong
       - konga-database
 
+  kong-initialiser:
+    image: kong/deck:latest
+    container_name: kong-initialiser
+    volumes:
+      - ./kong-config/kong.yml:/config/kong.yml
+    command: gateway sync /config/kong.yml --kong-addr=http://kong:8001
+    depends_on:
+      - kong
+
+
   kong-configurator:
     image: kong/deck:latest
     container_name: kong-configurator
     depends_on:
-      - kong
+      kong-initialiser:
+          condition: service_completed_successfully
     volumes:
-      - ./kong-config/kong.yml:/config/kong.yml:ro
-    command: gateway sync /config/kong.yml --kong-addr=http://kong:8001
+      - ./kong-config/kong.yml:/config/kong.yml
+    command: gateway dump  -o /config/kong.yml --kong-addr=http://kong:8001 --yes && gateway sync /config/kong.yml --kong-addr=http://kong:8001
     restart: always
 
   frontend:
