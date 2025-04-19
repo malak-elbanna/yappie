@@ -13,37 +13,82 @@ services:
       - rabbitmq-lib:/var/lib/rabbitmq/
       - rabbitmq-log:/var/log/rabbitmq
 
-  auth-service:  
+  auth-service-1:  
     build:
       context: ./backend/auth-service
       dockerfile: Dockerfile
     env_file:
       - ./backend/auth-service/.env  
+    environment:
+      PORT: 4999
+    ports:
+      - "4999:4999"
+    depends_on:
+      - db
+      - redis
+
+
+  auth-service-2:  
+    build:
+      context: ./backend/auth-service
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend/auth-service/.env  
+    environment:
+      PORT: 5000
     ports:
       - "5000:5000"
     depends_on:
       - db
       - redis
-    volumes:
-      - ./backend/auth-service:/app  
 
-  cms-service:
+
+  cms-service-1:
     build: 
       context: ./backend/content-management-service
       dockerfile: Dockerfile
     env_file:
       - ./backend/content-management-service/.env
+    environment:
+      PORT: 5001
     ports:
       - "5001:5001"
 
-  streaming-service:
+  cms-service-2:
+    build: 
+      context: ./backend/content-management-service
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend/content-management-service/.env
+    environment:
+      PORT: 5002
+    ports:
+      - "5002:5002"
+
+
+  streaming-service-1:
     build:
       context: ./backend/streaming-service
       dockerfile: Dockerfile
     env_file:
       - ./backend/streaming-service/.env
+    environment:
+      PORT: 8080
     ports:
       - "8080:8080"
+    depends_on:
+      - redis
+
+  streaming-service-2:
+    build:
+      context: ./backend/streaming-service
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend/streaming-service/.env
+    environment:
+      PORT: 8081
+    ports:
+      - "8081:8081"
     depends_on:
       - redis
 
@@ -176,14 +221,25 @@ services:
       - kong
       - konga-database
 
+  kong-initialiser:
+    image: kong/deck:latest
+    container_name: kong-initialiser
+    volumes:
+      - ./kong-config/kong.yml:/config/kong.yml
+    command: gateway sync /config/kong.yml --kong-addr=http://kong:8001
+    depends_on:
+      - kong
+
+
   kong-configurator:
     image: kong/deck:latest
     container_name: kong-configurator
     depends_on:
-      - kong
+      kong-initialiser:
+          condition: service_completed_successfully
     volumes:
-      - ./kong-config/kong.yml:/config/kong.yml:ro
-    command: gateway sync /config/kong.yml --kong-addr=http://kong:8001
+      - ./kong-config/kong.yml:/config/kong.yml
+    command: gateway dump  -o /config/kong.yml --kong-addr=http://kong:8001 --yes && gateway sync /config/kong.yml --kong-addr=http://kong:8001
     restart: always
 
   frontend:
