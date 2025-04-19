@@ -58,6 +58,15 @@ services:
     command: ["node", "server"]
     depends_on:
       - rabbitmq
+      
+  review-service:
+    build:
+      context: ./backend/review-service
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend/review-service/.env
+    ports:
+      - "5003:5003"
 
   profile-service:
     build: 
@@ -135,8 +144,6 @@ services:
       KONG_PROXY_ERROR_LOG: /dev/stderr
       KONG_ADMIN_ERROR_LOG: /dev/stderr
       KONG_ADMIN_LISTEN: 0.0.0.0:8001, 0.0.0.0:8444 ssl
-    volumes:
-      - ./kong.yml:/kong/kong.yml
     depends_on:
       - kong-migrations
     ports:
@@ -145,12 +152,51 @@ services:
       - "8443:8443" 
       - "8444:8444" 
 
+  konga-database:
+    image: postgres:9.6
+    environment:
+      POSTGRES_USER: konga
+      POSTGRES_PASSWORD: konga
+      POSTGRES_DB: konga
+    volumes:
+      - konga_data:/var/lib/postgresql9.6/data
+
+  konga:
+    image: pantsel/konga:latest
+    environment:
+      DB_ADAPTER: postgres
+      DB_HOST: konga-database
+      DB_USER: konga
+      DB_PASSWORD: konga
+      DB_DATABASE: konga
+      NODE_ENV: development
+    ports:
+      - "1337:1337"
+    depends_on:
+      - kong
+      - konga-database
+
+  kong-configurator:
+    image: kong/deck:latest
+    container_name: kong-configurator
+    depends_on:
+      - kong
+    volumes:
+      - ./kong-config/kong.yml:/config/kong.yml:ro
+    command: gateway sync /config/kong.yml --kong-addr=http://kong:8001
+    restart: always
+
   frontend:
     build:
       context: ./frontend
       dockerfile: Dockerfile
     env_file:
-      - ./frontend/.env  
+      - ./frontend/.env 
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true 
     depends_on:
       - notification-service
     ports:
@@ -163,5 +209,16 @@ volumes:
   rabbitmq-log:
     driver: local
   user_data:
+
   kong_data:
   profile_data:
+
+  konga_data:
+
+  kong-config:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: ./kong.yml
+

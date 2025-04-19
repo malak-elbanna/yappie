@@ -1,6 +1,7 @@
 package middleware
 
 import (
+	"log"
 	"net/http"
 	"os"
 	"strings"
@@ -11,7 +12,6 @@ import (
 
 func JWTAuthMiddleware() gin.HandlerFunc {
 	var jwtSecret = []byte(os.Getenv("JWT_SECRET_KEY"))
-
 	return func(c *gin.Context) {
 		authHeader := c.GetHeader("Authorization")
 		if authHeader == "" {
@@ -34,8 +34,8 @@ func JWTAuthMiddleware() gin.HandlerFunc {
 			}
 			return jwtSecret, nil
 		})
-
 		if err != nil || !token.Valid {
+			log.Println("invalid or expired token")
 			c.JSON(http.StatusUnauthorized, gin.H{"error": "Invalid or expired token"})
 			c.Abort()
 			return

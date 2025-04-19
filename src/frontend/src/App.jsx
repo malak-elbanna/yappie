@@ -11,6 +11,9 @@ import NotificationsTest from "./pages/Notifications-test";
 import BooksList from "./pages/BooksList";
 import BookDetails from "./pages/BookDetails";
 import Profile from "./pages/Profile";
+import LiveAudioStreaming from "./pages/Streamer";
+import AvailableStreams from "./pages/AvailableStreams";
+import StartStream from "./pages/StartStream";
 
 const App = () => {
   return (
@@ -28,6 +31,9 @@ const App = () => {
         <Route path="/books" element={<BooksList />} />
         <Route path="/books/:id" element={<BookDetails />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/stream/:roomId" element={<LiveAudioStreaming />} />
+        <Route path="/streams" element={<AvailableStreams />} />
+        <Route path="/start-stream" element={<StartStream />} />
       </Routes>
     </Router>
   );

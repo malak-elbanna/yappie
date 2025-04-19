@@ -20,6 +20,7 @@ const Register = () => {
         navigate("/login"); 
     } catch (err) {
         setError(err.response?.data?.error || "Registration failed"); 
+        console.log(err);
     }
   };
 

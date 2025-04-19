@@ -6,7 +6,7 @@ const BooksList = () => {
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
-    API.get('/books')
+    API.get('/books/')
       .then(res => setBooks(res.data))
       .catch(err => console.error(err));
   }, []);
