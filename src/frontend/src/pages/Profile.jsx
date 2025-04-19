@@ -40,6 +40,7 @@ const Profile = () => {
             const updatedProfile = await editBio(userId, { bio: newBio });
             setProfile(updatedProfile);
             setEditingBio(false);
+            window.location.reload();
         } catch (error) {
             console.error("Error updating bio:", error);
         } finally {

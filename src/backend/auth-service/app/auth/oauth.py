@@ -37,7 +37,10 @@ def google_callback_handler():
         db.session.commit()
 
     user_id = str(user.id)
-    access_token = create_access_token(identity=user_id)
+    access_token = create_access_token(identity=str(user.id), additional_claims={
+        'name': user.name,
+        'email': user.email
+    })
     refresh_token = create_refresh_token(identity=user_id)
     
     return redirect(f"http://localhost:5173/dashboard?access_token={access_token}&refresh_token={refresh_token}")
