@@ -13,7 +13,7 @@ const Profile = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const token = sessionStorage.getItem("token");
+                const token = sessionStorage.getItem("access_token");
                 if (token) {
                     const [header, payload, signature] = token.split('.');
                     const decodedPayload = JSON.parse(atob(payload.replace(/-/g, '+').replace(/_/g, '/')));
