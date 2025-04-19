@@ -16,4 +16,4 @@ ENV PYTHONPATH=/app
 ENV FLASK_APP=main.py
 
 ENTRYPOINT ["./entrypoint.sh"]
-CMD ["flask", "run", "--host=0.0.0.0"]
+CMD ["python", "main.py"]
