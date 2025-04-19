@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"os"
 
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
@@ -14,6 +15,7 @@ import (
 func main() {
 	router := gin.Default()
 
+	router.Use(cors.AllowAll())
 	err := godotenv.Load()
 	if err != nil {
 		log.Fatal("Error loading .env file")
@@ -25,7 +27,6 @@ func main() {
 	bookCollection := config.GetCollection(client, "books")
 	controllers.InitBookController(bookCollection)
 
-	router.Use(cors.AllowAll())
 	routes.BookRoutes(router)
 	routes.PlaybackRoutes(router)
 	routes.DownloadRoutes(router)
@@ -33,5 +34,5 @@ func main() {
 
 	config.InitRedis()
 
-	router.Run(":8080")
+	router.Run(":" + os.Getenv("PORT"))
 }

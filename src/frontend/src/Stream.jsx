@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8080";
-const AUTH_URL = import.meta.env.VITE_AUTH_SERVICE || "http://127.0.0.1:5000";
+const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
+const AUTH_URL = import.meta.env.VITE_AUTH_SERVICE || "auth-service";
 
 const API = axios.create({
   baseURL: 'http://localhost:8000/streaming-service',
