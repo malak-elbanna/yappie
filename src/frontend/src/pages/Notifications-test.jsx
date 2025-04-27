@@ -9,13 +9,27 @@ const NotificationsTest = () => {
             setSocket(io("http://localhost:4000"))
         }
     },[socket])
+
     useEffect(() => {
         if(!socket) return;
         socket.on('connect', () => {
             console.log('Connected to server with ID:', socket.id);
-            socket.emit('STARTED',subscribeTo)
+            const token = sessionStorage.getItem("access_token");
+            if (token) {
+                const [header, payload, signature] = token.split('.');
+                const decodedPayload = JSON.parse(atob(payload.replace(/-/g, '+').replace(/_/g, '/')));
+                socket.emit('STARTED',subscribeTo,decodedPayload.email)
+            }
         });
+        socket.on('RECIEVE',(message)=>{
+          console.log(`${message} was added...Check it out!`)
+        })
     },[socket]);
+
+
+    useEffect(()=>{
+
+    },[])
     
     const subscribe = () => {
         subscribeTo.splice(1,1);
