@@ -38,7 +38,7 @@ def get_audiobook(id):
         return jsonify({"error": not_found}), 404
 
 def add_audiobook():
-    db = mongo.cx[DATABASE_NAME]
+    db = mongo.cx["audiobooks_db"]
     fs = GridFS(db)
 
     data = request.form.to_dict()
