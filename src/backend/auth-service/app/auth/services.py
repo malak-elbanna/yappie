@@ -35,7 +35,8 @@ def login_user(data):
     refresh_token = create_refresh_token(identity=str(user.id))
     return jsonify({
         "access_token": access_token,
-        "refresh_token": refresh_token
+        "refresh_token": refresh_token,
+        "user_id": user.id
     }), 200
 
 def login_admin_user(data):

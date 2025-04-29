@@ -4,6 +4,8 @@ import requests
 
 BOOK_ID = "67f6fff64f5a80cc372aea52"
 REVIEW = "wow amazinggg"
+email = f"testuser{int(time.time())}@example.com"
+password = "securePassword123$"
 
 @pytest.fixture(scope="module")
 def auth_url():
@@ -13,41 +15,38 @@ def auth_url():
 def reviews_url():
     return "http://localhost:5003"
 
-@pytest.fixture
 def test_register_user(auth_url):
-    email = f"testuser{int(time.time())}@example.com"
-    password = f"securePassword{int(time.time())}$"
     name = "Test User"
-
     response = requests.post(
         f"{auth_url}/auth/register",
         json={"email": email, "name": name, "password": password}
     )
     assert response.status_code == 201
-    user_data = response.json()
-    yield user_data['id'], email, password, name
 
-@pytest.fixture
-def test_create_review(auth_url, reviews_url, test_register_user):
-    user_id, email, password, name = test_register_user
-    login_response = requests.post(
+
+def test_review_creation(auth_url, reviews_url):
+    login_res = requests.post(
         f"{auth_url}/auth/login",
-        json={"email": email, "password": password}
+        json={
+            "email": email,
+            "password": password
+        }
     )
-    assert login_response.status_code == 201
+    assert login_res.status_code == 200
+    token = login_res.json()['access_token']
+    user_id = login_res.json()['user_id']
 
-    token = login_response.json().get('token')
-    headers = {"Authorization": f"Bearer {token}"}
-
-    review_data = {
-        "audiobookId": BOOK_ID,
-        "userId": user_id,
-        "rating": 5,
-        "comment": REVIEW
-    }
-    review_response = requests.post(
+    review_res = requests.post(
         f"{reviews_url}/reviews",
-        json=review_data,
-        headers=headers
+        json={
+            "audiobookId": BOOK_ID,
+            "userId": user_id,
+            "rating": 5,
+            "comment": REVIEW
+        },
+        headers={"Authorization": f"Bearer {token}"}
     )
-    assert review_response.status_code == 201
+    assert review_res.status_code == 201
+    
+    review_data = review_res.json()
+    assert review_data['message'] == "Review added"
