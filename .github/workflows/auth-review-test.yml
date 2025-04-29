@@ -41,6 +41,17 @@ jobs:
                 ADMIN_PASSWORD=securepass
                 EOF
         
+        -   name: Create CMS .env file
+            run: |
+                mkdir -p src/backend/content-management-service
+                cat <<EOF > src/backend/content-management-service/.env
+                MONGO_URI=mongodb+srv://salmaayman:LgFYRUMZ3iuGPyzD@cluster0.ufjw6qu.mongodb.net/?retryWrites=true&w=majority
+                SECRET_KEY=secure_secret_key
+                HOST=0.0.0.0
+                PORT=5001
+                DEBUG=True
+                EOF
+        
         -   name: Start Services
             working-directory: src
             run: |

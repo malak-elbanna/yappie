@@ -33,6 +33,14 @@ jobs:
                 ADMIN_PASSWORD=securepass
                 EOF
         
+        -   name: Create Review .env file
+            run: |
+                mkdir -p src/backend/review-service
+                cat <<EOF > src/backend/review-service/.env
+                PORT=5003
+                MONGO_URI=mongodb+srv://salmaayman:LgFYRUMZ3iuGPyzD@cluster0.ufjw6qu.mongodb.net/?retryWrites=true&w=majority
+                EOF
+
         -   name: Create CMS .env file
             run: |
                 mkdir -p src/backend/content-management-service
