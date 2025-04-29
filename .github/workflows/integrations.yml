@@ -46,6 +46,20 @@ jobs:
             run: |
                 docker compose -f docker-compose.test.yml build
                 docker compose -f docker-compose.test.yml up -d
+
+        -   name: Wait for Services
+            run: |
+                echo "Waiting for auth-service..."
+                until curl --fail http://localhost:5000/health || curl --fail http://localhost:5000; do
+                    echo "Auth service not ready yet, retrying in 2s..."
+                    sleep 2
+                done
+
+                echo "Waiting for review-service..."
+                until curl --fail http://localhost:5003; do
+                    echo "Review service not ready yet, retrying in 2s..."
+                    sleep 2
+                done
         
         -   name: Run Tests
             working-directory: src/tests/integration
