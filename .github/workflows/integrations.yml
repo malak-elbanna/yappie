@@ -56,7 +56,7 @@ jobs:
                 done
 
                 echo "Waiting for review-service..."
-                until curl --fail http://localhost:5003; do
+                until curl --fail http://localhost:5003/health; do
                     echo "Review service not ready yet, retrying in 2s..."
                     sleep 2
                 done
