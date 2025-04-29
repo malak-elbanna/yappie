@@ -26,6 +26,17 @@ services:
     ports:
       - "5003:5003"
 
+  cms-service-1:
+    build: 
+      context: ./backend/content-management-service
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend/content-management-service/.env
+    environment:
+      PORT: 5001
+    ports:
+      - "5001:5001"
+
   db:
     image: postgres:13
     environment:
