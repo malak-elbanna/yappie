@@ -55,6 +55,14 @@ jobs:
                 REDIS_PORT=6379
                 JWT_SECRET_KEY=secret-key
                 EOF
+
+                mkdir -p src/backend/profile-management-service
+                cat <<EOF > src/backend/profile-management-service/.env
+                DATABASE_URL=postgresql://postgres:password@profile-db:5432/profile_db
+                HOST=0.0.0.0
+                PORT=5004
+                DEBUG=True
+                EOF
         
         -   name: Start Services
             working-directory: src

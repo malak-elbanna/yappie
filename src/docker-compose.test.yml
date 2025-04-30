@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
 
-  auth-service-2:  
+  auth-service:  
     build:
       context: ./backend/auth-service
       dockerfile: Dockerfile
@@ -15,7 +15,7 @@ services:
     depends_on:
       - db
       - redis
-  review-service-1:
+  review-service:
     build:
       context: ./backend/review-service
       dockerfile: Dockerfile
@@ -26,7 +26,7 @@ services:
     ports:
       - "5003:5003"
 
-  cms-service-1:
+  cms-service:
     build: 
       context: ./backend/content-management-service
       dockerfile: Dockerfile
@@ -37,7 +37,7 @@ services:
     ports:
       - "5001:5001"
 
-  streaming-service-1:
+  streaming-service:
     build:
       context: ./backend/streaming-service
       dockerfile: Dockerfile
@@ -49,6 +49,29 @@ services:
       - "8080:8080"
     depends_on:
       - redis
+
+  profile-service:
+    build: 
+      context: ./backend/profile-management-service
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend/profile-management-service/.env
+    environment:
+      PORT: 5005
+    ports:
+      - "5005:5005"
+    depends_on:
+      - profile-db
+
+  profile-db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: profile_db
+    ports:
+      - "5434:5432"
+
   db:
     image: postgres:13
     environment:
