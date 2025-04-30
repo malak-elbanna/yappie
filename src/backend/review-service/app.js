@@ -1,7 +1,12 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const client = require('prom-client');
+
 require('dotenv').config();
+
+const collectDefaultMetrics = client.collectDefaultMetrics;
+collectDefaultMetrics();
 
 const reviewRoutes = require('./routes/reviews');
 
@@ -11,6 +16,11 @@ app.use(express.json());
 
 app.get('/health', (req, res) => {
   res.status(200).send('OK');
+});
+
+app.get('/metrics', async (req, res) => {
+  res.set('Content-Type', client.register.contentType);
+  res.end(await client.register.metrics());
 });
 
 mongoose.connect(process.env.MONGO_URI, {

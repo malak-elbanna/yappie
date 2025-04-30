@@ -1,6 +1,13 @@
 _format_version: "3.0"
 plugins:
-- config:
+- name: rate-limiting
+  enabled: true
+  protocols:
+  - grpc
+  - grpcs
+  - http
+  - https
+  config:
     day: null
     error_code: 429
     error_message: API rate limit exceeded
@@ -24,13 +31,10 @@ plugins:
     redis_username: null
     second: null
     year: null
+  
+- name: prometheus
   enabled: true
-  name: rate-limiting
-  protocols:
-  - grpc
-  - grpcs
-  - http
-  - https
+  
 services:
 - connect_timeout: 60000
   enabled: true

@@ -5,3 +5,4 @@ Flask-Cors
 flask_marshmallow
 werkzeug
 requests
+prometheus-flask-exporter

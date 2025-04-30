@@ -3,6 +3,7 @@ from flask_cors import CORS
 from routes.audiobook_routes import audiobook_bp
 from services.db import init_db
 from config import HOST, PORT, DEBUG, MONGO_URI, SECRET_KEY
+from prometheus_flask_exporter import PrometheusMetrics
 
 app = Flask(__name__)
 
@@ -18,6 +19,7 @@ CORS(app)
 init_db(app)
 
 app.register_blueprint(audiobook_bp)
+metrics = PrometheusMetrics(app)
 
 @app.route('/health', methods=['GET'])
 def health_check():

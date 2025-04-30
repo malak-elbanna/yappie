@@ -7,6 +7,7 @@ from app.core.config import PORT
 from app.auth.oauth import init_oauth
 from flask_cors import CORS
 from dotenv import load_dotenv  
+from prometheus_flask_exporter import PrometheusMetrics
 
 load_dotenv()
 
@@ -22,6 +23,8 @@ db.init_app(app)
 jwt.init_app(app) 
 migrate = Migrate(app, db)  
 init_oauth(app)
+
+metrics = PrometheusMetrics(app)
 
 @jwt.token_in_blocklist_loader
 def check_if_token_revoked(jwt_header, jwt_payload):
