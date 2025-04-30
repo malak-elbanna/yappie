@@ -1,4 +1,4 @@
-name: Admin-CMS Integration Tests
+name: Streaming-Reviews Integration Tests
 
 on: [push, pull_request]
 
@@ -47,7 +47,7 @@ jobs:
                 PORT=5001
                 DEBUG=True
                 EOF
-        
+
                 mkdir -p src/backend/streaming-service
                 cat <<EOF > src/backend/streaming-service/.env
                 MONGO_URI=mongodb+srv://salmaayman:LgFYRUMZ3iuGPyzD@cluster0.ufjw6qu.mongodb.net/?retryWrites=true&w=majority
@@ -59,8 +59,8 @@ jobs:
         -   name: Start Services
             working-directory: src
             run: |
-                docker compose -f docker-compose.test.yml build auth-service-2 db redis cms-service-1
-                docker compose -f docker-compose.test.yml up -d auth-service-2 db redis cms-service-1
+                docker compose -f docker-compose.test.yml build
+                docker compose -f docker-compose.test.yml up -d
         
         -   name: Wait for Services
             run: |
@@ -70,19 +70,26 @@ jobs:
                     sleep 2
                 done
 
-                echo "Waiting for content-management-service..."
-                until curl --fail http://localhost:5001/health; do
-                    echo "content management service not ready yet, retrying in 2s..."
+                echo "Waiting for review-service..."
+                until curl --fail http://localhost:5003/health; do
+                    echo "Review service not ready yet, retrying in 2s..."
                     sleep 2
                 done
-        
+
+                echo "Waiting for streaming-service..."
+                until curl --fail http://localhost:8080/health; do
+                    echo "Review service not ready yet, retrying in 2s..."
+                    sleep 2
+                done
+
         -   name: Run Tests
             working-directory: src/tests/integration
             env:
                 AUTH_SERVICE_URL: http://localhost:5000
-                CMS_SERVICE_URL: http://localhost:5001
-            run: pytest test_admin_cms.py -v
-        
+                REVIEW_SERVICE_URL: http://localhost:5003
+                STREAMING_SERVICE_URL: http://localhost:8080
+            run: pytest test_stream_reviews.py -v
+    
         -   name: Stop containers
             if: always()
             run: cd src && docker compose -f docker-compose.test.yml down

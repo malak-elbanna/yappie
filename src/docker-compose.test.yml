@@ -37,6 +37,18 @@ services:
     ports:
       - "5001:5001"
 
+  streaming-service-1:
+    build:
+      context: ./backend/streaming-service
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend/streaming-service/.env
+    environment:
+      PORT: 8080
+    ports:
+      - "8080:8080"
+    depends_on:
+      - redis
   db:
     image: postgres:13
     environment:
@@ -45,8 +57,6 @@ services:
       POSTGRES_DB: user_db
     ports:
       - "5432:5432"
-    volumes:
-      - user_data:/var/lib/postgresql/data
 
   redis:
     image: redis:latest  
@@ -54,8 +64,3 @@ services:
     restart: always
     ports:
       - "6379:6379"
-
-
-volumes:
-  user_data:
-

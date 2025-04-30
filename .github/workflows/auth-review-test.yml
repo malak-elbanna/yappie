@@ -18,7 +18,7 @@ jobs:
                 python -m pip install --upgrade pip
                 pip install pytest requests
         
-        -   name: Create Review .env file
+        -   name: Create .env files
             run: |
                 mkdir -p src/backend/review-service
                 cat <<EOF > src/backend/review-service/.env
@@ -26,8 +26,6 @@ jobs:
                 MONGO_URI=mongodb+srv://salmaayman:LgFYRUMZ3iuGPyzD@cluster0.ufjw6qu.mongodb.net/?retryWrites=true&w=majority
                 EOF
 
-        -   name: Create Auth .env file
-            run: |
                 mkdir -p src/backend/auth-service
                 cat <<EOF > src/backend/auth-service/.env
                 SQLALCHEMY_DATABASE_URI=postgresql://postgres:password@db:5432/user_db
@@ -40,9 +38,7 @@ jobs:
                 ADMIN_EMAIL=admin@example.com
                 ADMIN_PASSWORD=securepass
                 EOF
-        
-        -   name: Create CMS .env file
-            run: |
+
                 mkdir -p src/backend/content-management-service
                 cat <<EOF > src/backend/content-management-service/.env
                 MONGO_URI=mongodb+srv://salmaayman:LgFYRUMZ3iuGPyzD@cluster0.ufjw6qu.mongodb.net/?retryWrites=true&w=majority
@@ -50,6 +46,14 @@ jobs:
                 HOST=0.0.0.0
                 PORT=5001
                 DEBUG=True
+                EOF
+
+                mkdir -p src/backend/streaming-service
+                cat <<EOF > src/backend/streaming-service/.env
+                MONGO_URI=mongodb+srv://salmaayman:LgFYRUMZ3iuGPyzD@cluster0.ufjw6qu.mongodb.net/?retryWrites=true&w=majority
+                REDIS_HOST=redis
+                REDIS_PORT=6379
+                JWT_SECRET_KEY=secret-key
                 EOF
         
         -   name: Start Services
