@@ -1,11 +1,15 @@
 amqp = require('amqplib')
 const Notification = require('../models/notification.js')
+const logger = require('../logger.js')
+
 exports.getAll = async (req,res)=>{
     try{
         const notifications = await Notification.find();
+        logger.info(`Fetched all notifications`);
         res.status(200).json(notifications);
     }catch(error){
         console.error(error);
+        logger.error(`Failed to fetch notifications: ${error.message}`);
         res.status(500).json({message: 'Internal server error'});
     }``
 }
@@ -22,9 +26,11 @@ exports.create = async (req,res)=>{
             await client.save();
         }
         else await Notification.create({email: email,notifications: [notification]})
+        logger.info(`Notification created for user ${email}`);
         res.status(201).json(`Notification Sent to user ${email}`);
     }catch(error){
         console.error(error);
+        logger.error(`Failed to create notification: ${error.message}`);
         res.status(500).json({message: 'Internal server error'});
     }``
 }
@@ -40,9 +46,11 @@ exports.publish = async (req,res)=>{
     channel.publish('subscription', message.author, Buffer.from(message.title));
     console.log(" [x] Sent %s:'%s'", message.author, message.title);
     await channel.close();
+    logger.info(`Notification published to ${message.author}`);
     }
     catch (err) {
-    console.warn(err);
+        logger.error(`Failed to publish notification: ${err.message}`);
+        console.warn(err);
     }
     finally {
         if (connection) await connection.close();
