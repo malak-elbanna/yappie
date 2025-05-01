@@ -2,6 +2,10 @@ global:
   scrape_interval: 15s
 
 scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
   - job_name: 'auth-service'
     static_configs:
       - targets: ['auth-service-1:4999', 'auth-service-2:5000']
@@ -26,7 +30,7 @@ scrape_configs:
     static_configs:
       - targets: ['profile-service-1:5005', 'profile-service-2:5006']
 
-  - job_name: kong
+  - job_name: 'kong'
     static_configs:
       - targets: ['kong:8001']  
       
