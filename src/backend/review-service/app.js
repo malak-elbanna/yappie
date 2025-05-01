@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const client = require('prom-client');
+const logger = require('./logger');
 
 require('dotenv').config();
 
@@ -32,3 +33,4 @@ app.use('/reviews', reviewRoutes);
 
 const PORT = process.env.PORT || 5003;
 app.listen(PORT, () => console.log(`Review Service running on port ${PORT}`));
+logger.info('Review service started');

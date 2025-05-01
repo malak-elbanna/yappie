@@ -1,0 +1,26 @@
+{"message": "Profile Management Service started", "time": "2025-05-01T12:43:00.986182+00:00"}
+{"message": "Profile Management Service started", "time": "2025-05-01T12:43:01.030975+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5006\n * Running on http://172.18.0.16:5006", "time": "2025-05-01T12:43:01.165980+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-01T12:43:01.167534+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-01T12:43:01.182571+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5005\n * Running on http://172.18.0.17:5005", "time": "2025-05-01T12:43:01.187118+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-01T12:43:01.195809+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-01T12:43:01.207165+00:00"}
+{"message": "Profile Management Service started", "time": "2025-05-01T12:43:02.715638+00:00"}
+{"message": "Profile Management Service started", "time": "2025-05-01T12:43:02.719707+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-01T12:43:02.760007+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-01T12:43:02.765219+00:00"}
+{"message": " * Debugger PIN: 959-274-358", "time": "2025-05-01T12:43:02.771344+00:00"}
+{"message": " * Debugger PIN: 845-805-051", "time": "2025-05-01T12:43:02.771351+00:00"}
+{"message": "172.18.0.4 - - [01/May/2025 12:43:14] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-01T12:43:14.957236+00:00"}
+{"message": "172.18.0.4 - - [01/May/2025 12:43:15] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-01T12:43:15.893879+00:00"}
+{"message": "172.18.0.4 - - [01/May/2025 12:43:29] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-01T12:43:29.952935+00:00"}
+{"message": "172.18.0.4 - - [01/May/2025 12:43:30] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-01T12:43:30.890578+00:00"}
+{"message": "172.18.0.4 - - [01/May/2025 12:43:44] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-01T12:43:44.952086+00:00"}
+{"message": "172.18.0.4 - - [01/May/2025 12:43:45] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-01T12:43:45.890244+00:00"}
+{"message": "172.18.0.4 - - [01/May/2025 12:43:59] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-01T12:43:59.949968+00:00"}
+{"message": "172.18.0.4 - - [01/May/2025 12:44:00] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-01T12:44:00.887609+00:00"}
+{"message": "172.18.0.4 - - [01/May/2025 12:44:14] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-01T12:44:14.950816+00:00"}
+{"message": "172.18.0.4 - - [01/May/2025 12:44:15] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-01T12:44:15.889071+00:00"}
+{"message": "172.18.0.4 - - [01/May/2025 12:44:29] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-01T12:44:29.948049+00:00"}
+{"message": "172.18.0.4 - - [01/May/2025 12:44:30] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-01T12:44:30.886294+00:00"}
