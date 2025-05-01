@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // ✅ make sure react-router-dom is installed
 import category from '../assets/category.png';
 
 const categories = [
@@ -24,22 +25,25 @@ const Categories = () => {
         <p className="text-gray-400 mb-10">Choose the category you want to dive in</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {categories.map((category, idx) => (
-            <div
+            <Link
+              to={`/category/${encodeURIComponent(category.name)}`}
               key={idx}
-              className={`rounded-xl overflow-hidden relative h-40 flex items-end p-4 ${category.color}`}
+              className="block rounded-xl overflow-hidden relative h-40"
             >
-              <div className="absolute inset-0 opacity-30">
-                <img
-                  src={category.image}
-                  alt={category.name}
-                  className="w-full h-full object-cover"
-                />
+              <div className={`relative h-full flex items-end p-4 ${category.color}`}>
+                <div className="absolute inset-0 opacity-30">
+                  <img
+                    src={category.image}
+                    alt={category.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h2 className="relative z-10 text-xl font-bold">
+                  <span className="mr-2">{category.icon}</span>
+                  {category.name}
+                </h2>
               </div>
-              <h2 className="relative z-10 text-xl font-bold">
-                <span className="mr-2">{category.icon}</span>
-                {category.name}
-              </h2>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
