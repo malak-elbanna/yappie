@@ -6,6 +6,23 @@ const port = 4000;
 const connectToMongo = require('./models')
 const notificationRouter = require('./routes/notificationRouter.js')
 const subscriptionRouter = require('./routes/notificationRouter.js')
+const logger = require('./logger.js')
+const promBundle = require('express-prom-bundle');
+
+const metricsMiddleware = promBundle({
+  includeMethod: true,
+  includePath: true,
+  includeStatusCode: true,
+  includeUp: true,
+  customLabels: { project_name: 'notification-service' },
+  promClient: {
+    collectDefaultMetrics: {
+      timeout: 1000
+    }
+  }
+});
+
+app.use(metricsMiddleware);
 
 connectToMongo();
 app.use(cors())
@@ -13,8 +30,8 @@ app.use(express.json());
 app.use('/notification',notificationRouter);
 app.use('/subscription',subscriptionRouter);
 
-
 const httpServer = app.listen(port, () => {console.log(`Server listening on port ${port}`)});
+logger.info('Notification service started');
 socket(httpServer);
 
 

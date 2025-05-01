@@ -10,6 +10,7 @@ import (
 	"github.com/malak-elbanna/streaming-service/config"
 	"github.com/malak-elbanna/streaming-service/controllers"
 	"github.com/malak-elbanna/streaming-service/routes"
+	"github.com/prometheus/client_golang/prometheus/promhttp"
 	cors "github.com/rs/cors/wrapper/gin"
 )
 
@@ -27,6 +28,8 @@ func main() {
 			"status": "UP",
 		})
 	})
+
+	router.GET("/metrics", gin.WrapH(promhttp.Handler()))
 
 	client := config.ConnectDB()
 	defer client.Disconnect(nil)

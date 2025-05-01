@@ -1,5 +1,6 @@
 from flask import request, jsonify
 from app.models.profile import db, UserProfile
+import logging
 
 profile_not_found = "Profile not found."
 
@@ -12,6 +13,7 @@ def get_info(user_id):
         db.session.add(profile)
         db.session.commit()
 
+    logging.info("User info retrieved", extra={"user_id": str(user_id)})
     return jsonify({
         "name": profile.name,
         "favorite_books": profile.favorite_books,
@@ -28,10 +30,12 @@ def edit_name(user_id):
     
     profile = UserProfile.query.filter_by(user_id=user_id).first()
     if not profile:
+        logging.info("User profile isn't found", extra={"user_id": str(user_id)})
         return jsonify({"error": profile_not_found}), 404
     profile.name = updated_name
     db.session.commit()
 
+    logging.info("User name edited", extra={"user_id": str(user_id)})
     return jsonify({"message": "Name is updated successfully."}), 200
 
 def remove_favorite_book(user_id):
@@ -41,10 +45,12 @@ def remove_favorite_book(user_id):
         return jsonify({"error": "No book selected."}), 400
     profile = UserProfile.query.filter_by(user_id=user_id).first()
     if not profile:
+        logging.info("User profile isn't found", extra={"user_id": str(user_id)})
         return jsonify({"error": profile_not_found}), 404
     if profile.favorite_books and book in profile.favorite_books:
         profile.favorite_books.remove(book)
         db.session.commit()
+    logging.info("Favorite book removed", extra={"user_id": str(user_id)})
     return jsonify({"message": f"{book} removed from favorites."}), 200
 
 def remove_favorite_podcast(user_id):
@@ -54,10 +60,13 @@ def remove_favorite_podcast(user_id):
         return jsonify({"error": "No podcast selected."}), 400
     profile = UserProfile.query.filter_by(user_id=user_id).first()
     if not profile:
+        logging.info("User profile isn't found", extra={"user_id": str(user_id)})
         return jsonify({"error": profile_not_found}), 404
     if profile.favorite_podcasts and podcast in profile.favorite_podcasts:
         profile.favorite_podcasts.remove(podcast)
         db.session.commit()
+
+    logging.info("Favorite podcast removed", extra={"user_id": str(user_id)})
     return jsonify({"message": f"{podcast} removed from favorites."}), 200
 
 def edit_bio(user_id):
@@ -68,9 +77,12 @@ def edit_bio(user_id):
     
     profile = UserProfile.query.filter_by(user_id=user_id).first()
     if not profile:
+        logging.info("User profile isn't found", extra={"user_id": str(user_id)})
         return jsonify({"error": profile_not_found}), 404
     profile.bio = updated_bio
     db.session.commit()
+
+    logging.info("User bio edited", extra={"user_id": str(user_id)})
     return jsonify({"message": "Bio is updated successfully."}), 200
 
 def add_preference(user_id):
@@ -83,6 +95,7 @@ def add_preference(user_id):
     
     profile = UserProfile.query.filter_by(user_id=user_id).first()
     if not profile:
+        logging.info("User profile isn't found", extra={"user_id": str(user_id)})
         return jsonify({"error": profile_not_found}), 404
     if not profile.preferences:
         profile.preferences = {}
@@ -94,6 +107,7 @@ def add_preference(user_id):
         profile.preferences["audiobooks"].append(genre)
         db.session.commit()
     
+    logging.info("New preference added", extra={"user_id": str(user_id)})
     return jsonify({"message": "New preference is added successfully."}), 200
 
 def remove_preference(user_id):
@@ -106,11 +120,15 @@ def remove_preference(user_id):
     
     profile = UserProfile.query.filter_by(user_id=user_id).first()
     if not profile:
+        logging.info("User profile isn't found", extra={"user_id": str(user_id)})
         return jsonify({"error": profile_not_found}), 404
     
     if profile.preferences and genre in profile.preferences.get(content_type, []):
         profile.preferences[content_type].remove(genre)
         db.session.commit()
+
+        logging.info("Preference removed", extra={"user_id": str(user_id)})
         return jsonify({"message": f"{genre} removed successfully."}), 200
     else:
+        logging.info("Failed to remove preference", extra={"user_id": str(user_id)})
         return jsonify({"error": f"Failed removing {genre}."}), 404

@@ -1,4 +1,4 @@
-name: Auth-Profile Integration Tests
+name: Integration Tests
 
 on: [push, pull_request]
 
@@ -78,9 +78,27 @@ jobs:
                     sleep 2
                 done
 
+                echo "Waiting for content-management-service..."
+                until curl --fail http://localhost:5001/health; do
+                    echo "content management service not ready yet, retrying in 2s..."
+                    sleep 2
+                done
+
                 echo "Waiting for profile-management-service..."
                 until curl --fail http://localhost:5005/health; do
                     echo "profile management service not ready yet, retrying in 2s..."
+                    sleep 2
+                done
+
+                echo "Waiting for review-service..."
+                until curl --fail http://localhost:5003/health; do
+                    echo "Review service not ready yet, retrying in 2s..."
+                    sleep 2
+                done
+
+                echo "Waiting for streaming-service..."
+                until curl --fail http://localhost:8080/health; do
+                    echo "Review service not ready yet, retrying in 2s..."
                     sleep 2
                 done
         
@@ -88,8 +106,15 @@ jobs:
             working-directory: src/tests/integration
             env:
                 AUTH_SERVICE_URL: http://localhost:5000
+                CMS_SERVICE_URL: http://localhost:5001
                 PROFILE_SERVICE_URL: http://localhost:5005
-            run: pytest test_auth_profile.py -v
+                REVIEW_SERVICE_URL: http://localhost:5003
+                STREAMING_SERVICE_URL: http://localhost:8080
+            run: |
+                pytest test_admin_cms.py -v
+                pytest test_auth_profile.py -v
+                pytest test_auth_reviews.py -v
+                pytest test_stream_reviews.py -v
         
         -   name: Stop containers
             if: always()
