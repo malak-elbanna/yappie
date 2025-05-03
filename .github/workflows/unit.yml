@@ -1,12 +1,12 @@
-name: CI Workflow
+name: Unit tests
 
 on:
   push:
     branches:
-      - main  # or the branch you work with
+      - integrate-user-cms-stream  # or the branch you work with
   pull_request:
     branches:
-      - main
+      - integrate-user-cms-stream  # or the branch you work with
 
 jobs:
   build:
