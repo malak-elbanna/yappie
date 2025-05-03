@@ -1,23 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
 import API from '../Stream';
 import axios from 'axios';
 
-const REVIEW_SERVICE_URL = 'review-service';
-const API_URL = 'http://localhost:8000'
+const REVIEW_SERVICE_URL   = 'review-service';
+const STREAMING_SERVICE_URL = 'streaming-service';
+const API_URL              = 'http://localhost:8000';
 
 const BookDetails = () => {
   const { id } = useParams();
   const { userId } = useAuth();
 
   const [book, setBook] = useState(null);
-  const [positions, setPositions] = useState({});
+  // const [positions, setPositions] = useState({});
   // const [currentAudio, setCurrentAudio] = useState(null);
   const [reviews, setReviews] = useState([]);
   const [reviewSummary, setReviewSummary] = useState(null);
   const [newReview, setNewReview] = useState({ rating: 5, comment: '' });
-
+  const [positions, setPositions] = useState({});
   useEffect(() => {
     API.get(`/books/${id}`)
       .then(res => setBook(res.data))
