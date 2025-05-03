@@ -103,7 +103,7 @@ jobs:
                 done
         
         -   name: Run Tests
-            working-directory: src/tests/integration
+            working-directory: src/tests
             env:
                 AUTH_SERVICE_URL: http://localhost:5000
                 CMS_SERVICE_URL: http://localhost:5001
@@ -111,10 +111,7 @@ jobs:
                 REVIEW_SERVICE_URL: http://localhost:5003
                 STREAMING_SERVICE_URL: http://localhost:8080
             run: |
-                pytest test_admin_cms.py -v
-                pytest test_auth_profile.py -v
-                pytest test_auth_reviews.py -v
-                pytest test_stream_reviews.py -v
+                pytest integration/ --cache-clear -v 
         
         -   name: Stop containers
             if: always()

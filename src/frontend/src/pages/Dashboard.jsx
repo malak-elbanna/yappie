@@ -1,5 +1,5 @@
 import { useNavigate, useLocation } from "react-router-dom";
-import { logout } from "../Api";
+import { logout } from "../api";
 import { useEffect, useState } from "react";
 
 const Dashboard = () => {

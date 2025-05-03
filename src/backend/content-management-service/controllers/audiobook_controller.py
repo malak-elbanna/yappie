@@ -4,6 +4,7 @@ from services.db import mongo
 from bson.objectid import ObjectId
 from werkzeug.utils import secure_filename
 from gridfs import GridFS
+import logging
 
 
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'mp4', 'm4a', 'mp3'}
@@ -28,9 +29,16 @@ def get_audiobooks():
         audiobook["_id"] = str(audiobook["_id"])
     return render_template("home.html", result=result)
 
+from bson.errors import InvalidId
+
 def get_audiobook(id):
     collection = get_collection()
-    result = collection.find_one({"_id": ObjectId(id)})
+    try:
+        obj_id = ObjectId(id)
+    except InvalidId:
+        return jsonify({"error": f"'{id}' is not a valid ObjectId"}), 400
+
+    result = collection.find_one({"_id": obj_id})
     if result:
         result["_id"] = str(result["_id"])
         return jsonify(result), 200
@@ -54,8 +62,8 @@ def add_audiobook():
             audio_id = fs.put(audio_file, filename=secure_filename(audio_file.filename))
             data['audio_id'] = str(audio_id)
     result = db.books.insert_one(data)
+    logging.info("Audiobook added", extra={"audiobook_id": str(result.inserted_id)})
     return jsonify({"_id": str(result.inserted_id)}), 201
-
 
 def update_audiobook(id):
     db = mongo.cx["audiobooks_db"]
@@ -76,6 +84,7 @@ def update_audiobook(id):
             data['audio_id'] = str(audio_id)
     
     db.books.update_one({"_id": ObjectId(id)}, {"$set": data})
+    logging.info("Audiobook updated", extra={"audiobook_id": str(id)})
     return jsonify({"message": "audiobook updated"}), 200
 
 
@@ -83,8 +92,10 @@ def delete_audiobook(id):
     collection = get_collection()
     result = collection.delete_one({"_id": ObjectId(id)})
     if result.deleted_count:
+        logging.info("Audiobook deleted", extra={"audiobook_id": str(id)})
         return jsonify({"message": "audiobook deleted"}), 200
     else:
+        logging.error("Failed to delete audiobook", extra={"audiobook_id": str(id)})
         return jsonify({"error": not_found}), 404
 
 def get_audiobook_update(id):
@@ -104,8 +115,10 @@ def update_chapter(id):
             {"$set": {f"chapters.{data['chapterIndex']}.title": data['title']}}
         )
         if result.modified_count:
+            logging.info("Chapter updated", extra={"chapter_id": str(id)})
             return jsonify({"message": "chapter updated"}), 200
         else:
+            logging.error("Failed to update chapter", extra={"chapter_id": str(id)})
             return jsonify({"error": "failed to update chapter"}), 400
     except Exception as e:
         return jsonify({"error": str(e)}), 500
