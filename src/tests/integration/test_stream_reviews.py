@@ -7,10 +7,6 @@ CHAPTER_INDEX = 1
 REVIEW = "wow amazinggg"
 
 @pytest.fixture(scope="module")
-def auth_url():
-    return "http://localhost:5000"
-
-@pytest.fixture(scope="module")
 def reviews_url():
     return "http://localhost:5003"
 
@@ -18,37 +14,6 @@ def reviews_url():
 def stream_url():
     return "http://localhost:8080"
 
-@pytest.fixture
-def test_user(auth_url):
-    email = f"exampleuser1{int(time.time())}@example.com"
-    password = "securePassword1$2"
-    name = "Test user"
-
-    reg_res = requests.post(
-        f"{auth_url}/auth/register",
-        json={"email": email, "name": name, "password": password}
-    )
-    assert reg_res.status_code == 201
-    
-    return {"email": email, "password": password}
-
-@pytest.fixture
-def auth_token(test_user, auth_url):
-    login_res = requests.post(
-        f"{auth_url}/auth/login",
-        json={"email": test_user['email'], "password": test_user['password']}
-    )
-    assert login_res.status_code == 200
-    data = login_res.json()
-
-    assert 'access_token' in data
-    assert 'user_id' in data
-    
-    return {
-        "token": data['access_token'],
-        "user_id": data['user_id'],
-        "headers": {"Authorization": f"Bearer {data['access_token']}"}
-    }
 
 def test_get_books(auth_token, stream_url):
     res = requests.get(
