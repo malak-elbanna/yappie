@@ -265,3 +265,1265 @@
 {"message": "172.18.0.4 - - [01/May/2025 12:46:07] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-01T12:46:07.908216+00:00"}
 {"message": "172.18.0.4 - - [01/May/2025 12:46:12] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-01T12:46:12.264221+00:00"}
 {"message": "172.18.0.4 - - [01/May/2025 12:46:22] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-01T12:46:22.908173+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T00:56:53.738729+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5002\n * Running on http://172.18.0.7:5002", "time": "2025-05-04T00:56:53.926436+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T00:56:53.929059+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T00:56:53.941638+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T00:56:54.527232+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5001\n * Running on http://172.18.0.14:5001", "time": "2025-05-04T00:56:54.629911+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T00:56:54.633376+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T00:56:54.645119+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T00:56:55.089458+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T00:56:55.130822+00:00"}
+{"message": " * Debugger PIN: 129-653-180", "time": "2025-05-04T00:56:55.136166+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T00:56:55.764314+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T00:56:55.809865+00:00"}
+{"message": " * Debugger PIN: 108-195-558", "time": "2025-05-04T00:56:55.811429+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 00:57:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T00:57:09.906643+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 00:57:13] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T00:57:13.954514+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 00:57:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T00:57:24.906610+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 00:57:28] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T00:57:28.954265+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 00:57:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T00:57:39.905808+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 00:57:43] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T00:57:43.955995+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 00:57:54] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T00:57:54.904045+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 00:57:58] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T00:57:58.952953+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 00:58:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T00:58:09.906556+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 00:58:13] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T00:58:13.953342+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 00:58:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T00:58:24.904533+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 00:58:28] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T00:58:28.948776+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 00:58:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T00:58:39.900056+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 00:58:43] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T00:58:43.953086+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 00:58:54] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T00:58:54.902559+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 00:58:58] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T00:58:58.951924+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 00:59:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T00:59:09.902638+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 00:59:13] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T00:59:13.947500+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 00:59:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T00:59:24.899248+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 00:59:28] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T00:59:28.948801+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 00:59:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T00:59:39.898000+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 00:59:43] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T00:59:43.948912+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 00:59:54] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T00:59:54.897335+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 00:59:58] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T00:59:58.941207+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:00:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:00:09.892090+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:00:13] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:00:13.948412+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:00:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:00:24.890666+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:00:28] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:00:28.942797+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:00:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:00:39.897014+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:00:43] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:00:43.942334+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:00:54] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:00:54.888493+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:00:58] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:00:58.939377+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:01:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:01:09.893646+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:01:13] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:01:13.938607+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:01:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:01:24.885967+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:01:28] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:01:28.940282+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:01:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:01:39.886700+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:01:43] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:01:43.939956+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:01:54] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:01:54.888407+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:01:58] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:01:58.938772+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:02:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:02:09.886348+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:02:13] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:02:13.933139+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:02:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:02:24.888515+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:02:28] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:02:28.935048+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:02:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:02:39.887563+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:02:43] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:02:43.932813+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:02:54] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:02:54.882985+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:02:58] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:02:58.933819+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:03:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:03:09.879668+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:03:13] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:03:13.928093+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:03:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:03:24.878661+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:03:28] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:03:28.926523+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:03:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:03:39.884582+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:03:43] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:03:43.927470+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:03:54] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:03:54.875666+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:03:58] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:03:58.929077+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:04:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:04:09.876307+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:04:13] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:04:13.926775+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:04:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:04:24.879070+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:04:28] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:04:28.923051+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:04:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:04:39.877934+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:04:43] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:04:43.922352+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:04:54] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:04:54.876385+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:04:58] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:04:58.925757+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:05:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:05:09.873939+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:05:13] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:05:13.924664+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:05:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:05:24.873544+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:05:28] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:05:28.919089+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:05:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:05:39.868680+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:05:43] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:05:43.921291+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:05:54] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:05:54.866317+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:05:58] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:05:58.919078+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:06:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:06:09.870584+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:06:13] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:06:13.916287+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:06:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:06:24.869744+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:06:28] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:06:28.916024+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:06:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:06:39.865335+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:06:43] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:06:43.918452+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:06:54] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:06:54.865583+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:06:58] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:06:58.914596+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:07:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:07:09.862516+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:07:13] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:07:13.911620+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:07:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:07:24.859876+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:07:28] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:07:28.910973+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:07:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:07:39.860468+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:07:43] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:07:43.909239+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:07:54] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:07:54.857819+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:07:58] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:07:58.906660+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:08:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:08:09.862255+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:08:13] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:08:13.906805+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:08:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:08:24.856765+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:08:28] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:08:28.905381+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:08:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:08:39.861985+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 01:08:43] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T01:08:43.906159+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:11:38.815529+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:11:38.815643+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5002\n * Running on http://172.18.0.10:5002", "time": "2025-05-04T19:11:38.941889+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5001\n * Running on http://172.18.0.5:5001", "time": "2025-05-04T19:11:38.943095+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T19:11:38.943279+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T19:11:38.943772+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T19:11:38.946847+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T19:11:38.947646+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:11:39.538077+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:11:39.543958+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T19:11:39.557796+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T19:11:39.563961+00:00"}
+{"message": " * Debugger PIN: 751-758-709", "time": "2025-05-04T19:11:39.578014+00:00"}
+{"message": " * Debugger PIN: 436-588-836", "time": "2025-05-04T19:11:39.578059+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:11:43] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:11:43.955624+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:11:54] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:11:54.904903+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:11:58] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:11:58.957079+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:12:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:12:09.906827+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:12:13] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:12:13.961605+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:12:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:12:24.905830+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:12:28] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:12:28.954681+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:12:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:12:39.901001+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:12:43] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:12:43.953122+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:12:54] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:12:54.901215+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:12:58] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:12:58.951519+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:13:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:13:09.899174+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:13:13] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:13:13.948976+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:13:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:13:24.899472+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:13:28] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:13:28.949385+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:13:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:13:39.896206+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:13:43] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:13:43.948119+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:13:54] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:13:54.897067+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:13:58] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:13:58.948720+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:14:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:14:09.899956+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:14:13] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:14:13.944095+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:14:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:14:24.896705+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:14:28] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:14:28.942367+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:14:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:14:39.899030+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:14:43] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:14:43.945231+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:14:54] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:14:54.891160+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:14:58] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:14:58.940816+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:15:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:15:09.891875+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:15:13] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:15:13.938467+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:15:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:15:24.889076+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:15:28] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:15:28.938996+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:15:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:15:39.889071+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:15:43] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:15:43.938689+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:15:54] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:15:54.886442+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:15:58] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:15:58.937774+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:16:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:16:09.890570+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:16:13] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:16:13.934481+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:16:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:16:24.884618+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:16:28] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:16:28.937025+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:16:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:16:39.885409+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:16:43] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:16:43.935158+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:16:54] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:16:54.886660+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:16:58] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:16:58.936118+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:17:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:17:09.884829+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:17:13] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:17:13.932343+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:17:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:17:24.885059+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:17:28] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:17:28.936025+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:17:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:17:39.878388+00:00"}
+{"message": "172.18.0.11 - - [04/May/2025 19:17:43] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:17:43.927638+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:22:48.778081+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5002\n * Running on http://172.18.0.7:5002", "time": "2025-05-04T19:22:48.899608+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T19:22:48.900228+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T19:22:48.901963+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:22:49.033383+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5001\n * Running on http://172.18.0.12:5001", "time": "2025-05-04T19:22:49.147742+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T19:22:49.149305+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T19:22:49.150968+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:22:49.595803+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T19:22:49.617567+00:00"}
+{"message": " * Debugger PIN: 109-923-789", "time": "2025-05-04T19:22:49.619214+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:22:49.906352+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T19:22:49.935967+00:00"}
+{"message": " * Debugger PIN: 153-737-378", "time": "2025-05-04T19:22:49.938247+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:23:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:23:05.086950+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:23:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:23:05.561270+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:23:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:23:20.090491+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:23:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:23:20.561825+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:23:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:23:35.086543+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:23:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:23:35.558023+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:23:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:23:50.084021+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:23:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:23:50.559986+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:24:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:24:05.085819+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:24:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:24:05.557440+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:24:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:24:20.082610+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:24:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:24:20.556563+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:24:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:24:35.080568+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:24:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:24:35.555264+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:24:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:24:50.080979+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:24:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:24:50.555544+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:25:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:25:05.078666+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:25:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:25:05.554552+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:25:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:25:20.079195+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:25:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:25:20.553527+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:25:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:25:35.077800+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:25:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:25:35.552302+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:25:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:25:50.076824+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:25:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:25:50.550581+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:26:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:26:05.074530+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:26:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:26:05.547493+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:26:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:26:20.073750+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:26:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:26:20.547514+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:26:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:26:35.078404+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:26:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:26:35.545556+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:27:40.387851+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5002\n * Running on http://172.18.0.9:5002", "time": "2025-05-04T19:27:40.513219+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T19:27:40.514295+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T19:27:40.517546+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:27:40.624455+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5001\n * Running on http://172.18.0.11:5001", "time": "2025-05-04T19:27:40.710542+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T19:27:40.711382+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T19:27:40.713507+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:27:41.207645+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T19:27:41.224358+00:00"}
+{"message": " * Debugger PIN: 709-650-191", "time": "2025-05-04T19:27:41.225949+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:27:41.380370+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T19:27:41.400160+00:00"}
+{"message": " * Debugger PIN: 849-825-250", "time": "2025-05-04T19:27:41.402414+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 19:27:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:27:50.093670+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 19:27:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:27:50.568371+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 19:28:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:28:05.087878+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 19:28:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:28:05.564599+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 19:28:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:28:20.084683+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 19:28:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:28:20.559738+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 19:28:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:28:35.083667+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 19:28:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:28:35.560495+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 19:28:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:28:50.082975+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 19:28:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:28:50.559900+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 19:29:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:29:05.084138+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 19:29:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:29:05.556998+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:30:20.267765+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:30:20.298281+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5002\n * Running on http://172.18.0.14:5002", "time": "2025-05-04T19:30:20.387439+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T19:30:20.388651+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T19:30:20.390769+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5001\n * Running on http://172.18.0.13:5001", "time": "2025-05-04T19:30:20.408559+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T19:30:20.409304+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T19:30:20.412195+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:30:21.229328+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T19:30:21.257213+00:00"}
+{"message": " * Debugger PIN: 397-333-945", "time": "2025-05-04T19:30:21.260011+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:30:21.262548+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T19:30:21.293564+00:00"}
+{"message": " * Debugger PIN: 100-921-756", "time": "2025-05-04T19:30:21.295562+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:30:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:30:35.087267+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:30:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:30:35.567988+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:30:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:30:50.093950+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:30:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:30:50.561733+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:31:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:31:05.086589+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:31:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:31:05.561432+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:31:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:31:20.087181+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:31:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:31:20.559974+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:31:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:31:35.085815+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:31:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:31:35.563588+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:31:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:31:50.086043+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:31:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:31:50.559270+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:32:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:32:05.083709+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:32:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:32:05.563531+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:32:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:32:20.088201+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:32:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:32:20.557615+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:32:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:32:35.082613+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:32:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:32:35.557812+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:32:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:32:50.082338+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:32:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:32:50.557957+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:33:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:33:05.081317+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:33:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:33:05.559660+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:33:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:33:20.082517+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:33:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:33:20.554693+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:33:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:33:35.079200+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:33:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:33:35.557987+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:33:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:33:50.082665+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:33:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:33:50.557322+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:34:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:34:05.077738+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:34:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:34:05.555019+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:34:54.424704+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5002\n * Running on http://172.18.0.4:5002", "time": "2025-05-04T19:34:54.610809+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T19:34:54.612024+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T19:34:54.616846+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:34:54.768169+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5001\n * Running on http://172.18.0.7:5001", "time": "2025-05-04T19:34:54.918273+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T19:34:54.924222+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T19:34:54.939958+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:34:55.757650+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T19:34:55.780051+00:00"}
+{"message": " * Debugger PIN: 451-860-073", "time": "2025-05-04T19:34:55.782185+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:34:56.003441+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T19:34:56.051690+00:00"}
+{"message": " * Debugger PIN: 360-035-858", "time": "2025-05-04T19:34:56.060696+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 19:35:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:35:05.067657+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 19:35:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:35:05.539304+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 19:35:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:35:20.069364+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 19:35:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:35:20.539980+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 19:35:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:35:35.059755+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 19:35:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:35:35.533379+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 19:35:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:35:50.064587+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 19:35:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:35:50.534893+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 19:36:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:36:05.057841+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 19:36:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:36:05.530520+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 19:36:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:36:20.057643+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 19:36:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:36:20.533154+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 19:36:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:36:35.055958+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 19:36:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:36:35.530740+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 19:36:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:36:50.054367+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 19:36:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:36:50.530468+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 19:37:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:37:05.053161+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 19:37:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:37:05.528130+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:37:58.742209+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5001\n * Running on http://172.18.0.13:5001", "time": "2025-05-04T19:37:59.102408+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T19:37:59.193998+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T19:37:59.222479+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:37:59.739570+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5002\n * Running on http://172.18.0.14:5002", "time": "2025-05-04T19:37:59.947692+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T19:37:59.953901+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T19:37:59.966655+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:38:01.046263+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T19:38:01.181591+00:00"}
+{"message": " * Debugger PIN: 264-518-366", "time": "2025-05-04T19:38:01.186969+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:38:01.770177+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T19:38:01.854041+00:00"}
+{"message": " * Debugger PIN: 793-203-897", "time": "2025-05-04T19:38:01.870338+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 19:38:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:38:05.084742+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 19:38:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:38:05.559426+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 19:38:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:38:20.086098+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 19:38:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:38:20.559835+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 19:38:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:38:35.085259+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 19:38:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:38:35.559680+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 19:38:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:38:50.085828+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 19:38:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:38:50.559508+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 19:39:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:39:05.090073+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 19:39:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:39:05.558476+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 19:39:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:39:20.084288+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 19:39:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:39:20.559421+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 19:39:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:39:35.083274+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 19:39:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:39:35.554805+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 19:39:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:39:50.082039+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 19:39:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:39:50.555404+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 19:40:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:40:05.079437+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 19:40:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:40:05.557816+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:41:09.245801+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5001\n * Running on http://172.18.0.7:5001", "time": "2025-05-04T19:41:09.377422+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T19:41:09.378834+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T19:41:09.383275+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:41:09.737362+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5002\n * Running on http://172.18.0.10:5002", "time": "2025-05-04T19:41:09.794091+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T19:41:09.795899+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T19:41:09.798050+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:41:10.047281+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T19:41:10.065636+00:00"}
+{"message": " * Debugger PIN: 872-833-050", "time": "2025-05-04T19:41:10.106165+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:41:10.527889+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T19:41:10.542083+00:00"}
+{"message": " * Debugger PIN: 701-754-838", "time": "2025-05-04T19:41:10.543455+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:41:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:41:20.106032+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:41:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:41:20.565942+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:41:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:41:35.088256+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:41:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:41:35.561532+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:41:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:41:50.090326+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:41:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:41:50.561570+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:42:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:42:05.086610+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:42:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:42:05.560149+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:42:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:42:20.086017+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:42:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:42:20.559074+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:42:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:42:35.082898+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:42:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:42:35.557756+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:42:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:42:50.083968+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:42:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:42:50.561353+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:43:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:43:05.083026+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:43:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:43:05.559239+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:43:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:43:20.085050+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:43:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:43:20.558383+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:43:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:43:35.080177+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:43:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:43:35.558239+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:46:06.566494+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5002\n * Running on http://172.18.0.9:5002", "time": "2025-05-04T19:46:06.657226+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T19:46:06.657766+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T19:46:06.659875+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:46:06.833762+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5001\n * Running on http://172.18.0.14:5001", "time": "2025-05-04T19:46:06.902530+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T19:46:06.903013+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T19:46:06.904802+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:46:07.304731+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T19:46:07.318887+00:00"}
+{"message": " * Debugger PIN: 721-900-563", "time": "2025-05-04T19:46:07.328344+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:46:07.592363+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T19:46:07.612206+00:00"}
+{"message": " * Debugger PIN: 463-816-330", "time": "2025-05-04T19:46:07.615087+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:46:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:46:20.090172+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:46:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:46:20.566103+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:46:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:46:35.087552+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:46:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:46:35.563057+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:46:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:46:50.088052+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:46:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:46:50.565594+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:47:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:47:05.086435+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:47:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:47:05.561820+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:47:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:47:20.091294+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:47:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:47:20.563012+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:47:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:47:35.085569+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:47:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:47:35.563006+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:47:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:47:50.087717+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:47:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:47:50.562518+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:48:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:48:05.085545+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:48:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:48:05.564874+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:48:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:48:20.091470+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:48:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:48:20.559820+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:48:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:48:35.083007+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:48:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:48:35.557932+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:48:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:48:50.084810+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:48:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:48:50.564530+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:49:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:49:05.082257+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:49:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:49:05.559970+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:49:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:49:20.081296+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:49:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:49:20.557106+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:49:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:49:35.082575+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:49:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:49:35.555401+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:49:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:49:50.081592+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:49:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:49:50.560010+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:50:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:50:05.078371+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:50:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:50:05.553393+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:50:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:50:20.081740+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:50:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:50:20.553376+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:50:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:50:35.079578+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:50:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:50:35.556785+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:50:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:50:50.078267+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:50:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:50:50.552685+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:51:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:51:05.075657+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:51:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:51:05.550779+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:51:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:51:20.082860+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:51:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:51:20.553459+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:52:05.167890+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:52:05.227218+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5002\n * Running on http://172.18.0.13:5002", "time": "2025-05-04T19:52:05.302541+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T19:52:05.308878+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T19:52:05.310974+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5001\n * Running on http://172.18.0.14:5001", "time": "2025-05-04T19:52:05.334742+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T19:52:05.341051+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T19:52:05.345734+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:52:05.932084+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T19:52:05.953534+00:00"}
+{"message": " * Debugger PIN: 378-184-494", "time": "2025-05-04T19:52:05.955096+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:52:05.982944+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T19:52:06.001660+00:00"}
+{"message": " * Debugger PIN: 592-541-637", "time": "2025-05-04T19:52:06.003356+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 19:52:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:52:20.088680+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 19:52:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:52:20.562425+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 19:52:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:52:35.108647+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 19:52:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:52:35.567981+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 19:52:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:52:50.093054+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 19:52:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:52:50.565970+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 19:53:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:53:05.093619+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 19:53:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:53:05.566855+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 19:53:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:53:20.096119+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 19:53:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:53:20.566551+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 19:53:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:53:35.090662+00:00"}
+{"message": "172.18.0.6 - - [04/May/2025 19:53:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:53:35.564272+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:54:20.944709+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:54:20.947704+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5002\n * Running on http://172.18.0.11:5002", "time": "2025-05-04T19:54:21.028241+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T19:54:21.028775+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T19:54:21.030843+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5001\n * Running on http://172.18.0.8:5001", "time": "2025-05-04T19:54:21.039810+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T19:54:21.040829+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T19:54:21.042442+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:54:21.734026+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T19:54:21.747587+00:00"}
+{"message": " * Debugger PIN: 419-709-649", "time": "2025-05-04T19:54:21.749011+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:54:21.749375+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T19:54:21.770834+00:00"}
+{"message": " * Debugger PIN: 100-590-945", "time": "2025-05-04T19:54:21.772799+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:54:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:54:35.087270+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:54:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:54:35.564634+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:54:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:54:50.087444+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:54:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:54:50.562807+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:55:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:55:05.086123+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 19:55:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:55:05.562706+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:55:54.423881+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5002\n * Running on http://172.18.0.4:5002", "time": "2025-05-04T19:55:54.641269+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T19:55:54.646163+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T19:55:54.648990+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:55:55.862371+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T19:55:55.880209+00:00"}
+{"message": " * Debugger PIN: 115-278-210", "time": "2025-05-04T19:55:55.881620+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:55:55.997821+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5001\n * Running on http://172.18.0.16:5001", "time": "2025-05-04T19:55:56.083490+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T19:55:56.084075+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T19:55:56.085507+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T19:55:56.706009+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T19:55:56.723563+00:00"}
+{"message": " * Debugger PIN: 225-591-589", "time": "2025-05-04T19:55:56.730164+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:56:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:56:05.091896+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:56:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:56:05.561341+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:56:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:56:20.086695+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:56:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:56:20.561567+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:56:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:56:35.085630+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:56:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:56:35.561792+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:56:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:56:50.085399+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:56:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:56:50.562445+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:57:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:57:05.087327+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:57:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:57:05.564200+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:57:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:57:20.089799+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:57:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:57:20.558758+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:57:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:57:35.083005+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:57:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:57:35.556989+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:57:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:57:50.085861+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:57:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:57:50.556888+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:58:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:58:05.085475+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:58:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:58:05.556662+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:58:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:58:20.085828+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:58:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:58:20.555857+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:58:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:58:35.082270+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:58:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:58:35.558513+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:58:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:58:50.080192+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:58:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:58:50.555817+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:59:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:59:05.078719+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:59:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:59:05.553565+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:59:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:59:20.082226+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:59:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:59:20.556329+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:59:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:59:35.080502+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:59:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:59:35.556528+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:59:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:59:50.080476+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 19:59:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T19:59:50.552093+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:00:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:00:05.076839+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:00:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:00:05.550575+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:00:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:00:20.083214+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:00:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:00:20.551198+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:00:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:00:35.075764+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:00:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:00:35.551724+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:00:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:00:50.074790+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:00:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:00:50.550126+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:01:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:01:05.074060+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:01:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:01:05.554075+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:01:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:01:20.079764+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:01:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:01:20.552812+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:01:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:01:35.075873+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:01:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:01:35.549707+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:01:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:01:50.071495+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:01:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:01:50.548486+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:02:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:02:05.070704+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:02:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:02:05.545557+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:02:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:02:20.075680+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:02:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:02:20.548223+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:02:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:02:35.069166+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:02:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:02:35.543637+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:02:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:02:50.070260+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:02:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:02:50.545618+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:03:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:03:05.067712+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:03:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:03:05.546723+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:03:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:03:20.072322+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:03:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:03:20.550384+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:03:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:03:35.066516+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:03:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:03:35.540661+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:03:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:03:50.067240+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:03:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:03:50.543119+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:04:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:04:05.071076+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:04:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:04:05.543109+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:04:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:04:20.069736+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:04:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:04:20.540915+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:04:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:04:35.063386+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:04:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:04:35.538935+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:04:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:04:50.066268+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:04:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:04:50.539529+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:05:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:05:05.064240+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:05:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:05:05.541993+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:05:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:05:20.063311+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:05:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:05:20.538975+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:05:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:05:35.062092+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:05:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:05:35.537350+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:05:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:05:50.060391+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:05:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:05:50.534964+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:06:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:06:05.061942+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:06:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:06:05.538383+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:06:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:06:20.064392+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:06:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:06:20.534702+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:06:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:06:35.058614+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:06:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:06:35.532916+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:06:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:06:50.059747+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:06:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:06:50.533842+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:07:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:07:05.061243+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:07:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:07:05.532208+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:07:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:07:20.057990+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:07:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:07:20.532572+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:07:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:07:35.060127+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:07:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:07:35.532242+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:07:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:07:50.057939+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:07:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:07:50.531067+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:08:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:08:05.057909+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:08:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:08:05.536659+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:08:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:08:20.055014+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:08:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:08:20.530557+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:08:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:08:35.052730+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:08:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:08:35.530611+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:08:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:08:50.057656+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:08:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:08:50.531526+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:09:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:09:05.053470+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:09:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:09:05.526465+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:09:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:09:20.053223+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:09:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:09:20.527745+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:09:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:09:35.049779+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:09:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:09:35.526627+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:09:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:09:50.048930+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:09:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:09:50.526758+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:10:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:10:05.051781+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:10:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:10:05.523732+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:10:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:10:20.048130+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:10:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:10:20.527832+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:10:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:10:35.059493+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:10:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:10:35.528803+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:10:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:10:50.045978+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:10:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:10:50.523194+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:11:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:11:05.048319+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:11:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:11:05.520868+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:11:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:11:20.047701+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:11:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:11:20.520110+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:11:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:11:35.047095+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:11:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:11:35.517165+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:11:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:11:50.046604+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:11:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:11:50.518361+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:12:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:12:05.040917+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:12:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:12:05.520311+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:12:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:12:20.046157+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:12:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:12:20.517870+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:12:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:12:35.044243+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:12:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:12:35.514332+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:12:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:12:50.039306+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:12:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:12:50.513922+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:13:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:13:05.041246+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:13:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:13:05.517338+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:13:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:13:20.043873+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:13:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:13:20.513549+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:13:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:13:35.040932+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:13:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:13:35.511825+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:13:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:13:50.036685+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:13:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:13:50.511357+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:14:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:14:05.039606+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:14:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:14:05.513811+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:14:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:14:20.037248+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:14:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:14:20.508521+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:14:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:14:35.034053+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:14:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:14:35.510120+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:14:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:14:50.035465+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:14:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:14:50.509504+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:15:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:15:05.030738+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:15:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:15:05.506133+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:15:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:15:20.030850+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:15:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:15:20.507421+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:15:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:15:35.031686+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:15:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:15:35.505933+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:15:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:15:50.029872+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:15:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:15:50.504645+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:16:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:16:05.028604+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:16:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:16:05.503899+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:16:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:16:20.029894+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 20:16:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:16:20.504429+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T20:27:47.114245+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T20:27:47.132717+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5002\n * Running on http://172.18.0.9:5002", "time": "2025-05-04T20:27:47.280081+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T20:27:47.281163+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5001\n * Running on http://172.18.0.12:5001", "time": "2025-05-04T20:27:47.286563+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T20:27:47.287133+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T20:27:47.288332+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T20:27:47.289408+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T20:27:48.476434+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T20:27:48.599217+00:00"}
+{"message": " * Debugger PIN: 109-452-375", "time": "2025-05-04T20:27:48.605826+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T20:27:48.799122+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T20:27:48.841655+00:00"}
+{"message": " * Debugger PIN: 693-655-370", "time": "2025-05-04T20:27:48.844239+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:28:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:28:05.086132+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:28:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:28:05.566640+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:28:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:28:20.085821+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:28:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:28:20.563492+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:28:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:28:35.084200+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:28:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:28:35.560416+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:28:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:28:50.084127+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:28:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:28:50.563989+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:29:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:29:05.085004+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:29:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:29:05.557189+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:29:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:29:20.081805+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:29:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:29:20.557393+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:29:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:29:35.080231+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:29:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:29:35.555266+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:29:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:29:50.081172+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:29:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:29:50.558918+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:30:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:30:05.077266+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:30:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:30:05.553009+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:30:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:30:20.077685+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:30:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:30:20.552201+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:30:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:30:35.075676+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:30:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:30:35.550196+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:30:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:30:50.075983+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:30:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:30:50.554660+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:31:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:31:05.072355+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:31:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:31:05.550962+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:31:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:31:20.075898+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:31:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:31:20.547816+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:31:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:31:35.070113+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:31:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:31:35.546213+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:31:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:31:50.070516+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:31:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:31:50.546677+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:32:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:32:05.070479+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:32:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:32:05.543668+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:32:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:32:20.071407+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:32:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:32:20.545060+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:32:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:32:35.068532+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:32:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:32:35.540975+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:32:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:32:50.065039+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:32:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:32:50.542075+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:33:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:33:05.067965+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:33:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:33:05.539928+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:33:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:33:20.066544+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:33:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:33:20.538846+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:33:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:33:35.063672+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:33:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:33:35.539385+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:33:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:33:50.065960+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:33:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:33:50.538115+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:34:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:34:05.063061+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:34:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:34:05.534812+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:34:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:34:20.058966+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:34:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:34:20.535954+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:34:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:34:35.057846+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:34:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:34:35.532675+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:34:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:34:50.057845+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 20:34:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T20:34:50.533155+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:18:15.784458+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:18:15.784765+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5001\n * Running on http://172.18.0.2:5001", "time": "2025-05-04T22:18:15.881264+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T22:18:15.881961+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5002\n * Running on http://172.18.0.4:5002", "time": "2025-05-04T22:18:15.881963+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T22:18:15.882603+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T22:18:15.884373+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T22:18:15.884373+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:18:16.952097+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T22:18:17.017913+00:00"}
+{"message": " * Debugger PIN: 952-907-836", "time": "2025-05-04T22:18:17.020432+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:18:17.110452+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T22:18:17.166293+00:00"}
+{"message": " * Debugger PIN: 112-025-311", "time": "2025-05-04T22:18:17.170923+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:18:25] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:18:25.577915+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:18:26] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:18:26.393815+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:18:40] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:18:40.574771+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:18:41] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:18:41.393399+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:18:55] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:18:55.576492+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:18:56] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:18:56.406598+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:19:10] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:19:10.572417+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:19:11] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:19:11.393702+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:19:25] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:19:25.570328+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:19:26] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:19:26.387944+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:19:40] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:19:40.570584+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:19:41] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:19:41.389964+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:19:55] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:19:55.567525+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:19:56] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:19:56.385805+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:20:10] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:20:10.567564+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:20:11] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:20:11.384937+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:20:59.283014+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5002\n * Running on http://172.18.0.4:5002", "time": "2025-05-04T22:20:59.361932+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T22:20:59.362887+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T22:20:59.364686+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:20:59.406541+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5001\n * Running on http://172.18.0.9:5001", "time": "2025-05-04T22:20:59.491157+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T22:20:59.492189+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T22:20:59.495192+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:21:00.009267+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T22:21:00.037812+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:21:00.117124+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T22:21:00.141272+00:00"}
+{"message": " * Debugger PIN: 365-214-514", "time": "2025-05-04T22:21:00.324544+00:00"}
+{"message": " * Debugger PIN: 597-542-292", "time": "2025-05-04T22:21:00.405130+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:21:51.851560+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5002\n * Running on http://172.18.0.6:5002", "time": "2025-05-04T22:21:51.987895+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T22:21:51.988639+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T22:21:51.991494+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:21:52.261707+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5001\n * Running on http://172.18.0.12:5001", "time": "2025-05-04T22:21:52.344130+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T22:21:52.345357+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T22:21:52.348740+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:21:52.658833+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T22:21:52.678960+00:00"}
+{"message": " * Debugger PIN: 796-331-939", "time": "2025-05-04T22:21:52.682254+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:21:52.892052+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T22:21:52.901302+00:00"}
+{"message": " * Debugger PIN: 949-967-733", "time": "2025-05-04T22:21:52.902406+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:21:56] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:21:56.395660+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:22:10] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:22:10.577222+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:22:11] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:22:11.394766+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:22:25] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:22:25.576240+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:22:26] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:22:26.391932+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:22:40] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:22:40.578305+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:22:41] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:22:41.391814+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:22:55] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:22:55.573639+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:22:56] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:22:56.390237+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:23:10] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:23:10.574237+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:23:11] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:23:11.392245+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:23:25] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:23:25.571010+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:23:26] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:23:26.387874+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:23:40] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:23:40.571035+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:23:41] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:23:41.388502+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:27:04.803278+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5001\n * Running on http://172.18.0.6:5001", "time": "2025-05-04T22:27:04.910684+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T22:27:04.916391+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T22:27:04.921711+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:27:05.090499+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5002\n * Running on http://172.18.0.9:5002", "time": "2025-05-04T22:27:05.206177+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T22:27:05.209949+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T22:27:05.212566+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:27:05.745128+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T22:27:05.780181+00:00"}
+{"message": " * Debugger PIN: 105-811-102", "time": "2025-05-04T22:27:05.920327+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:27:05.961324+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T22:27:05.975831+00:00"}
+{"message": " * Debugger PIN: 496-114-558", "time": "2025-05-04T22:27:06.090322+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:27:10] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:27:10.577836+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:27:11] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:27:11.394172+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:27:25] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:27:25.574916+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:27:26] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:27:26.392145+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:27:40] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:27:40.576888+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:27:41] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:27:41.391382+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:27:55] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:27:55.573465+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:27:56] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:27:56.389373+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:28:10] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:28:10.572928+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:28:11] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:28:11.389537+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:28:25] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:28:25.571716+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:28:26] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:28:26.390001+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:28:40] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:28:40.570877+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:28:41] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:28:41.389312+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:28:55] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:28:55.573902+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:28:56] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:28:56.386602+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:29:10] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:29:10.574542+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:29:11] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:29:11.388717+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:29:25] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:29:25.566627+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:29:26] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:29:26.386092+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:29:40] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:29:40.568156+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:29:41] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:29:41.383967+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:29:55] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:29:55.565695+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:29:56] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:29:56.382530+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:30:10] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:30:10.566018+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:30:11] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:30:11.385246+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:30:25] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:30:25.566255+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:30:26] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:30:26.381032+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:30:40] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:30:40.563213+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:30:41] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:30:41.380207+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:30:55] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:30:55.563055+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:30:56] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:30:56.378266+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:31:10] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:31:10.561741+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:31:11] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:31:11.378959+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:31:25] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:31:25.560346+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:31:26] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:31:26.378266+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:31:40] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:31:40.560361+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:31:41] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:31:41.381169+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:31:55] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:31:55.560419+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:31:56] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:31:56.384614+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:32:10] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:32:10.557854+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:32:11] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:32:11.375300+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:32:25] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:32:25.557615+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:32:26] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:32:26.373259+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:32:40] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:32:40.561016+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:32:41] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:32:41.373807+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:32:55] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:32:55.556587+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:32:56] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:32:56.373933+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:33:10] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:33:10.559697+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:33:11] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:33:11.372422+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:33:25] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:33:25.554083+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:33:26] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:33:26.370927+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:33:40] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:33:40.552010+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:33:41] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:33:41.372584+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:33:55] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:33:55.553123+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:33:56] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:33:56.370906+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:34:10] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:34:10.554765+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:34:11] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:34:11.368812+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:34:25] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:34:25.550652+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:34:26] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:34:26.365612+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:34:40] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:34:40.553852+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:34:41] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:34:41.367739+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:34:55] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:34:55.547758+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:34:56] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:34:56.363500+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:35:10] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:35:10.551316+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:35:11] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:35:11.363690+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:35:25] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:35:25.545378+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:35:26] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:35:26.362404+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:35:40] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:35:40.549334+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:35:41] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:35:41.363503+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:35:55] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:35:55.543127+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:35:56] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:35:56.360550+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:36:10] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:36:10.543204+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:36:11] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:36:11.360509+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:36:25] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:36:25.545648+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:36:26] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:36:26.358476+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:36:40] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:36:40.543078+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:36:41] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:36:41.358911+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:36:55] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:36:55.543867+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:36:56] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:36:56.357949+00:00"}
+{"message": "172.18.0.10 - - [04/May/2025 22:37:10] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:37:10.539662+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:37:49.980066+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5001\n * Running on http://172.18.0.9:5001", "time": "2025-05-04T22:37:50.069551+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T22:37:50.070153+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T22:37:50.071974+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:37:50.099507+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5002\n * Running on http://172.18.0.11:5002", "time": "2025-05-04T22:37:50.181940+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T22:37:50.184603+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T22:37:50.187044+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:37:50.799200+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T22:37:50.821161+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:37:50.918256+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T22:37:50.933860+00:00"}
+{"message": " * Debugger PIN: 104-032-994", "time": "2025-05-04T22:37:50.941937+00:00"}
+{"message": " * Debugger PIN: 824-509-722", "time": "2025-05-04T22:37:50.941972+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 22:37:55] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:37:55.577601+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 22:37:56] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:37:56.391984+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 22:38:10] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:38:10.575823+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 22:38:11] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:38:11.391733+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 22:38:25] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:38:25.572473+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 22:38:26] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:38:26.391885+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 22:38:40] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:38:40.576790+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 22:38:41] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:38:41.393271+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:39:42.708321+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5002\n * Running on http://172.18.0.9:5002", "time": "2025-05-04T22:39:42.773185+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T22:39:42.773698+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T22:39:42.775153+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:39:42.966775+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5001\n * Running on http://172.18.0.14:5001", "time": "2025-05-04T22:39:43.035983+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T22:39:43.036517+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T22:39:43.038262+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:39:43.356648+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T22:39:43.375945+00:00"}
+{"message": " * Debugger PIN: 106-061-701", "time": "2025-05-04T22:39:43.434645+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:39:43.618889+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T22:39:43.636339+00:00"}
+{"message": " * Debugger PIN: 372-475-071", "time": "2025-05-04T22:39:43.637771+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 22:39:55] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:39:55.577922+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 22:39:56] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:39:56.395306+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 22:40:10] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:40:10.576330+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 22:40:11] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:40:11.392737+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 22:40:25] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:40:25.573891+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 22:40:26] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:40:26.392969+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 22:40:40] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:40:40.576059+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 22:40:41] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:40:41.389951+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 22:40:55] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:40:55.574709+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 22:40:56] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:40:56.389066+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 22:41:10] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:41:10.573513+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 22:41:11] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:41:11.392188+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 22:41:25] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:41:25.575554+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 22:41:26] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:41:26.389113+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 22:41:40] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:41:40.569738+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 22:41:41] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:41:41.389965+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 22:41:55] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:41:55.573084+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 22:41:56] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:41:56.388290+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:43:19.358194+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5002\n * Running on http://172.18.0.6:5002", "time": "2025-05-04T22:43:19.456487+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T22:43:19.461402+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T22:43:19.466120+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:43:20.206422+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5001\n * Running on http://172.18.0.15:5001", "time": "2025-05-04T22:43:20.308851+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T22:43:20.310435+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T22:43:20.314122+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:43:20.362135+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T22:43:20.410672+00:00"}
+{"message": " * Debugger PIN: 213-397-298", "time": "2025-05-04T22:43:20.416748+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:43:21.130508+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T22:43:21.150823+00:00"}
+{"message": " * Debugger PIN: 406-891-845", "time": "2025-05-04T22:43:21.152867+00:00"}
+{"message": "172.18.0.8 - - [04/May/2025 22:43:25] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:43:25.575889+00:00"}
+{"message": "172.18.0.8 - - [04/May/2025 22:43:26] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:43:26.391575+00:00"}
+{"message": "172.18.0.8 - - [04/May/2025 22:43:40] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:43:40.589903+00:00"}
+{"message": "172.18.0.8 - - [04/May/2025 22:43:41] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:43:41.393705+00:00"}
+{"message": "172.18.0.8 - - [04/May/2025 22:43:55] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:43:55.574072+00:00"}
+{"message": "172.18.0.8 - - [04/May/2025 22:43:56] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:43:56.389769+00:00"}
+{"message": "172.18.0.8 - - [04/May/2025 22:44:10] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:44:10.574204+00:00"}
+{"message": "172.18.0.8 - - [04/May/2025 22:44:11] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:44:11.396253+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:45:00.324575+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5001\n * Running on http://172.18.0.8:5001", "time": "2025-05-04T22:45:00.424210+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T22:45:00.425386+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T22:45:00.427186+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:45:00.601772+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5002\n * Running on http://172.18.0.12:5002", "time": "2025-05-04T22:45:00.714585+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T22:45:00.715583+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T22:45:00.718505+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:45:01.221558+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T22:45:01.241534+00:00"}
+{"message": " * Debugger PIN: 140-417-541", "time": "2025-05-04T22:45:01.255993+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:45:01.390220+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T22:45:01.404608+00:00"}
+{"message": " * Debugger PIN: 694-988-730", "time": "2025-05-04T22:45:01.405731+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 22:45:10] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:45:10.577514+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 22:45:11] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:45:11.402381+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 22:45:25] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:45:25.571567+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 22:45:26] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:45:26.392335+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 22:45:40] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:45:40.571372+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 22:45:41] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:45:41.392531+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 22:45:55] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:45:55.574321+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 22:45:56] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:45:56.390857+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 22:46:10] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:46:10.578897+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 22:46:11] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:46:11.391054+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 22:46:25] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:46:25.573629+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 22:46:26] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:46:26.390795+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 22:46:40] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:46:40.571397+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 22:46:41] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:46:41.391140+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:47:51.439823+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5002\n * Running on http://172.18.0.4:5002", "time": "2025-05-04T22:47:51.556819+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T22:47:51.558008+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T22:47:51.559624+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:47:52.715218+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T22:47:52.756266+00:00"}
+{"message": " * Debugger PIN: 655-850-357", "time": "2025-05-04T22:47:52.757575+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:47:52.835564+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5001\n * Running on http://172.18.0.14:5001", "time": "2025-05-04T22:47:52.963810+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T22:47:52.965055+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T22:47:52.975645+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:47:53.596999+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T22:47:53.613063+00:00"}
+{"message": " * Debugger PIN: 490-357-930", "time": "2025-05-04T22:47:53.615267+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 22:48:10] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:48:10.579465+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 22:48:11] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:48:11.393604+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 22:48:25] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:48:25.579843+00:00"}
+{"message": "172.18.0.13 - - [04/May/2025 22:48:26] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:48:26.393123+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:49:25.196798+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5002\n * Running on http://172.18.0.4:5002", "time": "2025-05-04T22:49:25.296112+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T22:49:25.296867+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T22:49:25.298432+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:49:25.370801+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5001\n * Running on http://172.18.0.7:5001", "time": "2025-05-04T22:49:25.461115+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T22:49:25.462343+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T22:49:25.463926+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:49:26.160418+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T22:49:26.190745+00:00"}
+{"message": " * Debugger PIN: 113-882-245", "time": "2025-05-04T22:49:26.209593+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:49:26.348772+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T22:49:26.383169+00:00"}
+{"message": " * Debugger PIN: 686-055-264", "time": "2025-05-04T22:49:26.476625+00:00"}
+{"message": "172.18.0.14 - - [04/May/2025 22:49:40] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:49:40.576736+00:00"}
+{"message": "172.18.0.14 - - [04/May/2025 22:49:41] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:49:41.393992+00:00"}
+{"message": "172.18.0.14 - - [04/May/2025 22:49:55] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:49:55.577219+00:00"}
+{"message": "172.18.0.14 - - [04/May/2025 22:49:56] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:49:56.394871+00:00"}
+{"message": "172.18.0.14 - - [04/May/2025 22:50:10] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:50:10.577457+00:00"}
+{"message": "172.18.0.14 - - [04/May/2025 22:50:11] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:50:11.398737+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:50:34.984329+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:50:35.169160+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5002\n * Running on http://172.18.0.15:5002", "time": "2025-05-04T22:50:35.179072+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T22:50:35.180105+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T22:50:35.182353+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5001\n * Running on http://172.18.0.16:5001", "time": "2025-05-04T22:50:35.352786+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T22:50:35.360050+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T22:50:35.365749+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:50:36.220517+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T22:50:36.249258+00:00"}
+{"message": " * Debugger PIN: 172-906-572", "time": "2025-05-04T22:50:36.253665+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:50:36.316009+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T22:50:36.350895+00:00"}
+{"message": " * Debugger PIN: 120-538-838", "time": "2025-05-04T22:50:36.354453+00:00"}
+{"message": "172.18.0.14 - - [04/May/2025 22:50:40] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:50:40.574902+00:00"}
+{"message": "172.18.0.14 - - [04/May/2025 22:50:41] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:50:41.393226+00:00"}
+{"message": "172.18.0.14 - - [04/May/2025 22:50:55] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:50:55.574573+00:00"}
+{"message": "172.18.0.14 - - [04/May/2025 22:50:56] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:50:56.391421+00:00"}
+{"message": "172.18.0.14 - - [04/May/2025 22:51:10] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:51:10.573604+00:00"}
+{"message": "172.18.0.14 - - [04/May/2025 22:51:11] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:51:11.391113+00:00"}
+{"message": "172.18.0.14 - - [04/May/2025 22:51:25] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:51:25.571915+00:00"}
+{"message": "172.18.0.14 - - [04/May/2025 22:51:26] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:51:26.396824+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:52:31.510330+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5002\n * Running on http://172.18.0.10:5002", "time": "2025-05-04T22:52:31.578642+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T22:52:31.579205+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T22:52:31.580717+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:52:31.642681+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5001\n * Running on http://172.18.0.13:5001", "time": "2025-05-04T22:52:31.739944+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T22:52:31.740500+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T22:52:31.742810+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:52:32.257881+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T22:52:32.276379+00:00"}
+{"message": " * Debugger PIN: 425-513-688", "time": "2025-05-04T22:52:32.277983+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:52:32.371980+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T22:52:32.391800+00:00"}
+{"message": " * Debugger PIN: 409-540-035", "time": "2025-05-04T22:52:32.393457+00:00"}
+{"message": "172.18.0.4 - - [04/May/2025 22:52:40] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:52:40.579046+00:00"}
+{"message": "172.18.0.4 - - [04/May/2025 22:52:41] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:52:41.394529+00:00"}
+{"message": "172.18.0.4 - - [04/May/2025 22:52:55] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:52:55.574290+00:00"}
+{"message": "172.18.0.4 - - [04/May/2025 22:52:56] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:52:56.391599+00:00"}
+{"message": "172.18.0.4 - - [04/May/2025 22:53:10] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:53:10.573076+00:00"}
+{"message": "172.18.0.4 - - [04/May/2025 22:53:11] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:53:11.389862+00:00"}
+{"message": "172.18.0.4 - - [04/May/2025 22:53:25] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:53:25.574706+00:00"}
+{"message": "172.18.0.4 - - [04/May/2025 22:53:26] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:53:26.391921+00:00"}
+{"message": "172.18.0.4 - - [04/May/2025 22:53:40] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:53:40.574015+00:00"}
+{"message": "172.18.0.4 - - [04/May/2025 22:53:41] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:53:41.391631+00:00"}
+{"message": "172.18.0.4 - - [04/May/2025 22:53:55] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:53:55.572297+00:00"}
+{"message": "172.18.0.4 - - [04/May/2025 22:53:56] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:53:56.392639+00:00"}
+{"message": "172.18.0.4 - - [04/May/2025 22:54:10] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:54:10.575449+00:00"}
+{"message": "172.18.0.4 - - [04/May/2025 22:54:11] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:54:11.389518+00:00"}
+{"message": "172.18.0.4 - - [04/May/2025 22:54:25] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:54:25.571035+00:00"}
+{"message": "172.18.0.4 - - [04/May/2025 22:54:26] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:54:26.387298+00:00"}
+{"message": "172.18.0.4 - - [04/May/2025 22:54:40] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:54:40.574402+00:00"}
+{"message": "172.18.0.4 - - [04/May/2025 22:54:41] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:54:41.388237+00:00"}
+{"message": "172.18.0.4 - - [04/May/2025 22:54:55] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:54:55.569341+00:00"}
+{"message": "172.18.0.4 - - [04/May/2025 22:54:56] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:54:56.385700+00:00"}
+{"message": "172.18.0.4 - - [04/May/2025 22:55:10] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:55:10.568904+00:00"}
+{"message": "172.18.0.4 - - [04/May/2025 22:55:11] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:55:11.389068+00:00"}
+{"message": "172.18.0.4 - - [04/May/2025 22:55:25] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:55:25.569863+00:00"}
+{"message": "172.18.0.4 - - [04/May/2025 22:55:26] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:55:26.390118+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:56:13.676042+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:56:13.699317+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5001\n * Running on http://172.18.0.3:5001", "time": "2025-05-04T22:56:13.834899+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T22:56:13.839831+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T22:56:13.845071+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5002\n * Running on http://172.18.0.2:5002", "time": "2025-05-04T22:56:13.845177+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T22:56:13.847270+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T22:56:13.851101+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:56:14.545657+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:56:14.558777+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T22:56:14.569946+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T22:56:14.580390+00:00"}
+{"message": " * Debugger PIN: 733-021-576", "time": "2025-05-04T22:56:14.582052+00:00"}
+{"message": " * Debugger PIN: 101-556-987", "time": "2025-05-04T22:56:14.583243+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 22:56:25] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:56:25.577857+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 22:56:26] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:56:26.395880+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 22:56:40] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:56:40.576925+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 22:56:41] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:56:41.392927+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 22:56:55] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:56:55.576245+00:00"}
+{"message": "172.18.0.12 - - [04/May/2025 22:56:56] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:56:56.397230+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:58:40.710881+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:58:40.739623+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5002\n * Running on http://172.18.0.12:5002", "time": "2025-05-04T22:58:40.818358+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T22:58:40.819262+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T22:58:40.821572+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5001\n * Running on http://172.18.0.14:5001", "time": "2025-05-04T22:58:40.850572+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T22:58:40.858105+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T22:58:40.859624+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:58:41.369989+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T22:58:41.385727+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T22:58:41.391353+00:00"}
+{"message": " * Debugger PIN: 762-140-144", "time": "2025-05-04T22:58:41.391809+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T22:58:41.410434+00:00"}
+{"message": " * Debugger PIN: 384-334-764", "time": "2025-05-04T22:58:41.411762+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 22:58:55] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:58:55.575914+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 22:58:56] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:58:56.397773+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 22:59:10] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:59:10.576238+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 22:59:11] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:59:11.392508+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 22:59:25] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:59:25.575067+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 22:59:26] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:59:26.393726+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 22:59:40] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:59:40.575178+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 22:59:41] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:59:41.390416+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 22:59:55] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:59:55.572678+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 22:59:56] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T22:59:56.389356+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 23:00:10] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:00:10.573167+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 23:00:11] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:00:11.389391+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 23:00:25] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:00:25.571809+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 23:00:26] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:00:26.394230+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 23:00:40] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:00:40.573416+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 23:00:41] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:00:41.388112+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 23:00:55] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:00:55.573436+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 23:00:56] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:00:56.386980+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 23:01:10] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:01:10.569045+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 23:01:11] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:01:11.389386+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 23:01:25] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:01:25.567846+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 23:01:26] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:01:26.385331+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T23:05:07.665694+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T23:05:07.675755+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5002\n * Running on http://172.18.0.11:5002", "time": "2025-05-04T23:05:07.794073+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T23:05:07.799459+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T23:05:07.802951+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5001\n * Running on http://172.18.0.10:5001", "time": "2025-05-04T23:05:07.827449+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T23:05:07.828287+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T23:05:07.830397+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T23:05:08.931605+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T23:05:08.984665+00:00"}
+{"message": " * Debugger PIN: 367-395-913", "time": "2025-05-04T23:05:08.988206+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T23:05:09.008281+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T23:05:09.040661+00:00"}
+{"message": " * Debugger PIN: 808-381-191", "time": "2025-05-04T23:05:09.045156+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 23:05:16] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:05:16.530466+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 23:05:19] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:05:19.709587+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 23:05:31] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:05:31.528538+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 23:05:34] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:05:34.708690+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 23:05:46] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:05:46.527975+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 23:05:49] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:05:49.708913+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 23:06:01] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:06:01.529737+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 23:06:04] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:06:04.707640+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 23:06:16] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:06:16.528074+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 23:06:19] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:06:19.706835+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 23:06:31] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:06:31.529257+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 23:06:34] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:06:34.705763+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 23:06:46] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:06:46.526291+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 23:06:49] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:06:49.705691+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 23:07:01] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:07:01.526726+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 23:07:04] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:07:04.705603+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 23:07:16] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:07:16.526680+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 23:07:19] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:07:19.704592+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 23:07:31] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:07:31.528067+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 23:07:34] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:07:34.712355+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 23:07:46] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:07:46.524093+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 23:07:49] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:07:49.703749+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 23:08:01] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:08:01.521590+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 23:08:04] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:08:04.703555+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 23:08:16] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:08:16.521223+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 23:08:19] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:08:19.700696+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 23:08:31] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:08:31.519628+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 23:08:34] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:08:34.702793+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 23:08:46] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:08:46.519752+00:00"}
+{"message": "172.18.0.9 - - [04/May/2025 23:08:49] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:08:49.700028+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T23:09:38.517750+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5002\n * Running on http://172.18.0.3:5002", "time": "2025-05-04T23:09:38.644893+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T23:09:38.645626+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T23:09:38.648016+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T23:09:38.765807+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5001\n * Running on http://172.18.0.13:5001", "time": "2025-05-04T23:09:38.848239+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T23:09:38.849190+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T23:09:38.851086+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T23:09:39.329006+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T23:09:39.352525+00:00"}
+{"message": " * Debugger PIN: 880-587-618", "time": "2025-05-04T23:09:39.353920+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T23:09:39.489261+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T23:09:39.513582+00:00"}
+{"message": " * Debugger PIN: 145-146-907", "time": "2025-05-04T23:09:39.517968+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 23:09:46] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:09:46.530953+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 23:09:49] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:09:49.708877+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 23:10:01] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:10:01.529628+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 23:10:04] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:10:04.707868+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 23:10:16] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:10:16.530881+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 23:10:19] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:10:19.706771+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T23:11:30.584520+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T23:11:30.660052+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5002\n * Running on http://172.18.0.10:5002", "time": "2025-05-04T23:11:30.681095+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T23:11:30.685490+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T23:11:30.699605+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5001\n * Running on http://172.18.0.12:5001", "time": "2025-05-04T23:11:30.800609+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T23:11:30.802487+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T23:11:30.806998+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T23:11:31.657770+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T23:11:31.686431+00:00"}
+{"message": " * Debugger PIN: 857-859-123", "time": "2025-05-04T23:11:31.688746+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T23:11:31.712473+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T23:11:31.735183+00:00"}
+{"message": " * Debugger PIN: 489-057-158", "time": "2025-05-04T23:11:31.738899+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 23:11:41] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:11:41.567990+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 23:11:46] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:11:46.136442+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 23:11:56] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:11:56.574637+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 23:12:01] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:12:01.144389+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 23:12:11] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:12:11.577355+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 23:12:16] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:12:16.143339+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 23:12:26] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:12:26.571146+00:00"}
+{"message": "172.18.0.3 - - [04/May/2025 23:12:31] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:12:31.141820+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T23:13:46.057606+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T23:13:46.059486+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5002\n * Running on http://172.18.0.14:5002", "time": "2025-05-04T23:13:46.143182+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5001\n * Running on http://172.18.0.12:5001", "time": "2025-05-04T23:13:46.145179+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T23:13:46.145529+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-04T23:13:46.146133+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T23:13:46.149154+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-04T23:13:46.149205+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T23:13:46.712084+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T23:13:46.730788+00:00"}
+{"message": " * Debugger PIN: 273-157-901", "time": "2025-05-04T23:13:46.733357+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-04T23:13:46.743659+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-04T23:13:46.762741+00:00"}
+{"message": " * Debugger PIN: 650-128-834", "time": "2025-05-04T23:13:46.764084+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 23:13:56] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:13:56.564847+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 23:14:01] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:14:01.133538+00:00"}
+{"message": "172.18.0.5 - - [04/May/2025 23:14:11] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-04T23:14:11.565341+00:00"}
