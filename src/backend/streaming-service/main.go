@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"net/http"
 	"os"
 
 	"github.com/gin-gonic/gin"
@@ -9,6 +10,7 @@ import (
 	"github.com/malak-elbanna/streaming-service/config"
 	"github.com/malak-elbanna/streaming-service/controllers"
 	"github.com/malak-elbanna/streaming-service/routes"
+	"github.com/prometheus/client_golang/prometheus/promhttp"
 	cors "github.com/rs/cors/wrapper/gin"
 )
 
@@ -20,6 +22,14 @@ func main() {
 	if err != nil {
 		log.Fatal("Error loading .env file")
 	}
+
+	router.GET("/health", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{
+			"status": "UP",
+		})
+	})
+
+	router.GET("/metrics", gin.WrapH(promhttp.Handler()))
 
 	client := config.ConnectDB()
 	defer client.Disconnect(nil)

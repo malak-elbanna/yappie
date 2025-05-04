@@ -4,3 +4,6 @@ python-dotenv
 Flask-Migrate
 Flask-Cors
 psycopg2-binary
+prometheus-flask-exporter
+json_log_formatter
+prometheus-client==0.19.0

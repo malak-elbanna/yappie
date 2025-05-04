@@ -1,6 +1,19 @@
 _format_version: "3.0"
 plugins:
 - config:
+    bandwidth_metrics: false
+    latency_metrics: false
+    per_consumer: false
+    status_code_metrics: false
+    upstream_health_metrics: false
+  enabled: true
+  name: prometheus
+  protocols:
+  - grpc
+  - grpcs
+  - http
+  - https
+- config:
     day: null
     error_code: 429
     error_message: API rate limit exceeded

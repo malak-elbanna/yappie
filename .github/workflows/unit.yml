@@ -1,0 +1,35 @@
+name: Unit tests
+
+on:
+  push:
+    branches:
+      - integrate-user-cms-stream  # or the branch you work with
+  pull_request:
+    branches:
+      - integrate-user-cms-stream  # or the branch you work with
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # You can use other environments like macos or windows
+    
+    services:
+      docker:
+        image: docker:19.03.12
+        options: --privileged
+        ports:
+          - 2375:2375
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v1
+
+    - name: Build Docker image
+      run: |
+        docker build -t my-app .
+
+    - name: Run tests
+      run: |
+        docker run --rm my-app pytest  # This runs your tests in the Docker container

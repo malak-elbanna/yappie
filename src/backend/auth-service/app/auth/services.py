@@ -6,6 +6,7 @@ import datetime
 import re
 import requests
 import os
+import logging
 
 def register_user(data):
     if 'name' not in data or not data['name']:
@@ -21,6 +22,8 @@ def register_user(data):
     user.set_password(password)
     db.session.add(user)
     db.session.commit()
+
+    logging.info("User registered", extra={"user_id": str(user.id)})
     return jsonify(message="User registered"), 201
 
 def login_user(data):
@@ -33,9 +36,12 @@ def login_user(data):
         'email': user.email
     })
     refresh_token = create_refresh_token(identity=str(user.id))
+
+    logging.info("User logged in", extra={"user_id": str(user.id)})
     return jsonify({
         "access_token": access_token,
-        "refresh_token": refresh_token
+        "refresh_token": refresh_token,
+        "user_id": user.id
     }), 200
 
 def login_admin_user(data):
@@ -47,6 +53,8 @@ def login_admin_user(data):
 
     access_token = create_access_token(identity=str(admin.id))
     refresh_token = create_refresh_token(identity=str(admin.id))
+
+    logging.info("Admin logged in", extra={"user_id": str(admin.id)})
     return jsonify({
         "access_token": access_token,
         "refresh_token": refresh_token
@@ -70,6 +78,8 @@ def revoke_token(request):
 
         response = jsonify({"message": "Successfully logged out"})
         unset_jwt_cookies(response)
+
+        logging.info("User logged out", extra={"user_id": jwt_identity})
         return response, 200
     except Exception as e:
         print(f"Logout error: {str(e)}")

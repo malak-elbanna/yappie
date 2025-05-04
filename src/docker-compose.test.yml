@@ -1,0 +1,89 @@
+version: "3.8"
+
+services:
+
+  auth-service:  
+    build:
+      context: ./backend/auth-service
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend/auth-service/.env  
+    environment:
+      PORT: 5000
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+      - redis
+  review-service:
+    build:
+      context: ./backend/review-service
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend/review-service/.env
+    environment:
+      PORT: 5003
+    ports:
+      - "5003:5003"
+
+  cms-service:
+    build: 
+      context: ./backend/content-management-service
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend/content-management-service/.env
+    environment:
+      PORT: 5001
+    ports:
+      - "5001:5001"
+
+  streaming-service:
+    build:
+      context: ./backend/streaming-service
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend/streaming-service/.env
+    environment:
+      PORT: 8080
+    ports:
+      - "8080:8080"
+    depends_on:
+      - redis
+
+  profile-service:
+    build: 
+      context: ./backend/profile-management-service
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend/profile-management-service/.env
+    environment:
+      PORT: 5005
+    ports:
+      - "5005:5005"
+    depends_on:
+      - profile-db
+
+  profile-db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: profile_db
+    ports:
+      - "5434:5432"
+
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: user_db
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:latest  
+    container_name: redis_container
+    restart: always
+    ports:
+      - "6379:6379"

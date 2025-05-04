@@ -4,6 +4,7 @@ from app.core.extensions import db
 from flask_bcrypt import generate_password_hash
 from app.models.user import User
 from main import app
+import logging
 
 load_dotenv()
 
@@ -31,6 +32,8 @@ def create_admin():
         db.session.add(admin)
         db.session.commit()
         print("admin created")
+        
+        logging.info("Adming created", extra={"user_id": admin.id})
 
 if __name__ == "__main__":
     create_admin()
