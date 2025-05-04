@@ -9,6 +9,13 @@ services:
     ports:
       - 5672:5672
       - 15672:15672
+
+    healthcheck:
+      test: rabbitmq-diagnostics -q ping
+      interval: 30s
+      timeout: 30s
+      retries: 3 
+
     volumes:
       - rabbitmq-lib:/var/lib/rabbitmq/
       - rabbitmq-log:/var/log/rabbitmq
@@ -102,7 +109,8 @@ services:
       - "4000:4000"
     command: ["node", "server"]
     depends_on:
-      - rabbitmq
+      rabbitmq:
+        condition: service_healthy
       
   review-service-1:
     build:
