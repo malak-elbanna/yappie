@@ -5,6 +5,11 @@ from bson.objectid import ObjectId
 from werkzeug.utils import secure_filename
 from gridfs import GridFS
 import logging
+from minio import Minio
+import os
+
+
+
 
 
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'mp4', 'm4a', 'mp3'}
@@ -48,6 +53,13 @@ def get_audiobook(id):
 def add_audiobook():
     db = mongo.cx["audiobooks_db"]
     fs = GridFS(db)
+    
+    client = Minio("minio:9000",
+        access_key="user",
+        secret_key="userpassword",
+        secure=False,
+    )
+
 
     data = request.form.to_dict()
     files = request.files
@@ -59,8 +71,10 @@ def add_audiobook():
     if 'audio_file' in files:
         audio_file = files['audio_file']
         if audio_file and allowed_file(audio_file.filename):
-            audio_id = fs.put(audio_file, filename=secure_filename(audio_file.filename))
-            data['audio_id'] = str(audio_id)
+            # audio_id = fs.put(audio_file, filename=secure_filename(audio_file.filename))
+            size = os.fstat(audio_file.fileno()).st_size
+            client.put_object('audiobooks', audio_file.filename, audio_file,size)
+            data['audio_id'] = 'http://minio:9000/audiobooks/'+audio_file.filename
     result = db.books.insert_one(data)
     logging.info("Audiobook added", extra={"audiobook_id": str(result.inserted_id)})
     return jsonify({"_id": str(result.inserted_id)}), 201
