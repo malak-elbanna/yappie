@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getBooks } from '../api'; // adjust path if needed
+import { getBooks } from '../Api'; // adjust path if needed
+
+import { getBooks } from '../Api'; // adjust path if needed
 
 const CategoryBooks = () => {
   const { categoryName } = useParams();
@@ -51,3 +53,4 @@ const CategoryBooks = () => {
 };
 
 export default CategoryBooks;
+
