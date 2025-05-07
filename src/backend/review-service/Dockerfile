@@ -7,6 +7,7 @@ RUN npm install
 
 COPY . .
 
+
 EXPOSE 5003
 
 CMD ["node", "app.js"]
