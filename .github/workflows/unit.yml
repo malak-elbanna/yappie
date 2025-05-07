@@ -27,8 +27,8 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t my-app:test .
+          docker build -t review-service:test .
 
       - name: Run unit tests
         run: |
-          docker run --rm my-app:test npx jest --detectOpenHandles
+          docker run --rm review-service:test npx jest --detectOpenHandles
