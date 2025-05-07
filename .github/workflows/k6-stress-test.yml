@@ -106,7 +106,7 @@ jobs:
             -   name: Run k6 test
                 uses: grafana/run-k6-action@v1
                 with:
-                    path: src/tests/k6/profile_test.js
+                    path: src/tests/k6/*_test.js
 
             -   name: Stop containers
                 if: always()
