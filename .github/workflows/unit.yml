@@ -27,4 +27,4 @@ jobs:
 
       - name: Run unit tests
         run: |
-          docker run --rm my-app:test pytest tests/
+          docker run --rm my-app:test npx jest --detectOpenHandles
