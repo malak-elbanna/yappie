@@ -72,7 +72,7 @@ def add_audiobook():
             
             hls_export_upload(audio_file,os.path.splitext(audio_file.filename)[0])
 
-            data['audio_url'] = 'http://minio:9000/audiobooks/'+os.path.splitext(audio_file.filename)[0]+'.m3u8'
+            data['audio_url'] = 'http://localhost:9000/audiobooks/'+os.path.splitext(audio_file.filename)[0]+'.m3u8'
 
     result = db.books.insert_one(data)
     logging.info("Audiobook added", extra={"audiobook_id": str(result.inserted_id)})

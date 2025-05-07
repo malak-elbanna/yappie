@@ -22,20 +22,21 @@ def MinioUpload(bucket,filename,file):
 def hls_export_upload(rawfile,filename):
     
     os.makedirs("temp_hls", exist_ok=True)
-
     cmd = [
-        "ffmpeg","-f","mp3",
-        "-i","-",
-        "-map", "0:a", "-map", "0:a", "-map", "0:a",
-        "-c:a", "aac",
+        "ffmpeg",
+        "-i", "-",  
+        "-map", "0:a", "-map", "0:a", "-map", "0:a", 
+        "-c:a", "aac",  
         "-b:a:0", "64k", 
-        "-b:a:1", "128k",
-        "-b:a:2", "192k",
-        "-f", "hls",'-var_stream_map "a:0 a:1 a:2"',
+        "-b:a:1", "128k",  
+        "-b:a:2", "192k",  
+        "-f", "hls",
+        "-var_stream_map", "a:0 a:1 a:2",
         "-hls_time", "10",
         "-hls_playlist_type", "event",
-        "-hls_segment_filename", f'temp_hls/{filename}_%03d.ts',
-        f'temp_hls/{filename}.m3u8'
+        "-hls_segment_filename", f"temp_hls/{filename}_%v_%03d.ts", 
+        "-master_pl_name", f"{filename}.m3u8",
+        f"temp_hls/{filename}_%v.m3u8"
     ]
     process = subprocess.Popen(cmd, stdin=subprocess.PIPE)
     process.communicate(rawfile.read())

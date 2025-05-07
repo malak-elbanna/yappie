@@ -5577,3 +5577,305 @@
 {"message": "172.18.0.7 - - [07/May/2025 02:46:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:46:24.965407+00:00"}
 {"message": "172.18.0.7 - - [07/May/2025 02:46:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:46:35.920667+00:00"}
 {"message": "172.18.0.7 - - [07/May/2025 02:46:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:46:39.962961+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:46:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:46:50.919602+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:46:54] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:46:54.962119+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:47:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:47:05.918069+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:47:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:47:09.961841+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:47:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:47:20.914516+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:47:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:47:24.966038+00:00"}
+{"message": " * Detected change in '/app/services/Minio_upload.py', reloading", "time": "2025-05-07T02:47:27.174035+00:00"}
+{"message": " * Detected change in '/app/services/Minio_upload.py', reloading", "time": "2025-05-07T02:47:27.178766+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-07T02:47:27.820940+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-07T02:47:27.855947+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-07T02:47:28.761889+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-07T02:47:28.764457+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-07T02:47:28.788281+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-07T02:47:28.788782+00:00"}
+{"message": " * Debugger PIN: 376-304-067", "time": "2025-05-07T02:47:28.789387+00:00"}
+{"message": " * Debugger PIN: 583-186-604", "time": "2025-05-07T02:47:28.789691+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:47:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:47:35.915620+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:47:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:47:39.960384+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:47:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:47:50.916505+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:47:54] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:47:54.960464+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:48:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:48:05.912348+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:48:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:48:09.963058+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:48:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:48:20.913456+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:48:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:48:24.960349+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:48:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:48:35.910166+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:48:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:48:39.956410+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:48:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:48:50.913660+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:48:54] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:48:54.958282+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:49:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:49:05.908450+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:49:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:49:09.958087+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:49:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:49:20.908069+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:49:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:49:24.954962+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:49:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:49:35.913495+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:49:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:49:39.955775+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:49:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:49:50.912758+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:49:54] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:49:54.957780+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:50:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:50:05.907905+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:50:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:50:09.955487+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:50:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:50:20.904950+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:50:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:50:24.954591+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:50:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:50:35.903066+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:50:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:50:39.949057+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:50:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:50:50.909061+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:50:54] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:50:54.954157+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:51:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:51:05.900352+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:51:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:51:09.947073+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:51:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:51:20.901897+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:51:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:51:24.946761+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:51:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:51:35.901475+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:51:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:51:39.947484+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:51:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:51:50.900517+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:51:54] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:51:54.948017+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:52:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:52:05.899345+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:52:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:52:09.945945+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:52:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:52:20.903772+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:52:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:52:24.946014+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:52:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:52:35.898343+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:52:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:52:39.943879+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:52:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:52:50.897773+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:52:54] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:52:54.947855+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:53:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:53:05.898658+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:53:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:53:09.942116+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:53:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:53:20.901965+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:53:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:53:24.943056+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:53:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:53:35.894713+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:53:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:53:39.941569+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:53:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:53:50.897541+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:53:54] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:53:54.943408+00:00"}
+{"message": " * Detected change in '/app/services/Minio_upload.py', reloading", "time": "2025-05-07T02:53:56.245389+00:00"}
+{"message": " * Detected change in '/app/services/Minio_upload.py', reloading", "time": "2025-05-07T02:53:56.249479+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-07T02:53:56.378009+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-07T02:53:56.379579+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-07T02:53:57.137141+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-07T02:53:57.137210+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-07T02:53:57.151347+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-07T02:53:57.151389+00:00"}
+{"message": " * Debugger PIN: 376-304-067", "time": "2025-05-07T02:53:57.152026+00:00"}
+{"message": " * Debugger PIN: 583-186-604", "time": "2025-05-07T02:53:57.152224+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:54:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:54:05.897027+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:54:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:54:09.937724+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:54:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:54:20.897367+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:54:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:54:24.942375+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:54:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:54:35.889697+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:54:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:54:39.936884+00:00"}
+{"message": " * Detected change in '/app/services/Minio_upload.py', reloading", "time": "2025-05-07T02:54:41.224218+00:00"}
+{"message": " * Detected change in '/app/services/Minio_upload.py', reloading", "time": "2025-05-07T02:54:41.228693+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-07T02:54:41.330133+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-07T02:54:41.333252+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-07T02:54:41.905775+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-07T02:54:41.905778+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-07T02:54:41.925065+00:00"}
+{"message": " * Debugger PIN: 583-186-604", "time": "2025-05-07T02:54:41.925756+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-07T02:54:41.928346+00:00"}
+{"message": " * Debugger PIN: 376-304-067", "time": "2025-05-07T02:54:41.929450+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:54:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:54:50.890827+00:00"}
+{"message": "Uploaded: One Last Adventure.m3u8", "time": "2025-05-07T02:54:54.889238+00:00"}
+{"message": "Uploaded: One Last Adventure_0.m3u8", "time": "2025-05-07T02:54:54.902490+00:00"}
+{"message": "Uploaded: One Last Adventure_0_000.ts", "time": "2025-05-07T02:54:54.921070+00:00"}
+{"message": "Uploaded: One Last Adventure_0_001.ts", "time": "2025-05-07T02:54:54.933035+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:54:54] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:54:54.937406+00:00"}
+{"message": "Uploaded: One Last Adventure_0_002.ts", "time": "2025-05-07T02:54:54.945806+00:00"}
+{"message": "Uploaded: One Last Adventure_0_003.ts", "time": "2025-05-07T02:54:54.965044+00:00"}
+{"message": "Uploaded: One Last Adventure_0_004.ts", "time": "2025-05-07T02:54:54.983076+00:00"}
+{"message": "Uploaded: One Last Adventure_0_005.ts", "time": "2025-05-07T02:54:54.997378+00:00"}
+{"message": "Uploaded: One Last Adventure_0_006.ts", "time": "2025-05-07T02:54:55.018004+00:00"}
+{"message": "Uploaded: One Last Adventure_0_007.ts", "time": "2025-05-07T02:54:55.033399+00:00"}
+{"message": "Uploaded: One Last Adventure_0_008.ts", "time": "2025-05-07T02:54:55.048685+00:00"}
+{"message": "Uploaded: One Last Adventure_0_009.ts", "time": "2025-05-07T02:54:55.063075+00:00"}
+{"message": "Uploaded: One Last Adventure_0_010.ts", "time": "2025-05-07T02:54:55.075730+00:00"}
+{"message": "Uploaded: One Last Adventure_0_011.ts", "time": "2025-05-07T02:54:55.086534+00:00"}
+{"message": "Uploaded: One Last Adventure_0_012.ts", "time": "2025-05-07T02:54:55.098254+00:00"}
+{"message": "Uploaded: One Last Adventure_0_013.ts", "time": "2025-05-07T02:54:55.114795+00:00"}
+{"message": "Uploaded: One Last Adventure_0_014.ts", "time": "2025-05-07T02:54:55.126580+00:00"}
+{"message": "Uploaded: One Last Adventure_1.m3u8", "time": "2025-05-07T02:54:55.136582+00:00"}
+{"message": "Uploaded: One Last Adventure_1_000.ts", "time": "2025-05-07T02:54:55.152090+00:00"}
+{"message": "Uploaded: One Last Adventure_1_001.ts", "time": "2025-05-07T02:54:55.166147+00:00"}
+{"message": "Uploaded: One Last Adventure_1_002.ts", "time": "2025-05-07T02:54:55.179628+00:00"}
+{"message": "Uploaded: One Last Adventure_1_003.ts", "time": "2025-05-07T02:54:55.192947+00:00"}
+{"message": "Uploaded: One Last Adventure_1_004.ts", "time": "2025-05-07T02:54:55.212574+00:00"}
+{"message": "Uploaded: One Last Adventure_1_005.ts", "time": "2025-05-07T02:54:55.226538+00:00"}
+{"message": "Uploaded: One Last Adventure_1_006.ts", "time": "2025-05-07T02:54:55.240796+00:00"}
+{"message": "Uploaded: One Last Adventure_1_007.ts", "time": "2025-05-07T02:54:55.254934+00:00"}
+{"message": "Uploaded: One Last Adventure_1_008.ts", "time": "2025-05-07T02:54:55.270472+00:00"}
+{"message": "Uploaded: One Last Adventure_1_009.ts", "time": "2025-05-07T02:54:55.284493+00:00"}
+{"message": "Uploaded: One Last Adventure_1_010.ts", "time": "2025-05-07T02:54:55.302681+00:00"}
+{"message": "Uploaded: One Last Adventure_1_011.ts", "time": "2025-05-07T02:54:55.322292+00:00"}
+{"message": "Uploaded: One Last Adventure_1_012.ts", "time": "2025-05-07T02:54:55.339580+00:00"}
+{"message": "Uploaded: One Last Adventure_1_013.ts", "time": "2025-05-07T02:54:55.355917+00:00"}
+{"message": "Uploaded: One Last Adventure_1_014.ts", "time": "2025-05-07T02:54:55.368211+00:00"}
+{"message": "Uploaded: One Last Adventure_2.m3u8", "time": "2025-05-07T02:54:55.378679+00:00"}
+{"message": "Uploaded: One Last Adventure_2_000.ts", "time": "2025-05-07T02:54:55.396120+00:00"}
+{"message": "Uploaded: One Last Adventure_2_001.ts", "time": "2025-05-07T02:54:55.415480+00:00"}
+{"message": "Uploaded: One Last Adventure_2_002.ts", "time": "2025-05-07T02:54:55.432670+00:00"}
+{"message": "Uploaded: One Last Adventure_2_003.ts", "time": "2025-05-07T02:54:55.454027+00:00"}
+{"message": "Uploaded: One Last Adventure_2_004.ts", "time": "2025-05-07T02:54:55.468650+00:00"}
+{"message": "Uploaded: One Last Adventure_2_005.ts", "time": "2025-05-07T02:54:55.483730+00:00"}
+{"message": "Uploaded: One Last Adventure_2_006.ts", "time": "2025-05-07T02:54:55.501888+00:00"}
+{"message": "Uploaded: One Last Adventure_2_007.ts", "time": "2025-05-07T02:54:55.523116+00:00"}
+{"message": "Uploaded: One Last Adventure_2_008.ts", "time": "2025-05-07T02:54:55.541425+00:00"}
+{"message": "Uploaded: One Last Adventure_2_009.ts", "time": "2025-05-07T02:54:55.558481+00:00"}
+{"message": "Uploaded: One Last Adventure_2_010.ts", "time": "2025-05-07T02:54:55.575315+00:00"}
+{"message": "Uploaded: One Last Adventure_2_011.ts", "time": "2025-05-07T02:54:55.591479+00:00"}
+{"message": "Uploaded: One Last Adventure_2_012.ts", "time": "2025-05-07T02:54:55.615014+00:00"}
+{"message": "Uploaded: One Last Adventure_2_013.ts", "time": "2025-05-07T02:54:55.631970+00:00"}
+{"message": "Uploaded: One Last Adventure_2_014.ts", "time": "2025-05-07T02:54:55.647397+00:00"}
+{"audiobook_id": "681acb7f30fc4659d35cc1cd", "message": "Audiobook added", "time": "2025-05-07T02:54:57.109623+00:00"}
+{"message": "172.18.0.21 - - [07/May/2025 02:54:57] \"\u001b[35m\u001b[1mPOST / HTTP/1.1\u001b[0m\" 201 -", "time": "2025-05-07T02:54:57.111622+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:55:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:55:05.890149+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:55:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:55:09.934357+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:55:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:55:20.890202+00:00"}
+{"message": "Uploaded: One Last Adventure.m3u8", "time": "2025-05-07T02:55:24.910917+00:00"}
+{"message": "Uploaded: One Last Adventure_0.m3u8", "time": "2025-05-07T02:55:24.922326+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:55:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:55:24.935577+00:00"}
+{"message": "Uploaded: One Last Adventure_0_000.ts", "time": "2025-05-07T02:55:24.936696+00:00"}
+{"message": "Uploaded: One Last Adventure_0_001.ts", "time": "2025-05-07T02:55:24.954814+00:00"}
+{"message": "Uploaded: One Last Adventure_0_002.ts", "time": "2025-05-07T02:55:24.972100+00:00"}
+{"message": "Uploaded: One Last Adventure_0_003.ts", "time": "2025-05-07T02:55:24.985890+00:00"}
+{"message": "Uploaded: One Last Adventure_0_004.ts", "time": "2025-05-07T02:55:25.000037+00:00"}
+{"message": "Uploaded: One Last Adventure_0_005.ts", "time": "2025-05-07T02:55:25.015894+00:00"}
+{"message": "Uploaded: One Last Adventure_0_006.ts", "time": "2025-05-07T02:55:25.031697+00:00"}
+{"message": "Uploaded: One Last Adventure_0_007.ts", "time": "2025-05-07T02:55:25.049571+00:00"}
+{"message": "Uploaded: One Last Adventure_0_008.ts", "time": "2025-05-07T02:55:25.068169+00:00"}
+{"message": "Uploaded: One Last Adventure_0_009.ts", "time": "2025-05-07T02:55:25.081238+00:00"}
+{"message": "Uploaded: One Last Adventure_0_010.ts", "time": "2025-05-07T02:55:25.096024+00:00"}
+{"message": "Uploaded: One Last Adventure_0_011.ts", "time": "2025-05-07T02:55:25.108992+00:00"}
+{"message": "Uploaded: One Last Adventure_0_012.ts", "time": "2025-05-07T02:55:25.120190+00:00"}
+{"message": "Uploaded: One Last Adventure_0_013.ts", "time": "2025-05-07T02:55:25.132203+00:00"}
+{"message": "Uploaded: One Last Adventure_0_014.ts", "time": "2025-05-07T02:55:25.145407+00:00"}
+{"message": "Uploaded: One Last Adventure_1.m3u8", "time": "2025-05-07T02:55:25.161091+00:00"}
+{"message": "Uploaded: One Last Adventure_1_000.ts", "time": "2025-05-07T02:55:25.192466+00:00"}
+{"message": "Uploaded: One Last Adventure_1_001.ts", "time": "2025-05-07T02:55:25.213874+00:00"}
+{"message": "Uploaded: One Last Adventure_1_002.ts", "time": "2025-05-07T02:55:25.231106+00:00"}
+{"message": "Uploaded: One Last Adventure_1_003.ts", "time": "2025-05-07T02:55:25.249210+00:00"}
+{"message": "Uploaded: One Last Adventure_1_004.ts", "time": "2025-05-07T02:55:25.266754+00:00"}
+{"message": "Uploaded: One Last Adventure_1_005.ts", "time": "2025-05-07T02:55:25.281031+00:00"}
+{"message": "Uploaded: One Last Adventure_1_006.ts", "time": "2025-05-07T02:55:25.295406+00:00"}
+{"message": "Uploaded: One Last Adventure_1_007.ts", "time": "2025-05-07T02:55:25.309458+00:00"}
+{"message": "Uploaded: One Last Adventure_1_008.ts", "time": "2025-05-07T02:55:25.324279+00:00"}
+{"message": "Uploaded: One Last Adventure_1_009.ts", "time": "2025-05-07T02:55:25.338889+00:00"}
+{"message": "Uploaded: One Last Adventure_1_010.ts", "time": "2025-05-07T02:55:25.356273+00:00"}
+{"message": "Uploaded: One Last Adventure_1_011.ts", "time": "2025-05-07T02:55:25.369470+00:00"}
+{"message": "Uploaded: One Last Adventure_1_012.ts", "time": "2025-05-07T02:55:25.384401+00:00"}
+{"message": "Uploaded: One Last Adventure_1_013.ts", "time": "2025-05-07T02:55:25.398842+00:00"}
+{"message": "Uploaded: One Last Adventure_1_014.ts", "time": "2025-05-07T02:55:25.411022+00:00"}
+{"message": "Uploaded: One Last Adventure_2.m3u8", "time": "2025-05-07T02:55:25.421314+00:00"}
+{"message": "Uploaded: One Last Adventure_2_000.ts", "time": "2025-05-07T02:55:25.434746+00:00"}
+{"message": "Uploaded: One Last Adventure_2_001.ts", "time": "2025-05-07T02:55:25.451418+00:00"}
+{"message": "Uploaded: One Last Adventure_2_002.ts", "time": "2025-05-07T02:55:25.466391+00:00"}
+{"message": "Uploaded: One Last Adventure_2_003.ts", "time": "2025-05-07T02:55:25.481339+00:00"}
+{"message": "Uploaded: One Last Adventure_2_004.ts", "time": "2025-05-07T02:55:25.496369+00:00"}
+{"message": "Uploaded: One Last Adventure_2_005.ts", "time": "2025-05-07T02:55:25.512935+00:00"}
+{"message": "Uploaded: One Last Adventure_2_006.ts", "time": "2025-05-07T02:55:25.527170+00:00"}
+{"message": "Uploaded: One Last Adventure_2_007.ts", "time": "2025-05-07T02:55:25.543711+00:00"}
+{"message": "Uploaded: One Last Adventure_2_008.ts", "time": "2025-05-07T02:55:25.564970+00:00"}
+{"message": "Uploaded: One Last Adventure_2_009.ts", "time": "2025-05-07T02:55:25.582592+00:00"}
+{"message": "Uploaded: One Last Adventure_2_010.ts", "time": "2025-05-07T02:55:25.602329+00:00"}
+{"message": "Uploaded: One Last Adventure_2_011.ts", "time": "2025-05-07T02:55:25.619698+00:00"}
+{"message": "Uploaded: One Last Adventure_2_012.ts", "time": "2025-05-07T02:55:25.637514+00:00"}
+{"message": "Uploaded: One Last Adventure_2_013.ts", "time": "2025-05-07T02:55:25.660123+00:00"}
+{"message": "Uploaded: One Last Adventure_2_014.ts", "time": "2025-05-07T02:55:25.680887+00:00"}
+{"audiobook_id": "681acb9d86672052b15b9610", "message": "Audiobook added", "time": "2025-05-07T02:55:26.916272+00:00"}
+{"message": "172.18.0.21 - - [07/May/2025 02:55:26] \"\u001b[35m\u001b[1mPOST / HTTP/1.1\u001b[0m\" 201 -", "time": "2025-05-07T02:55:26.920306+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:55:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:55:35.888708+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:55:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:55:39.932856+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:55:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:55:50.891200+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:55:54] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:55:54.932885+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:56:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:56:05.887776+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:56:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:56:09.931333+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:56:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:56:20.884562+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:56:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:56:24.932730+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:56:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:56:35.885540+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:56:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:56:39.929398+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:56:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:56:50.885966+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:56:54] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:56:54.929670+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:57:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:57:05.884239+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:57:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:57:09.933013+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:57:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:57:20.881819+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:57:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:57:24.928706+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:57:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:57:35.881481+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:57:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:57:39.927833+00:00"}
+{"message": " * Detected change in '/app/controllers/audiobook_controller.py', reloading", "time": "2025-05-07T02:57:42.636675+00:00"}
+{"message": " * Detected change in '/app/controllers/audiobook_controller.py', reloading", "time": "2025-05-07T02:57:42.637967+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-07T02:57:43.106189+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-07T02:57:43.209467+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-07T02:57:43.820108+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-07T02:57:43.820346+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-07T02:57:43.833105+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-07T02:57:43.833129+00:00"}
+{"message": " * Debugger PIN: 376-304-067", "time": "2025-05-07T02:57:43.834401+00:00"}
+{"message": " * Debugger PIN: 583-186-604", "time": "2025-05-07T02:57:43.834416+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:57:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:57:50.879779+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:57:54] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:57:54.928431+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:58:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:58:05.878269+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:58:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:58:09.925318+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:58:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:58:20.878328+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:58:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:58:24.926779+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:58:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:58:35.879719+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:58:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:58:39.923282+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:58:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:58:50.877633+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:58:54] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:58:54.926840+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:59:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:59:05.875537+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:59:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:59:09.923284+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:59:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:59:20.877505+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:59:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:59:24.923152+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:59:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:59:35.873302+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:59:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:59:39.920057+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:59:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:59:50.876208+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 02:59:54] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T02:59:54.919818+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:00:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:00:05.872385+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:00:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:00:09.918323+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:00:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:00:20.877410+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:00:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:00:24.918727+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:00:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:00:35.871477+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:00:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:00:39.921140+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:00:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:00:50.870765+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:00:54] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:00:54.917547+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:01:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:01:05.874050+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:01:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:01:09.915076+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:01:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:01:20.873389+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:01:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:01:24.917718+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:01:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:01:35.868365+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:01:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:01:39.915372+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:01:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:01:50.869767+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:01:54] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:01:54.916916+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:02:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:02:05.864454+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:02:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:02:09.911610+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:02:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:02:20.864190+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:02:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:02:24.910673+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:02:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:02:35.863164+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:02:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:02:39.909175+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:02:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:02:50.863951+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:02:54] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:02:54.909303+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:03:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:03:05.864098+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:03:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:03:09.908978+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:03:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:03:20.862081+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:03:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:03:24.907468+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:03:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:03:35.865303+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:03:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:03:39.905058+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:03:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:03:50.859665+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:03:54] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:03:54.905809+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:04:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:04:05.863828+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:04:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:04:09.903668+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:04:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:04:20.860820+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:04:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:04:24.903169+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:04:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:04:35.856334+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:04:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:04:39.902603+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:04:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:04:50.856334+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:04:54] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:04:54.901801+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:05:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:05:05.854473+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:05:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:05:09.904275+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:05:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:05:20.854332+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:05:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:05:24.901377+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:05:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:05:35.853255+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:05:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:05:39.898266+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:05:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:05:50.856876+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:05:54] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:05:54.898833+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:06:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:06:05.851933+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:06:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:06:09.896692+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:06:20] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:06:20.851517+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:06:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:06:24.897144+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:06:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:06:35.851608+00:00"}
+{"message": "172.18.0.7 - - [07/May/2025 03:06:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:06:39.897423+00:00"}
