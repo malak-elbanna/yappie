@@ -4,8 +4,8 @@ function addAudiobook() {
     const message = {
         topic:"author",
     }
-    console.log(formData);
-    fetch("/api/content", {
+    
+    fetch("/admin-cms", {
         method: "POST",
         body: formData
     })
@@ -30,7 +30,7 @@ function addAudiobook() {
     })
     .then(response => {
         if (response.ok) {
-            window.location.href = "/api/content";
+            window.location.href = "/admin-cms";
         } else {
             alert("Failed to add notification.");
         }

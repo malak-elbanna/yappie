@@ -64,9 +64,7 @@ services:
       PORT: 5001
     ports:
       - "5001:5001"
-    volumes:
-      - ./logs/cms-service:/var/log/cms-service
-
+    volumes: ['./backend/content-management-service:/app','./logs/cms-service:/var/log/cms-service']
   cms-service-2:
     build: 
       context: ./backend/content-management-service
@@ -77,9 +75,7 @@ services:
       PORT: 5002
     ports:
       - "5002:5002"
-    volumes:
-      - ./logs/cms-service:/var/log/cms-service
-
+    volumes: ['./backend/content-management-service:/app','./logs/cms-service:/var/log/cms-service']
 
   streaming-service-1:
     build:
@@ -310,7 +306,7 @@ services:
       kong-initialiser:
           condition: service_completed_successfully
     volumes:
-      - ./kong-config/kong.yml:/config/kong.yml
+      - ./kong-config/kong.yml:/kong-config/kong.yml
     command: gateway dump  -o /config/kong.yml --kong-addr=http://kong:8001 --yes && gateway sync /config/kong.yml --kong-addr=http://kong:8001
 
   prometheus:
@@ -376,6 +372,39 @@ services:
       - "5173:5173"
     command: ["npm", "run", "dev"]
 
+
+  minio:
+    image: minio/minio:latest
+    ports:
+      - '9000:9000'
+      - '9001:9001'
+    volumes:
+      - 'minio_data:/data'
+    environment:
+      - MINIO_ROOT_USER= user
+      - MINIO_ROOT_PASSWORD= userpassword
+      - MINIO_DEFAULT_BUCKETS= yappie
+    command: server /data --console-address ':9001'
+
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+
+  minio-init:
+    image: minio/mc
+    depends_on:
+      minio:
+        condition: service_healthy
+    volumes:
+      - './minio-config/init-minio.sh:/init-minio.sh'
+    environment:
+      - MINIO_ROOT_USER=user
+      - MINIO_ROOT_PASSWORD=userpassword
+    entrypoint: sh init-minio.sh
+
 volumes:
   rabbitmq-lib:
     driver: local
@@ -397,4 +426,6 @@ volumes:
   grafana-data:
   loki-data:
   prometheus-data:
+  minio_data:
+    driver: local
 

@@ -265,7 +265,7 @@ body {
     <script>
         function deleteAudiobook(bookId) {
     if (confirm("Are you sure you want to delete this audiobook?")) {
-        fetch(`/${bookId}`, {
+        fetch(`/admin-cms/${bookId}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
