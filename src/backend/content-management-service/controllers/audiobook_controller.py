@@ -1,6 +1,7 @@
 import json
 from flask import request, jsonify, render_template, redirect, url_for
 from services.db import mongo
+from services.Minio_upload import *
 from bson.objectid import ObjectId
 from werkzeug.utils import secure_filename
 from gridfs import GridFS
@@ -54,12 +55,6 @@ def add_audiobook():
     db = mongo.cx["audiobooks_db"]
     fs = GridFS(db)
     
-    client = Minio("minio:9000",
-        access_key="user",
-        secret_key="userpassword",
-        secure=False,
-    )
-
 
     data = request.form.to_dict()
     files = request.files
@@ -71,10 +66,14 @@ def add_audiobook():
     if 'audio_file' in files:
         audio_file = files['audio_file']
         if audio_file and allowed_file(audio_file.filename):
+            
             # audio_id = fs.put(audio_file, filename=secure_filename(audio_file.filename))
-            size = os.fstat(audio_file.fileno()).st_size
-            client.put_object('audiobooks', audio_file.filename, audio_file,size)
-            data['audio_id'] = 'http://minio:9000/audiobooks/'+audio_file.filename
+            # size = os.fstat(audio_file.fileno()).st_size
+            
+            hls_export_upload(audio_file,os.path.splitext(audio_file.filename)[0])
+
+            data['audio_url'] = 'http://minio:9000/audiobooks/'+os.path.splitext(audio_file.filename)[0]+'.m3u8'
+
     result = db.books.insert_one(data)
     logging.info("Audiobook added", extra={"audiobook_id": str(result.inserted_id)})
     return jsonify({"_id": str(result.inserted_id)}), 201

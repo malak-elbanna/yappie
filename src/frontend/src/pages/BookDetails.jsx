@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
 import API from '../Stream';
 import axios from 'axios';
+import AudioHLS from '../components/AudioHLS';
 
 const REVIEW_SERVICE_URL = 'review-service';
 const API_URL = 'http://localhost:8000'
@@ -145,7 +146,7 @@ const BookDetails = () => {
 
           <div className="mt-6">
             <h3 className="text-xl font-semibold">Chapters</h3>
-            {book.chapters.map((chapter, index) => {
+            {book.chapters && book.chapters.map((chapter, index) => {
               const audioRef = React.createRef();
 
               return (
@@ -163,6 +164,7 @@ const BookDetails = () => {
                 </div>
               );
             })}
+            {book.audio_url && <AudioHLS source = {book.audio_url}/>}
           </div>
         </>
       ) : (
