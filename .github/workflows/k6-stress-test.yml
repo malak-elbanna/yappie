@@ -9,12 +9,10 @@ jobs:
         steps:
             -   name: Checkout repository
                 uses: actions/checkout@v3
-            
-            -   name: Install k6
-                run: |
-                    curl -s https://packagecloud.io/install/repositories/loadimpact/k6/script.deb.sh | sudo bash
-                    sudo apt-get install k6
-            
+
+            -   name: Set up k6
+                uses: grafana/setup-k6-action@v1
+
             -   name: Create .env files
                 run: |
                     mkdir -p src/backend/review-service
@@ -44,7 +42,7 @@ jobs:
                     PORT=5001
                     DEBUG=True
                     EOF
-            
+
                     mkdir -p src/backend/streaming-service
                     cat <<EOF > src/backend/streaming-service/.env
                     MONGO_URI=mongodb+srv://salmaayman:LgFYRUMZ3iuGPyzD@cluster0.ufjw6qu.mongodb.net/?retryWrites=true&w=majority
@@ -60,13 +58,13 @@ jobs:
                     PORT=5004
                     DEBUG=True
                     EOF
-            
+
             -   name: Start Services
                 working-directory: src
                 run: |
                     docker compose -f docker-compose.test.yml build
                     docker compose -f docker-compose.test.yml up -d
-                
+
             -   name: Wait for Services
                 run: |
                     echo "Waiting for auth-service..."
@@ -74,42 +72,42 @@ jobs:
                         echo "Auth service not ready yet, retrying in 2s..."
                         sleep 2
                     done
-    
+
                     echo "Waiting for content-management-service..."
                     until curl --fail http://localhost:5001/health; do
-                        echo "content management service not ready yet, retrying in 2s..."
+                        echo "Content management service not ready yet, retrying in 2s..."
                         sleep 2
                     done
-    
+
                     echo "Waiting for profile-management-service..."
                     until curl --fail http://localhost:5005/health; do
-                        echo "profile management service not ready yet, retrying in 2s..."
+                        echo "Profile management service not ready yet, retrying in 2s..."
                         sleep 2
                     done
-    
+
                     echo "Waiting for review-service..."
                     until curl --fail http://localhost:5003/health; do
                         echo "Review service not ready yet, retrying in 2s..."
                         sleep 2
                     done
-    
+
                     echo "Waiting for streaming-service..."
                     until curl --fail http://localhost:8080/health; do
-                        echo "Review service not ready yet, retrying in 2s..."
+                        echo "Streaming service not ready yet, retrying in 2s..."
                         sleep 2
                     done
-            
+
             -   name: Register User
                 run: |
                     curl -X POST http://localhost:5000/auth/register \
                     -H "Content-Type: application/json" \
                     -d '{"name": "test user", "email": "testUser@example.com", "password": "securePassword12$"}'
-            
+
             -   name: Run k6 test
-                working-directory: src/tests/k6
-                run: |
-                    k6 run profile_test.js
-            
+                uses: grafana/run-k6-action@v1
+                with:
+                    path: src/tests/k6/profile_test.js
+
             -   name: Stop containers
                 if: always()
                 run: cd src && docker compose -f docker-compose.test.yml down
