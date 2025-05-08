@@ -7,7 +7,6 @@ import AudioHLS from '../components/AudioHLS';
 import { addFavoriteBook } from '../Api';
 import { FaHeart, FaRegHeart } from 'react-icons/fa';
 
-
 const REVIEW_SERVICE_URL   = 'review-service';
 const STREAMING_SERVICE_URL = 'streaming-service';
 const API_URL              = 'http://localhost:8000';
