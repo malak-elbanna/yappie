@@ -61,8 +61,8 @@ def add_audiobook():
     if 'cover_image' in files:
         cover_image = files['cover_image']
         if cover_image and allowed_file(cover_image.filename):
-            cover_id = fs.put(cover_image, filename=secure_filename(cover_image.filename))
-            data['cover_id'] = str(cover_id) 
+            MinioUpload('audiobooks',str(id) + os.path.splitext(cover_image.filename)[1] ,cover_image)
+            data['cover_url'] ='http://localhost:9000/audiobooks/'+str(id) + os.path.splitext(cover_image.filename)[1]
     if 'audio_file' in files:
         audio_file = files['audio_file']
         if audio_file and allowed_file(audio_file.filename):
