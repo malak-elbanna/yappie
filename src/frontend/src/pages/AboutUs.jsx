@@ -5,7 +5,7 @@ import image2 from '../assets/image 12.png';
 export default function AboutUs() {
     return (
         <div className="bg-gray-900 min-h-screen w-full">
-            <div className="w-full h-80 md:h-96 bg-gradient-to-r from-purple-700 to-purple-900 flex flex-col md:flex-row justify-between items-center px-6 md:px-16 relative overflow-hidden">
+            <div className="w-full h-80 md:h-96 bg-gradient-to-r from-purple-700 to-purple-980 flex flex-col md:flex-row justify-between items-center px-6 md:px-16 relative overflow-hidden">
                 <div className="z-10">
                     <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-4 tracking-tight">
                         ABOUT <span className="text-purple-300">YAPPIE</span>
