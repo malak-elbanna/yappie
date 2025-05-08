@@ -2,34 +2,33 @@ name: Unit tests
 
 on:
   push:
-    branches:
-      - integrate-user-cms-stream  # or the branch you work with
+    paths:
+      - 'src/unit tests/**'  # Trigger on changes in unit test files
+    branches: [integrate-user-cms-stream]  # Ensure this is still targeting your branch
   pull_request:
-    branches:
-      - integrate-user-cms-stream  # or the branch you work with
+    paths:
+      - 'src/unit tests/**'  # Trigger on PR changes in unit test files
+    branches: [integrate-user-cms-stream]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest  # You can use other environments like macos or windows
-    
-    services:
-      docker:
-        image: docker:19.03.12
-        options: --privileged
-        ports:
-          - 2375:2375
+  test:
+    runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v1
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
 
-    - name: Build Docker image
-      run: |
-        docker build -t my-app .
+      - name: Log in to Docker Hub (optional)
+        run: echo "Skipping Docker Hub login"
+        # If you're using a Docker registry, add login step here
 
-    - name: Run tests
-      run: |
-        docker run --rm my-app pytest  # This runs your tests in the Docker container
+      - name: Build Docker image
+        run: |
+          docker build -t review-service:test .
+
+      - name: Run unit tests
+        run: |
+          docker run --rm review-service:test npx jest --detectOpenHandles

@@ -5072,3 +5072,87 @@
 {"message": "172.18.0.7 - - [07/May/2025 03:06:25] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:06:25.552771+00:00"}
 {"message": "172.18.0.7 - - [07/May/2025 03:06:36] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:06:36.219667+00:00"}
 {"message": "172.18.0.7 - - [07/May/2025 03:06:40] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:06:40.548551+00:00"}
+{"message": "Auth Service started", "time": "2025-05-07T19:04:40.117603+00:00"}
+{"message": "Auth Service started", "time": "2025-05-07T19:04:40.117970+00:00"}
+{"message": "Auth Service started", "time": "2025-05-07T19:04:44.654564+00:00"}
+{"message": "Auth Service started", "time": "2025-05-07T19:04:44.698447+00:00"}
+{"message": "Auth Service started", "time": "2025-05-07T19:04:47.159525+00:00"}
+{"message": "Auth Service started", "time": "2025-05-07T19:04:47.277784+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:4999\n * Running on http://172.18.0.20:4999", "time": "2025-05-07T19:04:47.321474+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-07T19:04:47.322611+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-07T19:04:47.324871+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5000\n * Running on http://172.18.0.16:5000", "time": "2025-05-07T19:04:47.383670+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-07T19:04:47.385732+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-07T19:04:47.387876+00:00"}
+{"message": "Auth Service started", "time": "2025-05-07T19:04:48.478906+00:00"}
+{"message": "Auth Service started", "time": "2025-05-07T19:04:48.482783+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-07T19:04:48.502862+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-07T19:04:48.506193+00:00"}
+{"message": " * Debugger PIN: 534-036-619", "time": "2025-05-07T19:04:48.511462+00:00"}
+{"message": " * Debugger PIN: 144-185-908", "time": "2025-05-07T19:04:48.511482+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:04:55] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:04:55.076207+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:04:56] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:04:56.502397+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:05:11] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:05:11.271015+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:05:12] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:05:12.699533+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:05:26] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:05:26.270663+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:05:27] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:05:27.699855+00:00"}
+{"message": "172.18.0.14 - - [07/May/2025 19:05:35] \"\u001b[32mGET /auth/google-login HTTP/1.1\u001b[0m\" 302 -", "time": "2025-05-07T19:05:35.044158+00:00"}
+{"message": "172.18.0.14 - - [07/May/2025 19:05:36] \"\u001b[32mGET /auth/google-login HTTP/1.1\u001b[0m\" 302 -", "time": "2025-05-07T19:05:36.201716+00:00"}
+{"message": "172.18.0.14 - - [07/May/2025 19:05:37] \"\u001b[32mGET /auth/google-callback?state=JEPRK7StZyk5uEezvcilIG2jU2VTur&code=4/0Ab_5qlmbUNqmj_HWioeoDFHdKpgUIphT0a2n7N1EJCW2RtGvOS2lBWWQqh92I7jZYHRvRw&scope=email+profile+https://www.googleapis.com/auth/userinfo.email+https://www.googleapis.com/auth/userinfo.profile+openid&authuser=0&hd=zewailcity.edu.eg&prompt=none HTTP/1.1\u001b[0m\" 302 -", "time": "2025-05-07T19:05:37.302939+00:00"}
+{"message": "172.18.0.14 - - [07/May/2025 19:05:37] \"\u001b[32mGET /auth/google-callback?state=j4MNNiAUZDNsxcly72iNjgwPjjOYqJ&code=4/0Ab_5qlk3IHLbgU-ZK8UvH-QYDIOoitnJE0pZRnCInIlNl36cAz_mn-M87reZavUwbGGGPQ&scope=email+profile+openid+https://www.googleapis.com/auth/userinfo.email+https://www.googleapis.com/auth/userinfo.profile&authuser=0&hd=zewailcity.edu.eg&prompt=none HTTP/1.1\u001b[0m\" 302 -", "time": "2025-05-07T19:05:37.556519+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:05:41] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:05:41.748410+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:05:43] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:05:43.177869+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:05:59] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:05:59.977649+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:06:01] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:06:01.407098+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:06:15] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:06:15.858703+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:06:17] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:06:17.287999+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:06:30] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:06:30.858551+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:06:32] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:06:32.288072+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:06:48] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:06:48.591998+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:06:50] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:06:50.020677+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:07:03] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:07:03.590396+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:07:05] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:07:05.019054+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:07:21] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:07:21.102464+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:07:22] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:07:22.530376+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:07:36] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:07:36.101900+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:07:37] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:07:37.527775+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:07:53] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:07:53.611872+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:07:55] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:07:55.041635+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:08:08] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:08:08.610989+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:08:10] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:08:10.040931+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:08:26] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:08:26.134345+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:08:27] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:08:27.565902+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:08:41] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:08:41.133579+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:08:42] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:08:42.562946+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:08:58] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:08:58.438647+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:08:59] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:08:59.867685+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:09:13] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:09:13.436730+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:09:14] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:09:14.865673+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:09:31] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:09:31.026998+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:09:32] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:09:32.457793+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:09:46] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:09:46.027852+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:09:47] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:09:47.456390+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:10:03] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:10:03.479161+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:10:04] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:10:04.909898+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:10:18] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:10:18.481243+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:10:19] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:10:19.909588+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:10:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:10:36.000088+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:10:37] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:10:37.431216+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:10:51] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:10:51.001280+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:10:52] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:10:52.431301+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:11:08] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:11:08.281489+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:11:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:11:09.708524+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:11:23] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:11:23.279820+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:11:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:11:24.708794+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:11:40] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:11:40.847533+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:11:42] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:11:42.277324+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:11:55] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:11:55.847331+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:11:57] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:11:57.277154+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:12:13] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:12:13.320919+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:12:14] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:12:14.750277+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:12:28] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:12:28.319089+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:12:29] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:12:29.748316+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:12:43] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:12:43.638468+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:12:45] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:12:45.067911+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:13:01] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:13:01.158040+00:00"}
+{"message": "172.18.0.9 - - [07/May/2025 19:13:02] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T19:13:02.591039+00:00"}
