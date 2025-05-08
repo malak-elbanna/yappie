@@ -5,7 +5,7 @@ const cors = require('cors');
 const port = 4000;
 const connectToMongo = require('./models')
 const notificationRouter = require('./routes/notificationRouter.js')
-const subscriptionRouter = require('./routes/notificationRouter.js')
+const subscriptionRouter = require('./routes/subscriptionRouter.js')
 const logger = require('./logger.js')
 const promBundle = require('express-prom-bundle');
 
@@ -27,6 +27,15 @@ app.use(metricsMiddleware);
 connectToMongo();
 app.use(cors())
 app.use(express.json());
+
+app.get('/health', (req, res) => {
+  res.status(200).json({ 
+    status: 'OK',
+    timestamp: new Date().toISOString(),
+    service: 'notification-service'
+  });
+});
+
 app.use('/notification',notificationRouter);
 app.use('/subscription',subscriptionRouter);
 

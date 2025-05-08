@@ -63,6 +63,11 @@ jobs:
                 PORT=5004
                 DEBUG=True
                 EOF
+
+                mkdir -p src/backend/notification-service
+                cat <<EOF > src/backend/notification-service/.env
+                MONGO_URI=mongodb+srv://salmaayman:LgFYRUMZ3iuGPyzD@cluster0.ufjw6qu.mongodb.net/?retryWrites=true&w=majority
+                EOF
         
         -   name: Start Services
             working-directory: src
@@ -101,6 +106,12 @@ jobs:
                     echo "Review service not ready yet, retrying in 2s..."
                     sleep 2
                 done
+
+                echo "Waiting for notification-service..."
+                until curl --fail http://localhost:4000/health; do
+                    echo "Notification service not ready yet, retrying in 2s..."
+                    sleep 2
+                done
         
         -   name: Run Tests
             working-directory: src/tests
@@ -110,6 +121,7 @@ jobs:
                 PROFILE_SERVICE_URL: http://localhost:5005
                 REVIEW_SERVICE_URL: http://localhost:5003
                 STREAMING_SERVICE_URL: http://localhost:8080
+                NOTIFICATION_URL: http://localhost:4000
             run: |
                 pytest integration/ --cache-clear -v 
         

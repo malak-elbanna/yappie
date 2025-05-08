@@ -11,7 +11,7 @@ const REVIEW_SERVICE_URL = 'review-service';
 const BookDetails = () => {
   const { id } = useParams();
   const { userId } = useAuth();
-
+  const [isFavorite, setIsFavorite] = useState(false);
   const [book, setBook] = useState(null);
   const [reviews, setReviews] = useState([]);
   const [reviewSummary, setReviewSummary] = useState(null);

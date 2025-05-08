@@ -219,14 +219,14 @@ textarea.form-control {
     const form = document.getElementById("edit-audiobook-form");
     const formData = new FormData(form);
 
-    fetch(`/${id}`, {
+    fetch(`/admin-cms/${id}`, {
         method: "PUT",
         body: formData
     })
     .then(response => {
         if (response.ok) {
             alert("Audiobook updated successfully.");
-            window.location.href = "/";
+            window.location.href = "/admin-cms";
         } else {
             alert("Failed to update audiobook.");
         }
@@ -261,7 +261,7 @@ textarea.form-control {
             return;
         }
         
-        fetch(`/${id}`, {
+        fetch(`/admin-cms/${id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
