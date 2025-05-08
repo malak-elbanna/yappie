@@ -10,6 +10,9 @@ export default function AudioHLS({ source }) {
   useEffect(() => {
     const hls = new Hls({
       debug: true,
+      maxMaxBufferLength: 20,
+      backBufferLength: 10,
+      abrEwmaDefaultEstimate: 300000
     });
     hlsRef.current = hls;
 

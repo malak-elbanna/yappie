@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {"message": "Profile Management Service started", "time": "2025-05-01T12:43:00.986182+00:00"}
 {"message": "Profile Management Service started", "time": "2025-05-01T12:43:01.030975+00:00"}
 {"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5006\n * Running on http://172.18.0.16:5006", "time": "2025-05-01T12:43:01.165980+00:00"}
@@ -5655,3 +5656,5 @@
 {"message": "172.18.0.5 - - [08/May/2025 23:02:53] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T23:02:53.878576+00:00"}
 {"message": "172.18.0.5 - - [08/May/2025 23:03:00] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T23:03:00.930851+00:00"}
 {"message": "172.18.0.5 - - [08/May/2025 23:03:08] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T23:03:08.882407+00:00"}
+=======
+>>>>>>> d9a842cceb13063cc1168b6db35d24c95082db6b

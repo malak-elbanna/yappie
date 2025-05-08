@@ -19,7 +19,7 @@ const Login = () => {
     if (accessToken && refreshToken) {
       sessionStorage.setItem("access_token", accessToken);
       sessionStorage.setItem("refresh_token", refreshToken);
-      navigate("/dashboard");
+      navigate("/");
     }
   }, [navigate]);
 
@@ -31,7 +31,7 @@ const Login = () => {
       const response = await login(email, password);
       sessionStorage.setItem("access_token", response.data.access_token);
       sessionStorage.setItem("refresh_token", response.data.refresh_token);
-      navigate("/dashboard");
+      navigate("/");
     } catch (err) {
       setError(err.response?.data?.message || "Login failed");
     }

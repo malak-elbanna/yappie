@@ -137,3 +137,21 @@ export const removePreference = async (userId, preferenceData) => {
         throw error;
     }
 }
+
+export const addFavoriteBook = async (userId, bookTitle) => {
+  try {
+    const token = sessionStorage.getItem("token");
+    const response = await fetch(`${API_URL}/profile-page/${userId}/add-book`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
+      },
+      body: JSON.stringify({ book_title: bookTitle})
+    });
+    return await response.json();
+  } catch (error) {
+    console.error("error adding favorite book: ", error);
+    throw error;
+  }
+}
