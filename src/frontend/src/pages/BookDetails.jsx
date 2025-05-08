@@ -1,59 +1,161 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
 import API from '../Stream';
 import axios from 'axios';
-import AudioHLS from '../components/AudioHLS';
-import { addFavoriteBook } from '../Api';
-import { FaHeart, FaRegHeart } from 'react-icons/fa';
+import { saveChapter, getChapter, isChapterDownloaded } from '../utils/download';
+import BookInfoSection from '../components/BookInfoSection';
+import ChaptersList from '../components/ChapterList';
+import ReviewSection from '../components/ReviewSection';
 
-const REVIEW_SERVICE_URL   = 'review-service';
-const STREAMING_SERVICE_URL = 'streaming-service';
-const API_URL              = 'http://localhost:8000';
+const API_URL = 'http://localhost:8000';
+const REVIEW_SERVICE_URL = 'review-service';
 
 const BookDetails = () => {
   const { id } = useParams();
   const { userId } = useAuth();
-  const [isFavorite, setIsFavorite] = useState(false);
   const [book, setBook] = useState(null);
-  // const [positions, setPositions] = useState({});
-  // const [currentAudio, setCurrentAudio] = useState(null);
   const [reviews, setReviews] = useState([]);
   const [reviewSummary, setReviewSummary] = useState(null);
   const [newReview, setNewReview] = useState({ rating: 5, comment: '' });
   const [positions, setPositions] = useState({});
-  useEffect(() => {
-    API.get(`/books/${id}`)
-      .then(res => setBook(res.data))
-      .catch(err => console.error(err));
+  const [isOffline, setIsOffline] = useState(!navigator.onLine);
+  const [activeChapter, setActiveChapter] = useState(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isAutoPlayEnabled, setIsAutoPlayEnabled] = useState(true);
 
-    axios.get(`${API_URL}/${REVIEW_SERVICE_URL}/reviews/${id}`)
-      .then(res => setReviews(res.data))
-      .catch(err => console.error(err));
-
-    axios.get(`${API_URL}/${REVIEW_SERVICE_URL}/reviews/${id}/summary`)
-      .then(res => setReviewSummary(res.data))
-      .catch(err => console.error(err));
-  }, [id]);
+  const audioRefs = useRef({});
 
   useEffect(() => {
-    if (book?.chapters?.length) {
-      book.chapters.forEach((_, i) => {
-        API.get(`/playback/${userId}/${id}/${i}`).then(res => {
-          setPositions(prev => ({ ...prev, [i]: res.data.playback_position || 0 }));
-        });
-      });
+    const handleOnlineStatus = () => setIsOffline(!navigator.onLine);
+    window.addEventListener('online', handleOnlineStatus);
+    window.addEventListener('offline', handleOnlineStatus);
+    return () => {
+      window.removeEventListener('online', handleOnlineStatus);
+      window.removeEventListener('offline', handleOnlineStatus);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isOffline) {
+      API.get(`/books/${id}`)
+        .then(res => setBook(res.data))
+        .catch(console.error);
+
+      axios.get(`${API_URL}/${REVIEW_SERVICE_URL}/reviews/${id}`)
+        .then(res => setReviews(res.data))
+        .catch(console.error);
+
+      axios.get(`${API_URL}/${REVIEW_SERVICE_URL}/reviews/${id}/summary`)
+        .then(res => setReviewSummary(res.data))
+        .catch(console.error);
     }
-  }, [book, id, userId]);
+  }, [id, isOffline]);
 
-  const handleSavePosition = (index, position) => {
-    API.post(`/playback/${userId}/${id}/${index}`, { position }).catch(console.error);
+  const loadOfflineChapter = async (index) => {
+    const key = `${id}-${index}`;
+    const isDownloaded = await isChapterDownloaded(key);
+    if (isDownloaded) {
+      const blob = await getChapter(key);
+      return URL.createObjectURL(blob);
+    }
+    return null;
   };
 
-  const handlePlay = (audioRef, index) => {
-    if (positions[index]) {
-      audioRef.current.currentTime = positions[index];
+  const handlePlay = async (index) => {
+    if (activeChapter !== null && audioRefs.current[activeChapter]) {
+      audioRefs.current[activeChapter].pause();
     }
+    
+    setActiveChapter(index);
+    setIsPlaying(true);
+
+    if (!audioRefs.current[index]) {
+      return;
+    }
+
+    if (positions[index]) {
+      audioRefs.current[index].currentTime = positions[index];
+    }
+
+    if (isOffline) {
+      const offlineUrl = await loadOfflineChapter(index);
+      if (offlineUrl) {
+        audioRefs.current[index].src = offlineUrl;
+        try {
+          await audioRefs.current[index].play();
+        } catch (err) {
+          console.error('Error playing audio:', err);
+          setIsPlaying(false);
+        }
+      } else {
+        alert('This chapter is not available offline.');
+        setIsPlaying(false);
+      }
+    } else {
+      try {
+        await audioRefs.current[index].play();
+      } catch (err) {
+        console.error('Error playing audio:', err);
+        setIsPlaying(false);
+      }
+    }
+  };
+  
+  const handleAutoPlayNext = (currentIndex) => {
+    if (isAutoPlayEnabled && currentIndex < book.chapters.length - 1) {
+      handlePlay(currentIndex + 1);
+    } else {
+      console.log('End of book reached');
+      setIsPlaying(false);
+    }
+  };
+  
+  const handleSeek = (index, e) => {
+    if (!audioRefs.current[index]) return;
+    
+    const progressBar = e.currentTarget;
+    const bounds = progressBar.getBoundingClientRect();
+    const x = e.clientX - bounds.left;
+    const width = bounds.width;
+    const percentage = x / width;
+    
+    const seekTime = percentage * audioRefs.current[index].duration;
+    
+    audioRefs.current[index].currentTime = seekTime;
+    
+    setPositions(prev => ({ ...prev, [index]: seekTime }));
+  };
+
+  const handlePause = (index) => {
+    if (audioRefs.current[index]) {
+      audioRefs.current[index].pause();
+      const currentPosition = audioRefs.current[index].currentTime;
+      setIsPlaying(false);
+      handleSavePosition(index, currentPosition);
+    }
+  };
+
+  const handleDownloadChapter = async (index) => {
+    try {
+      const chapter = book.chapters[index];
+      const key = `${id}-${index}`;
+      const response = await API.get(`/download/${id}/${index}`, {
+        responseType: 'blob',
+      });
+      await saveChapter(key, response.data);
+      alert(`Chapter "${chapter.title}" downloaded successfully.`);
+    } catch (err) {
+      console.error('Error downloading chapter:', err);
+      alert('Failed to download chapter.');
+    }
+  };
+
+  const handleSavePosition = (index, position) => {
+    console.log('Saving position:', { userId, bookId: id, index, position });
+    const newPositions = { ...positions, [index]: position };
+    setPositions(newPositions);
+    API.post(`/playback/${userId}/${id}/${index}`, { position }).catch(console.error);
   };
 
   const handleSubmitReview = (e) => {
@@ -62,143 +164,93 @@ const BookDetails = () => {
       audiobookId: id,
       userId,
       rating: newReview.rating,
-      comment: newReview.comment
+      comment: newReview.comment,
     })
       .then(() => {
-        axios.get(`${API_URL}/${REVIEW_SERVICE_URL}/reviews/${id}`)
-          .then(res => setReviews(res.data))
-          .catch(err => console.error(err));
-
-        axios.get(`${API_URL}/${REVIEW_SERVICE_URL}/reviews/${id}/summary`)
-          .then(res => setReviewSummary(res.data))
-          .catch(err => console.error(err));
-
+        axios.get(`${API_URL}/${REVIEW_SERVICE_URL}/reviews/${id}`).then(res => setReviews(res.data));
+        axios.get(`${API_URL}/${REVIEW_SERVICE_URL}/reviews/${id}/summary`).then(res => setReviewSummary(res.data));
         setNewReview({ rating: 5, comment: '' });
       })
-      .catch(err => console.error(err));
+      .catch(console.error);
   };
 
-  const handleAddFavorite = async () => {
-    try {
-      await addFavoriteBook(userId, book.title);
-      setIsFavorite(true);
-      alert(`${book.title} added to favorites!`);
-    } catch (error) {
-      console.error("Error adding favorite book", error);
-      alert("Failed to add to favorites");
-    }
-  };
+  if (!book) {
+    return (
+      <div className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-800 text-white flex items-center justify-center">
+        <div className="animate-pulse flex flex-col items-center">
+          <div className="h-12 w-64 bg-gray-700 rounded-lg mb-8"></div>
+          <div className="h-6 w-48 bg-gray-700 rounded-lg mb-4"></div>
+          <div className="h-24 w-96 bg-gray-700 rounded-lg"></div>
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <div className="p-4">
-      {book ? (
-        <>
-          <h2 className="text-3xl font-bold">{book.title}</h2>
-          <p className="text-gray-600">{book.author}</p>
-          <button
-            onClick={handleAddFavorite}
-            disabled={!userId || !book || isFavorite}
-            className={`flex items-center gap-2 px-4 py-2 rounded-lg ${isFavorite ? 'bg-red-100 text-red-500' : 'bg-gray-100 hover:bg-gray-200'}`}
-          >
-            {isFavorite ? (
-              <>
-                <FaHeart /> Added to Favorites
-              </>
-            ) : (
-              <>
-                <FaRegHeart /> Add to Favorites
-              </>
-            )}
-          </button>
-          <p>{book.description}</p>
+    <div className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-800 text-white relative overflow-x-hidden">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-72 bg-purple-700 opacity-25 blur-3xl rounded-full pointer-events-none z-0" />
+      
+      <div className="container mx-auto px-4 sm:px-6 py-8 relative z-10">
+        <header className="mb-8">
+          <Link to="/books" className="inline-flex items-center text-purple-400 hover:text-purple-300 transition group">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 group-hover:-translate-x-1 transition-transform" viewBox="0 0 20 20" fill="currentColor">
+              <path fillRule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clipRule="evenodd" />
+            </svg>
+            Back to Library
+          </Link>
+        </header>
+      
+        <div className="flex flex-col lg:flex-row gap-8">
 
-          {reviewSummary && (
-            <div className="mt-4 p-4 bg-gray-50 rounded-lg">
-              <h3 className="text-xl font-semibold">Reviews</h3>
-              <div className="flex items-center mt-2">
-                <span className="text-2xl font-bold">{reviewSummary.averageRating}</span>
-                <span className="ml-2 text-gray-600">({reviewSummary.totalReviews} reviews)</span>
-              </div>
+          <div className="lg:w-2/3 flex flex-col gap-8">
+            <div className="bg-gray-800 bg-opacity-50 rounded-xl p-6 backdrop-blur-sm shadow-lg border border-gray-700">
+              <BookInfoSection 
+                book={book} 
+                reviewSummary={reviewSummary} 
+                isOffline={isOffline} 
+                isAutoPlayEnabled={isAutoPlayEnabled} 
+                setIsAutoPlayEnabled={setIsAutoPlayEnabled} 
+              />
             </div>
-          )}
-
-          <div className="mt-6 p-4 bg-white rounded-lg shadow">
-            <h3 className="text-xl font-semibold mb-4">Write a Review</h3>
-            <form onSubmit={handleSubmitReview}>
-              <div className="mb-4">
-                <label className="block text-gray-700 mb-2">Rating</label>
-                <select
-                  value={newReview.rating}
-                  onChange={(e) => setNewReview({ ...newReview, rating: parseInt(e.target.value) })}
-                  className="w-full p-2 border rounded"
-                >
-                  <option value="5">5 Stars</option>
-                  <option value="4">4 Stars</option>
-                  <option value="3">3 Stars</option>
-                  <option value="2">2 Stars</option>
-                  <option value="1">1 Star</option>
-                </select>
-              </div>
-              <div className="mb-4">
-                <label className="block text-gray-700 mb-2">Comment</label>
-                <textarea
-                  value={newReview.comment}
-                  onChange={(e) => setNewReview({ ...newReview, comment: e.target.value })}
-                  className="w-full p-2 border rounded"
-                  rows="3"
-                  placeholder="Share your thoughts about this audiobook..."
-                />
-              </div>
-              <button
-                type="submit"
-                className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-              >
-                Submit Review
-              </button>
-            </form>
+            
+            <div className="bg-gray-800 bg-opacity-50 rounded-xl p-6 backdrop-blur-sm shadow-lg border border-gray-700">
+              <h2 className="text-xl font-bold mb-4 text-purple-300">Chapters</h2>
+              <ChaptersList 
+                book={book}
+                isOffline={isOffline}
+                activeChapter={activeChapter}
+                isPlaying={isPlaying}
+                positions={positions}
+                audioRefs={audioRefs}
+                handlePlay={handlePlay}
+                handlePause={handlePause}
+                handleDownloadChapter={handleDownloadChapter}
+                handleSeek={handleSeek}
+                handleSavePosition={handleSavePosition}
+                handleAutoPlayNext={handleAutoPlayNext}
+                setPositions={setPositions}
+                setIsPlaying={setIsPlaying}
+              />
+            </div>
           </div>
-
-          <div className="mt-6">
-            <h3 className="text-xl font-semibold mb-4">User Reviews</h3>
-            {reviews.map((review, index) => (
-              <div key={index} className="mb-4 p-4 bg-gray-50 rounded-lg">
-                <div className="flex items-center mb-2">
-                  <span className="text-yellow-500">
-                    {'★'.repeat(review.rating)}
-                    {'☆'.repeat(5 - review.rating)}
-                  </span>
-                </div>
-                <p className="text-gray-700">{review.comment}</p>
-              </div>
-            ))}
+          
+          <div className="lg:w-1/3">
+            <div className="bg-gray-800 bg-opacity-50 rounded-xl p-6 backdrop-blur-sm shadow-lg border border-gray-700">
+              <h2 className="text-xl font-bold mb-4 text-purple-300">Reviews</h2>
+              <ReviewSection 
+                reviews={reviews}
+                newReview={newReview}
+                setNewReview={setNewReview}
+                handleSubmitReview={handleSubmitReview}
+              />
+            </div>
           </div>
-
-          <div className="mt-6">
-            <h3 className="text-xl font-semibold">Chapters</h3>
-            {book.chapters && book.chapters.map((chapter, index) => {
-              const audioRef = React.createRef();
-
-              return (
-                <div key={index} className="mt-4 border-t pt-4">
-                  <h4 className="font-medium">{chapter.title}</h4>
-                  <audio
-                    ref={audioRef}
-                    controls
-                    src={chapter.mp3_url}
-                    onPlay={() => handlePlay(audioRef, index)}
-                    onPause={() =>
-                      handleSavePosition(index, audioRef.current?.currentTime || 0)
-                    }
-                  />
-                </div>
-              );
-            })}
-            {book.audio_url && <AudioHLS source = {book.audio_url}/>}
-          </div>
-        </>
-      ) : (
-        <p>Loading book...</p>
-      )}
+        </div>
+        
+        <footer className="mt-16 pt-8 border-t border-gray-700 text-center text-gray-400 text-sm">
+          <p>© {new Date().getFullYear()} Audiobook Stream. All rights reserved.</p>
+        </footer>
+      </div>
     </div>
   );
 };

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';  
 import API from '../Stream'; 
-import { getBooks } from '../Api'; // adjust path if needed
 
 const CategoryBooks = () => {
   const { categoryName } = useParams(); 

@@ -19,7 +19,7 @@ func SavePlaybackPosition(c *gin.Context) {
 	chapterIndex := c.Param("chapterIndex")
 
 	var payload struct {
-		Position int `json:"position"`
+		Position float64 `json:"position"`
 	}
 
 	if err := c.BindJSON(&payload); err != nil {
