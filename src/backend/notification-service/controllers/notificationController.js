@@ -47,10 +47,12 @@ exports.publish = async (req,res)=>{
     console.log(" [x] Sent %s:'%s'", message.author, message.title);
     await channel.close();
     logger.info(`Notification published to ${message.author}`);
+    res.status(200).json("Notification published");
     }
     catch (err) {
         logger.error(`Failed to publish notification: ${err.message}`);
         console.warn(err);
+        res.status(500).json({error: err.message});
     }
     finally {
         if (connection) await connection.close();

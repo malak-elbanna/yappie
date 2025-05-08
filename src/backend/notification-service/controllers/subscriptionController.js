@@ -34,12 +34,12 @@ exports.create = async (req,res)=>{
             client.subscriptions.push(subscription);
             await client.save();
         }
-        else await Notification.create({email: email,subscriptions: [subscription]})
-        logger.info(`Notification sent to user ${email}`);
-        res.status(201).json(`Notification Sent to user ${email}`);
+        else await Subscription.create({email: email,subscriptions: [subscription]})
+        logger.info(`Subscription created to user ${email}`);
+        res.status(201).json(`Subscription created to user ${email}`);
     }catch(error){
         console.error(error);
-        logger.error(`Failed to send notification: ${error.message}`);
+        logger.error(`Failed to create subscription : ${error.message}`);
         res.status(500).json({message: 'Internal server error'});
     }``
 }

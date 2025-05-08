@@ -63,6 +63,33 @@ services:
     depends_on:
       - profile-db
 
+  notification-service:
+    build:
+      context: ./backend/notification-service
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend/notification-service/.env  
+    ports:
+      - "4000:4000"
+    command: ["node", "server"]
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+
+  rabbitmq:
+    image: rabbitmq:management
+    container_name: rabbitmq
+    restart: always
+    ports:
+      - 5672:5672
+      - 15672:15672
+
+    healthcheck:
+      test: rabbitmq-diagnostics -q ping
+      interval: 30s
+      timeout: 30s
+      retries: 3 
+
   profile-db:
     image: postgres:13
     environment:
