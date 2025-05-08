@@ -97,8 +97,8 @@ const BookDetails = () => {
           <p className="text-gray-600">{book.author}</p>
           <button
             onClick={handleAddFavorite}
+            disabled={!userId || !book || isFavorite}
             className={`flex items-center gap-2 px-4 py-2 rounded-lg ${isFavorite ? 'bg-red-100 text-red-500' : 'bg-gray-100 hover:bg-gray-200'}`}
-            disabled={isFavorite}
           >
             {isFavorite ? (
               <>

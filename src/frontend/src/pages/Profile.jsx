@@ -170,9 +170,19 @@ const Profile = () => {
 
             <div className="flex-1 bg-gray-800 bg-opacity-70 rounded-2xl p-6">
                 <h3 className="text-xl font-semibold text-gray-200 mb-4">Favorite Books</h3>
-                <p className="text-gray-400 text-sm mb-6">
-                This section displays a curated list of the user's favorite audiobooks and novels.
-                </p>
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                {profile?.favorite_books?.length > 0 ? (
+                    profile.favorite_books.map((book, index) => (
+                    <div key={`${book}-${index}`} className="bg-gray-700 p-4 rounded-lg text-center hover:bg-gray-600 transition-colors border border-gray-600">
+                        <p className="font-medium text-white truncate">{book}</p>
+                    </div>
+                    ))
+                ) : (
+                    <div className="col-span-full py-8 text-center text-gray-400">
+                    {profile ? "No favorite books added yet." : "Loading books..."}
+                    </div>
+                )}
+                </div>
 
                 <h3 className="text-xl font-semibold text-gray-200 mb-2">Add a Preference</h3>
                 <div className="flex items-center space-x-2 mb-4">
