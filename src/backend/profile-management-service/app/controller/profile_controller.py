@@ -53,21 +53,29 @@ def remove_favorite_book(user_id):
     logging.info("Favorite book removed", extra={"user_id": str(user_id)})
     return jsonify({"message": f"{book} removed from favorites."}), 200
 
-def remove_favorite_podcast(user_id):
+def add_favorite_book(user_id):
     data = request.get_json()
-    podcast = data.get('podcast')
-    if not podcast:
-        return jsonify({"error": "No podcast selected."}), 400
+    book_title = data.get('book_title')
+    if not book_title:
+        return jsonify({"error": "No book selected."}), 400
     profile = UserProfile.query.filter_by(user_id=user_id).first()
     if not profile:
         logging.info("User profile isn't found", extra={"user_id": str(user_id)})
         return jsonify({"error": profile_not_found}), 404
-    if profile.favorite_podcasts and podcast in profile.favorite_podcasts:
-        profile.favorite_podcasts.remove(podcast)
+    
+    if profile.favorite_books is None:
+        profile.favorite_books = []
+    
+    if book_title not in profile.favorite_books:
+        profile.favorite_books = profile.favorite_books + [book_title]
         db.session.commit()
-
-    logging.info("Favorite podcast removed", extra={"user_id": str(user_id)})
-    return jsonify({"message": f"{podcast} removed from favorites."}), 200
+        logging.info("Favorite book added", extra={
+            "user_id": str(user_id),
+            "favorites_count": len(profile.favorite_books)
+        })
+        return jsonify({"message": f"{book_title} added to favorites"}), 200
+    else:
+        return jsonify({"message": f"{book_title} is already in favorites"}), 200
 
 def edit_bio(user_id):
     data = request.get_json()

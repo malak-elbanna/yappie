@@ -4,8 +4,12 @@ import { Hourglass } from 'ldrs/react';
 import 'ldrs/react/Hourglass.css';
 
 const Profile = () => {
-    const [profile, setProfile] = useState(null);
-    const [userInfo, setUserInfo] = useState({ name: "", email: "" });
+    const [profile, setProfile] = useState({
+        favorite_books: [],
+        preferences: { audiobooks: [] },
+        bio: ""
+    });
+    const [userInfo, setUserInfo] = useState({name: "", email: ""});
     const [editingBio, setEditingBio] = useState(false);
     const [userId, setUserId] = useState(null);
     const [newBio, setNewBio] = useState("");

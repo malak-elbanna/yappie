@@ -10,4 +10,4 @@ const subscriptionssSchema = new mongoose.Schema({
     subscriptions: [subscriptionSchema], // Array of subscriptions
 });
 
-module.exports = mongoose.model("notifications", notificationsSchema);
+module.exports = mongoose.model("subscriptions", subscriptionssSchema);
