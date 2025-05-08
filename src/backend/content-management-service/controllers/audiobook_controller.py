@@ -6,7 +6,6 @@ from bson.objectid import ObjectId
 from werkzeug.utils import secure_filename
 from gridfs import GridFS
 import logging
-from minio import Minio
 import os
 
 
