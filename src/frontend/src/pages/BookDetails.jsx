@@ -3,54 +3,91 @@ import { useParams } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
 import API from '../Stream';
 import axios from 'axios';
+import { saveChapter, getChapter, isChapterDownloaded } from '../utils/download';
 
-const REVIEW_SERVICE_URL   = 'review-service';
-const STREAMING_SERVICE_URL = 'streaming-service';
-const API_URL              = 'http://localhost:8000';
+const API_URL = 'http://localhost:8000';
+const REVIEW_SERVICE_URL = 'review-service';
 
 const BookDetails = () => {
   const { id } = useParams();
   const { userId } = useAuth();
 
   const [book, setBook] = useState(null);
-  // const [positions, setPositions] = useState({});
-  // const [currentAudio, setCurrentAudio] = useState(null);
   const [reviews, setReviews] = useState([]);
   const [reviewSummary, setReviewSummary] = useState(null);
   const [newReview, setNewReview] = useState({ rating: 5, comment: '' });
   const [positions, setPositions] = useState({});
-  useEffect(() => {
-    API.get(`/books/${id}`)
-      .then(res => setBook(res.data))
-      .catch(err => console.error(err));
-
-    axios.get(`${API_URL}/${REVIEW_SERVICE_URL}/reviews/${id}`)
-      .then(res => setReviews(res.data))
-      .catch(err => console.error(err));
-
-    axios.get(`${API_URL}/${REVIEW_SERVICE_URL}/reviews/${id}/summary`)
-      .then(res => setReviewSummary(res.data))
-      .catch(err => console.error(err));
-  }, [id]);
+  const [isOffline, setIsOffline] = useState(!navigator.onLine);
 
   useEffect(() => {
-    if (book?.chapters?.length) {
-      book.chapters.forEach((_, i) => {
-        API.get(`/playback/${userId}/${id}/${i}`).then(res => {
-          setPositions(prev => ({ ...prev, [i]: res.data.playback_position || 0 }));
-        });
-      });
+    const handleOnlineStatus = () => setIsOffline(!navigator.onLine);
+    window.addEventListener('online', handleOnlineStatus);
+    window.addEventListener('offline', handleOnlineStatus);
+    return () => {
+      window.removeEventListener('online', handleOnlineStatus);
+      window.removeEventListener('offline', handleOnlineStatus);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isOffline) {
+      API.get(`/books/${id}`)
+        .then(res => setBook(res.data))
+        .catch(console.error);
+
+      axios.get(`${API_URL}/${REVIEW_SERVICE_URL}/reviews/${id}`)
+        .then(res => setReviews(res.data))
+        .catch(console.error);
+
+      axios.get(`${API_URL}/${REVIEW_SERVICE_URL}/reviews/${id}/summary`)
+        .then(res => setReviewSummary(res.data))
+        .catch(console.error);
     }
-  }, [book, id, userId]);
+  }, [id, isOffline]);
 
-  const handleSavePosition = (index, position) => {
-    API.post(`/playback/${userId}/${id}/${index}`, { position }).catch(console.error);
+  const loadOfflineChapter = async (index) => {
+    const key = `${id}-${index}`;
+    const isDownloaded = await isChapterDownloaded(key);
+    if (isDownloaded) {
+      const blob = await getChapter(key);
+      return URL.createObjectURL(blob);
+    }
+    return null;
   };
 
-  const handlePlay = (audioRef, index) => {
+  const handlePlay = async (audioRef, index) => {
     if (positions[index]) {
       audioRef.current.currentTime = positions[index];
     }
+
+    if (isOffline) {
+      const offlineUrl = await loadOfflineChapter(index);
+      if (offlineUrl) {
+        audioRef.current.src = offlineUrl;
+      } else {
+        alert('This chapter is not available offline.');
+      }
+    }
+  };
+
+  const handleDownloadChapter = async (index) => {
+    try {
+      const chapter = book.chapters[index];
+      const key = `${id}-${index}`;
+      const response = await API.get(`/download/${id}/${index}`, {
+        responseType: 'blob',
+      });
+      await saveChapter(key, response.data);
+      alert(`Chapter "${chapter.title}" downloaded successfully.`);
+    } catch (err) {
+      console.error('Error downloading chapter:', err);
+      alert('Failed to download chapter.');
+    }
+  };
+
+  const handleSavePosition = (index, position) => {
+    console.log('Saving position:', { userId, bookId: id, index, position });
+    API.post(`/playback/${userId}/${id}/${index}`, { position }).catch(console.error);
   };
 
   const handleSubmitReview = (e) => {
@@ -59,20 +96,14 @@ const BookDetails = () => {
       audiobookId: id,
       userId,
       rating: newReview.rating,
-      comment: newReview.comment
+      comment: newReview.comment,
     })
       .then(() => {
-        axios.get(`${API_URL}/${REVIEW_SERVICE_URL}/reviews/${id}`)
-          .then(res => setReviews(res.data))
-          .catch(err => console.error(err));
-
-        axios.get(`${API_URL}/${REVIEW_SERVICE_URL}/reviews/${id}/summary`)
-          .then(res => setReviewSummary(res.data))
-          .catch(err => console.error(err));
-
+        axios.get(`${API_URL}/${REVIEW_SERVICE_URL}/reviews/${id}`).then(res => setReviews(res.data));
+        axios.get(`${API_URL}/${REVIEW_SERVICE_URL}/reviews/${id}/summary`).then(res => setReviewSummary(res.data));
         setNewReview({ rating: 5, comment: '' });
       })
-      .catch(err => console.error(err));
+      .catch(console.error);
   };
 
   return (
@@ -103,11 +134,9 @@ const BookDetails = () => {
                   onChange={(e) => setNewReview({ ...newReview, rating: parseInt(e.target.value) })}
                   className="w-full p-2 border rounded"
                 >
-                  <option value="5">5 Stars</option>
-                  <option value="4">4 Stars</option>
-                  <option value="3">3 Stars</option>
-                  <option value="2">2 Stars</option>
-                  <option value="1">1 Star</option>
+                  {[5, 4, 3, 2, 1].map(star => (
+                    <option key={star} value={star}>{`${star} Star${star > 1 ? 's' : ''}`}</option>
+                  ))}
                 </select>
               </div>
               <div className="mb-4">
@@ -133,11 +162,8 @@ const BookDetails = () => {
             <h3 className="text-xl font-semibold mb-4">User Reviews</h3>
             {reviews.map((review, index) => (
               <div key={index} className="mb-4 p-4 bg-gray-50 rounded-lg">
-                <div className="flex items-center mb-2">
-                  <span className="text-yellow-500">
-                    {'★'.repeat(review.rating)}
-                    {'☆'.repeat(5 - review.rating)}
-                  </span>
+                <div className="flex items-center mb-2 text-yellow-500">
+                  {'★'.repeat(review.rating)}{'☆'.repeat(5 - review.rating)}
                 </div>
                 <p className="text-gray-700">{review.comment}</p>
               </div>
@@ -148,19 +174,39 @@ const BookDetails = () => {
             <h3 className="text-xl font-semibold">Chapters</h3>
             {book.chapters.map((chapter, index) => {
               const audioRef = React.createRef();
-
               return (
                 <div key={index} className="mt-4 border-t pt-4">
                   <h4 className="font-medium">{chapter.title}</h4>
                   <audio
                     ref={audioRef}
                     controls
-                    src={chapter.mp3_url}
+                    src={!isOffline ? chapter.mp3_url : undefined}
                     onPlay={() => handlePlay(audioRef, index)}
-                    onPause={() =>
-                      handleSavePosition(index, audioRef.current?.currentTime || 0)
-                    }
+                    onPause={() => handleSavePosition(index, audioRef.current?.currentTime || 0)}
                   />
+                  {isOffline ? (
+                    <button
+                      className="bg-gray-500 text-white px-4 py-2 rounded mt-2"
+                      onClick={async () => {
+                        const offlineUrl = await loadOfflineChapter(index);
+                        if (offlineUrl) {
+                          audioRef.current.src = offlineUrl;
+                          audioRef.current.play();
+                        } else {
+                          alert('This chapter is not available offline.');
+                        }
+                      }}
+                    >
+                      Play Offline
+                    </button>
+                  ) : (
+                    <button
+                      className="bg-blue-500 text-white px-4 py-2 rounded mt-2"
+                      onClick={() => handleDownloadChapter(index)}
+                    >
+                      Download
+                    </button>
+                  )}
                 </div>
               );
             })}
