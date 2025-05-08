@@ -2,7 +2,11 @@ import React, {useState, useEffect} from "react";
 import { getProfilePage, editBio, addPreference, removePreference } from "../Api";
 
 const Profile = () => {
-    const [profile, setProfile] = useState(null);
+    const [profile, setProfile] = useState({
+        favorite_books: [],
+        preferences: { audiobooks: [] },
+        bio: ""
+    });
     const [userInfo, setUserInfo] = useState({name: "", email: ""});
     const [editingBio, setEditingBio] = useState(false);
     const [userId, setUserId] = useState(null);
@@ -255,16 +259,18 @@ const Profile = () => {
                         <h1 className="text-xl font-bold mb-4 text-white">Your Library</h1>
                         <h2 className="text-xl font-bold mb-4 text-white">Favorite Books</h2>
                         <div className="mb-8">
-                            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                                {profile.favorite_books.length > 0 ? (
-                                    profile.favorite_books.map((book) => (
-                                        <div key={book} className="bg-gray-700 p-4 rounded-lg text-center hover:bg-gray-600 transition-colors border border-gray-600">
-                                            <p className="font-medium text-white">{book}</p>
-                                        </div>
-                                    ))
-                                ) : (
-                                    <p className="text-gray-500">No favorite books added.</p>
-                                )}
+                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                            {profile?.favorite_books?.length > 0 ? (
+                                profile.favorite_books.map((book, index) => (
+                                <div key={`${book}-${index}`} className="bg-gray-700 p-4 rounded-lg text-center hover:bg-gray-600 transition-colors border border-gray-600">
+                                    <p className="font-medium text-white truncate">{book}</p>
+                                </div>
+                                ))
+                            ) : (
+                                <div className="col-span-full py-8 text-center text-gray-400">
+                                {profile ? "No favorite books added yet." : "Loading books..."}
+                                </div>
+                            )}
                             </div>
                         </div>
                     </div>

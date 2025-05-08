@@ -4,6 +4,9 @@ import useAuth from '../hooks/useAuth';
 import API from '../Stream';
 import axios from 'axios';
 import AudioHLS from '../components/AudioHLS';
+import { addFavoriteBook } from '../Api';
+import { FaHeart, FaRegHeart } from 'react-icons/fa';
+
 
 const REVIEW_SERVICE_URL   = 'review-service';
 const STREAMING_SERVICE_URL = 'streaming-service';
@@ -12,7 +15,7 @@ const API_URL              = 'http://localhost:8000';
 const BookDetails = () => {
   const { id } = useParams();
   const { userId } = useAuth();
-
+  const [isFavorite, setIsFavorite] = useState(false);
   const [book, setBook] = useState(null);
   // const [positions, setPositions] = useState({});
   // const [currentAudio, setCurrentAudio] = useState(null);
@@ -76,12 +79,38 @@ const BookDetails = () => {
       .catch(err => console.error(err));
   };
 
+  const handleAddFavorite = async () => {
+    try {
+      await addFavoriteBook(userId, book.title);
+      setIsFavorite(true);
+      alert(`${book.title} added to favorites!`);
+    } catch (error) {
+      console.error("Error adding favorite book", error);
+      alert("Failed to add to favorites");
+    }
+  };
+
   return (
     <div className="p-4">
       {book ? (
         <>
           <h2 className="text-3xl font-bold">{book.title}</h2>
           <p className="text-gray-600">{book.author}</p>
+          <button
+            onClick={handleAddFavorite}
+            className={`flex items-center gap-2 px-4 py-2 rounded-lg ${isFavorite ? 'bg-red-100 text-red-500' : 'bg-gray-100 hover:bg-gray-200'}`}
+            disabled={isFavorite}
+          >
+            {isFavorite ? (
+              <>
+                <FaHeart /> Added to Favorites
+              </>
+            ) : (
+              <>
+                <FaRegHeart /> Add to Favorites
+              </>
+            )}
+          </button>
           <p>{book.description}</p>
 
           {reviewSummary && (
