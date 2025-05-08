@@ -42,51 +42,64 @@ const BooksList = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-800 text-white relative overflow-x-hidden">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-purple-700 opacity-30 blur-3xl rounded-full pointer-events-none z-0" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-72 bg-purple-700 opacity-30 blur-3xl rounded-full pointer-events-none z-0" />
 
-      <div className="relative z-10 flex flex-col items-center pt-12 pb-4">
-        <h1 className="text-4xl md:text-5xl font-extrabold mb-2 drop-shadow-lg text-center">Hear something amazing</h1>
-        <p className="text-lg text-gray-300 mb-8 text-center max-w-xl">Enjoy performances of bestselling titles and new releases from authors and genres you love.</p>
+      <div className="relative z-10 flex flex-col items-center pt-8 sm:pt-12 pb-4 px-4">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-2 sm:mb-4 drop-shadow-lg text-center">Hear something amazing</h1>
+        <p className="text-base sm:text-lg text-gray-300 mb-6 sm:mb-8 text-center max-w-xl px-4">Enjoy performances of bestselling titles and new releases from authors and genres you love.</p>
       </div>
 
       {featured.length > 0 && (
-        <section className="relative flex flex-col items-center justify-center py-6 mb-8 z-10">
-          <div className="flex items-center justify-center gap-4">
-            <button onClick={handlePrev} className="p-2 rounded-full bg-gray-800 bg-opacity-60 hover:bg-purple-700 transition shadow-lg">
-              <FaChevronLeft size={24} />
+        <section className="relative flex flex-col items-center justify-center py-4 sm:py-6 mb-6 sm:mb-8 z-10 px-2">
+          <div className="flex items-center justify-center gap-2 sm:gap-4 w-full max-w-4xl mx-auto">
+
+            <button 
+              onClick={handlePrev} 
+              className="p-1 sm:p-2 rounded-full bg-gray-800 bg-opacity-60 hover:bg-purple-700 transition shadow-lg"
+              aria-label="Previous book"
+            >
+              <FaChevronLeft size={20} />
             </button>
 
-            <div className="flex items-center gap-6">
+            <div className="flex items-center justify-center overflow-hidden">
               {featured.map((book, idx) => (
                 <div
                   key={book._id}
-                  className={`transition-all duration-500 ${idx === current ? 'scale-110 z-20' : 'scale-90 opacity-60 z-10'} relative flex flex-col items-center`}
-                  style={{ minWidth: idx === current ? 240 : 160 }}
+                  className={`transition-all duration-500 px-1 sm:px-2 ${
+                    idx === current ? 'scale-100 sm:scale-110 z-20 opacity-100' : 
+                    'scale-75 sm:scale-90 opacity-40 sm:opacity-60 z-10'
+                  } relative flex flex-col items-center`}
+                  style={{ 
+                    minWidth: idx === current ? '220px' : '160px',
+                    display: idx === current ? 'flex' : (
+                      window.innerWidth < 640 && idx !== current ? 'none' : 'flex'
+                    )
+                  }}
                 >
-                  <div className={`rounded-xl shadow-2xl ${idx === current ? 'ring-4 ring-purple-600' : ''} bg-gradient-to-br from-gray-800 to-gray-900 p-2`}>
+                  <div className={`rounded-xl shadow-2xl ${idx === current ? 'ring-2 sm:ring-4 ring-purple-600' : ''} bg-gradient-to-br from-gray-800 to-gray-900 p-2`}>
                     <img
                       src={book.cover_url}
                       alt={book.title}
-                      className="w-40 h-56 object-cover rounded-lg shadow-lg"
+                      className="w-32 sm:w-40 h-44 sm:h-56 object-cover rounded-lg shadow-lg"
                     />
                   </div>
                   {idx === current && (
-                    <div className="mt-4 text-center">
-                      <h2 className="text-2xl font-bold mb-1 text-white drop-shadow">{book.title}</h2>
-                      <h3 className="text-md text-purple-400 mb-1">By {book.author}</h3>
-                      <p className="text-sm text-gray-300 mb-2 max-w-xs mx-auto line-clamp-2">{book.description}</p>
+                    <div className="mt-3 sm:mt-4 text-center">
+                      <h2 className="text-xl sm:text-2xl font-bold mb-1 text-white drop-shadow">{book.title}</h2>
+                      <h3 className="text-sm sm:text-md text-purple-400 mb-1">By {book.author}</h3>
+                      <p className="text-xs sm:text-sm text-gray-300 mb-2 max-w-xs mx-auto line-clamp-2 px-2">{book.description}</p>
                       <div className="flex flex-col items-center gap-2">
                         <Link
                           to={`/books/${book._id}`}
-                          className="text-purple-200 hover:underline text-sm mb-1"
+                          className="text-purple-200 hover:underline text-xs sm:text-sm mb-1"
                         >
-                          Personal Success
+                          {book.category || "Personal Success"}
                         </Link>
                         <button
                           onClick={() => handleSamplePlay(book._id)}
-                          className="flex items-center gap-2 bg-purple-700 hover:bg-purple-800 text-white px-4 py-2 rounded-full shadow-lg transition"
+                          className="flex items-center gap-1 sm:gap-2 bg-purple-700 hover:bg-purple-800 text-white px-3 sm:px-4 py-1 sm:py-2 rounded-full shadow-lg transition text-sm"
                         >
-                          <FaPlay /> Sample
+                          <FaPlay size={12} /> Sample
                         </button>
                       </div>
                     </div>
@@ -94,53 +107,77 @@ const BooksList = () => {
                 </div>
               ))}
             </div>
-            <button onClick={handleNext} className="p-2 rounded-full bg-gray-800 bg-opacity-60 hover:bg-purple-700 transition shadow-lg">
-              <FaChevronRight size={24} />
+
+            <button 
+              onClick={handleNext} 
+              className="p-1 sm:p-2 rounded-full bg-gray-800 bg-opacity-60 hover:bg-purple-700 transition shadow-lg"
+              aria-label="Next book"
+            >
+              <FaChevronRight size={20} />
             </button>
+          </div>
+          
+          <div className="flex justify-center gap-2 mt-4 sm:hidden">
+            {featured.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setCurrent(idx)}
+                className={`w-2 h-2 rounded-full transition-all ${
+                  idx === current ? 'bg-purple-500 w-4' : 'bg-gray-500'
+                }`}
+                aria-label={`Go to slide ${idx + 1}`}
+              />
+            ))}
           </div>
         </section>
       )}
 
-      <div className="container mx-auto px-4 py-8 relative z-10">
-      {Object.keys(grouped).map((category) => (
-        <div key={category} className="mb-10 px-6">
-          <div className="flex justify-between items-center mb-4">
-            <h2 className="text-2xl font-bold text-white">{category}</h2>
-            {grouped[category].length > 4 && (
-              <Link
-                to={`/categories/${category}`}
-                className="text-purple-400 hover:underline text-sm"
-              >
-                View All
-              </Link>
-            )}
+      <div className="container mx-auto px-3 sm:px-4 py-4 sm:py-8 relative z-10">
+        {Object.keys(grouped).map((category) => (
+          <div key={category} className="mb-8 sm:mb-10 px-2 sm:px-6">
+            <div className="flex justify-between items-center mb-3 sm:mb-4">
+              <h2 className="text-xl sm:text-2xl font-bold text-white">{category}</h2>
+              {grouped[category].length > 4 && (
+                <Link
+                  to={`/categories/${category}`}
+                  className="text-purple-400 hover:underline text-xs sm:text-sm"
+                >
+                  View All
+                </Link>
+              )}
+            </div>
+            
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-3 sm:gap-4 md:gap-6">
+              {grouped[category].slice(0, 4).map((book) => (
+                <Link
+                  to={`/books/${book._id}`}
+                  key={book._id}
+                  className="relative group rounded-xl sm:rounded-2xl p-1 sm:p-2 bg-gray-800 bg-opacity-40 backdrop-blur-md hover:bg-opacity-60 transition duration-300 shadow-lg hover:shadow-purple-700/30 overflow-hidden"
+                >
+                  <div className="rounded-lg sm:rounded-xl overflow-hidden">
+                    <img
+                      src={book.cover_url}
+                      alt={book.title}
+                      className="w-full h-36 sm:h-48 md:h-56 object-cover transform group-hover:scale-105 transition duration-300"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="mt-2 sm:mt-3 px-1">
+                    <h3 className="text-white text-sm sm:text-base md:text-lg font-semibold truncate">{book.title}</h3>
+                    <p className="text-xs sm:text-sm text-purple-300 truncate">{book.author}</p>
+                  </div>
+                
+                  <div className="absolute inset-0 rounded-xl sm:rounded-2xl pointer-events-none group-hover:ring-2 group-hover:ring-purple-600 transition-all duration-300" />
+                </Link>            
+              ))}
+            </div>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-            {grouped[category].slice(0, 4).map((book) => (
-              <Link
-                to={`/books/${book._id}`}
-                key={book._id}
-                className="relative group rounded-2xl p-2 bg-gray-800 bg-opacity-40 backdrop-blur-md hover:bg-opacity-60 transition duration-300 shadow-lg hover:shadow-purple-700 overflow-hidden"
-              >
-                <div className="rounded-xl overflow-hidden">
-                  <img
-                    src={book.cover_url}
-                    alt={book.title}
-                    className="w-full h-56 object-cover transform group-hover:scale-105 transition duration-300"
-                  />
-                </div>
-                <div className="mt-3 px-1">
-                  <h3 className="text-white text-lg font-semibold truncate">{book.title}</h3>
-                  <p className="text-sm text-purple-300 truncate">{book.author}</p>
-                </div>
-              
-                <div className="absolute inset-0 rounded-2xl pointer-events-none group-hover:ring-2 group-hover:ring-purple-600 transition-all duration-300" />
-              </Link>            
-            ))}
-          </div>
-        </div>
-      ))}
+        ))}
       </div>
+      
+      <footer className="py-6 px-4 mt-8 text-center text-sm text-gray-400 border-t border-gray-800">
+        <p>&copy; {new Date().getFullYear()} Audiobook Stream. All rights reserved.</p>
+      </footer>
     </div>
   );
 };

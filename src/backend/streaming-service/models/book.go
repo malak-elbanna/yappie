@@ -19,5 +19,6 @@ type Book struct {
 	URLLibriVox string             `bson:"url_librivox" json:"url_librivox"`
 	TotalTime   string             `bson:"totaltime" json:"totaltime"`
 	CoverURL    *string            `bson:"cover_url,omitempty" json:"cover_url,omitempty"`
-	Chapters    []Chapter          `bson:"chapters" json:"chapters"`
+	AudioURL    *string            `bson:"audio_url,omitempty" json:"audio_url,omitempty"`
+	Chapters    []Chapter          `bson:"chapters" json:"chapters,omitempty"`
 }

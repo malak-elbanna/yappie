@@ -201,7 +201,7 @@ textarea.form-control {
     const form = document.getElementById("add-audiobook-form");
     const formData = new FormData(form);
     console.log(formData);
-    fetch("/", {
+    fetch("/admin-cms", {
         method: "POST",
         body: formData
     })
@@ -218,6 +218,7 @@ textarea.form-control {
         console.error("Error:", error);
         alert(error)
         alert(`An error occured while adding the audiobook.`);
+        return;
     });
     var object = {};
     formData.forEach((value, key) => object[key] = value);
@@ -230,7 +231,7 @@ textarea.form-control {
     })
     .then(response => {
         if (response.ok) {
-            window.location.href = "/";
+            window.location.href = "/admin-cms";
         } else {
             alert("Failed to add notification.");
         }
