@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import { getProfilePage, editBio, addPreference, removePreference } from "../Api";
 import { Hourglass } from 'ldrs/react';
 import 'ldrs/react/Hourglass.css';
+Hourglass.register()
 
 const Profile = () => {
     const [profile, setProfile] = useState(null);
