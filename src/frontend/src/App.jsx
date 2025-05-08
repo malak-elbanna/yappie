@@ -15,6 +15,7 @@ import LiveAudioStreaming from "./pages/Streamer";
 import AvailableStreams from "./pages/AvailableStreams";
 import StartStream from "./pages/StartStream";
 import CategoryBooks from "./pages/CategoryBooks";
+import AboutUs from "./pages/AboutUs";
 import DownloadsPage from "./pages/Downloads";
 
 const App = () => {
@@ -38,6 +39,7 @@ const App = () => {
         <Route path="/streams" element={<AvailableStreams />} />
         <Route path="/start-stream" element={<StartStream />} />
         <Route path="/category/:categoryName" element={<CategoryBooks />} />
+        <Route path="/about-us" element={<AboutUs />} />        
         <Route path="/downloads" element={<DownloadsPage />} />
       </Routes>
     </Router>
