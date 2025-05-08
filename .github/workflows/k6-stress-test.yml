@@ -59,6 +59,11 @@ jobs:
                     DEBUG=True
                     EOF
 
+                    mkdir -p src/backend/notification-service
+                    cat <<EOF > src/backend/notification-service/.env
+                    MONGO_URI=mongodb+srv://salmaayman:LgFYRUMZ3iuGPyzD@cluster0.ufjw6qu.mongodb.net/?retryWrites=true&w=majority
+                    EOF
+
             -   name: Start Services
                 working-directory: src
                 run: |
@@ -94,6 +99,12 @@ jobs:
                     echo "Waiting for streaming-service..."
                     until curl --fail http://localhost:8080/health; do
                         echo "Streaming service not ready yet, retrying in 2s..."
+                        sleep 2
+                    done
+
+                    echo "Waiting for notification-service..."
+                    until curl --fail http://localhost:4000/health; do
+                        echo "Notification service not ready yet, retrying in 2s..."
                         sleep 2
                     done
 

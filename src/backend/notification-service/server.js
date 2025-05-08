@@ -27,6 +27,15 @@ app.use(metricsMiddleware);
 connectToMongo();
 app.use(cors())
 app.use(express.json());
+
+app.get('/health', (req, res) => {
+  res.status(200).json({ 
+    status: 'OK',
+    timestamp: new Date().toISOString(),
+    service: 'notification-service'
+  });
+});
+
 app.use('/notification',notificationRouter);
 app.use('/subscription',subscriptionRouter);
 

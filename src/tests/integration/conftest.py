@@ -38,5 +38,6 @@ def auth_token(auth_url, register) -> Dict[str, str]:
     return {
         "token": token['access_token'],
         "headers": {"Authorization": f"Bearer {token['access_token']}"},
-        "user_id": token['user_id']
+        "user_id": token['user_id'],
+        "email": register['email']
     }
