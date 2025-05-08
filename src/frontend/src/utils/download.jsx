@@ -28,3 +28,23 @@ export async function deleteChapter(key) {
   const db = await dbPromise;
   await db.delete(STORE_NAME, key);
 }
+
+export async function getAllDownloadedChapters() {
+  const db = await dbPromise;
+  const keys = await db.getAllKeys(STORE_NAME);
+  
+  const chapters = await Promise.all(
+    keys.map(async (key) => {
+      const blob = await db.get(STORE_NAME, key);
+      const [bookId, chapterIndex] = key.split('-');
+      return {
+        key,
+        blob,
+        bookId,
+        chapterIndex: parseInt(chapterIndex),
+      };
+    })
+  );
+
+  return chapters;
+}
