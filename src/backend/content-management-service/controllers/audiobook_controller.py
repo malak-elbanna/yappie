@@ -54,7 +54,8 @@ def add_audiobook():
     db = mongo.cx["audiobooks_db"]
     fs = GridFS(db)
     
-
+    id = db.books.count_documents({}) + 1
+    
     data = request.form.to_dict()
     files = request.files
     if 'cover_image' in files:
@@ -69,9 +70,9 @@ def add_audiobook():
             # audio_id = fs.put(audio_file, filename=secure_filename(audio_file.filename))
             # size = os.fstat(audio_file.fileno()).st_size
             
-            hls_export_upload(audio_file,os.path.splitext(audio_file.filename)[0])
+            hls_export_upload(audio_file,str(id))
 
-            data['audio_url'] = 'http://localhost:9000/audiobooks/'+os.path.splitext(audio_file.filename)[0]+'.m3u8'
+            data['audio_url'] = 'http://localhost:9000/audiobooks/'+str(id)+'.m3u8'
 
     result = db.books.insert_one(data)
     logging.info("Audiobook added", extra={"audiobook_id": str(result.inserted_id)})

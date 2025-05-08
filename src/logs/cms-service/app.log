@@ -5879,3 +5879,326 @@
 {"message": "172.18.0.7 - - [07/May/2025 03:06:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:06:24.897144+00:00"}
 {"message": "172.18.0.7 - - [07/May/2025 03:06:35] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:06:35.851608+00:00"}
 {"message": "172.18.0.7 - - [07/May/2025 03:06:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-07T03:06:39.897423+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-08T02:58:33.196846+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-08T02:58:33.228487+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5002\n * Running on http://172.18.0.3:5002", "time": "2025-05-08T02:58:33.349238+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-08T02:58:33.350201+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-08T02:58:33.354849+00:00"}
+{"message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5001\n * Running on http://172.18.0.12:5001", "time": "2025-05-08T02:58:33.377686+00:00"}
+{"message": "\u001b[33mPress CTRL+C to quit\u001b[0m", "time": "2025-05-08T02:58:33.378365+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-08T02:58:33.400039+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-08T02:58:34.598689+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-08T02:58:34.640794+00:00"}
+{"message": " * Debugger PIN: 870-165-478", "time": "2025-05-08T02:58:34.642346+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-08T02:58:34.743468+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-08T02:58:34.801250+00:00"}
+{"message": " * Debugger PIN: 118-427-639", "time": "2025-05-08T02:58:34.802827+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 02:58:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T02:58:39.013493+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 02:58:48] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T02:58:48.355362+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 02:58:54] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T02:58:54.013957+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 02:59:03] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T02:59:03.352337+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 02:59:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T02:59:09.010872+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 02:59:18] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T02:59:18.354435+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 02:59:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T02:59:24.011162+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 02:59:33] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T02:59:33.351630+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 02:59:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T02:59:39.008610+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 02:59:48] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T02:59:48.350023+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 02:59:54] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T02:59:54.008859+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:00:03] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:00:03.348245+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:00:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:00:09.005379+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:00:18] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:00:18.349029+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:00:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:00:24.005982+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:00:33] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:00:33.347154+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:00:39] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:00:39.007498+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:00:48] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:00:48.346857+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:00:54] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:00:54.004563+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:01:03] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:01:03.343051+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:01:09] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:01:09.000749+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:01:18] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:01:18.347370+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:01:24] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:01:24.000949+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:01:33] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:01:33.342050+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:01:38] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:01:38.999714+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:01:48] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:01:48.342356+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:01:54] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:01:54.000401+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:02:03] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:02:03.340078+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:02:08] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:02:08.998028+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:02:18] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:02:18.341839+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:02:23] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:02:23.996805+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:02:33] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:02:33.339146+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:02:38] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:02:38.996152+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:02:48] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:02:48.336578+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:02:53] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:02:53.994388+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:03:03] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:03:03.335316+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:03:08] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:03:08.993687+00:00"}
+{"message": " * Detected change in '/app/controllers/audiobook_controller.py', reloading", "time": "2025-05-08T03:03:16.319285+00:00"}
+{"message": " * Detected change in '/app/controllers/audiobook_controller.py', reloading", "time": "2025-05-08T03:03:16.326111+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-08T03:03:16.499550+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-08T03:03:16.525910+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-08T03:03:17.492435+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-08T03:03:17.492769+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-08T03:03:17.513623+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-08T03:03:17.513619+00:00"}
+{"message": " * Debugger PIN: 118-427-639", "time": "2025-05-08T03:03:17.514914+00:00"}
+{"message": " * Debugger PIN: 870-165-478", "time": "2025-05-08T03:03:17.516758+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:03:18] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:03:18.337162+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:03:23] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:03:23.994439+00:00"}
+{"message": "172.18.0.15 - - [08/May/2025 03:03:26] \"\u001b[35m\u001b[1mPOST / HTTP/1.1\u001b[0m\" 500 -", "time": "2025-05-08T03:03:26.642457+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:03:33] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:03:33.334423+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:03:38] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:03:38.990749+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:03:48] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:03:48.333477+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:03:53] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:03:53.990519+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:04:03] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:04:03.333121+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:04:08] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:04:08.989935+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:04:18] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:04:18.332803+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:04:23] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:04:23.989476+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:04:33] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:04:33.330107+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:04:38] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:04:38.986532+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:04:48] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:04:48.330184+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:04:53] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:04:53.986596+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:05:03] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:05:03.330167+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:05:08] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:05:08.987131+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:05:18] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:05:18.328389+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:05:23] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:05:23.985743+00:00"}
+{"message": " * Detected change in '/app/controllers/audiobook_controller.py', reloading", "time": "2025-05-08T03:05:31.863677+00:00"}
+{"message": " * Detected change in '/app/controllers/audiobook_controller.py', reloading", "time": "2025-05-08T03:05:31.868478+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-08T03:05:31.995019+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-08T03:05:31.999345+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-08T03:05:33.001544+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-08T03:05:33.008834+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-08T03:05:33.020078+00:00"}
+{"message": " * Debugger PIN: 118-427-639", "time": "2025-05-08T03:05:33.021178+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-08T03:05:33.028719+00:00"}
+{"message": " * Debugger PIN: 870-165-478", "time": "2025-05-08T03:05:33.029623+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:05:33] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:05:33.327361+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:05:38] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:05:38.987374+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:05:48] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:05:48.326488+00:00"}
+{"message": "172.18.0.15 - - [08/May/2025 03:05:50] \"\u001b[35m\u001b[1mPOST / HTTP/1.1\u001b[0m\" 500 -", "time": "2025-05-08T03:05:50.011596+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:05:53] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:05:53.983555+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:06:03] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:06:03.324680+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:06:08] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:06:08.981871+00:00"}
+{"message": " * Detected change in '/app/controllers/audiobook_controller.py', reloading", "time": "2025-05-08T03:06:18.088494+00:00"}
+{"message": " * Detected change in '/app/controllers/audiobook_controller.py', reloading", "time": "2025-05-08T03:06:18.094483+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-08T03:06:18.227779+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-08T03:06:18.235964+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-08T03:06:18.981963+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-08T03:06:18.982558+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-08T03:06:19.001523+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-08T03:06:19.002306+00:00"}
+{"message": " * Debugger PIN: 870-165-478", "time": "2025-05-08T03:06:19.002968+00:00"}
+{"message": " * Debugger PIN: 118-427-639", "time": "2025-05-08T03:06:19.003713+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:06:19] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:06:19.085425+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:06:23] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:06:23.981941+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:06:33] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:06:33.323856+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:06:38] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:06:38.980393+00:00"}
+{"message": "Uploaded: One Last Adventure.m3u8", "time": "2025-05-08T03:06:39.444565+00:00"}
+{"message": "Uploaded: One Last Adventure_0.m3u8", "time": "2025-05-08T03:06:39.454503+00:00"}
+{"message": "Uploaded: One Last Adventure_0_000.ts", "time": "2025-05-08T03:06:39.466511+00:00"}
+{"message": "Uploaded: One Last Adventure_0_001.ts", "time": "2025-05-08T03:06:39.482958+00:00"}
+{"message": "Uploaded: One Last Adventure_0_002.ts", "time": "2025-05-08T03:06:39.506143+00:00"}
+{"message": "Uploaded: One Last Adventure_0_003.ts", "time": "2025-05-08T03:06:39.521260+00:00"}
+{"message": "Uploaded: One Last Adventure_0_004.ts", "time": "2025-05-08T03:06:39.536748+00:00"}
+{"message": "Uploaded: One Last Adventure_0_005.ts", "time": "2025-05-08T03:06:39.554708+00:00"}
+{"message": "Uploaded: One Last Adventure_0_006.ts", "time": "2025-05-08T03:06:39.574688+00:00"}
+{"message": "Uploaded: One Last Adventure_0_007.ts", "time": "2025-05-08T03:06:39.592054+00:00"}
+{"message": "Uploaded: One Last Adventure_0_008.ts", "time": "2025-05-08T03:06:39.606672+00:00"}
+{"message": "Uploaded: One Last Adventure_0_009.ts", "time": "2025-05-08T03:06:39.619026+00:00"}
+{"message": "Uploaded: One Last Adventure_0_010.ts", "time": "2025-05-08T03:06:39.632292+00:00"}
+{"message": "Uploaded: One Last Adventure_0_011.ts", "time": "2025-05-08T03:06:39.643056+00:00"}
+{"message": "Uploaded: One Last Adventure_0_012.ts", "time": "2025-05-08T03:06:39.655584+00:00"}
+{"message": "Uploaded: One Last Adventure_0_013.ts", "time": "2025-05-08T03:06:39.667468+00:00"}
+{"message": "Uploaded: One Last Adventure_0_014.ts", "time": "2025-05-08T03:06:39.680497+00:00"}
+{"message": "Uploaded: One Last Adventure_1.m3u8", "time": "2025-05-08T03:06:39.691907+00:00"}
+{"message": "Uploaded: One Last Adventure_1_000.ts", "time": "2025-05-08T03:06:39.708032+00:00"}
+{"message": "Uploaded: One Last Adventure_1_001.ts", "time": "2025-05-08T03:06:39.721461+00:00"}
+{"message": "Uploaded: One Last Adventure_1_002.ts", "time": "2025-05-08T03:06:39.746005+00:00"}
+{"message": "Uploaded: One Last Adventure_1_003.ts", "time": "2025-05-08T03:06:39.764771+00:00"}
+{"message": "Uploaded: One Last Adventure_1_004.ts", "time": "2025-05-08T03:06:39.783716+00:00"}
+{"message": "Uploaded: One Last Adventure_1_005.ts", "time": "2025-05-08T03:06:39.798910+00:00"}
+{"message": "Uploaded: One Last Adventure_1_006.ts", "time": "2025-05-08T03:06:39.812358+00:00"}
+{"message": "Uploaded: One Last Adventure_1_007.ts", "time": "2025-05-08T03:06:39.824800+00:00"}
+{"message": "Uploaded: One Last Adventure_1_008.ts", "time": "2025-05-08T03:06:39.839336+00:00"}
+{"message": "Uploaded: One Last Adventure_1_009.ts", "time": "2025-05-08T03:06:39.855179+00:00"}
+{"message": "Uploaded: One Last Adventure_1_010.ts", "time": "2025-05-08T03:06:39.873793+00:00"}
+{"message": "Uploaded: One Last Adventure_1_011.ts", "time": "2025-05-08T03:06:39.893429+00:00"}
+{"message": "Uploaded: One Last Adventure_1_012.ts", "time": "2025-05-08T03:06:39.913934+00:00"}
+{"message": "Uploaded: One Last Adventure_1_013.ts", "time": "2025-05-08T03:06:39.932545+00:00"}
+{"message": "Uploaded: One Last Adventure_1_014.ts", "time": "2025-05-08T03:06:39.947742+00:00"}
+{"message": "Uploaded: One Last Adventure_2.m3u8", "time": "2025-05-08T03:06:39.959645+00:00"}
+{"message": "Uploaded: One Last Adventure_2_000.ts", "time": "2025-05-08T03:06:39.976925+00:00"}
+{"message": "Uploaded: One Last Adventure_2_001.ts", "time": "2025-05-08T03:06:39.999969+00:00"}
+{"message": "Uploaded: One Last Adventure_2_002.ts", "time": "2025-05-08T03:06:40.018946+00:00"}
+{"message": "Uploaded: One Last Adventure_2_003.ts", "time": "2025-05-08T03:06:40.038068+00:00"}
+{"message": "Uploaded: One Last Adventure_2_004.ts", "time": "2025-05-08T03:06:40.058554+00:00"}
+{"message": "Uploaded: One Last Adventure_2_005.ts", "time": "2025-05-08T03:06:40.076644+00:00"}
+{"message": "Uploaded: One Last Adventure_2_006.ts", "time": "2025-05-08T03:06:40.096657+00:00"}
+{"message": "Uploaded: One Last Adventure_2_007.ts", "time": "2025-05-08T03:06:40.114915+00:00"}
+{"message": "Uploaded: One Last Adventure_2_008.ts", "time": "2025-05-08T03:06:40.140422+00:00"}
+{"message": "Uploaded: One Last Adventure_2_009.ts", "time": "2025-05-08T03:06:40.162234+00:00"}
+{"message": "Uploaded: One Last Adventure_2_010.ts", "time": "2025-05-08T03:06:40.188685+00:00"}
+{"message": "Uploaded: One Last Adventure_2_011.ts", "time": "2025-05-08T03:06:40.208900+00:00"}
+{"message": "Uploaded: One Last Adventure_2_012.ts", "time": "2025-05-08T03:06:40.229652+00:00"}
+{"message": "Uploaded: One Last Adventure_2_013.ts", "time": "2025-05-08T03:06:40.247115+00:00"}
+{"message": "Uploaded: One Last Adventure_2_014.ts", "time": "2025-05-08T03:06:40.263575+00:00"}
+{"audiobook_id": "681c1fc074150264294aa3ba", "message": "Audiobook added", "time": "2025-05-08T03:06:40.517994+00:00"}
+{"message": "172.18.0.15 - - [08/May/2025 03:06:40] \"\u001b[35m\u001b[1mPOST / HTTP/1.1\u001b[0m\" 201 -", "time": "2025-05-08T03:06:40.520432+00:00"}
+{"message": " * Detected change in '/app/controllers/audiobook_controller.py', reloading", "time": "2025-05-08T03:06:44.935292+00:00"}
+{"message": " * Detected change in '/app/controllers/audiobook_controller.py', reloading", "time": "2025-05-08T03:06:44.941639+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-08T03:06:45.075413+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-08T03:06:45.476809+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-08T03:06:46.132319+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-08T03:06:46.154452+00:00"}
+{"message": " * Debugger PIN: 870-165-478", "time": "2025-05-08T03:06:46.155797+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-08T03:06:46.191209+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-08T03:06:46.219511+00:00"}
+{"message": " * Debugger PIN: 118-427-639", "time": "2025-05-08T03:06:46.221030+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:06:48] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:06:48.326619+00:00"}
+{"message": " * Detected change in '/app/controllers/audiobook_controller.py', reloading", "time": "2025-05-08T03:06:52.923525+00:00"}
+{"message": " * Detected change in '/app/controllers/audiobook_controller.py', reloading", "time": "2025-05-08T03:06:52.947769+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-08T03:06:53.050361+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-08T03:06:53.066340+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-08T03:06:53.841055+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-08T03:06:53.841210+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-08T03:06:53.861104+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-08T03:06:53.861473+00:00"}
+{"message": " * Debugger PIN: 118-427-639", "time": "2025-05-08T03:06:53.862719+00:00"}
+{"message": " * Debugger PIN: 870-165-478", "time": "2025-05-08T03:06:53.862741+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:06:53] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:06:53.980355+00:00"}
+{"message": "2", "time": "2025-05-08T03:06:59.463606+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:07:03] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:07:03.323807+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:07:08] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:07:08.978854+00:00"}
+{"message": "Uploaded: One Last Adventure.m3u8", "time": "2025-05-08T03:07:11.065744+00:00"}
+{"message": "Uploaded: One Last Adventure_0.m3u8", "time": "2025-05-08T03:07:11.076182+00:00"}
+{"message": "Uploaded: One Last Adventure_0_000.ts", "time": "2025-05-08T03:07:11.087915+00:00"}
+{"message": "Uploaded: One Last Adventure_0_001.ts", "time": "2025-05-08T03:07:11.102385+00:00"}
+{"message": "Uploaded: One Last Adventure_0_002.ts", "time": "2025-05-08T03:07:11.114220+00:00"}
+{"message": "Uploaded: One Last Adventure_0_003.ts", "time": "2025-05-08T03:07:11.126193+00:00"}
+{"message": "Uploaded: One Last Adventure_0_004.ts", "time": "2025-05-08T03:07:11.139349+00:00"}
+{"message": "Uploaded: One Last Adventure_0_005.ts", "time": "2025-05-08T03:07:11.152766+00:00"}
+{"message": "Uploaded: One Last Adventure_0_006.ts", "time": "2025-05-08T03:07:11.163406+00:00"}
+{"message": "Uploaded: One Last Adventure_0_007.ts", "time": "2025-05-08T03:07:11.175198+00:00"}
+{"message": "Uploaded: One Last Adventure_0_008.ts", "time": "2025-05-08T03:07:11.186768+00:00"}
+{"message": "Uploaded: One Last Adventure_0_009.ts", "time": "2025-05-08T03:07:11.198010+00:00"}
+{"message": "Uploaded: One Last Adventure_0_010.ts", "time": "2025-05-08T03:07:11.210776+00:00"}
+{"message": "Uploaded: One Last Adventure_0_011.ts", "time": "2025-05-08T03:07:11.222626+00:00"}
+{"message": "Uploaded: One Last Adventure_0_012.ts", "time": "2025-05-08T03:07:11.235776+00:00"}
+{"message": "Uploaded: One Last Adventure_0_013.ts", "time": "2025-05-08T03:07:11.249967+00:00"}
+{"message": "Uploaded: One Last Adventure_0_014.ts", "time": "2025-05-08T03:07:11.266372+00:00"}
+{"message": "Uploaded: One Last Adventure_1.m3u8", "time": "2025-05-08T03:07:11.278433+00:00"}
+{"message": "Uploaded: One Last Adventure_1_000.ts", "time": "2025-05-08T03:07:11.294000+00:00"}
+{"message": "Uploaded: One Last Adventure_1_001.ts", "time": "2025-05-08T03:07:11.308090+00:00"}
+{"message": "Uploaded: One Last Adventure_1_002.ts", "time": "2025-05-08T03:07:11.326962+00:00"}
+{"message": "Uploaded: One Last Adventure_1_003.ts", "time": "2025-05-08T03:07:11.344899+00:00"}
+{"message": "Uploaded: One Last Adventure_1_004.ts", "time": "2025-05-08T03:07:11.362083+00:00"}
+{"message": "Uploaded: One Last Adventure_1_005.ts", "time": "2025-05-08T03:07:11.378028+00:00"}
+{"message": "Uploaded: One Last Adventure_1_006.ts", "time": "2025-05-08T03:07:11.393750+00:00"}
+{"message": "Uploaded: One Last Adventure_1_007.ts", "time": "2025-05-08T03:07:11.409013+00:00"}
+{"message": "Uploaded: One Last Adventure_1_008.ts", "time": "2025-05-08T03:07:11.425156+00:00"}
+{"message": "Uploaded: One Last Adventure_1_009.ts", "time": "2025-05-08T03:07:11.443410+00:00"}
+{"message": "Uploaded: One Last Adventure_1_010.ts", "time": "2025-05-08T03:07:11.459921+00:00"}
+{"message": "Uploaded: One Last Adventure_1_011.ts", "time": "2025-05-08T03:07:11.474681+00:00"}
+{"message": "Uploaded: One Last Adventure_1_012.ts", "time": "2025-05-08T03:07:11.488964+00:00"}
+{"message": "Uploaded: One Last Adventure_1_013.ts", "time": "2025-05-08T03:07:11.506415+00:00"}
+{"message": "Uploaded: One Last Adventure_1_014.ts", "time": "2025-05-08T03:07:11.517921+00:00"}
+{"message": "Uploaded: One Last Adventure_2.m3u8", "time": "2025-05-08T03:07:11.527265+00:00"}
+{"message": "Uploaded: One Last Adventure_2_000.ts", "time": "2025-05-08T03:07:11.543404+00:00"}
+{"message": "Uploaded: One Last Adventure_2_001.ts", "time": "2025-05-08T03:07:11.562270+00:00"}
+{"message": "Uploaded: One Last Adventure_2_002.ts", "time": "2025-05-08T03:07:11.577050+00:00"}
+{"message": "Uploaded: One Last Adventure_2_003.ts", "time": "2025-05-08T03:07:11.590949+00:00"}
+{"message": "Uploaded: One Last Adventure_2_004.ts", "time": "2025-05-08T03:07:11.605122+00:00"}
+{"message": "Uploaded: One Last Adventure_2_005.ts", "time": "2025-05-08T03:07:11.622697+00:00"}
+{"message": "Uploaded: One Last Adventure_2_006.ts", "time": "2025-05-08T03:07:11.639102+00:00"}
+{"message": "Uploaded: One Last Adventure_2_007.ts", "time": "2025-05-08T03:07:11.657212+00:00"}
+{"message": "Uploaded: One Last Adventure_2_008.ts", "time": "2025-05-08T03:07:11.672116+00:00"}
+{"message": "Uploaded: One Last Adventure_2_009.ts", "time": "2025-05-08T03:07:11.687531+00:00"}
+{"message": "Uploaded: One Last Adventure_2_010.ts", "time": "2025-05-08T03:07:11.702203+00:00"}
+{"message": "Uploaded: One Last Adventure_2_011.ts", "time": "2025-05-08T03:07:11.717220+00:00"}
+{"message": "Uploaded: One Last Adventure_2_012.ts", "time": "2025-05-08T03:07:11.732585+00:00"}
+{"message": "Uploaded: One Last Adventure_2_013.ts", "time": "2025-05-08T03:07:11.749840+00:00"}
+{"message": "Uploaded: One Last Adventure_2_014.ts", "time": "2025-05-08T03:07:11.766561+00:00"}
+{"audiobook_id": "681c1fdfbf2ae31094f1c102", "message": "Audiobook added", "time": "2025-05-08T03:07:11.920849+00:00"}
+{"message": "172.18.0.15 - - [08/May/2025 03:07:11] \"\u001b[35m\u001b[1mPOST / HTTP/1.1\u001b[0m\" 201 -", "time": "2025-05-08T03:07:11.922565+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:07:18] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:07:18.323597+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:07:23] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:07:23.978988+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:07:33] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:07:33.319607+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:07:38] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:07:38.977212+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:07:48] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:07:48.320553+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:07:53] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:07:53.976347+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:08:03] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:08:03.316742+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:08:08] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:08:08.974913+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:08:18] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:08:18.317361+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:08:23] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:08:23.975012+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:08:33] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:08:33.316945+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:08:38] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:08:38.972322+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:08:48] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:08:48.316009+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:08:53] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:08:53.973613+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:09:03] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:09:03.315913+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:09:08] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:09:08.974253+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:09:18] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:09:18.316153+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:09:23] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:09:23.971337+00:00"}
+{"message": " * Detected change in '/app/controllers/audiobook_controller.py', reloading", "time": "2025-05-08T03:09:25.914693+00:00"}
+{"message": " * Detected change in '/app/controllers/audiobook_controller.py', reloading", "time": "2025-05-08T03:09:25.916984+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-08T03:09:26.022374+00:00"}
+{"message": " * Restarting with stat", "time": "2025-05-08T03:09:26.464856+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-08T03:09:26.874040+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-08T03:09:26.894252+00:00"}
+{"message": " * Debugger PIN: 870-165-478", "time": "2025-05-08T03:09:26.895423+00:00"}
+{"message": "Content Management Service started", "time": "2025-05-08T03:09:27.089576+00:00"}
+{"message": " * Debugger is active!", "time": "2025-05-08T03:09:27.107212+00:00"}
+{"message": " * Debugger PIN: 118-427-639", "time": "2025-05-08T03:09:27.108100+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:09:33] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:09:33.312942+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:09:38] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:09:38.970119+00:00"}
+{"message": "Uploaded: 1.m3u8", "time": "2025-05-08T03:09:45.353557+00:00"}
+{"message": "Uploaded: 1_0.m3u8", "time": "2025-05-08T03:09:45.366500+00:00"}
+{"message": "Uploaded: 1_0_000.ts", "time": "2025-05-08T03:09:45.379800+00:00"}
+{"message": "Uploaded: 1_0_001.ts", "time": "2025-05-08T03:09:45.390742+00:00"}
+{"message": "Uploaded: 1_0_002.ts", "time": "2025-05-08T03:09:45.399248+00:00"}
+{"message": "Uploaded: 1_0_003.ts", "time": "2025-05-08T03:09:45.408907+00:00"}
+{"message": "Uploaded: 1_0_004.ts", "time": "2025-05-08T03:09:45.420721+00:00"}
+{"message": "Uploaded: 1_0_005.ts", "time": "2025-05-08T03:09:45.429670+00:00"}
+{"message": "Uploaded: 1_0_006.ts", "time": "2025-05-08T03:09:45.438866+00:00"}
+{"message": "Uploaded: 1_0_007.ts", "time": "2025-05-08T03:09:45.447611+00:00"}
+{"message": "Uploaded: 1_0_008.ts", "time": "2025-05-08T03:09:45.456503+00:00"}
+{"message": "Uploaded: 1_0_009.ts", "time": "2025-05-08T03:09:45.465866+00:00"}
+{"message": "Uploaded: 1_0_010.ts", "time": "2025-05-08T03:09:45.478504+00:00"}
+{"message": "Uploaded: 1_0_011.ts", "time": "2025-05-08T03:09:45.491105+00:00"}
+{"message": "Uploaded: 1_0_012.ts", "time": "2025-05-08T03:09:45.504474+00:00"}
+{"message": "Uploaded: 1_0_013.ts", "time": "2025-05-08T03:09:45.520371+00:00"}
+{"message": "Uploaded: 1_0_014.ts", "time": "2025-05-08T03:09:45.530249+00:00"}
+{"message": "Uploaded: 1_1.m3u8", "time": "2025-05-08T03:09:45.539171+00:00"}
+{"message": "Uploaded: 1_1_000.ts", "time": "2025-05-08T03:09:45.553636+00:00"}
+{"message": "Uploaded: 1_1_001.ts", "time": "2025-05-08T03:09:45.566805+00:00"}
+{"message": "Uploaded: 1_1_002.ts", "time": "2025-05-08T03:09:45.581645+00:00"}
+{"message": "Uploaded: 1_1_003.ts", "time": "2025-05-08T03:09:45.594930+00:00"}
+{"message": "Uploaded: 1_1_004.ts", "time": "2025-05-08T03:09:45.608319+00:00"}
+{"message": "Uploaded: 1_1_005.ts", "time": "2025-05-08T03:09:45.623998+00:00"}
+{"message": "Uploaded: 1_1_006.ts", "time": "2025-05-08T03:09:45.636193+00:00"}
+{"message": "Uploaded: 1_1_007.ts", "time": "2025-05-08T03:09:45.652444+00:00"}
+{"message": "Uploaded: 1_1_008.ts", "time": "2025-05-08T03:09:45.666511+00:00"}
+{"message": "Uploaded: 1_1_009.ts", "time": "2025-05-08T03:09:45.682753+00:00"}
+{"message": "Uploaded: 1_1_010.ts", "time": "2025-05-08T03:09:45.698195+00:00"}
+{"message": "Uploaded: 1_1_011.ts", "time": "2025-05-08T03:09:45.714470+00:00"}
+{"message": "Uploaded: 1_1_012.ts", "time": "2025-05-08T03:09:45.728015+00:00"}
+{"message": "Uploaded: 1_1_013.ts", "time": "2025-05-08T03:09:45.740110+00:00"}
+{"message": "Uploaded: 1_1_014.ts", "time": "2025-05-08T03:09:45.748694+00:00"}
+{"message": "Uploaded: 1_2.m3u8", "time": "2025-05-08T03:09:45.767353+00:00"}
+{"message": "Uploaded: 1_2_000.ts", "time": "2025-05-08T03:09:45.787064+00:00"}
+{"message": "Uploaded: 1_2_001.ts", "time": "2025-05-08T03:09:45.798729+00:00"}
+{"message": "Uploaded: 1_2_002.ts", "time": "2025-05-08T03:09:45.811712+00:00"}
+{"message": "Uploaded: 1_2_003.ts", "time": "2025-05-08T03:09:45.824516+00:00"}
+{"message": "Uploaded: 1_2_004.ts", "time": "2025-05-08T03:09:45.836701+00:00"}
+{"message": "Uploaded: 1_2_005.ts", "time": "2025-05-08T03:09:45.849230+00:00"}
+{"message": "Uploaded: 1_2_006.ts", "time": "2025-05-08T03:09:45.861374+00:00"}
+{"message": "Uploaded: 1_2_007.ts", "time": "2025-05-08T03:09:45.877891+00:00"}
+{"message": "Uploaded: 1_2_008.ts", "time": "2025-05-08T03:09:45.890091+00:00"}
+{"message": "Uploaded: 1_2_009.ts", "time": "2025-05-08T03:09:45.902407+00:00"}
+{"message": "Uploaded: 1_2_010.ts", "time": "2025-05-08T03:09:45.920137+00:00"}
+{"message": "Uploaded: 1_2_011.ts", "time": "2025-05-08T03:09:45.936635+00:00"}
+{"message": "Uploaded: 1_2_012.ts", "time": "2025-05-08T03:09:45.957593+00:00"}
+{"message": "Uploaded: 1_2_013.ts", "time": "2025-05-08T03:09:45.975983+00:00"}
+{"message": "Uploaded: 1_2_014.ts", "time": "2025-05-08T03:09:45.989142+00:00"}
+{"audiobook_id": "681c207a1a6f387fb2c7bfca", "message": "Audiobook added", "time": "2025-05-08T03:09:46.146067+00:00"}
+{"message": "172.18.0.15 - - [08/May/2025 03:09:46] \"\u001b[35m\u001b[1mPOST / HTTP/1.1\u001b[0m\" 201 -", "time": "2025-05-08T03:09:46.148075+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:09:48] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:09:48.312820+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:09:53] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:09:53.971478+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:10:03] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:10:03.312333+00:00"}
+{"message": "172.18.0.4 - - [08/May/2025 03:10:08] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-08T03:10:08.969389+00:00"}
