@@ -330,6 +330,12 @@ services:
       - '--storage.tsdb.path=/prometheus'
       - '--web.console.libraries=/usr/share/prometheus/console_libraries'
       - '--web.console.templates=/usr/share/prometheus/consoles'
+  
+  node-exporter-1:
+    image: prom/node-exporter
+
+  node-exporter-2:
+    image: prom/node-exporter
 
   loki:
     image: grafana/loki:2.9.0
@@ -343,9 +349,9 @@ services:
   promtail:
     image: grafana/promtail:2.9.0
     volumes:
-      - ./monitoring/promtail-config.yaml:/etc/promtail/config.yml
+      - ./monitoring/promtail-config.yaml:/etc/promtail/config.yaml
       - ./logs:/var/log
-    command: -config.file=/etc/promtail/config.yml
+    command: -config.file=/etc/promtail/config.yaml
     depends_on:
       - loki
 
