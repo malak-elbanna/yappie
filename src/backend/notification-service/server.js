@@ -39,6 +39,9 @@ app.get('/health', (req, res) => {
 app.use('/notification',notificationRouter);
 app.use('/subscription',subscriptionRouter);
 
+
+
+
 const httpServer = app.listen(port, () => {console.log(`Server listening on port ${port}`)});
 logger.info('Notification service started');
 socket(httpServer);

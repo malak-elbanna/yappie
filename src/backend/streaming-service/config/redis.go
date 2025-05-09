@@ -13,7 +13,7 @@ var Ctx = context.Background()
 func InitRedis() {
 	REDIS_HOST := os.Getenv("REDIS_HOST")
 	if REDIS_HOST == "" {
-		REDIS_HOST = "localhost"
+		REDIS_HOST = "redis"
 	}
 
 	REDIS_PORT := os.Getenv("REDIS_PORT")

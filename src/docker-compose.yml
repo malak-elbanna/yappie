@@ -12,8 +12,8 @@ services:
 
     healthcheck:
       test: rabbitmq-diagnostics -q ping
-      interval: 30s
-      timeout: 30s
+      interval: 5s
+      timeout: 5s
       retries: 3 
 
     volumes:
@@ -111,13 +111,13 @@ services:
       - ./backend/notification-service/.env  
     ports:
       - "4000:4000"
-    volumes:
-      - ./logs/notification-service:/var/log/notification-service
-    command: ["node", "server"]
+    volumes: ['./backend/notification-service:/app',./logs/notification-service:/var/log/notification-service]
+    working_dir : /app
     depends_on:
       rabbitmq:
         condition: service_healthy
-      
+    
+     
   review-service-1:
     build:
       context: ./backend/review-service
@@ -307,7 +307,7 @@ services:
           condition: service_completed_successfully
     volumes:
       - ./kong-config/kong.yml:/kong-config/kong.yml
-    command: gateway dump  -o /config/kong.yml --kong-addr=http://kong:8001 --yes && gateway sync /config/kong.yml --kong-addr=http://kong:8001
+    command: gateway dump  -o /kong-config/kong.yml --kong-addr=http://kong:8001 --yes && gateway sync /config/kong.yml --kong-addr=http://kong:8001
 
   prometheus:
     image: prom/prometheus
