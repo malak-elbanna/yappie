@@ -1,5 +1,6 @@
 from flask import request, jsonify
 from app.models.profile import db, UserProfile
+from app.services.MQ import channel
 import logging
 
 profile_not_found = "Profile not found."
@@ -24,6 +25,8 @@ def get_info(user_id):
 
 def edit_name(user_id):
     data = request.get_json()
+
+    logging.info('email: ' + email)
     updated_name = data.get('name')
     if not updated_name:
         return jsonify({"error": "New name is required."}), 400
@@ -62,7 +65,6 @@ def add_favorite_book(user_id):
     if not profile:
         logging.info("User profile isn't found", extra={"user_id": str(user_id)})
         return jsonify({"error": profile_not_found}), 404
-    
     if profile.favorite_books is None:
         profile.favorite_books = []
     
@@ -94,29 +96,38 @@ def edit_bio(user_id):
     return jsonify({"message": "Bio is updated successfully."}), 200
 
 def add_preference(user_id):
-    data = request.get_json()
-    content_type = data.get('type')
-    genre = data.get('genre')
+    try:
+        data = request.get_json()
+        content_type = data.get('type')
+    
+        genre = data.get('genre')
+        email = data.get('email')
+        if not email:
+            return jsonify({"error": "No email."}), 400
 
-    if content_type != "audiobooks":
-        return jsonify({"error": "Type must be 'audiobooks'"}), 400
+        if content_type != "audiobooks":
+            return jsonify({"error": "Type must be 'audiobooks'"}), 400
     
-    profile = UserProfile.query.filter_by(user_id=user_id).first()
-    if not profile:
-        logging.info("User profile isn't found", extra={"user_id": str(user_id)})
-        return jsonify({"error": profile_not_found}), 404
-    if not profile.preferences:
-        profile.preferences = {}
+        profile = UserProfile.query.filter_by(user_id=user_id).first()
+        if not profile:
+            logging.info("User profile isn't found", extra={"user_id": str(user_id)})
+            return jsonify({"error": profile_not_found}), 404
+        if not profile.preferences:
+            profile.preferences = {}
     
-    if "audiobooks" not in profile.preferences:
-        profile.preferences["audiobooks"] = []
+        if "audiobooks" not in profile.preferences:
+            profile.preferences["audiobooks"] = []
     
-    if genre not in profile.preferences["audiobooks"]:
-        profile.preferences["audiobooks"].append(genre)
-        db.session.commit()
+        if genre not in profile.preferences["audiobooks"]:
+            profile.preferences["audiobooks"].append(genre)
+            logging.info('message: ' + genre)
+            channel.basic_publish(exchange='jobs',routing_key='BIND',body=email + '/' + genre)
+            db.session.commit()
     
-    logging.info("New preference added", extra={"user_id": str(user_id)})
-    return jsonify({"message": "New preference is added successfully."}), 200
+        logging.info("New preference added", extra={"user_id": str(user_id)})
+        return jsonify({"message": "New preference is added successfully."}), 200
+    except:
+        return jsonify({"message": "error occurred"}), 400
 
 def remove_preference(user_id):
     data = request.get_json()

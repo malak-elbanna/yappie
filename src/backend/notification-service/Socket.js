@@ -15,7 +15,7 @@ const StartSocket = (app)=>{
     socket.on('STARTED',async (message,email)=>{
         console.log('New client connected:', socket.id);
         
-        realTimeConsume(message,email,socket,channel);
+        realTimeConsume(message,email,socket);
     })
     socket.on('disconnect',async ()=>{
         console.log(`${socket.id} disconnected`)

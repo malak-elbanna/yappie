@@ -8,6 +8,7 @@ const notificationRouter = require('./routes/notificationRouter.js')
 const subscriptionRouter = require('./routes/subscriptionRouter.js')
 const logger = require('./logger.js')
 const promBundle = require('express-prom-bundle');
+const checkBind = require('./workers/binder.js')
 
 const metricsMiddleware = promBundle({
   includeMethod: true,
@@ -40,7 +41,7 @@ app.use('/notification',notificationRouter);
 app.use('/subscription',subscriptionRouter);
 
 
-
+checkBind();
 
 const httpServer = app.listen(port, () => {console.log(`Server listening on port ${port}`)});
 logger.info('Notification service started');
