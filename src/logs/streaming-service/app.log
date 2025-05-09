@@ -1,0 +1,40 @@
+{"level":"info","msg":"Starting streaming service...","time":"2025-05-09T15:49:20Z"}
+{"level":"info","msg":"Starting streaming service...","time":"2025-05-09T15:49:22Z"}
+{"level":"info","msg":"Service running on port 8081","time":"2025-05-09T15:49:26Z"}
+{"level":"info","msg":"Service running on port 8080","time":"2025-05-09T15:49:36Z"}
+{"level":"info","msg":"JWT middleware triggered","time":"2025-05-09T15:50:32Z"}
+{"level":"warning","msg":"Authorization header is missing","time":"2025-05-09T15:50:32Z"}
+{"level":"info","msg":"JWT middleware triggered","time":"2025-05-09T15:50:32Z"}
+{"level":"warning","msg":"Authorization header is missing","time":"2025-05-09T15:50:32Z"}
+{"level":"info","msg":"JWT middleware triggered","time":"2025-05-09T15:54:53Z"}
+{"level":"warning","msg":"Authorization header is missing","time":"2025-05-09T15:54:53Z"}
+{"level":"info","msg":"JWT middleware triggered","time":"2025-05-09T15:54:53Z"}
+{"level":"warning","msg":"Authorization header is missing","time":"2025-05-09T15:54:53Z"}
+{"level":"info","msg":"JWT middleware triggered","time":"2025-05-09T15:54:55Z"}
+{"level":"info","msg":"Token validated successfully","time":"2025-05-09T15:54:55Z"}
+{"level":"info","msg":"GetAllBooks request received","time":"2025-05-09T15:54:55Z"}
+{"level":"info","msg":"Checking Redis","time":"2025-05-09T15:54:55Z"}
+{"level":"warning","msg":"Cache miss for key:books:","time":"2025-05-09T15:54:56Z"}
+{"level":"info","msg":"Querying MongoDB with filter:map[]","time":"2025-05-09T15:54:56Z"}
+{"error":"connection(ac-eej2xcw-shard-00-01.ufjw6qu.mongodb.net:27017[-14]) incomplete read of full message: context deadline exceeded: read tcp 172.18.0.5:49872-\u003e159.41.77.243:27017: i/o timeout","level":"error","msg":"MongoDB Find error","time":"2025-05-09T15:55:05Z"}
+{"level":"info","msg":"JWT middleware triggered","time":"2025-05-09T15:55:05Z"}
+{"level":"info","msg":"Token validated successfully","time":"2025-05-09T15:55:05Z"}
+{"level":"info","msg":"GetAllBooks request received","time":"2025-05-09T15:55:05Z"}
+{"level":"info","msg":"Checking Redis","time":"2025-05-09T15:55:05Z"}
+{"level":"warning","msg":"Cache miss for key:books:","time":"2025-05-09T15:55:05Z"}
+{"level":"info","msg":"Querying MongoDB with filter:map[]","time":"2025-05-09T15:55:05Z"}
+{"error":"connection(ac-eej2xcw-shard-00-01.ufjw6qu.mongodb.net:27017[-7]) incomplete read of message header: context deadline exceeded: read tcp 172.18.0.13:51456-\u003e159.41.77.243:27017: i/o timeout","level":"error","msg":"MongoDB Find error","time":"2025-05-09T15:55:15Z"}
+{"level":"info","msg":"JWT middleware triggered","time":"2025-05-09T15:55:22Z"}
+{"level":"info","msg":"Token validated successfully","time":"2025-05-09T15:55:22Z"}
+{"level":"info","msg":"GetAllBooks request received","time":"2025-05-09T15:55:22Z"}
+{"level":"info","msg":"Checking Redis","time":"2025-05-09T15:55:22Z"}
+{"level":"warning","msg":"Cache miss for key:books:","time":"2025-05-09T15:55:22Z"}
+{"level":"info","msg":"Querying MongoDB with filter:map[]","time":"2025-05-09T15:55:22Z"}
+{"error":"connection(ac-eej2xcw-shard-00-01.ufjw6qu.mongodb.net:27017[-18]) incomplete read of full message: context deadline exceeded: read tcp 172.18.0.5:59906-\u003e159.41.77.243:27017: i/o timeout","level":"error","msg":"MongoDB Find error","time":"2025-05-09T15:55:32Z"}
+{"level":"info","msg":"JWT middleware triggered","time":"2025-05-09T15:55:32Z"}
+{"level":"info","msg":"Token validated successfully","time":"2025-05-09T15:55:32Z"}
+{"level":"info","msg":"GetAllBooks request received","time":"2025-05-09T15:55:32Z"}
+{"level":"info","msg":"Checking Redis","time":"2025-05-09T15:55:32Z"}
+{"level":"warning","msg":"Cache miss for key:books:","time":"2025-05-09T15:55:32Z"}
+{"level":"info","msg":"Querying MongoDB with filter:map[]","time":"2025-05-09T15:55:32Z"}
+{"error":"connection(ac-eej2xcw-shard-00-01.ufjw6qu.mongodb.net:27017[-18]) incomplete read of full message: context deadline exceeded: read tcp 172.18.0.13:41956-\u003e159.41.77.243:27017: i/o timeout","level":"error","msg":"MongoDB Find error","time":"2025-05-09T15:55:42Z"}
