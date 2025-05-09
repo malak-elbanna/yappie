@@ -3,11 +3,11 @@ name: Unit tests
 on:
   push:
     paths:
-      - 'src/unit tests/**'  # Trigger on changes in unit test files
+      - 'src/backend/profile-management-service/tests/**'  # Trigger on changes in unit test files
     branches: [integrate-user-cms-stream]  # Ensure this is still targeting your branch
   pull_request:
     paths:
-      - 'src/unit tests/**'  # Trigger on PR changes in unit test files
+      - 'src/backend/profile-management-service/tests/**'  # Trigger on PR changes in unit test files
     branches: [integrate-user-cms-stream]
 
 jobs:
