@@ -1,0 +1,40 @@
+groups:
+  - name: notification-service-alerts
+    rules:
+      - alert: HighNotificationServiceLatency
+        expr: histogram_quantile(0.95, rate(notification_request_duration_seconds_bucket[5m])) > 1
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High latency in Notification Service"
+          description: "The 95th percentile latency for the Notification Service has exceeded 1 second for the last 2 minutes."
+
+      - alert: HighNotificationServiceErrorRate
+        expr: sum(rate(notification_request_duration_seconds_count{status_code=~"4..|5.."}[5m])) > 5
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "High error rate in Notification Service"
+          description: "The error rate (4xx/5xx responses) for the Notification Service has exceeded 5 requests per second for the last 2 minutes."
+
+  - name: system-metrics-alerts
+    rules:
+      - alert: HighCPUUsage
+        expr: 100 - (avg by (instance) (rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) > 80
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High CPU usage detected"
+          description: "CPU usage has exceeded 80% for the last 2 minutes on instance {{ $labels.instance }}."
+
+      - alert: HighMemoryUsage
+        expr: (process_resident_memory_bytes / process_virtual_memory_bytes) * 100 > 90
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High memory usage detected"
+          description: "Memory usage has exceeded 90% for the last 2 minutes on instance {{ $labels.instance }}."
