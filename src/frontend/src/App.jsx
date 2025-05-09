@@ -14,6 +14,7 @@ import Profile from "./pages/Profile";
 import LiveAudioStreaming from "./pages/Streamer";
 import AvailableStreams from "./pages/AvailableStreams";
 import StartStream from "./pages/StartStream";
+import CategoryBooks from "./pages/CategoryBooks";
 import CategoryBooks from './pages/CategoryBooks'; 
 
 const App = () => {
