@@ -7,6 +7,7 @@ import { saveChapter, getChapter, isChapterDownloaded } from '../utils/download'
 import BookInfoSection from '../components/BookInfoSection';
 import ChaptersList from '../components/ChapterList';
 import ReviewSection from '../components/ReviewSection';
+import { addFavoriteBook, getFavoriteBooks } from '../Api';
 
 const API_URL = 'http://localhost:8000';
 const REVIEW_SERVICE_URL = 'review-service';
@@ -23,6 +24,7 @@ const BookDetails = () => {
   const [activeChapter, setActiveChapter] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isAutoPlayEnabled, setIsAutoPlayEnabled] = useState(true);
+  const [isFavorite, setIsFavorite] = useState(false);
 
   const audioRefs = useRef({});
 
@@ -174,6 +176,39 @@ const BookDetails = () => {
       .catch(console.error);
   };
 
+  useEffect(() => {
+    const checkIfFavorite = async () => {
+      if (userId && book?.title) {
+        try {
+          const favoriteBooks = await getFavoriteBooks(userId);
+          const isFav = favoriteBooks.includes(book.title)
+          console.log("is fav is", isFav);
+          setIsFavorite(isFav);
+        } catch (error) {
+          console.error("Error checking favorite status: ", error);
+        }
+      }
+    };
+  
+    checkIfFavorite();
+  }, [userId, book?.title]);  
+
+  const handleAddFavorite = async() => {
+    try {
+      await addFavoriteBook(userId, book.title);
+      setIsFavorite(true);
+    } catch (error) {
+      console.error("Error adding favorite book", error);
+    }
+  };
+
+  const handleToggleFavorite = async () => {
+    if (!isFavorite) {
+      handleAddFavorite();
+    } else {
+      setIsFavorite(false);
+    }
+  }
   if (!book) {
     return (
       <div className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-800 text-white flex items-center justify-center">
@@ -210,6 +245,8 @@ const BookDetails = () => {
                 isOffline={isOffline} 
                 isAutoPlayEnabled={isAutoPlayEnabled} 
                 setIsAutoPlayEnabled={setIsAutoPlayEnabled} 
+                isFavorite={isFavorite}
+                onToggleFavorite={handleToggleFavorite}
               />
             </div>
             

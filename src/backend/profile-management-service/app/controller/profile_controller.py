@@ -77,6 +77,15 @@ def add_favorite_book(user_id):
     else:
         return jsonify({"message": f"{book_title} is already in favorites"}), 200
 
+def get_favorite_books(user_id):
+    profile = UserProfile.query.filter_by(user_id=user_id).first()
+    if not profile:
+        logging.info("User profile is not found", extra={"user_id": str(user_id)})
+        return jsonify({"error": profile_not_found}), 404
+    return jsonify({
+        "favorite_books": profile.favorite_books
+    }), 200
+
 def edit_bio(user_id):
     data = request.get_json()
     updated_bio = data.get('bio')
