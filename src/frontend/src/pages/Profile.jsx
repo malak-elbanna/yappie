@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from "react";
-import { getProfilePage, editBio, addPreference, removePreference } from "../Api";
+import { getProfilePage, editBio, addPreference, removePreference, removeFavoriteBook } from "../Api";
 import { Hourglass } from 'ldrs/react';
 import 'ldrs/react/Hourglass.css';
+import { useNavigate } from "react-router-dom";
 
 const Profile = () => {
     const [profile, setProfile] = useState(null);
@@ -11,6 +12,7 @@ const Profile = () => {
     const [newBio, setNewBio] = useState("");
     const [newPreference, setNewPreference] = useState({ genre: "" });
     const [isLoading, setIsLoading] = useState(false);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchData = async () => {
@@ -101,6 +103,17 @@ const Profile = () => {
         }
     };
 
+    const handleRemoveFavorite = async(bookCover) => {
+        try {
+            await removeFavoriteBook(userId, bookCover);
+            
+        } catch (error) {
+            console.error("Error removing favorite book ", error);
+        } finally {
+            window.location.href = "/profile";
+        }
+    }
+
     if (isLoading || !profile) return (
         <div className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-800 flex items-center justify-center text-white relative overflow-hidden">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[250px] bg-purple-600 opacity-25 blur-3xl rounded-full pointer-events-none z-0" />
@@ -185,23 +198,6 @@ const Profile = () => {
                         </div>
                     )}
 
-                    <div className="flex justify-center gap-4 pt-2">
-                        <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200 p-2 rounded-full hover:bg-gray-700/50">
-                            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 0C5.37..." />
-                            </svg>
-                        </a>
-                        <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors duration-200 p-2 rounded-full hover:bg-gray-700/50">
-                            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M19 0h-14..." />
-                            </svg>
-                        </a>
-                        <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors duration-200 p-2 rounded-full hover:bg-gray-700/50">
-                            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M24 4.557c-.883..." />
-                            </svg>
-                        </a>
-                    </div>
                 </div>
 
                 <div className="flex-1 bg-gray-800/40 rounded-2xl p-6 border border-gray-700/50">
@@ -267,7 +263,9 @@ const Profile = () => {
                                         loading="lazy"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3">
-                                        <button className="absolute top-2 right-2 p-1.5 bg-black/50 rounded-full hover:bg-red-500/80 transition-colors duration-200">
+                                        <button className="absolute top-2 right-2 p-1.5 bg-black/50 rounded-full hover:bg-red-500/80 transition-colors duration-200"
+                                            onClick={() => handleRemoveFavorite(book)}
+                                        >
                                             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
                                             </svg>
@@ -285,7 +283,7 @@ const Profile = () => {
                             </div>
                             <h4 className="text-lg font-medium text-gray-300 mb-2">No favorite books yet</h4>
                             <p className="text-gray-500 max-w-md mx-auto">Add your favorite books to build your personalized collection</p>
-                            <button className="mt-4 px-6 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-medium rounded-xl transition-all duration-300">
+                            <button className="mt-4 px-6 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-medium rounded-xl transition-all duration-300" onClick={() => navigate('/books')}>
                                 Browse Books
                             </button>
                         </div>
