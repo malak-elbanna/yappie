@@ -94,3 +94,50 @@
 {"level":"info","message":"Notification published to Alhusseain","timestamp":"2025-05-08T03:06:25.119Z"}
 {"level":"info","message":"Notification published to Alhusseain","timestamp":"2025-05-08T03:06:58.184Z"}
 {"level":"info","message":"Notification published to Alhusseain","timestamp":"2025-05-08T03:09:32.445Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-08T03:35:35.724Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-08T03:53:00.997Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-08T04:05:22.384Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-08T04:11:10.858Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-08T09:58:55.241Z"}
+{"level":"info","message":"Notification published to husseain","timestamp":"2025-05-08T10:07:51.399Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-08T13:59:51.033Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-08T15:52:01.773Z"}
+{"level":"info","message":"Notification published to husseain","timestamp":"2025-05-08T15:52:49.237Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-08T16:14:22.388Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-08T16:17:12.840Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-08T16:18:47.910Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-08T16:22:04.387Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-08T16:24:28.123Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-08T16:28:43.727Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-08T16:41:26.030Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-08T16:48:03.206Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-08T16:50:49.276Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-08T16:53:01.729Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-08T16:58:26.476Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-08T17:03:13.037Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-08T22:42:51.485Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-08T22:46:25.723Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-08T22:54:57.765Z"}
+{"level":"info","message":"Notification published to husseain","timestamp":"2025-05-08T23:00:41.236Z"}
+{"level":"info","message":"Notification published to mohamed","timestamp":"2025-05-08T23:11:41.946Z"}
+{"level":"info","message":"Notification published to mohamed","timestamp":"2025-05-08T23:15:11.303Z"}
+{"level":"info","message":"Notification published to mohamed","timestamp":"2025-05-08T23:17:13.147Z"}
+{"level":"info","message":"Notification published to mohamed","timestamp":"2025-05-08T23:19:10.878Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-08T23:23:21.380Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-08T23:28:27.015Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-08T23:34:10.050Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-08T23:36:18.843Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-08T23:39:06.731Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-08T23:43:01.559Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-08T23:49:21.590Z"}
+{"level":"error","message":"Failed to publish notification: connection.createChannel is not a function","timestamp":"2025-05-08T23:51:00.959Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-08T23:57:04.648Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-09T00:03:01.565Z"}
+{"level":"error","message":"Failed to publish notification: channel.publish(...).then is not a function","timestamp":"2025-05-09T00:03:42.791Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-09T00:06:54.006Z"}
+{"level":"info","message":"Notification published to mohamed","timestamp":"2025-05-09T00:07:16.142Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-09T00:22:35.765Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-09T00:28:00.543Z"}
+{"level":"info","message":"Notification published to mohamed","timestamp":"2025-05-09T00:29:57.073Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-09T00:32:39.241Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-09T00:36:22.318Z"}

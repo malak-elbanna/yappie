@@ -27,8 +27,14 @@ app.use(metricsMiddleware);
 connectToMongo();
 app.use(cors())
 app.use(express.json());
+
 app.use('/notification',notificationRouter);
 app.use('/subscription',subscriptionRouter);
+
+app.get('/health',(req,res)=>{
+  res.send("Server healthy!");
+})
+
 
 const httpServer = app.listen(port, () => {console.log(`Server listening on port ${port}`)});
 logger.info('Notification service started');
