@@ -178,10 +178,10 @@ const BookDetails = () => {
 
   useEffect(() => {
     const checkIfFavorite = async () => {
-      if (userId && book?.title) {
+      if (userId && book?.cover_url) {
         try {
           const favoriteBooks = await getFavoriteBooks(userId);
-          const isFav = favoriteBooks.includes(book.title)
+          const isFav = favoriteBooks.includes(book.cover_url)
           console.log("is fav is", isFav);
           setIsFavorite(isFav);
         } catch (error) {
@@ -191,11 +191,11 @@ const BookDetails = () => {
     };
   
     checkIfFavorite();
-  }, [userId, book?.title]);  
+  }, [userId, book?.cover_url]);  
 
   const handleAddFavorite = async() => {
     try {
-      await addFavoriteBook(userId, book.title);
+      await addFavoriteBook(userId, book.cover_url);
       setIsFavorite(true);
     } catch (error) {
       console.error("Error adding favorite book", error);
