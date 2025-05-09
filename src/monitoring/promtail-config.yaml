@@ -28,8 +28,10 @@ scrape_configs:
           service: auth
           __path__: /var/log/auth-service/*.log
     pipeline_stages:
-      - json: {}
-    read_from: beginning
+        - json:
+            expressions:
+              message: message
+              timestamp: time
 
   - job_name: cms-service
     static_configs:
@@ -40,8 +42,10 @@ scrape_configs:
           service: cms
           __path__: /var/log/cms-service/*.log
     pipeline_stages:
-      - json: {}
-    read_from: beginning
+        - json:
+            expressions:
+              message: message
+              timestamp: time
 
   - job_name: notification-service
     static_configs:
@@ -52,8 +56,11 @@ scrape_configs:
           service: notification
           __path__: /var/log/notification-service/*.log
     pipeline_stages:
-      - json: {}
-    read_from: beginning
+        - json:
+            expressions:
+              level: level
+              message: message
+              timestamp: time
 
   - job_name: profile-service
     static_configs:
@@ -64,8 +71,10 @@ scrape_configs:
           service: profile
           __path__: /var/log/profile-service/*.log
     pipeline_stages:
-      - json: {}
-    read_from: beginning
+      - json:
+            expressions:
+              message: message
+              timestamp: time
 
   - job_name: review-service
     static_configs:
@@ -76,8 +85,11 @@ scrape_configs:
           service: review
           __path__: /var/log/review-service/*.log
     pipeline_stages:
-      - json: {}
-    read_from: beginning
+      - json:
+            expressions:
+              level: level
+              message: message
+              timestamp: time
 
   - job_name: streaming-service
     static_configs:
@@ -88,5 +100,8 @@ scrape_configs:
           service: streaming
           __path__: /var/log/streaming-service/*.log
     pipeline_stages:
-      - json: {}
-    read_from: beginning
+      - json:
+            expressions:
+              level: level
+              message: msg
+              timestamp: time
