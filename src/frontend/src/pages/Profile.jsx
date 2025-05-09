@@ -4,11 +4,7 @@ import { Hourglass } from 'ldrs/react';
 import 'ldrs/react/Hourglass.css';
 
 const Profile = () => {
-    const [profile, setProfile] = useState({
-        favorite_books: [],
-        preferences: { audiobooks: [] },
-        bio: ""
-    });
+    const [profile, setProfile] = useState(null);
     const [userInfo, setUserInfo] = useState({name: "", email: ""});
     const [editingBio, setEditingBio] = useState(false);
     const [userId, setUserId] = useState(null);
@@ -18,40 +14,48 @@ const Profile = () => {
 
     useEffect(() => {
         const fetchData = async () => {
+        setIsLoading(true);
         try {
-            const token = sessionStorage.getItem("access_token");
-            if (token) {
+        const token = sessionStorage.getItem("access_token");
+        if (token) {
             const [header, payload, signature] = token.split('.');
             const decodedPayload = JSON.parse(atob(payload.replace(/-/g, '+').replace(/_/g, '/')));
             setUserId(decodedPayload.sub);
             setUserInfo({
-                name: decodedPayload.name,
-                email: decodedPayload.email
+            name: decodedPayload.name,
+            email: decodedPayload.email
             });
-
-            const profileData = await getProfilePage(decodedPayload.sub); // Fetch user profile
+    
+            const profileData = await getProfilePage(decodedPayload.sub);
             setProfile(profileData);
             setNewBio(profileData.bio || "");
-            }
-        } catch (error) {
-            console.error("Error fetching data:", error);
         }
-        };
-        fetchData();
-    }, []);
-
-    const handleBioUpdate = async () => {
-        setIsLoading(true);
-        try {
-        const updatedProfile = await editBio(userId, { bio: newBio });
-        setProfile(updatedProfile);
-        setEditingBio(false);
         } catch (error) {
-        console.error("Error updating bio:", error);
+        console.error("Error fetching data:", error);
         } finally {
         setIsLoading(false);
         }
     };
+    
+    fetchData();
+    }, []);
+    
+
+
+    const handleBioUpdate = async () => {
+        setIsLoading(true);
+        try {
+            await editBio(userId, { bio: newBio });
+            const refreshed = await getProfilePage(userId); // Re-fetch
+            setProfile(refreshed);
+            setEditingBio(false);
+        } catch (error) {
+            console.error("Error updating bio:", error);
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
 
     const handleAddPreference = async () => {
         if (!newPreference.genre.trim()) return;
@@ -97,7 +101,7 @@ const Profile = () => {
         }
     };
 
-    if (!profile) return (
+    if (isLoading || !profile) return (
         <div className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-800 flex items-center justify-center text-white relative overflow-hidden">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[250px] bg-purple-600 opacity-25 blur-3xl rounded-full pointer-events-none z-0" />
                 <div className="relative z-10 text-center p-8">

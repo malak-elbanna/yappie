@@ -155,3 +155,24 @@ export const addFavoriteBook = async (userId, bookTitle) => {
     throw error;
   }
 }
+
+export const getFavoriteBooks = async(userId) => {
+  try {
+    const token = sessionStorage.getItem("token");
+    const response = await fetch(`${API_URL}/profile-page/${userId}/get-books`, {
+        method: 'GET',
+        headers: {
+          'Authorization': `Bearer ${token}`
+        }
+      }
+    );
+    if (!response.ok) {
+      throw new Error("Failed to fetch favorite books");
+    }
+    const data = await response.json();
+    return data.favorite_books;
+  } catch (error) {
+    console.error("Error fetching books: ", error);
+    throw error;
+  }
+}

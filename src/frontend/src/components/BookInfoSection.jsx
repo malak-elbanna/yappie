@@ -1,11 +1,21 @@
 import React from 'react';
 import { renderStars } from '../utils/StarRating';
+import { FaHeart, FaRegHeart } from 'react-icons/fa';
 
-const BookInfoSection = ({ book, reviewSummary, isOffline, isAutoPlayEnabled, setIsAutoPlayEnabled }) => {
+const BookInfoSection = ({ book, reviewSummary, isOffline, isAutoPlayEnabled, setIsAutoPlayEnabled, isFavorite, onToggleFavorite }) => { 
   return (
     <div className="md:col-span-1 lg:col-span-2">
       <div className="bg-gray-800 bg-opacity-40 backdrop-blur-md rounded-2xl shadow-lg p-6 mb-8">
-        <h1 className="text-4xl font-extrabold mb-2 drop-shadow-lg">{book.title}</h1>
+      <div className="flex items-center mb-2">
+          <h1 className="text-4xl font-extrabold drop-shadow-lg">{book.title}</h1>
+          <button
+            onClick={onToggleFavorite}
+            className='text-purple-400 hover:text-purple-300 text-2xl transition ml-4'
+            title={isFavorite ? "Remove from Favorites" : "Add to Favorites"}
+          >
+            {isFavorite ? <FaHeart /> : <FaRegHeart />}
+          </button>
+        </div>
         <p className="text-xl text-purple-400 mb-4">{book.author}</p>
         <p className="text-gray-300 mb-6 leading-relaxed">{book.description}</p>
         
