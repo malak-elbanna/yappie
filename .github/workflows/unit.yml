@@ -3,11 +3,15 @@ name: Unit tests
 on:
   push:
     paths:
-      - 'src/unit tests/**'  # Trigger on changes in unit test files
-    branches: [integrate-user-cms-stream]  # Ensure this is still targeting your branch
+      - 'src/unit tests/**'
+      - 'src/backend/profile-management-service/tests/**'
+      - 'src/backend/content-management-service/**'  # Add this path
+    branches: [integrate-user-cms-stream]
   pull_request:
     paths:
-      - 'src/unit tests/**'  # Trigger on PR changes in unit test files
+      - 'src/unit tests/**'
+      - 'src/backend/profile-management-service/tests/**'
+      - 'src/backend/content-management-service/**'  # Add this path
     branches: [integrate-user-cms-stream]
 
 jobs:
@@ -23,12 +27,61 @@ jobs:
 
       - name: Log in to Docker Hub (optional)
         run: echo "Skipping Docker Hub login"
-        # If you're using a Docker registry, add login step here
 
-      - name: Build Docker image
+      - name: Build Docker image for review service
         run: |
           docker build -t review-service:test .
 
-      - name: Run unit tests
+      - name: Run unit tests for review service
         run: |
           docker run --rm review-service:test npx jest --detectOpenHandles
+
+  profile-tests:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: src/backend/profile-management-service
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest requests
+
+      - name: Run profile service unit tests
+        run: |
+          pytest tests/test_profile_service.py
+
+  content-tests:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: src/backend/content-management-service  # Adjust path as needed
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest flask werkzeug  # Add other dependencies your service needs
+
+      - name: Run content management service tests
+        run: |
+          pytest tests/test_content_management.py
