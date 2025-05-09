@@ -55,8 +55,8 @@ def remove_favorite_book(user_id):
 
 def add_favorite_book(user_id):
     data = request.get_json()
-    book_title = data.get('book_title')
-    if not book_title:
+    book_cover = data.get('book_cover')
+    if not book_cover:
         return jsonify({"error": "No book selected."}), 400
     profile = UserProfile.query.filter_by(user_id=user_id).first()
     if not profile:
@@ -66,16 +66,16 @@ def add_favorite_book(user_id):
     if profile.favorite_books is None:
         profile.favorite_books = []
     
-    if book_title not in profile.favorite_books:
-        profile.favorite_books = profile.favorite_books + [book_title]
+    if book_cover not in profile.favorite_books:
+        profile.favorite_books = profile.favorite_books + [book_cover]
         db.session.commit()
         logging.info("Favorite book added", extra={
             "user_id": str(user_id),
             "favorites_count": len(profile.favorite_books)
         })
-        return jsonify({"message": f"{book_title} added to favorites"}), 200
+        return jsonify({"message": f"{book_cover} added to favorites"}), 200
     else:
-        return jsonify({"message": f"{book_title} is already in favorites"}), 200
+        return jsonify({"message": f"{book_cover} is already in favorites"}), 200
 
 def get_favorite_books(user_id):
     profile = UserProfile.query.filter_by(user_id=user_id).first()

@@ -138,7 +138,7 @@ export const removePreference = async (userId, preferenceData) => {
     }
 }
 
-export const addFavoriteBook = async (userId, bookTitle) => {
+export const addFavoriteBook = async (userId, bookCover) => {
   try {
     const token = sessionStorage.getItem("token");
     const response = await fetch(`${API_URL}/profile-page/${userId}/add-book`, {
@@ -147,7 +147,7 @@ export const addFavoriteBook = async (userId, bookTitle) => {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`
       },
-      body: JSON.stringify({ book_title: bookTitle})
+      body: JSON.stringify({ book_cover: bookCover})
     });
     return await response.json();
   } catch (error) {
