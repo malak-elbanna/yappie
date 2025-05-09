@@ -9,6 +9,7 @@ const subscriptionRouter = require('./routes/subscriptionRouter.js');
 const logger = require('./logger.js');
 const promBundle = require('express-prom-bundle');
 const client = require('prom-client'); 
+const checkBind = require('./workers/binder.js')
 
 const requestDurationHistogram = new client.Histogram({
   name: 'notification_request_duration_seconds',
@@ -60,8 +61,8 @@ app.get('/health', (req, res) => {
 app.use('/notification', notificationRouter);
 app.use('/subscription', subscriptionRouter);
 
-const httpServer = app.listen(port, () => {
-  console.log(`Server listening on port ${port}`);
-});
+checkBind();
+
+const httpServer = app.listen(port, () => {console.log(`Server listening on port ${port}`)});
 logger.info('Notification service started');
 socket(httpServer);

@@ -1,6 +1,7 @@
 amqp = require('amqplib')
 const Notification = require('../models/notification.js')
 const logger = require('../logger.js')
+const mqClient = require('../index.js')
 
 exports.getAll = async (req,res)=>{
     try{
@@ -38,25 +39,19 @@ exports.create = async (req,res)=>{
 exports.publish = async (req,res)=>{
     try{
         message = req.body;
-        connection = await amqp.connect('amqp://rabbitmq:5672')
+        const connection = await amqp.connect('amqp://rabbitmq:5672');
         channel = await connection.createChannel();
-        await channel.assertExchange('subscription','topic',{
-            durable:true
-    });
-    channel.publish('subscription', message.author, Buffer.from(message.title));
-    console.log(" [x] Sent %s:'%s'", message.author, message.title);
-    await channel.close();
-    logger.info(`Notification published to ${message.author}`);
-    res.status(200).json("Notification published");
+        await channel.assertExchange('notifications','topic',{
+            durable:true});
+        channel.publish('notifications', message.author, Buffer.from(message.title));
+        console.log(" [x] Sent %s:'%s'", message.author, message.title);
+        logger.info(`Notification published to ${message.author}`);
+        res.status(200).json("Notification published");
     }
     catch (err) {
         logger.error(`Failed to publish notification: ${err.message}`);
         console.warn(err);
         res.status(500).json({error: err.message});
     }
-    finally {
-        if (connection) await connection.close();
-    };
-
 
 }
