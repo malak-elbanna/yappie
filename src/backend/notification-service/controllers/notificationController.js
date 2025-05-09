@@ -39,16 +39,14 @@ exports.create = async (req,res)=>{
 exports.publish = async (req,res)=>{
     try{
         message = req.body;
-        const {connection} = await mqClient;
+        const connection = await amqp.connect('amqp://rabbitmq:5672');
         channel = await connection.createChannel();
         await channel.assertExchange('notification','topic',{
-            durable:true
-    });
-    await channel.publish('notification', message.author, Buffer.from(message.title));
-    console.log(channel);
-    console.log(" [x] Sent %s:'%s'", message.author, message.title);
-    logger.info(`Notification published to ${message.author}`);
-    res.status(200).json("Notification published");
+            durable:true});
+        channel.publish('notification', message.author, Buffer.from(message.title));
+        console.log(" [x] Sent %s:'%s'", message.author, message.title);
+        logger.info(`Notification published to ${message.author}`);
+        res.status(200).json("Notification published");
     }
     catch (err) {
         logger.error(`Failed to publish notification: ${err.message}`);

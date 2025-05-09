@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {"level":"info","message":"Notification service started","timestamp":"2025-05-01T00:14:18.970Z"}
 {"level":"info","message":"Notification service started","timestamp":"2025-05-01T10:08:51.879Z"}
 {"level":"info","message":"Notification service started","timestamp":"2025-05-01T10:13:28.856Z"}
@@ -88,6 +89,7 @@
 {"level":"info","message":"Notification published to husseain","timestamp":"2025-05-07T02:54:44.714Z"}
 {"level":"info","message":"Notification published to husseain","timestamp":"2025-05-07T02:55:14.691Z"}
 {"level":"info","message":"Notification service started","timestamp":"2025-05-07T19:05:10.656Z"}
+<<<<<<< HEAD
 {"level":"info","message":"Notification service started","timestamp":"2025-05-08T02:59:02.490Z"}
 {"level":"info","message":"Notification published to Alhusseain","timestamp":"2025-05-08T03:03:26.711Z"}
 {"level":"info","message":"Notification published to Alhusseain","timestamp":"2025-05-08T03:05:50.019Z"}
@@ -141,3 +143,41 @@
 {"level":"info","message":"Notification published to mohamed","timestamp":"2025-05-09T00:29:57.073Z"}
 {"level":"info","message":"Notification service started","timestamp":"2025-05-09T00:32:39.241Z"}
 {"level":"info","message":"Notification service started","timestamp":"2025-05-09T00:36:22.318Z"}
+=======
+{"level":"info","message":"Notification service started","timestamp":"2025-05-08T21:22:23.692Z"}
+=======
+>>>>>>> d9a842cceb13063cc1168b6db35d24c95082db6b
+>>>>>>> 3203c5042b756464859489c5f840bc2b4ed0c8a4
+{"level":"info","message":"Notification service started","timestamp":"2025-05-09T00:49:10.199Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-09T00:53:37.632Z"}
+{"level":"info","message":"Notification published to husseain","timestamp":"2025-05-09T00:58:18.981Z"}
+{"level":"info","message":"Notification published to mohamed","timestamp":"2025-05-09T00:59:06.335Z"}
+{"level":"info","message":"Notification published to mohamed","timestamp":"2025-05-09T01:01:34.112Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-09T01:10:28.966Z"}
+{"level":"info","message":"Notification published to mohamed","timestamp":"2025-05-09T01:11:18.805Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-09T01:14:08.335Z"}
+{"level":"info","message":"Notification published to mohamed","timestamp":"2025-05-09T01:16:15.338Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-09T01:19:48.188Z"}
+{"level":"info","message":"Notification published to mohamed","timestamp":"2025-05-09T01:20:40.627Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-09T01:23:38.814Z"}
+{"level":"info","message":"Notification published to mohamed","timestamp":"2025-05-09T01:24:24.811Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-09T01:35:50.880Z"}
+{"level":"error","message":"Failed to publish notification: debug is not defined","timestamp":"2025-05-09T01:36:30.474Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-09T01:38:40.404Z"}
+{"level":"info","message":"Notification published to mohamed","timestamp":"2025-05-09T01:39:05.382Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-09T01:43:17.215Z"}
+{"level":"info","message":"Notification published to mohamed","timestamp":"2025-05-09T01:44:05.070Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-09T01:48:16.816Z"}
+{"level":"info","message":"Notification published to mohamed","timestamp":"2025-05-09T01:49:11.428Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-09T01:50:24.680Z"}
+{"level":"info","message":"Notification published to mohamed","timestamp":"2025-05-09T01:50:58.082Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-09T01:52:08.890Z"}
+{"level":"info","message":"Notification published to mohamed","timestamp":"2025-05-09T01:52:40.215Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-09T01:56:18.338Z"}
+{"level":"info","message":"Notification published to mohamed","timestamp":"2025-05-09T01:56:28.371Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-09T02:01:23.432Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-09T02:06:20.170Z"}
+{"level":"info","message":"Notification published to mohamed","timestamp":"2025-05-09T02:09:46.909Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-09T02:11:38.781Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-09T02:19:02.809Z"}
+{"level":"info","message":"Notification published to mohamed","timestamp":"2025-05-09T02:20:55.441Z"}

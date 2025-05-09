@@ -12,8 +12,8 @@ services:
 
     healthcheck:
       test: rabbitmq-diagnostics -q ping
-      interval: 30s
-      timeout: 30s
+      interval: 5s
+      timeout: 5s
       retries: 3 
 
     volumes:
@@ -116,6 +116,7 @@ services:
     depends_on:
       rabbitmq:
         condition: service_healthy
+    
      
   review-service-1:
     build:
