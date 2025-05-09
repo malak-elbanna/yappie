@@ -174,10 +174,6 @@ const BooksList = () => {
           </div>
         ))}
       </div>
-      
-      <footer className="py-6 px-4 mt-8 text-center text-sm text-gray-400 border-t border-gray-800">
-        <p>&copy; {new Date().getFullYear()} Audiobook Stream. All rights reserved.</p>
-      </footer>
     </div>
   );
 };
