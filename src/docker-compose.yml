@@ -124,6 +124,8 @@ services:
       dockerfile: Dockerfile
     env_file:
       - ./backend/review-service/.env
+    volumes:
+      - ./logs/review-service:/var/log/review-service
     environment:
       PORT: 5003
     ports:
@@ -135,6 +137,8 @@ services:
       dockerfile: Dockerfile
     env_file:
       - ./backend/review-service/.env
+    volumes:
+      - ./logs/review-service:/var/log/review-service
     environment:
       PORT: 5004
     ports:
