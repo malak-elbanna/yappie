@@ -17,6 +17,7 @@ import StartStream from "./pages/StartStream";
 import CategoryBooks from "./pages/CategoryBooks";
 import AboutUs from "./pages/AboutUs";
 import DownloadsPage from "./pages/Downloads";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -42,6 +43,7 @@ const App = () => {
         <Route path="/about-us" element={<AboutUs />} />        
         <Route path="/downloads" element={<DownloadsPage />} />
       </Routes>
+      <Footer />
     </Router>
   );
 };
