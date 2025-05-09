@@ -194,3 +194,6 @@
 {"level":"info","message":"Notification service started","timestamp":"2025-05-09T04:45:20.845Z"}
 {"level":"info","message":"Notification service started","timestamp":"2025-05-09T04:50:08.581Z"}
 {"level":"info","message":"Notification service started","timestamp":"2025-05-09T04:59:15.210Z"}
+{"level":"info","message":"Notification service started","timestamp":"2025-05-09T16:21:10.539Z"}
+{"level":"info","message":"Notification published to comedy","timestamp":"2025-05-09T16:30:15.990Z"}
+{"level":"info","message":"Notification published to classic","timestamp":"2025-05-09T16:30:41.799Z"}
