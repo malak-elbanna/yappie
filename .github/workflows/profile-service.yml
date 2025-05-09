@@ -1,0 +1,95 @@
+name: Profile Service CI/CD Pipeline
+
+on: [push, pull_request]
+
+env:
+  IMAGE_NAME: profile-service
+
+jobs:
+  test:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: test_db
+        ports:
+          - 5432:5432
+    
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      working-directory: src/backend/profile-management-service
+      run: |
+        python -m pip install --upgrade pip
+        pip install -e .[test]
+    
+    - name: Run unit tests
+      working-directory: src/backend/profile-management-service
+      run: |
+        pytest tests/unit/ -v --cov=src --cov-report=xml
+        
+    - name: Run integration tests
+      working-directory: src/backend/profile-management-service
+      run: |
+        pytest tests/integration/ -v
+      env:
+        TEST_DATABASE_URL: postgresql://postgres:postgres@localhost:5432/test_db
+    
+    - name: Check test coverage
+      run: |
+        python -m coverage report --fail-under=80
+    
+    - name: Upload coverage
+      uses: codecov/codecov-action@v3
+
+  build:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Login to Docker Hub
+      uses: docker/login-action@v2
+      with:
+        username: ${{ secrets.DOCKER_HUB_USERNAME }}
+        password: ${{ secrets.DOCKER_HUB_TOKEN }}
+    
+    - name: Build and push
+      uses: docker/build-push-action@v4
+      with:
+        context: src/backend/profile-management-service
+        push: true
+        tags: |
+          ${{ secrets.DOCKER_HUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
+          ${{ secrets.DOCKER_HUB_USERNAME }}/${{ env.IMAGE_NAME }}:latest
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+    - uses: azure/setup-kubectl@v3
+    
+    - name: Deploy to staging
+      run: |
+        kubectl set image deployment/${{ env.IMAGE_NAME }} \
+          ${{ env.IMAGE_NAME }}=${{ secrets.DOCKER_HUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }} \
+          --namespace=staging
+      env:
+        KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
+    
+    - name: Verify deployment
+      run: |
+        kubectl rollout status deployment/${{ env.IMAGE_NAME }} --namespace=staging
