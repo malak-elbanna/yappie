@@ -6,6 +6,6 @@ router.get('/',nfController.getAll);
 
 router.post('/',nfController.create);
 
-router.post('/admin',nfController.publish);
+// router.post('/admin',nfController.publish);
 
 module.exports = router;

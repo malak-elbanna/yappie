@@ -7,6 +7,7 @@ from werkzeug.utils import secure_filename
 from gridfs import GridFS
 import logging
 import os
+from services.MQ import channel
 
 
 
@@ -75,6 +76,8 @@ def add_audiobook():
             data['audio_url'] = 'http://localhost:9000/audiobooks/'+str(id)+'.m3u8'
 
     result = db.books.insert_one(data)
+    if not data['category'] : data['category'] = ''
+    channel.basic_publish(exchange='notifications',routing_key=(data['author']+'.'+data['category']+'.'+data['language']).lower(),body=data['title'])
     logging.info("Audiobook added", extra={"audiobook_id": str(result.inserted_id)})
     return jsonify({"_id": str(result.inserted_id)}), 201
 

@@ -12,8 +12,8 @@ services:
 
     healthcheck:
       test: rabbitmq-diagnostics -q ping
-      interval: 5s
-      timeout: 5s
+      interval: 30s
+      timeout: 30s
       retries: 3 
 
     volumes:
@@ -62,6 +62,9 @@ services:
       - ./backend/content-management-service/.env
     environment:
       PORT: 5001
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
     ports:
       - "5001:5001"
     volumes: ['./backend/content-management-service:/app','./logs/cms-service:/var/log/cms-service']
@@ -75,6 +78,9 @@ services:
       PORT: 5002
     ports:
       - "5002:5002"
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
     volumes: ['./backend/content-management-service:/app','./logs/cms-service:/var/log/cms-service']
 
   streaming-service-1:
@@ -154,7 +160,8 @@ services:
       - ./logs/profile-service:/var/log/profile-service
       - ./backend/profile-management-service:/app
     depends_on:
-      - profile-db
+      rabbitmq:
+        condition: service_healthy
 
   profile-service-2:
     build: 
@@ -170,7 +177,9 @@ services:
       - ./logs/profile-service:/var/log/profile-service
       - ./backend/profile-management-service:/app
     depends_on:
-      - profile-db
+      rabbitmq:
+        condition: service_healthy
+
 
 
   db:

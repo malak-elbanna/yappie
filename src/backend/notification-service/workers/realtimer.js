@@ -1,4 +1,4 @@
-const mqClient = require('./index.js');
+const mqClient = require('../index.js');
 
 const realTimeConsume = async (message, email, socket) => {
     let channel;
@@ -8,11 +8,11 @@ const realTimeConsume = async (message, email, socket) => {
         const { connection } = await mqClient;
         channel = await connection.createChannel();
 
-        await channel.assertExchange('notification', 'topic', { durable: true });
+        await channel.assertExchange('notifications', 'topic', { durable: true });
         const queue = (await channel.assertQueue(`${email}`, { durable: true })).queue;
 
         await Promise.all(message.map(key => 
-            channel.bindQueue(queue, 'notification', key)
+            channel.bindQueue(queue, 'notifications', key)
         ));
 
         const handleMessage = async (msg) => {
@@ -61,9 +61,6 @@ const realTimeConsume = async (message, email, socket) => {
             }
         } catch (cleanupErr) {
             console.error("Error during cleanup:", cleanupErr);
-        } finally {
-            channel = null;
-            consumerTag = null;
         }
     }
 };

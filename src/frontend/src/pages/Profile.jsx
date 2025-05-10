@@ -57,9 +57,10 @@ const Profile = () => {
         if (!newPreference.genre.trim()) return;
         setIsLoading(true);
         try {
-        const updatedProfile = await addPreference(userId, {
+        const updatedProfile = await addPreference(userId,{
             type: "audiobooks",
-            genre: newPreference.genre
+            genre: newPreference.genre,
+            email: userInfo.email
         });
         setProfile(prev => ({
             ...prev,

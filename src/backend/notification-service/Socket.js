@@ -15,15 +15,9 @@ const StartSocket = (app)=>{
     socket.on('STARTED',async (message,email)=>{
         console.log('New client connected:', socket.id);
         
-        realTimeConsume(message,email,socket,channel);
+        realTimeConsume(message,email,socket);
     })
-    socket.on('disconnect',async ()=>{
-        console.log(`${socket.id} disconnected`)
-        if(channel) {
-            await channel.close();
-            console.log("channel closed");
-        }
-    })
+
 
     console.log('Socket.io server running on port 4000');
 

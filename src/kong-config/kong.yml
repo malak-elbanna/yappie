@@ -199,9 +199,9 @@ upstreams:
         http_statuses:
         - 200
         - 302
-        interval: 0
-        successes: 0
-      http_path: /
+        interval: 15
+        successes: 1
+      http_path: /health
       https_verify_certificate: true
       timeout: 1
       type: http
@@ -216,9 +216,9 @@ upstreams:
         - 503
         - 504
         - 505
-        interval: 0
-        tcp_failures: 0
-        timeouts: 0
+        interval: 5
+        tcp_failures: 3
+        timeouts: 3
     passive:
       healthy:
         http_statuses:
@@ -271,9 +271,9 @@ upstreams:
         http_statuses:
         - 200
         - 302
-        interval: 0
-        successes: 0
-      http_path: /
+        interval: 15
+        successes: 1
+      http_path: /health
       https_verify_certificate: true
       timeout: 1
       type: http
@@ -288,9 +288,9 @@ upstreams:
         - 503
         - 504
         - 505
-        interval: 0
-        tcp_failures: 0
-        timeouts: 0
+        interval: 5
+        tcp_failures: 3
+        timeouts: 3
     passive:
       healthy:
         http_statuses:
@@ -343,14 +343,14 @@ upstreams:
         http_statuses:
         - 200
         - 302
-        interval: 0
-        successes: 0
-      http_path: /
+        interval: 15
+        successes: 1
+      http_path: /health
       https_verify_certificate: true
       timeout: 1
       type: http
       unhealthy:
-        http_failures: 0
+        http_failures: 3
         http_statuses:
         - 429
         - 404
@@ -360,9 +360,9 @@ upstreams:
         - 503
         - 504
         - 505
-        interval: 0
-        tcp_failures: 0
-        timeouts: 0
+        interval: 5
+        tcp_failures: 3
+        timeouts: 3
     passive:
       healthy:
         http_statuses:
@@ -415,14 +415,14 @@ upstreams:
         http_statuses:
         - 200
         - 302
-        interval: 0
-        successes: 0
-      http_path: /
+        interval: 15
+        successes: 1
+      http_path: /health
       https_verify_certificate: true
       timeout: 1
       type: http
       unhealthy:
-        http_failures: 0
+        http_failures: 3
         http_statuses:
         - 429
         - 404
@@ -432,9 +432,9 @@ upstreams:
         - 503
         - 504
         - 505
-        interval: 0
-        tcp_failures: 0
-        timeouts: 0
+        interval: 5
+        tcp_failures: 3
+        timeouts: 3
     passive:
       healthy:
         http_statuses:
@@ -487,9 +487,9 @@ upstreams:
         http_statuses:
         - 200
         - 302
-        interval: 0
-        successes: 0
-      http_path: /
+        interval: 15
+        successes: 1
+      http_path: /health
       https_verify_certificate: true
       timeout: 1
       type: http
@@ -504,9 +504,9 @@ upstreams:
         - 503
         - 504
         - 505
-        interval: 0
-        tcp_failures: 0
-        timeouts: 0
+        interval: 5
+        tcp_failures: 5
+        timeouts: 3
     passive:
       healthy:
         http_statuses:
