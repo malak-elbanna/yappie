@@ -69,7 +69,7 @@ const Subscription = () => {
         </div>
       </div>
 
-      <div className="mt-16 px-4">
+      <div className="mt-16 px-4 py-8">
         <h3 className="text-center font-bold text-lg mb-4">FAQS</h3>
         <div className="max-w-2xl mx-auto space-y-2">
           <div className="bg-white text-black rounded-md px-4 py-3 shadow-md">
@@ -107,41 +107,6 @@ const Subscription = () => {
         </div>
       </div>
 
-      
-
-      
-      <footer className="py-8 bg-gray-800 mt-20">
-              <div className="container mx-auto px-4">
-                <div className="flex flex-col md:flex-row justify-between">
-                  <div className="mb-6 md:mb-0">
-                    <nav className="flex flex-col space-y-2">
-                      <a href="#" className="hover:text-purple-400">Home</a>
-                      <a href="#" className="hover:text-purple-400">Books</a>
-                      <a href="#" className="hover:text-purple-400">Categories</a>
-                      <a href="#" className="hover:text-purple-400">About us</a>
-                      <a href="#" className="hover:text-purple-400">Podcasts</a>
-                    </nav>
-                  </div>
-                  <div>
-                    <p className="mb-2">Follow us on</p>
-                    <div className="flex space-x-4 mb-4">
-                      <a href="#" className="hover:text-purple-400"><FaInstagram size={20} /></a>
-                      <a href="#" className="hover:text-purple-400"><FaFacebook size={20} /></a>
-                      <a href="#" className="hover:text-purple-400"><FaTwitter size={20} /></a>
-                    </div>
-                    <p className="mb-2">Download the app</p>
-                    <div className="bg-black inline-block px-2 py-1 rounded">
-                      <img src="/api/placeholder/100/30" alt="App Store" />
-                    </div>
-                  </div>
-                </div>
-                <div className="text-center text-sm text-gray-400 mt-8">
-                  Copyright © 2024. All rights reserved.
-                </div>
-              </div>
-
-
-            </footer>
     </div>
   );
 };
