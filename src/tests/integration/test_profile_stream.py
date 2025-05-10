@@ -33,8 +33,9 @@ def test_add_preference(auth_token, profile_url):
     add_pref_res = requests.put(
         f"{profile_url}/{auth_token['user_id']}/add-preference",
         json={
+            "genre": "Fantasy",
             "type": "audiobooks",
-            "genre": "Fantasy"
+            "email": auth_token['email']
         },
         headers=auth_token['headers']
     )
@@ -44,8 +45,8 @@ def test_remove_preference(auth_token, profile_url):
     remove_pref_res = requests.put(
         f"{profile_url}/{auth_token['user_id']}/remove-preference",
         json={
-            "type": "audiobooks",
-            "genre": "Fantasy"
+            "genre": "Fantasy",
+            "type": "audiobooks"
         },
         headers=auth_token['headers']
     )

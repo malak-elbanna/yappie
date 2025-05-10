@@ -18,6 +18,8 @@ import AboutUs from "./pages/AboutUs";
 import DownloadsPage from "./pages/Downloads";
 import Footer from "./components/Footer";
 import CategoryBooks from './pages/CategoryBooks'; 
+import Subscription from "./pages/Subscription";
+import SubscribeForm from "./pages/SubscribeForm";
 
 const App = () => {
   return (
@@ -41,10 +43,14 @@ const App = () => {
         <Route path="/start-stream" element={<StartStream />} />
         <Route path="/category/:categoryName" element={<CategoryBooks />} />
         <Route path="/about-us" element={<AboutUs />} />        
-        <Route path="/downloads" element={<DownloadsPage />} />
+        <Route path="/downloads" element={<DownloadsPage />} />        
+        <Route path="/subscription" element={<Subscription />} />
+        <Route path="/subscribe-form" element={<SubscribeForm />} />
+
       </Routes>
       <Footer />
     </Router>
+    
   );
 };
 

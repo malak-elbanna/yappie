@@ -9,3 +9,4 @@ prometheus-flask-exporter
 json_log_formatter
 prometheus-client==0.19.0
 minio
+pika

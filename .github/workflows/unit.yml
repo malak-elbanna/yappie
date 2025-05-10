@@ -5,13 +5,13 @@ on:
     paths:
       - 'src/unit tests/**'
       - 'src/backend/profile-management-service/tests/**'
-      - 'src/backend/content-management-service/**'  # Add this path
+      - 'src/backend/content-management-service/**' 
     branches: [integrate-user-cms-stream]
   pull_request:
     paths:
       - 'src/unit tests/**'
       - 'src/backend/profile-management-service/tests/**'
-      - 'src/backend/content-management-service/**'  # Add this path
+      - 'src/backend/content-management-service/**' 
     branches: [integrate-user-cms-stream]
 
 jobs:

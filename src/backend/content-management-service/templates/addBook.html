@@ -209,27 +209,6 @@ textarea.form-control {
         if (response.ok) {
             alert(formData);
             alert("Audiobook added successfully.");
-
-                var object = {};
-                formData.forEach((value, key) => object[key] = value);
-                var json = JSON.stringify(object);
-                console.log(json)
-                fetch("http://localhost:4000/notification/admin", {
-                method: "POST",
-                body: json,
-                headers: new Headers({'content-type': 'application/json'})
-            })
-            .then(response => {
-                if (response.ok) {
-                    window.location.href = "/admin-cms";
-                } else {
-                    alert("Failed to add notification.");
-                }
-            })
-            .catch(error => {
-                console.error("Error:", error);
-            });
-        
         } else {
             alert(error)
             alert("Failed to add audiobook.");

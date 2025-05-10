@@ -5,7 +5,6 @@ const cors = require('cors');
 const port = 4000;
 const connectToMongo = require('./models');
 const notificationRouter = require('./routes/notificationRouter.js');
-const subscriptionRouter = require('./routes/subscriptionRouter.js');
 const logger = require('./logger.js');
 const promBundle = require('express-prom-bundle');
 const client = require('prom-client'); 
@@ -59,7 +58,6 @@ app.get('/health', (req, res) => {
 });
 
 app.use('/notification', notificationRouter);
-app.use('/subscription', subscriptionRouter);
 
 checkBind();
 

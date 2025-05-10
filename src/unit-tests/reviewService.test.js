@@ -2,7 +2,7 @@ const request = require('supertest');
 const express = require('express');
 const mongoose = require('mongoose');
 
-jest.setTimeout(10000); // Increase timeout to 10 seconds
+jest.setTimeout(10000); 
 
 jest.mock('../backend/review-service/models/Review');
 jest.mock('../backend/review-service/logger', () => ({
@@ -18,11 +18,10 @@ const app = express();
 app.use(express.json());
 app.use('/reviews', reviewRoutes);
 
-// --- Track server to close it later ---
 let server;
 
 beforeAll((done) => {
-  server = app.listen(0, done); // Use port 0 to auto-assign an available port
+  server = app.listen(0, done);
 });
 
 afterAll((done) => {
@@ -33,7 +32,6 @@ afterAll((done) => {
   }
 });
 
-// ---------- POST /reviews ----------
 describe('POST /reviews', () => {
   it('should create a review and return it with 201', async () => {
     const mockReviewData = {
@@ -48,7 +46,6 @@ describe('POST /reviews', () => {
       ...mockReviewData,
     };
 
-    // Mock constructor to return object with save()
     Review.mockImplementation(() => ({
       ...mockReviewData,
       save: jest.fn().mockResolvedValue(mockSavedReview),
@@ -81,7 +78,6 @@ describe('POST /reviews', () => {
   });
 });
 
-// ---------- GET /reviews/:audiobookId ----------
 describe('GET /reviews/:audiobookId', () => {
   it('should return a list of reviews for a given audiobook', async () => {
     const mockReviews = [
@@ -89,7 +85,6 @@ describe('GET /reviews/:audiobookId', () => {
       { audiobookId: 'abc123', userId: 'user2', rating: 5, comment: 'Great' },
     ];
 
-    // Mock the find method to return the mockReviews
     Review.find = jest.fn().mockResolvedValue(mockReviews);
 
     const response = await request(server).get('/reviews/abc123');
@@ -100,7 +95,6 @@ describe('GET /reviews/:audiobookId', () => {
   });
 
   it('should return 500 if there is a problem fetching reviews', async () => {
-    // Mock the find method to reject with an error
     Review.find = jest.fn().mockRejectedValue(new Error('Database error'));
 
     const response = await request(server).get('/reviews/abc123');
@@ -110,7 +104,6 @@ describe('GET /reviews/:audiobookId', () => {
   });
 });
 
-// ---------- GET /reviews/:audiobookId/summary ----------
 describe('GET /reviews/:audiobookId/summary', () => {
   it('should return average rating and total reviews', async () => {
     const mockReviews = [
@@ -119,7 +112,6 @@ describe('GET /reviews/:audiobookId/summary', () => {
       { rating: 4 },
     ];
 
-    // Mock the find method to return the mockReviews
     Review.find = jest.fn().mockResolvedValue(mockReviews);
 
     const response = await request(server).get('/reviews/abc123/summary');
@@ -133,7 +125,6 @@ describe('GET /reviews/:audiobookId/summary', () => {
   });
 
   it('should return 500 if there is an error during summary fetch', async () => {
-    // Mock the find method to reject with an error
     Review.find = jest.fn().mockRejectedValue(new Error('Summary fetch error'));
 
     const response = await request(server).get('/reviews/abc123/summary');
