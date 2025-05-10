@@ -115,13 +115,12 @@ services:
       - ./backend/notification-service/.env  
     ports:
       - "4000:4000"
-    volumes: ['./backend/notification-service:/app',./logs/notification-service:/var/log/notification-service]
+    volumes: ['./backend/notification-service:/app',./logs/notification-service:/var/log/notification-service, /app/node_modules]
     working_dir : /app
     depends_on:
       rabbitmq:
         condition: service_healthy
-    
-     
+
   review-service-1:
     build:
       context: ./backend/review-service
