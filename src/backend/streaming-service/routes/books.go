@@ -8,9 +8,8 @@ import (
 
 func BookRoutes(router *gin.Engine) {
 	books := router.Group("/books")
-	books.Use(middleware.JWTAuthMiddleware())
 	{
 		books.GET("/", controllers.GetAllBooks)
-		books.GET("/:id", controllers.GetBookByID)
+		books.GET("/:id", middleware.JWTAuthMiddleware(), controllers.GetBookByID)
 	}
 }
