@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from "react-router-dom";
 import { logout } from "../Api";
+import { Link } from 'react-router-dom';
+
 
 export default function Navbar() {
     const navigate = useNavigate();
@@ -81,9 +83,13 @@ export default function Navbar() {
                             </button>
                         </>
                     )}
-                    <button className="bg-purple-700 hover:bg-purple-800 text-white py-1 px-4 rounded">
-                        Subscribe
-                    </button>
+                    <Link
+                            to="/subscription"
+                            className="bg-purple-700 hover:bg-purple-800 text-white py-1 px-4 rounded"
+                        >
+                            Subscribe
+                        </Link>
+
                 </div>
             </div>
         </header>

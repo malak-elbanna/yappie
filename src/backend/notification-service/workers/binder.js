@@ -17,7 +17,7 @@ const checkBind = async () =>{
         const handleMessage = async (msg) => {
             const content = msg.content.toString().split('/')
             await channel.assertQueue(content[0],{durable:true});
-            await channel.bindQueue(content[0],'notifications',content[1]);
+            await channel.bindQueue(content[0],'notifications',`#.${content[1]}.#`);
             console.log('queue is bound! : ' + content)
         };
 

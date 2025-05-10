@@ -25,7 +25,6 @@ def get_info(user_id):
 def edit_name(user_id):
     data = request.get_json()
 
-    logging.info('email: ' + email)
     updated_name = data.get('name')
     if not updated_name:
         return jsonify({"error": "New name is required."}), 400
@@ -130,7 +129,7 @@ def add_preference(user_id):
         if genre not in profile.preferences["audiobooks"]:
             profile.preferences["audiobooks"].append(genre)
             logging.info('message: ' + genre)
-            channel.basic_publish(exchange='jobs',routing_key='BIND',body=email + '/' + genre)
+            channel.basic_publish(exchange='jobs',routing_key='BIND',body=email + '/' + genre.lower())
             db.session.commit()
     
         logging.info("New preference added", extra={"user_id": str(user_id)})
