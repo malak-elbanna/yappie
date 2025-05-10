@@ -1,6 +1,6 @@
 # Yappie
 
-## Desription ##
+## Description ##
 This document outlines specifications about Yappie, a web application designed for audiobook and podcast streaming. The document will serve as a reference point that connects development personnel with stakeholders and testers to ensure the understatement of the system functionality and design following Microservices Architecture.
 
 ## Intended Audience ##
@@ -44,11 +44,22 @@ MongoDB
 Redis
 
 
+## Contributing ## 
+Follow these steps to contribute:
+Fork the repository.
+Create a new branch:
+Make your changes and commit them:
+Push to your branch:
+Open a pull request.
+
+
 ## Acknowledgment ##
 Malak Elbanna
 
-Salma Ayman
+Salama Ayman
 
-El-hussain shalaby
+El -hussain shalaby
 
-Merna Ahmed
+Merna Ahmed 
+
+

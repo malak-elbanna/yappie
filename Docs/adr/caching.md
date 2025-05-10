@@ -4,13 +4,16 @@
 The system consists of services such as, notification service and streaming service that require quick access to frequently accessed data and high throughput rate for real-time interactions.
 
 ## Decision
-We chose Redis as our caching solution to store frequently streamed audio content, active users sessions, recent notifications, and user playback states.
+We chose **Redis** as our caching solution to store frequently streamed audio content, active users sessions, recent notifications, and user playback states.
 
 ## Justification
 - Redis is known for its high performance, low latency, and support for various data.
 - Reduces database load and improve respose times.
 - Redis is well-supported in multiple coding languages such as, Go and NodeJS, allowing easy integration to our microservices.
 - Redis includes a built-in TTL that is ideal for temporary or expiring data like notifications.
+
+## Alternatives Considered
+- Memcached: for its simple and lightweight key-value caching, but lacks support for complex data types.
 
 ## Consequences
 Pros:
