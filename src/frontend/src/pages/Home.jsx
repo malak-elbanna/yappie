@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FaPlay, FaPause, FaStepBackward, FaStepForward, FaRedo, FaInstagram, FaFacebook, FaTwitter } from 'react-icons/fa';
-import { getBooks } from '../api'; 
+import { getBooks } from '../Api'; 
 import hero from '../assets/hero.png';
 
 export default function Home() {
