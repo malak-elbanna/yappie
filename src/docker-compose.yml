@@ -25,7 +25,7 @@ services:
       context: ./backend/auth-service
       dockerfile: Dockerfile
     env_file:
-      - ./backend/auth-service/.env  
+      - ./.env  
     environment:
       PORT: 4999
     ports:
@@ -42,7 +42,7 @@ services:
       context: ./backend/auth-service
       dockerfile: Dockerfile
     env_file:
-      - ./backend/auth-service/.env  
+      - ./.env  
     environment:
       PORT: 5000
     ports:
@@ -59,7 +59,7 @@ services:
       context: ./backend/content-management-service
       dockerfile: Dockerfile
     env_file:
-      - ./backend/content-management-service/.env
+      - ./.env
     environment:
       PORT: 5001
     depends_on:
@@ -73,7 +73,7 @@ services:
       context: ./backend/content-management-service
       dockerfile: Dockerfile
     env_file:
-      - ./backend/content-management-service/.env
+      - ./.env
     environment:
       PORT: 5002
     ports:
@@ -88,7 +88,7 @@ services:
       context: ./backend/streaming-service
       dockerfile: Dockerfile
     env_file:
-      - ./backend/streaming-service/.env
+      - ./.env
     volumes:
       - ./logs/streaming-service:/var/log/streaming-service
     environment:
@@ -103,7 +103,7 @@ services:
       context: ./backend/streaming-service
       dockerfile: Dockerfile
     env_file:
-      - ./backend/streaming-service/.env
+      - ./.env
     volumes:
       - ./logs/streaming-service:/var/log/streaming-service
     environment:
@@ -118,7 +118,7 @@ services:
       context: ./backend/notification-service
       dockerfile: Dockerfile
     env_file:
-      - ./backend/notification-service/.env  
+      - ./.env 
     ports:
       - "4000:4000"
     volumes: ['./backend/notification-service:/app',./logs/notification-service:/var/log/notification-service, /app/node_modules]
@@ -132,7 +132,7 @@ services:
       context: ./backend/review-service
       dockerfile: Dockerfile
     env_file:
-      - ./backend/review-service/.env
+      - ./.env
     volumes:
       - ./logs/review-service:/var/log/review-service
     environment:
@@ -145,7 +145,7 @@ services:
       context: ./backend/review-service
       dockerfile: Dockerfile
     env_file:
-      - ./backend/review-service/.env
+      - ./.env
     volumes:
       - ./logs/review-service:/var/log/review-service
     environment:
@@ -158,7 +158,7 @@ services:
       context: ./backend/profile-management-service
       dockerfile: Dockerfile
     env_file:
-      - ./backend/profile-management-service/.env
+      - ./.env
     environment:
       PORT: 5005
     ports:
@@ -175,7 +175,7 @@ services:
       context: ./backend/profile-management-service
       dockerfile: Dockerfile
     env_file:
-      - ./backend/profile-management-service/.env
+      - ./.env
     environment:
       PORT: 5006
     ports:
@@ -383,7 +383,7 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
     env_file:
-      - ./frontend/.env 
+      - ./.env
     volumes:
       - ./frontend:/app
       - /app/node_modules
