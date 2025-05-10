@@ -57,7 +57,7 @@ def add_audiobook():
     
     id = db.books.count_documents({}) + 1
     
-    data = request.form.to_dict()
+    data = request.get_json()
     files = request.files
     if 'cover_image' in files:
         cover_image = files['cover_image']
@@ -76,8 +76,9 @@ def add_audiobook():
             data['audio_url'] = 'http://localhost:9000/audiobooks/'+str(id)+'.m3u8'
 
     result = db.books.insert_one(data)
-    if not data['category'] : data['category'] = ''
-    channel.basic_publish(exchange='notifications',routing_key=(data['author']+'.'+data['category']+'.'+data['language']).lower(),body=data['title'])
+    if not data.get('category'): data['category'] = ''
+    routing_key = f"{data['author']}.{data['category']}.{data['language']}".lower()
+    channel.basic_publish(exchange='notifications',routing_key=routing_key,body=data['title'])
     logging.info("Audiobook added", extra={"audiobook_id": str(result.inserted_id)})
     return jsonify({"_id": str(result.inserted_id)}), 201
 
@@ -85,7 +86,7 @@ def update_audiobook(id):
     db = mongo.cx["audiobooks_db"]
     fs = GridFS(db)
 
-    data = request.form.to_dict()
+    data = request.get_json()
     files = request.files
     if 'cover_image' in files:
         cover_image = files['cover_image']

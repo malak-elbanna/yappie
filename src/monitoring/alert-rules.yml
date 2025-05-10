@@ -18,6 +18,26 @@ groups:
         annotations:
           summary: "High error rate in Notification Service"
           description: "The error rate (4xx/5xx responses) for the Notification Service has exceeded 5 requests per second for the last 2 minutes."
+  
+  - name: review-service-alerts
+    rules:
+      - alert: HighReviewServiceLatency
+        expr: histogram_quantile(0.95, rate(review_request_duration_seconds_bucket[5m])) > 1
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High latency in Review Service"
+          description: "The 95th percentile latency for the Review Service has exceeded 1 second for the last 2 minutes."
+
+      - alert: HighReviewServiceErrorRate
+        expr: sum(rate(review_request_duration_seconds_count{status_code=~"4..|5.."}[5m])) > 5
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "High error rate in Review Service"
+          description: "The error rate (4xx/5xx responses) for the Review Service has exceeded 5 requests per second for the last 2 minutes."
 
   - name: system-metrics-alerts
     rules:
