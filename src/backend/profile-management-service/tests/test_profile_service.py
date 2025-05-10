@@ -4,7 +4,6 @@ import requests
 import json
 from concurrent.futures import ThreadPoolExecutor
 
-# Constants for test data
 USER_ID = "123"
 NEW_NAME = "Updated User"
 NEW_BIO = "This is my updated bio."
@@ -29,12 +28,7 @@ def mock_requests():
          patch('requests.put') as mock_put:
         yield mock_get, mock_put
 
-# --- Existing Tests (kept for reference) ---
-# ... [Previous test cases here] ...
 
-# --- New Test Cases ---
-
-# Edge Cases
 def test_empty_name(mock_requests, auth_token, profile_url):
     _, mock_put = mock_requests
     
@@ -45,7 +39,7 @@ def test_empty_name(mock_requests, auth_token, profile_url):
     
     response = requests.put(
         f"{profile_url}/{auth_token['user_id']}/edit-name",
-        json={"name": ""},  # Empty string
+        json={"name": ""}, 
         headers=auth_token['headers']
     )
     
@@ -62,7 +56,7 @@ def test_null_bio(mock_requests, auth_token, profile_url):
     
     response = requests.put(
         f"{profile_url}/{auth_token['user_id']}/edit-bio",
-        json={"bio": None},  # Null value
+        json={"bio": None},  
         headers=auth_token['headers']
     )
     
@@ -87,7 +81,6 @@ def test_invalid_token(mock_requests, profile_url):
     assert response.status_code == 401
     assert response.json()['error'] == "Invalid token"
 
-# Rate Limiting
 def test_rate_limiting(mock_requests, auth_token, profile_url):
     mock_get, _ = mock_requests
     
@@ -96,7 +89,6 @@ def test_rate_limiting(mock_requests, auth_token, profile_url):
     mock_response.json.return_value = {"error": "Too many requests"}
     mock_get.return_value = mock_response
     
-    # Simulate rate-limited request
     response = requests.get(
         f"{profile_url}/{auth_token['user_id']}",
         headers=auth_token['headers']
@@ -105,11 +97,9 @@ def test_rate_limiting(mock_requests, auth_token, profile_url):
     assert response.status_code == 429
     assert "error" in response.json()
 
-# Concurrent Requests
 def test_concurrent_requests(mock_requests, auth_token, profile_url):
     mock_get, _ = mock_requests
     
-    # Setup mock to return different responses based on call count
     mock_responses = [
         MagicMock(status_code=200, json=lambda: {"name": f"User{i}"})
         for i in range(5)
@@ -122,7 +112,6 @@ def test_concurrent_requests(mock_requests, auth_token, profile_url):
             headers=auth_token['headers']
         )
     
-    # Make 5 concurrent requests
     with ThreadPoolExecutor(max_workers=5) as executor:
         futures = [executor.submit(make_request, i) for i in range(5)]
         results = [f.result() for f in futures]

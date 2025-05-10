@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { FaPlay, FaPause, FaStepBackward, FaStepForward, FaRedo, FaInstagram, FaFacebook, FaTwitter } from 'react-icons/fa';
-import { getBooks } from '../api'; 
+import { getBooks } from '../Api'; 
 import hero from '../assets/hero.png';
+import { Link } from 'react-router-dom';
+
 
 export default function Home() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(1);
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(true);
+
 
   const togglePlayback = () => setIsPlaying(!isPlaying);
 
@@ -82,25 +85,28 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-8 bg-gray-800">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {[
-              { count: "5540+", label: "Books" },
-              { count: "375+", label: "Podcasts" },
-              { count: "2000+", label: "Users" }
-            ].map((stat, index) => (
-              <div key={index} className="bg-gray-700 p-8 rounded text-center">
-                <h3 className="text-3xl font-bold mb-2">{stat.count}</h3>
-                <p className="text-xl mb-4">{stat.label}</p>
-                <button className="bg-purple-700 hover:bg-purple-800 text-white py-2 px-6 rounded">
-                  {stat.label === "Users" ? "Subscribe now" : "Explore more"}
-                </button>
-              </div>
-            ))}
-          </div>
+   <section className="py-8 bg-gray-800">
+  <div className="container mx-auto px-4">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      {[
+        { count: "5540+", label: "Books", link: "/books" },
+        { count: "375+", label: "Podcasts", link: "/books" },
+        { count: "2000+", label: "Users", link: "/subscription" }
+      ].map((stat, index) => (
+        <div key={index} className="bg-gray-700 p-8 rounded text-center">
+          <h3 className="text-3xl font-bold mb-2">{stat.count}</h3>
+          <p className="text-xl mb-4">{stat.label}</p>
+          <Link
+            to={stat.link}
+            className="inline-block bg-purple-700 hover:bg-purple-800 text-white py-2 px-6 rounded"
+          >
+            {stat.label === "Users" ? "Subscribe now" : "Explore more"}
+          </Link>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       <section className="py-8 bg-gray-900">
         <div className="container mx-auto px-4">
@@ -134,9 +140,12 @@ export default function Home() {
               offline listening, and exclusive content.
             </p>
             <div className="flex justify-end">
-              <button className="bg-purple-700 hover:bg-purple-800 text-white py-2 px-6 rounded">
-                Subscribe now
-              </button>
+              <Link
+                            to="/subscription"
+                            className="bg-purple-700 hover:bg-purple-800 text-white py-1 px-4 rounded"
+                        >
+                            Subscribe
+                        </Link>
             </div>
           </div>
         </div>

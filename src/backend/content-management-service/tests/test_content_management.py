@@ -22,12 +22,10 @@ class TestContentManagementController(unittest.TestCase):
         self.app_context.push()
         self.mock_render_template = mock_render_template
         
-        # Add a patch for url_for to prevent routing errors
         self.url_for_patcher = patch('flask.url_for', return_value='/fake_url')
         self.mock_url_for = self.url_for_patcher.start()
 
     def tearDown(self):
-        # Stop the patcher when the test is done
         if hasattr(self, 'url_for_patcher'):
             self.url_for_patcher.stop()
         self.app_context.pop()
@@ -36,20 +34,15 @@ class TestContentManagementController(unittest.TestCase):
     @pytest.mark.xfail(reason="URL endpoint 'audiobo' is incomplete or not registered")
 
     def test_get_audiobooks(self, mock_get_collection):
-        # Mocking the database response for audiobooks
         test_books = [{'_id': ObjectId(), 'title': 'Test Book'}]
         mock_get_collection.return_value.find.return_value = test_books
         
-        # Mock url_for directly for this test
         with patch('flask.url_for', return_value='/fake_url'):
-            # Call the function with a fake request context
             with self.app.test_request_context('/audiobooks'):
                 response = get_audiobooks()
                 
-                # Check that the response matches the mocked response
                 self.assertEqual(response, 'mocked_template')
                 
-                # Ensure that render_template was called with the expected template and context
                 self.mock_render_template.assert_called_once()
                 args, kwargs = self.mock_render_template.call_args
                 self.assertEqual(args[0], 'home.html')
@@ -58,7 +51,6 @@ class TestContentManagementController(unittest.TestCase):
     @patch('controllers.audiobook_controller.get_collection')
     def test_get_audiobook_valid_id(self, mock_get_collection):
         test_id = ObjectId()
-        # Mocking the database response for a valid audiobook
         mock_get_collection.return_value.find_one.return_value = {'_id': test_id, 'title': 'Test Book'}
         with self.app.test_request_context(f'/audiobooks/{test_id}'):
             response, status = get_audiobook(str(test_id))
@@ -66,7 +58,6 @@ class TestContentManagementController(unittest.TestCase):
 
     @patch('controllers.audiobook_controller.get_collection')
     def test_get_audiobook_invalid_id(self, mock_get_collection):
-        # Mocking an invalid ID scenario
         mock_get_collection.return_value = {'books': MagicMock()}
         with self.app.test_request_context('/audiobooks/invalid-id'):
             response, status = get_audiobook("invalid-id")
@@ -82,7 +73,6 @@ class TestContentManagementController(unittest.TestCase):
         db_mock.books.insert_one.return_value.inserted_id = ObjectId()
         mock_mongo.cx.__getitem__.return_value = db_mock
 
-        # Mock GridFS initialization properly
         mock_fs.return_value = MagicMock()
 
         with self.app.test_request_context('/audiobooks', method='POST', data={'title': 'Book'}, content_type='multipart/form-data'):
