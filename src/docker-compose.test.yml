@@ -61,7 +61,11 @@ services:
     ports:
       - "5005:5005"
     depends_on:
-      - profile-db
+      profile-db:
+        condition: service_started
+      rabbitmq:
+        condition: service_healthy
+
 
   notification-service:
     build:
@@ -71,6 +75,7 @@ services:
       - ./backend/notification-service/.env  
     ports:
       - "4000:4000"
+    volumes: [/app/node_modules]
     command: ["node", "server"]
     depends_on:
       rabbitmq:
