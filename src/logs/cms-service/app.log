@@ -2476,3 +2476,201 @@
 {"message": "172.18.0.27 - - [10/May/2025 15:59:51] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T15:59:51.923153+00:00"}
 {"message": "172.18.0.27 - - [10/May/2025 15:59:51] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T15:59:51.924185+00:00"}
 {"message": "172.18.0.7 - - [10/May/2025 15:59:58] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T15:59:58.885919+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:00:06] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:00:06.840181+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:00:06] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:00:06.953533+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:00:06] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:00:06.954410+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:00:13] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:00:13.882043+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:00:21] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:00:21.840588+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:00:21] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:00:21.980811+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:00:21] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:00:21.980977+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:00:28] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:00:28.885218+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:00:36] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:00:36.840726+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:00:37] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:00:37.006367+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:00:37] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:00:37.006451+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:00:43] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:00:43.881982+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:00:51] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:00:51.841988+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:00:52] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:00:52.035104+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:00:52] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:00:52.035166+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:00:58] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:00:58.881317+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:01:06] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:01:06.839302+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:01:07] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:01:07.070368+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:01:07] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:01:07.070458+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:01:13] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:01:13.881532+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:01:21] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:01:21.840443+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:01:22] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:01:22.096920+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:01:22] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:01:22.096966+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:01:28] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:01:28.883858+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:01:36] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:01:36.837960+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:01:37] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:01:37.127144+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:01:37] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:01:37.127173+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:01:43] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:01:43.878066+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:01:51] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:01:51.838361+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:01:52] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:01:52.161142+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:01:52] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:01:52.165342+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:01:58] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:01:58.878145+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:02:06] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:02:06.836076+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:02:07] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:02:07.192211+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:02:07] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:02:07.192235+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:02:13] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:02:13.876921+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:02:21] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:02:21.836676+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:02:22] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:02:22.224818+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:02:22] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:02:22.225127+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:02:28] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:02:28.878747+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:02:36] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:02:36.836628+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:02:37] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:02:37.257503+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:02:37] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:02:37.257528+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:02:43] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:02:43.875518+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:02:51] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:02:51.834665+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:02:52] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:02:52.285578+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:02:52] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:02:52.285729+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:02:58] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:02:58.875632+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:03:06] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:03:06.834313+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:03:07] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:03:07.312988+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:03:07] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:03:07.313062+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:03:13] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:03:13.875567+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:03:21] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:03:21.843979+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:03:22] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:03:22.335099+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:03:22] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:03:22.338102+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:03:28] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:03:28.876377+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:03:36] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:03:36.832518+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:03:37] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:03:37.362625+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:03:37] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:03:37.362881+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:03:43] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:03:43.874323+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:03:51] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:03:51.831734+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:03:52] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:03:52.393980+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:03:52] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:03:52.394500+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:03:58] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:03:58.873852+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:04:06] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:04:06.831264+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:04:07] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:04:07.423243+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:04:07] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:04:07.423419+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:04:13] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:04:13.873005+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:04:21] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:04:21.831303+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:04:22] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:04:22.455143+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:04:22] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:04:22.455185+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:04:28] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:04:28.873045+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:04:36] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:04:36.829302+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:04:37] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:04:37.479474+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:04:37] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:04:37.480032+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:04:43] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:04:43.870078+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:04:51] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:04:51.830331+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:04:52] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:04:52.514199+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:04:52] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:04:52.514289+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:04:58] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:04:58.870762+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:05:06] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:05:06.828015+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:05:07] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:05:07.557417+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:05:07] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:05:07.557537+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:05:13] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:05:13.870475+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:05:21] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:05:21.828516+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:05:22] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:05:22.591044+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:05:22] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:05:22.591338+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:05:28] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:05:28.868706+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:05:36] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:05:36.826569+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:05:37] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:05:37.629814+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:05:37] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:05:37.629841+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:05:43] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:05:43.868637+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:05:51] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:05:51.826295+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:05:52] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:05:52.660334+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:05:52] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:05:52.660437+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:05:58] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:05:58.866720+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:06:06] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:06:06.825699+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:06:07] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:06:07.692186+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:06:07] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:06:07.693181+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:06:13] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:06:13.867197+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:06:21] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:06:21.825058+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:06:22] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:06:22.720680+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:06:22] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:06:22.720695+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:06:28] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:06:28.867129+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:06:36] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:06:36.826017+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:06:37] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:06:37.746463+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:06:37] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:06:37.746601+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:06:43] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:06:43.865278+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:06:51] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:06:51.824197+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:06:52] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:06:52.778016+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:06:52] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:06:52.778310+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:06:58] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:06:58.864895+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:07:06] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:07:06.822771+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:07:07] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:07:07.803924+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:07:07] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:07:07.803939+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:07:13] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:07:13.865342+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:07:21] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:07:21.822009+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:07:22] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:07:22.835998+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:07:22] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:07:22.836120+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:07:28] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:07:28.864046+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:07:36] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:07:36.822792+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:07:37] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:07:37.862295+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:07:37] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:07:37.862454+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:07:43] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:07:43.863296+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:07:51] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:07:51.821179+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:07:52] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:07:52.895932+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:07:52] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:07:52.895978+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:07:58] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:07:58.862185+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:08:06] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:08:06.820229+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:08:07] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:08:07.922440+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:08:07] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:08:07.922615+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:08:13] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:08:13.861398+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:08:21] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:08:21.819249+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:08:22] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:08:22.952268+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:08:22] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:08:22.952386+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:08:28] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:08:28.861546+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:08:36] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:08:36.819059+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:08:37] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:08:37.984766+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:08:37] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:08:37.984842+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:08:43] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:08:43.859292+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:08:51] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:08:51.818633+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:08:53] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:08:53.020341+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:08:53] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:08:53.020680+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:08:58] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:08:58.859745+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:09:06] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:09:06.817699+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:09:08] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:09:08.056005+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:09:08] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:09:08.056045+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:09:13] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:09:13.859049+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:09:21] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:09:21.816664+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:09:23] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:09:23.093573+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:09:23] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:09:23.093577+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:09:28] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:09:28.858991+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:09:36] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:09:36.816049+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:09:38] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:09:38.127681+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:09:38] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:09:38.127722+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:09:43] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:09:43.856359+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:09:51] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:09:51.816184+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:09:53] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:09:53.163514+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:09:53] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:09:53.163545+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:09:58] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:09:58.856525+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:10:06] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:10:06.805807+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:10:08] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:10:08.186309+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:10:08] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:10:08.186309+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:10:13] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:10:13.847664+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:10:21] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:10:21.805372+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:10:23] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:10:23.215477+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:10:23] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:10:23.216085+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:10:28] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:10:28.848530+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:10:36] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:10:36.812788+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:10:38] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:10:38.239677+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:10:38] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:10:38.240271+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:10:43] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:10:43.844642+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:10:51] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:10:51.801873+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:10:53] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:10:53.268689+00:00"}
+{"message": "172.18.0.27 - - [10/May/2025 16:10:53] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T16:10:53.268720+00:00"}
+{"message": "172.18.0.7 - - [10/May/2025 16:10:58] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T16:10:58.843927+00:00"}
+{"message": "Closing channel (0): 'Normal shutdown' on <Channel number=1 OPEN conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7f992d26e950> params=<ConnectionParameters host=rabbitmq port=5672 virtual_host=/ ssl=False>>>", "time": "2025-05-10T16:10:59.083084+00:00"}
+{"message": "Received <Channel.CloseOk> on <Channel number=1 CLOSING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7f992d26e950> params=<ConnectionParameters host=rabbitmq port=5672 virtual_host=/ ssl=False>>>", "time": "2025-05-10T16:10:59.120857+00:00"}
+{"message": "Closing connection (200): Normal shutdown", "time": "2025-05-10T16:10:59.127672+00:00"}
+{"message": "Closing connection (200): 'Normal shutdown'", "time": "2025-05-10T16:10:59.128774+00:00"}
+{"message": "Aborting transport connection: state=1; <socket.socket fd=6, family=2, type=1, proto=6, laddr=('172.18.0.17', 36244), raddr=('172.18.0.3', 5672)>", "time": "2025-05-10T16:10:59.135390+00:00"}
+{"message": "_AsyncTransportBase._initate_abort(): Initiating abrupt asynchronous transport shutdown: state=1; error=None; <socket.socket fd=6, family=2, type=1, proto=6, laddr=('172.18.0.17', 36244), raddr=('172.18.0.3', 5672)>", "time": "2025-05-10T16:10:59.136601+00:00"}
+{"message": "Closing channel (0): 'Normal shutdown' on <Channel number=1 OPEN conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7f97f064ebd0> params=<ConnectionParameters host=rabbitmq port=5672 virtual_host=/ ssl=False>>>", "time": "2025-05-10T16:10:59.136190+00:00"}
+{"message": "Deactivating transport: state=1; <socket.socket fd=6, family=2, type=1, proto=6, laddr=('172.18.0.17', 36244), raddr=('172.18.0.3', 5672)>", "time": "2025-05-10T16:10:59.137130+00:00"}
+{"message": "AMQP stack terminated, failed to connect, or aborted: opened=True, error-arg=None; pending-error=ConnectionClosedByClient: (200) 'Normal shutdown'", "time": "2025-05-10T16:10:59.140018+00:00"}
+{"message": "Stack terminated due to ConnectionClosedByClient: (200) 'Normal shutdown'", "time": "2025-05-10T16:10:59.150647+00:00"}
+{"message": "Closing transport socket and unlinking: state=3; <socket.socket fd=6, family=2, type=1, proto=6, laddr=('172.18.0.17', 36244), raddr=('172.18.0.3', 5672)>", "time": "2025-05-10T16:10:59.152121+00:00"}
+{"message": "Received <Channel.CloseOk> on <Channel number=1 CLOSING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x7f97f064ebd0> params=<ConnectionParameters host=rabbitmq port=5672 virtual_host=/ ssl=False>>>", "time": "2025-05-10T16:10:59.153870+00:00"}
+{"message": "User-initiated close: result=BlockingConnection__OnClosedArgs(connection=<SelectConnection CLOSED transport=None params=<ConnectionParameters host=rabbitmq port=5672 virtual_host=/ ssl=False>>, error=ConnectionClosedByClient: (200) 'Normal shutdown')", "time": "2025-05-10T16:10:59.155021+00:00"}
+{"message": "Closing connection (200): Normal shutdown", "time": "2025-05-10T16:10:59.157154+00:00"}
+{"message": "Closing connection (200): 'Normal shutdown'", "time": "2025-05-10T16:10:59.158073+00:00"}
+{"message": "Aborting transport connection: state=1; <socket.socket fd=6, family=2, type=1, proto=6, laddr=('172.18.0.18', 36574), raddr=('172.18.0.3', 5672)>", "time": "2025-05-10T16:10:59.163219+00:00"}
+{"message": "_AsyncTransportBase._initate_abort(): Initiating abrupt asynchronous transport shutdown: state=1; error=None; <socket.socket fd=6, family=2, type=1, proto=6, laddr=('172.18.0.18', 36574), raddr=('172.18.0.3', 5672)>", "time": "2025-05-10T16:10:59.163818+00:00"}
+{"message": "Deactivating transport: state=1; <socket.socket fd=6, family=2, type=1, proto=6, laddr=('172.18.0.18', 36574), raddr=('172.18.0.3', 5672)>", "time": "2025-05-10T16:10:59.164367+00:00"}
+{"message": "AMQP stack terminated, failed to connect, or aborted: opened=True, error-arg=None; pending-error=ConnectionClosedByClient: (200) 'Normal shutdown'", "time": "2025-05-10T16:10:59.165637+00:00"}
+{"message": "Stack terminated due to ConnectionClosedByClient: (200) 'Normal shutdown'", "time": "2025-05-10T16:10:59.177828+00:00"}
+{"message": "Closing transport socket and unlinking: state=3; <socket.socket fd=6, family=2, type=1, proto=6, laddr=('172.18.0.18', 36574), raddr=('172.18.0.3', 5672)>", "time": "2025-05-10T16:10:59.180025+00:00"}
+{"message": "User-initiated close: result=BlockingConnection__OnClosedArgs(connection=<SelectConnection CLOSED transport=None params=<ConnectionParameters host=rabbitmq port=5672 virtual_host=/ ssl=False>>, error=ConnectionClosedByClient: (200) 'Normal shutdown')", "time": "2025-05-10T16:10:59.183080+00:00"}
