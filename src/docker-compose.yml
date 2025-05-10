@@ -1,0 +1,454 @@
+version: "3.8"
+
+services:
+
+  rabbitmq:
+    image: rabbitmq:management
+    container_name: rabbitmq
+    restart: always
+    ports:
+      - 5672:5672
+      - 15672:15672
+
+    healthcheck:
+      test: rabbitmq-diagnostics -q ping
+      interval: 30s
+      timeout: 30s
+      retries: 3 
+
+    volumes:
+      - rabbitmq-lib:/var/lib/rabbitmq/
+      - rabbitmq-log:/var/log/rabbitmq
+
+  auth-service-1:  
+    build:
+      context: ./backend/auth-service
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend/auth-service/.env  
+    environment:
+      PORT: 4999
+    ports:
+      - "4999:4999"
+    volumes:
+      - ./logs/auth-service:/var/log/auth-service
+    depends_on:
+      - db
+      - redis
+
+
+  auth-service-2:  
+    build:
+      context: ./backend/auth-service
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend/auth-service/.env  
+    environment:
+      PORT: 5000
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./logs/auth-service:/var/log/auth-service
+    depends_on:
+      - db
+      - redis
+
+
+  cms-service-1:
+    build: 
+      context: ./backend/content-management-service
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend/content-management-service/.env
+    environment:
+      PORT: 5001
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    ports:
+      - "5001:5001"
+    volumes: ['./backend/content-management-service:/app','./logs/cms-service:/var/log/cms-service']
+  cms-service-2:
+    build: 
+      context: ./backend/content-management-service
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend/content-management-service/.env
+    environment:
+      PORT: 5002
+    ports:
+      - "5002:5002"
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    volumes: ['./backend/content-management-service:/app','./logs/cms-service:/var/log/cms-service']
+
+  streaming-service-1:
+    build:
+      context: ./backend/streaming-service
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend/streaming-service/.env
+    volumes:
+      - ./logs/streaming-service:/var/log/streaming-service
+    environment:
+      PORT: 8080
+    ports:
+      - "8080:8080"
+    depends_on:
+      - redis
+
+  streaming-service-2:
+    build:
+      context: ./backend/streaming-service
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend/streaming-service/.env
+    volumes:
+      - ./logs/streaming-service:/var/log/streaming-service
+    environment:
+      PORT: 8081
+    ports:
+      - "8081:8081"
+    depends_on:
+      - redis
+
+  notification-service:
+    build:
+      context: ./backend/notification-service
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend/notification-service/.env  
+    ports:
+      - "4000:4000"
+    volumes: ['./backend/notification-service:/app',./logs/notification-service:/var/log/notification-service, /app/node_modules]
+    working_dir : /app
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+
+  review-service-1:
+    build:
+      context: ./backend/review-service
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend/review-service/.env
+    volumes:
+      - ./logs/review-service:/var/log/review-service
+    environment:
+      PORT: 5003
+    ports:
+      - "5003:5003"
+  
+  review-service-2:
+    build:
+      context: ./backend/review-service
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend/review-service/.env
+    volumes:
+      - ./logs/review-service:/var/log/review-service
+    environment:
+      PORT: 5004
+    ports:
+      - "5004:5004"
+
+  profile-service-1:
+    build: 
+      context: ./backend/profile-management-service
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend/profile-management-service/.env
+    environment:
+      PORT: 5005
+    ports:
+      - "5005:5005"
+    volumes:
+      - ./logs/profile-service:/var/log/profile-service
+      - ./backend/profile-management-service:/app
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+
+  profile-service-2:
+    build: 
+      context: ./backend/profile-management-service
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend/profile-management-service/.env
+    environment:
+      PORT: 5006
+    ports:
+      - "5006:5006"
+    volumes:
+      - ./logs/profile-service:/var/log/profile-service
+      - ./backend/profile-management-service:/app
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+
+
+
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: user_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - user_data:/var/lib/postgresql/data
+
+  profile-db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: profile_db
+    ports:
+      - "5434:5432"
+    volumes:
+      - profile_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:latest  
+    container_name: redis_container
+    restart: always
+    ports:
+      - "6379:6379"
+
+  kong-migrations:
+    image: kong:3.3
+    command: kong migrations bootstrap
+    environment:
+      KONG_DATABASE: postgres
+      KONG_PG_HOST: kong-database
+      KONG_PG_USER: kong
+      KONG_PG_PASSWORD: kong
+    depends_on:
+      kong-database:
+        condition: service_healthy
+
+  kong-database:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: kong
+      POSTGRES_DB: kong
+      POSTGRES_PASSWORD: kong
+
+    healthcheck:
+      test: ["CMD", "pg_isready","-q","-U","kong", "-d", "kong"]
+      interval: 30s
+      timeout: 60s
+      retries: 5
+      start_period: 80s
+
+    ports:
+      - "5433:5432"
+    volumes:
+      - kong_data:/var/lib/postgresql/data
+
+  kong:
+    image: kong:3.3
+    environment:
+      KONG_DATABASE: postgres
+      KONG_PG_HOST: kong-database
+      KONG_PG_USER: kong
+      KONG_PG_PASSWORD: kong
+      KONG_PROXY_ACCESS_LOG: /dev/stdout
+      KONG_ADMIN_ACCESS_LOG: /dev/stdout
+      KONG_PROXY_ERROR_LOG: /dev/stderr
+      KONG_ADMIN_ERROR_LOG: /dev/stderr
+      KONG_ADMIN_LISTEN: 0.0.0.0:8001, 0.0.0.0:8444 ssl
+    depends_on:
+      kong-migrations:
+        condition: service_completed_successfully
+      kong-database:
+        condition: service_healthy
+    ports:
+      - "8000:8000" 
+      - "8001:8001" 
+      - "8443:8443" 
+      - "8444:8444" 
+
+  konga-database:
+    image: postgres:9.6
+    environment:
+      POSTGRES_USER: konga
+      POSTGRES_PASSWORD: konga
+      POSTGRES_DB: konga
+    healthcheck:
+      test: ["CMD", "pg_isready","-q","-U","konga", "-d", "konga"]
+      interval: 30s
+      timeout: 60s
+      retries: 5
+      start_period: 80s
+    volumes:
+      - konga_data:/var/lib/postgresql9.6/data
+
+  konga:
+    image: pantsel/konga:latest
+    environment:
+      DB_ADAPTER: postgres
+      DB_HOST: konga-database
+      DB_USER: konga
+      DB_PASSWORD: konga
+      DB_DATABASE: konga
+      NODE_ENV: development
+    ports:
+      - "1337:1337"
+    depends_on:
+      kong:
+        condition: service_healthy
+      konga-database:
+        condition: service_healthy
+
+  kong-initialiser:
+    image: kong/deck:latest
+    container_name: kong-initialiser
+    volumes:
+      - ./kong-config/kong.yml:/config/kong.yml
+    command: gateway sync /config/kong.yml --kong-addr=http://kong:8001
+    depends_on:
+      kong:
+        condition: service_healthy
+
+
+  kong-configurator:
+    image: kong/deck:latest
+    container_name: kong-configurator
+    depends_on:
+      kong-initialiser:
+          condition: service_completed_successfully
+    volumes:
+      - ./kong-config/kong.yml:/kong-config/kong.yml
+    command: gateway dump  -o /kong-config/kong.yml --kong-addr=http://kong:8001 --yes && gateway sync /config/kong.yml --kong-addr=http://kong:8001
+
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./monitoring/alert-rules.yml:/etc/prometheus/alert-rules.yml
+      - prometheus-data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/usr/share/prometheus/console_libraries'
+      - '--web.console.templates=/usr/share/prometheus/consoles'
+  
+  node-exporter-1:
+    image: prom/node-exporter
+
+  node-exporter-2:
+    image: prom/node-exporter
+
+  loki:
+    image: grafana/loki:2.9.0
+    ports:
+      - "3100:3100"
+    volumes:
+      - ./monitoring/loki-config.yaml:/etc/loki/local-config.yaml
+      - loki-data:/loki
+    command: -config.file=/etc/loki/local-config.yaml
+
+  promtail:
+    image: grafana/promtail:2.9.0
+    volumes:
+      - ./monitoring/promtail-config.yaml:/etc/promtail/config.yaml
+      - ./logs:/var/log
+    command: -config.file=/etc/promtail/config.yaml
+    depends_on:
+      - loki
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+      - GF_AUTH_DISABLE_LOGIN_FORM=true
+    volumes:
+      - grafana-data:/var/lib/grafana
+    depends_on:
+      - prometheus
+      - loki
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    env_file:
+      - ./frontend/.env 
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true 
+    depends_on:
+      - notification-service
+    ports:
+      - "5173:5173"
+    command: ["npm", "run", "dev"]
+
+
+  minio:
+    image: minio/minio:latest
+    ports:
+      - '9000:9000'
+      - '9001:9001'
+    volumes:
+      - 'minio_data:/data'
+    environment:
+      - MINIO_ROOT_USER= user
+      - MINIO_ROOT_PASSWORD= userpassword
+      - MINIO_DEFAULT_BUCKETS= yappie
+    command: server /data --console-address ':9001'
+
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+
+  minio-init:
+    image: minio/mc
+    depends_on:
+      minio:
+        condition: service_healthy
+    volumes:
+      - './minio-config/init-minio.sh:/init-minio.sh'
+    environment:
+      - MINIO_ROOT_USER=user
+      - MINIO_ROOT_PASSWORD=userpassword
+    entrypoint: sh init-minio.sh
+
+volumes:
+  rabbitmq-lib:
+    driver: local
+  rabbitmq-log:
+    driver: local
+  user_data:
+
+  kong_data:
+  profile_data:
+
+  konga_data:
+
+  kong-config:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: ./kong.yml
+  grafana-data:
+  loki-data:
+  prometheus-data:
+  minio_data:
+    driver: local
+
