@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { getBooks } from '../Api'; // adjust path if needed 
+import { useParams, Link } from 'react-router-dom';
 import API from '../Stream'; 
 
 const CategoryBooks = () => {
@@ -29,7 +28,7 @@ const CategoryBooks = () => {
   if (loading) return <div className="text-white">Loading...</div>;
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white px-6 pt-24">
+    <div className="min-h-screen bg-gray-900 text-white px-6 pt-24 py-8">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl font-bold mb-6">{categoryName} Books</h1>
         
