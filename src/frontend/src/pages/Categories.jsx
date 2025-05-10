@@ -31,7 +31,6 @@ const categories = [
 const Categories = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-800 text-white relative overflow-x-hidden">
-      {/* Decorative blurred circle */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-purple-700 opacity-25 blur-3xl rounded-full pointer-events-none z-0" />
       
       <div className="relative z-10 max-w-7xl mx-auto px-6 pt-16 pb-4">
