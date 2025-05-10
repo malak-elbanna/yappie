@@ -56,40 +56,40 @@ docker-compose up --build
 ## Screenshots ##
 
 ### Home Page
-![Home Page](Screenshots\Home.png)
+![Home Page](Screenshots/Home.png)
 
 ### About Us Page
-![About Us Page](Screenshots\AboutUs.png)
+![About Us Page](Screenshots/AboutUs.png)
 
 ### Sign Up / Login Page
-![Sign Up / Login Page](Screenshots\Login.png)
+![Sign Up / Login Page](Screenshots/Login.png)
 
 ### User Profile Page
-![User Profile](Screenshots\Profile.png)
+![User Profile](Screenshots/Profile.png)
 
 ### Books Page
-![Books Page](Screenshots\Books.png)
+![Books Page](Screenshots/Books.png)
 
 ### Book Details Page
-![Book Details Page](Screenshots\BookDetails.png)
+![Book Details Page](Screenshots/BookDetails.png)
 
 ### Books Categories Page
-![Books Categories Page](Screenshots\BooksCategories.png)
+![Books Categories Page](Screenshots/BooksCategories.png)
 
 ### Category Details Page
-![Category Details Page](Screenshots\CategoryDetails.png)
+![Category Details Page](Screenshots/CategoryDetails.png)
 
 ### All Live Streams Page
-![All Live Streams Page](Screenshots\AllLives.png)
+![All Live Streams Page](Screenshots/AllLives.png)
 
 ### Live Stream (Broadcaster View)
-![Live Stream (Broadcaster View)](Screenshots\LiveStream_broadcast.png)
+![Live Stream (Broadcaster View)](Screenshots/LiveStream_broadcast.png)
 
 ### Live Stream (Listener View)
-![Live Stream (Listener View)](Screenshots\LiveStream_Listener.png)
+![Live Stream (Listener View)](Screenshots/LiveStream_Listener.png)
 
 ### Downloads Page
-![Downloads Page](Screenshots\Downloads.png)
+![Downloads Page](Screenshots/Downloads.png)
 
 ## Developers ##
 1. Malak Elbanna
