@@ -60,7 +60,7 @@ func GetPlaybackPosition(c *gin.Context) {
 
 	playbackPosition, err := config.RedisClient.Get(ctx, key).Result()
 	if err == redis.Nil {
-		log.Warnf("No playback position found for userId: %s, bookId: %s, chapterIndex: %s", userId, bookId, chapterIndex)
+		log.Warn("No playback position found", "userId", userId, "bookId", bookId, "chapterIndex", chapterIndex)
 		c.JSON(http.StatusOK, gin.H{"position": 0})
 		return
 	} else if err != nil {
@@ -69,6 +69,10 @@ func GetPlaybackPosition(c *gin.Context) {
 		return
 	}
 
-	log.Infof("Playback position retrieved successfully for userId: %s, bookId: %s, chapterIndex: %s", userId, bookId, chapterIndex)
+	log.WithFields(map[string]interface{}{
+		"userId":       userId,
+		"bookId":       bookId,
+		"chapterIndex": chapterIndex,
+	}).Info("Playback position retrieved successfully for ")
 	c.JSON(http.StatusOK, gin.H{"playback_position": playbackPosition})
 }

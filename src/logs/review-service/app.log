@@ -1,0 +1,8 @@
+{"level":"info","message":"Review service started","timestamp":"2025-05-10T13:19:22.580Z"}
+{"level":"info","message":"Review service started","timestamp":"2025-05-10T13:19:22.591Z"}
+{"level":"info","message":"Fetched review summary for audiobookId: 67f6fff64f5a80cc372aea56","timestamp":"2025-05-10T13:23:35.028Z"}
+{"level":"info","message":"Fetched reviews for audiobookId: 67f6fff64f5a80cc372aea56","timestamp":"2025-05-10T13:23:35.031Z"}
+{"level":"info","message":"Fetched reviews for audiobookId: 67f6fff64f5a80cc372aea3d","timestamp":"2025-05-10T13:23:42.305Z"}
+{"level":"info","message":"Fetched review summary for audiobookId: 67f6fff64f5a80cc372aea3d","timestamp":"2025-05-10T13:23:42.307Z"}
+{"level":"info","message":"Fetched review summary for audiobookId: 67f6fff64f5a80cc372aea3d","timestamp":"2025-05-10T13:23:42.508Z"}
+{"level":"info","message":"Fetched reviews for audiobookId: 67f6fff64f5a80cc372aea3d","timestamp":"2025-05-10T13:23:42.509Z"}

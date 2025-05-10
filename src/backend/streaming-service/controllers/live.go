@@ -34,7 +34,11 @@ func HandleLiveAudio(c *gin.Context) {
 		return
 	}
 
-	log.Infof("Handling live audio for roomId: %s, userId: %s, role: %s", roomID, userID, role)
+	log.WithFields(map[string]interface{}{
+		"userId": userID,
+		"roomId": roomID,
+		"role":   role,
+	}).Info("Handling live audio for ")
 
 	if role == "broadcaster" {
 		if existingBroadcaster, exists := broadcasterIDs[roomID]; exists && existingBroadcaster != userID {
@@ -67,7 +71,7 @@ func HandleLiveAudio(c *gin.Context) {
 		log.Println("Failed to add room to Redis:", err)
 	}
 
-	log.Infof("Client connected to room: %s", roomID)
+	log.WithField("roomId", roomID).Info("Client connected to room")
 
 	defer func() {
 		delete(clientConnections[roomID], conn)
@@ -79,7 +83,7 @@ func HandleLiveAudio(c *gin.Context) {
 				log.WithError(err).Error("Failed to remove room from Redis")
 			}
 		}
-		log.Infof("Client disconnected from room: %s", roomID)
+		log.WithField("roomId", roomID).Info("Client disconnected from room")
 
 		if len(clientConnections[roomID]) == 0 {
 			delete(broadcasterIDs, roomID)
@@ -134,6 +138,6 @@ func GetActiveStreams(c *gin.Context) {
 		}
 	}
 
-	log.Infof("Active rooms: %v", activeRooms)
+	log.WithField("active_rooms", activeRooms).Info("Active rooms retrieved")
 	c.JSON(http.StatusOK, gin.H{"rooms": activeRooms})
 }

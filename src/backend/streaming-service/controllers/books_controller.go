@@ -56,9 +56,9 @@ func GetAllBooks(c *gin.Context) {
 		}
 	}
 
-	log.Warn("Cache miss for key:", cachingKey)
+	log.WithField("cache_key", cachingKey).Warn("Cache miss")
 
-	log.Info("Querying MongoDB with filter:", filter)
+	log.WithField("filter", filter).Info("Querying MongoDB")
 	cursor, err := bookCollection.Find(ctx, filter)
 	if err != nil {
 		log.WithError(err).Error("MongoDB Find error")
@@ -81,7 +81,7 @@ func GetAllBooks(c *gin.Context) {
 		return
 	}
 
-	log.Info("Setting cache in Redis")
+	log.WithField("cache_key", cachingKey).Info("Setting cache in Redis")
 	err = config.RedisClient.Set(ctx, cachingKey, bytes, time.Hour).Err()
 	if err != nil {
 		log.WithError(err).Error("Error setting cache in Redis")
@@ -101,7 +101,7 @@ func GetBookByID(c *gin.Context) {
 	bookID := c.Param("id")
 	objectID, err := primitive.ObjectIDFromHex(bookID)
 	if err != nil {
-		log.WithError(err).Error("Invalid book ID")
+		log.WithError(err).WithField("book_id", bookID).Error("Invalid book ID")
 		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid book ID"})
 		return
 	}
@@ -109,11 +109,11 @@ func GetBookByID(c *gin.Context) {
 	var book models.Book
 	err = bookCollection.FindOne(ctx, bson.M{"_id": objectID}).Decode(&book)
 	if err != nil {
-		log.WithError(err).Error("Book not found")
+		log.WithError(err).WithField("book_id", bookID).Error("Book not found")
 		c.JSON(http.StatusNotFound, gin.H{"error": "Book not found"})
 		return
 	}
 
-	log.Info("Book found:", book.Title)
+	log.WithField("book_title", book.Title).Info("Book found")
 	c.JSON(http.StatusOK, book)
 }

@@ -19,7 +19,10 @@ func StreamChapter(c *gin.Context) {
 	bookID := c.Param("bookId")
 	chapterIndex := c.Param("chapterIndex")
 
-	log.Infof("Streaming request received for bookID: %s, chapterIndex: %s", bookID, chapterIndex)
+	log.WithFields(map[string]interface{}{
+		"bookID":       bookID,
+		"chapterIndex": chapterIndex,
+	}).Info("Streaming request received for ")
 
 	id, err := primitive.ObjectIDFromHex(bookID)
 	if err != nil {
@@ -88,5 +91,8 @@ func StreamChapter(c *gin.Context) {
 		log.WithError(err).Error("Error while streaming file")
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Error while streaming file"})
 	}
-	log.Infof("Streaming completed for bookID: %s, chapterIndex: %s", bookID, chapterIndex)
+	log.WithFields(map[string]interface{}{
+		"bookID":       bookID,
+		"chapterIndex": chapterIndex,
+	}).Info("Streaming completed for ")
 }

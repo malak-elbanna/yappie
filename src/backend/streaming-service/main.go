@@ -48,6 +48,6 @@ func main() {
 	config.InitRedis()
 
 	port := os.Getenv("PORT")
-	log.Infof("Service running on port %s", port)
+	log.WithField("port", port).Info("Service running on port ")
 	router.Run(":" + port)
 }

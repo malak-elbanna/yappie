@@ -20,11 +20,14 @@ func DownloadChapter(c *gin.Context) {
 	bookID := c.Param("bookId")
 	chapterIndex := c.Param("chapterIndex")
 
-	log.Infof("Download request received for bookId: %s, chapterIndex: %s", bookID, chapterIndex)
+	log.WithFields(map[string]interface{}{
+		"book_id":       bookID,
+		"chapter_index": chapterIndex,
+	}).Info("Download request received")
 
 	id, err := primitive.ObjectIDFromHex(bookID)
 	if err != nil {
-		log.WithError(err).Error("Invalid book ID")
+		log.WithError(err).WithField("book_id", bookID).Error("Book not found")
 		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid book ID"})
 		return
 	}
@@ -32,7 +35,10 @@ func DownloadChapter(c *gin.Context) {
 	var book models.Book
 	err = bookCollection.FindOne(context.TODO(), bson.M{"_id": id}).Decode(&book)
 	if err != nil {
-		log.WithError(err).Error("Book not found")
+		log.WithFields(map[string]interface{}{
+			"chapter_index": chapterIndex,
+			"book_title":    book.Title,
+		}).WithError(err).Error("Invalid chapter index")
 		c.JSON(http.StatusNotFound, gin.H{"error": "Book not found"})
 		return
 	}
@@ -45,10 +51,18 @@ func DownloadChapter(c *gin.Context) {
 	}
 
 	chapter := book.Chapters[i]
+	log.WithFields(map[string]interface{}{
+		"book_title":    book.Title,
+		"chapter_title": chapter.Title,
+		"mp3_url":       chapter.MP3URL,
+	}).Info("Fetching chapter audio")
 
 	resp, err := http.Get(chapter.MP3URL)
 	if err != nil || resp.StatusCode != http.StatusOK {
-		log.WithError(err).Error("Failed to fetch audio from source")
+		log.WithFields(map[string]interface{}{
+			"status_code": resp.StatusCode,
+			"mp3_url":     chapter.MP3URL,
+		}).WithError(err).Error("Failed to fetch audio from source")
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to fetch audio from source"})
 		return
 	}
@@ -66,5 +80,9 @@ func DownloadChapter(c *gin.Context) {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to stream file"})
 	}
 
-	log.Infof("Download completed for bookId: %s, chapterIndex: %s", bookID, chapterIndex)
+	log.WithFields(map[string]interface{}{
+		"book_id":       bookID,
+		"chapter_index": chapterIndex,
+		"filename":      filename,
+	}).Info("Download completed successfully")
 }
