@@ -84,9 +84,14 @@ const ChaptersList = ({
                         if (isActive && isPlaying) {
                           handlePause(index);
                         } else {
-                          handlePlay(index);
+                          const audio = audioRefs.current[index];
+                          const resumeFrom = positions[index] || 0;
+                          if (audio) {
+                            audio.currentTime = resumeFrom;
+                          }
+                          handlePlay(index); 
                         }
-                      }}
+                      }}                      
                     >
                       {isActive && isPlaying ? (
                         <>

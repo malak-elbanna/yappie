@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FaPlay, FaPause, FaStepBackward, FaStepForward, FaRedo, FaInstagram, FaFacebook, FaTwitter } from 'react-icons/fa';
-import API from '../Stream';
+import { getBooks } from '../Api'; 
 import hero from '../assets/hero.png';
 import { useNavigate, Link } from 'react-router-dom';
 
