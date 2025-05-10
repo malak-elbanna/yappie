@@ -58,7 +58,7 @@ const BooksList = () => {
             type="text"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            placeholder="Search by title, author, or category..."
+            placeholder="Search by book title..."
             className="w-full px-4 py-2 rounded-full bg-gray-800 text-white border border-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-700"
           />
           <FaSearch className="absolute right-4 top-1/2 transform -translate-y-1/2 text-purple-400" />
