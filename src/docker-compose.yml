@@ -83,6 +83,8 @@ services:
       dockerfile: Dockerfile
     env_file:
       - ./backend/streaming-service/.env
+    volumes:
+      - ./logs/streaming-service:/var/log/streaming-service
     environment:
       PORT: 8080
     ports:
@@ -96,6 +98,8 @@ services:
       dockerfile: Dockerfile
     env_file:
       - ./backend/streaming-service/.env
+    volumes:
+      - ./logs/streaming-service:/var/log/streaming-service
     environment:
       PORT: 8081
     ports:
@@ -111,19 +115,21 @@ services:
       - ./backend/notification-service/.env  
     ports:
       - "4000:4000"
-    volumes:
-      - ./logs/notification-service:/var/log/notification-service
-    command: ["node", "server"]
+    volumes: ['./backend/notification-service:/app',./logs/notification-service:/var/log/notification-service]
+    working_dir : /app
     depends_on:
       rabbitmq:
         condition: service_healthy
-      
+    
+     
   review-service-1:
     build:
       context: ./backend/review-service
       dockerfile: Dockerfile
     env_file:
       - ./backend/review-service/.env
+    volumes:
+      - ./logs/review-service:/var/log/review-service
     environment:
       PORT: 5003
     ports:
@@ -135,6 +141,8 @@ services:
       dockerfile: Dockerfile
     env_file:
       - ./backend/review-service/.env
+    volumes:
+      - ./logs/review-service:/var/log/review-service
     environment:
       PORT: 5004
     ports:
@@ -154,7 +162,8 @@ services:
       - ./logs/profile-service:/var/log/profile-service
       - ./backend/profile-management-service:/app
     depends_on:
-      - profile-db
+      rabbitmq:
+        condition: service_healthy
 
   profile-service-2:
     build: 
@@ -170,7 +179,9 @@ services:
       - ./logs/profile-service:/var/log/profile-service
       - ./backend/profile-management-service:/app
     depends_on:
-      - profile-db
+      rabbitmq:
+        condition: service_healthy
+
 
 
   db:
@@ -307,7 +318,7 @@ services:
           condition: service_completed_successfully
     volumes:
       - ./kong-config/kong.yml:/kong-config/kong.yml
-    command: gateway dump  -o /config/kong.yml --kong-addr=http://kong:8001 --yes && gateway sync /config/kong.yml --kong-addr=http://kong:8001
+    command: gateway dump  -o /kong-config/kong.yml --kong-addr=http://kong:8001 --yes && gateway sync /config/kong.yml --kong-addr=http://kong:8001
 
   prometheus:
     image: prom/prometheus
@@ -316,12 +327,19 @@ services:
       - "9090:9090"
     volumes:
       - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./monitoring/alert-rules.yml:/etc/prometheus/alert-rules.yml
       - prometheus-data:/prometheus
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
       - '--storage.tsdb.path=/prometheus'
       - '--web.console.libraries=/usr/share/prometheus/console_libraries'
       - '--web.console.templates=/usr/share/prometheus/consoles'
+  
+  node-exporter-1:
+    image: prom/node-exporter
+
+  node-exporter-2:
+    image: prom/node-exporter
 
   loki:
     image: grafana/loki:2.9.0
@@ -335,9 +353,9 @@ services:
   promtail:
     image: grafana/promtail:2.9.0
     volumes:
-      - ./monitoring/promtail-config.yaml:/etc/promtail/config.yml
+      - ./monitoring/promtail-config.yaml:/etc/promtail/config.yaml
       - ./logs:/var/log
-    command: -config.file=/etc/promtail/config.yml
+    command: -config.file=/etc/promtail/config.yaml
     depends_on:
       - loki
 

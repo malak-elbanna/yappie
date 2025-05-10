@@ -1,7 +1,6 @@
 package main
 
 import (
-	"log"
 	"net/http"
 	"os"
 
@@ -15,12 +14,16 @@ import (
 )
 
 func main() {
+	config.InitLogger()
+	log := config.Logger
+	log.Info("Starting streaming service...")
+
 	router := gin.Default()
 
 	router.Use(cors.AllowAll())
 	err := godotenv.Load()
 	if err != nil {
-		log.Fatal("Error loading .env file")
+		log.WithError(err).Fatal("Error loading .env file")
 	}
 
 	router.GET("/health", func(c *gin.Context) {
@@ -44,5 +47,7 @@ func main() {
 
 	config.InitRedis()
 
-	router.Run(":" + os.Getenv("PORT"))
+	port := os.Getenv("PORT")
+	log.Infof("Service running on port %s", port)
+	router.Run(":" + port)
 }

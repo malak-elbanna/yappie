@@ -14,9 +14,10 @@ import Profile from "./pages/Profile";
 import LiveAudioStreaming from "./pages/Streamer";
 import AvailableStreams from "./pages/AvailableStreams";
 import StartStream from "./pages/StartStream";
-import CategoryBooks from "./pages/CategoryBooks";
 import AboutUs from "./pages/AboutUs";
 import DownloadsPage from "./pages/Downloads";
+import Footer from "./components/Footer";
+import CategoryBooks from './pages/CategoryBooks'; 
 
 const App = () => {
   return (
@@ -42,6 +43,7 @@ const App = () => {
         <Route path="/about-us" element={<AboutUs />} />        
         <Route path="/downloads" element={<DownloadsPage />} />
       </Routes>
+      <Footer />
     </Router>
   );
 };

@@ -1,5 +1,6 @@
 from app import create_app
 from app.config import HOST, PORT, DEBUG
+from app.models.profile import db
 import logging
 import json_log_formatter
 import os
@@ -19,6 +20,8 @@ logger.addHandler(file_handler)
 logger.setLevel(logging.INFO)
 
 app = create_app()
+with app.app_context():
+    db.create_all()
 
 @app.route('/health', methods=['GET'])
 def health_check():

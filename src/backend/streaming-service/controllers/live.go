@@ -2,7 +2,6 @@ package controllers
 
 import (
 	"context"
-	"log"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -20,6 +19,8 @@ var upgrader = websocket.Upgrader{
 }
 
 func HandleLiveAudio(c *gin.Context) {
+	log := config.Logger
+
 	roomID := c.Param("roomId")
 	if roomID == "" {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "roomId is required"})
@@ -32,6 +33,8 @@ func HandleLiveAudio(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "userId and role are required"})
 		return
 	}
+
+	log.Infof("Handling live audio for roomId: %s, userId: %s, role: %s", roomID, userID, role)
 
 	if role == "broadcaster" {
 		if existingBroadcaster, exists := broadcasterIDs[roomID]; exists && existingBroadcaster != userID {
@@ -48,7 +51,7 @@ func HandleLiveAudio(c *gin.Context) {
 
 	conn, err := upgrader.Upgrade(c.Writer, c.Request, nil)
 	if err != nil {
-		log.Println("WebSocket upgrade failed:", err)
+		log.WithError(err).Error("WebSocket upgrade failed")
 		return
 	}
 	defer conn.Close()
@@ -64,7 +67,7 @@ func HandleLiveAudio(c *gin.Context) {
 		log.Println("Failed to add room to Redis:", err)
 	}
 
-	log.Printf("Client joined room: %s", roomID)
+	log.Infof("Client connected to room: %s", roomID)
 
 	defer func() {
 		delete(clientConnections[roomID], conn)
@@ -73,10 +76,10 @@ func HandleLiveAudio(c *gin.Context) {
 
 			err := config.RedisClient.SRem(context.Background(), "active_rooms", roomID).Err()
 			if err != nil {
-				log.Println("Failed to remove room from Redis:", err)
+				log.WithError(err).Error("Failed to remove room from Redis")
 			}
 		}
-		log.Printf("Client left room: %s", roomID)
+		log.Infof("Client disconnected from room: %s", roomID)
 
 		if len(clientConnections[roomID]) == 0 {
 			delete(broadcasterIDs, roomID)
@@ -86,7 +89,7 @@ func HandleLiveAudio(c *gin.Context) {
 	for {
 		messageType, data, err := conn.ReadMessage()
 		if err != nil {
-			log.Println("Error reading from client:", err)
+			log.WithError(err).Error("Error reading message from client")
 			break
 		}
 
@@ -94,7 +97,7 @@ func HandleLiveAudio(c *gin.Context) {
 			if client != conn {
 				err := client.WriteMessage(messageType, data)
 				if err != nil {
-					log.Println("Error broadcasting message:", err)
+					log.WithError(err).Error("Error writing message to client")
 					client.Close()
 					delete(clientConnections[roomID], client)
 				}
@@ -104,9 +107,12 @@ func HandleLiveAudio(c *gin.Context) {
 }
 
 func GetActiveStreams(c *gin.Context) {
+	log := config.Logger
+	log.Info("GetActiveStreams request received")
+
 	roomIDs, err := config.RedisClient.SMembers(context.Background(), "active_rooms").Result()
 	if err != nil {
-		log.Println("Failed to retrieve active rooms:", err)
+		log.WithError(err).Error("Failed to retrieve active rooms from Redis")
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Could not fetch active streams"})
 		return
 	}
@@ -128,5 +134,6 @@ func GetActiveStreams(c *gin.Context) {
 		}
 	}
 
+	log.Infof("Active rooms: %v", activeRooms)
 	c.JSON(http.StatusOK, gin.H{"rooms": activeRooms})
 }

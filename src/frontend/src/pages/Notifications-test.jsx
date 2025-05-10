@@ -21,7 +21,7 @@ const NotificationsTest = () => {
                 socket.emit('STARTED',subscribeTo,decodedPayload.email)
             }
         });
-        socket.on('RECIEVE',(message)=>{
+        socket.on('RECEIVE',(message)=>{
           console.log(`${message} was added...Check it out!`)
         })
     },[socket]);

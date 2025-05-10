@@ -7,17 +7,23 @@ import (
 	"strconv"
 
 	"github.com/gin-gonic/gin"
+	"github.com/malak-elbanna/streaming-service/config"
 	"github.com/malak-elbanna/streaming-service/models"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
 func StreamChapter(c *gin.Context) {
+	log := config.Logger
+
 	bookID := c.Param("bookId")
 	chapterIndex := c.Param("chapterIndex")
 
+	log.Infof("Streaming request received for bookID: %s, chapterIndex: %s", bookID, chapterIndex)
+
 	id, err := primitive.ObjectIDFromHex(bookID)
 	if err != nil {
+		log.WithError(err).Error("Invalid book ID")
 		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid book ID"})
 		return
 	}
@@ -25,12 +31,14 @@ func StreamChapter(c *gin.Context) {
 	var book models.Book
 	err = bookCollection.FindOne(context.TODO(), bson.M{"_id": id}).Decode(&book)
 	if err != nil {
+		log.WithError(err).Error("Book not found")
 		c.JSON(http.StatusNotFound, gin.H{"error": "Book not found"})
 		return
 	}
 
 	i, err := strconv.Atoi(chapterIndex)
 	if err != nil || i < 0 || i >= len(book.Chapters) {
+		log.WithError(err).Error("Invalid chapter index")
 		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid chapter index"})
 		return
 	}
@@ -39,6 +47,7 @@ func StreamChapter(c *gin.Context) {
 
 	resp, err := http.Get(chapter.MP3URL)
 	if err != nil || resp.StatusCode != http.StatusOK {
+		log.WithError(err).Error("Failed to fetch audio from source")
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to fetch audio from source"})
 		return
 	}
@@ -55,6 +64,7 @@ func StreamChapter(c *gin.Context) {
 
 		rangeResp, err := http.DefaultClient.Do(req)
 		if err != nil || rangeResp.StatusCode != http.StatusPartialContent {
+			log.WithError(err).Error("Failed to stream range content")
 			c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to stream range content"})
 			return
 		}
@@ -66,6 +76,7 @@ func StreamChapter(c *gin.Context) {
 
 		_, err = io.Copy(c.Writer, rangeResp.Body)
 		if err != nil {
+			log.WithError(err).Error("Error while streaming file")
 			c.JSON(http.StatusInternalServerError, gin.H{"error": "Error during streaming"})
 		}
 		return
@@ -74,6 +85,8 @@ func StreamChapter(c *gin.Context) {
 	c.Header("Content-Length", resp.Header.Get("Content-Length"))
 	_, err = io.Copy(c.Writer, resp.Body)
 	if err != nil {
+		log.WithError(err).Error("Error while streaming file")
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Error while streaming file"})
 	}
+	log.Infof("Streaming completed for bookID: %s, chapterIndex: %s", bookID, chapterIndex)
 }

@@ -138,7 +138,7 @@ export const removePreference = async (userId, preferenceData) => {
     }
 }
 
-export const addFavoriteBook = async (userId, bookTitle) => {
+export const addFavoriteBook = async (userId, bookCover) => {
   try {
     const token = sessionStorage.getItem("token");
     const response = await fetch(`${API_URL}/profile-page/${userId}/add-book`, {
@@ -147,11 +147,50 @@ export const addFavoriteBook = async (userId, bookTitle) => {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`
       },
-      body: JSON.stringify({ book_title: bookTitle})
+      body: JSON.stringify({ book_cover: bookCover})
     });
     return await response.json();
   } catch (error) {
     console.error("error adding favorite book: ", error);
+    throw error;
+  }
+}
+
+export const removeFavoriteBook = async (userId, bookCover) => {
+  try {
+    const token = sessionStorage.getItem("token");
+    const response = await fetch(`${API_URL}/profile-page/${userId}/remove-book`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
+      },
+      body: JSON.stringify({ book_cover: bookCover})
+    });
+    return await response.json();
+  } catch (error) {
+    console.error("error removing favorite book: ", error);
+    throw error;
+  }
+}
+
+export const getFavoriteBooks = async(userId) => {
+  try {
+    const token = sessionStorage.getItem("token");
+    const response = await fetch(`${API_URL}/profile-page/${userId}/get-books`, {
+        method: 'GET',
+        headers: {
+          'Authorization': `Bearer ${token}`
+        }
+      }
+    );
+    if (!response.ok) {
+      throw new Error("Failed to fetch favorite books");
+    }
+    const data = await response.json();
+    return data.favorite_books;
+  } catch (error) {
+    console.error("Error fetching books: ", error);
     throw error;
   }
 }
