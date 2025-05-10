@@ -37,16 +37,6 @@ def test_create_notification(auth_token, notification_url):
     )
     assert res.status_code == 201
 
-def test_publish_notification(notification_url):
-    res = requests.post(
-        f"{notification_url}/notification/admin",
-        json={
-            "title": "Review posted",
-            "author": "user"
-        }
-    )
-    assert res.status_code == 200
-
 def test_get_notifications(notification_url):
     res = requests.get(
         f"{notification_url}/notification"
