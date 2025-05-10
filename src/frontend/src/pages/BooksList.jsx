@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaChevronLeft, FaChevronRight, FaPlay } from 'react-icons/fa';
+import { FaChevronLeft, FaChevronRight, FaPlay, FaSearch } from 'react-icons/fa';
 import API from '../Stream';
 
 const BooksList = () => {
@@ -9,24 +9,29 @@ const BooksList = () => {
   const [featured, setFeatured] = useState([]);
   const [current, setCurrent] = useState(0);
   const [audio, setAudio] = useState(null);
+  const [search, setSearch] = useState('');
 
   useEffect(() => {
-    API.get('/books/')
-      .then(res => {
-        setBooks(res.data);
-
-        const byCategory = {};
-        res.data.forEach(book => {
-          if (!book.category) return;
-          if (!byCategory[book.category]) byCategory[book.category] = [];
-          byCategory[book.category].push(book);
-        });
-        setGrouped(byCategory);
-
-        setFeatured(res.data.slice(0, 3));
-      })
-      .catch(err => console.error(err));
-  }, []);
+    const delayDebounceFn = setTimeout(() => {
+      const query = search.trim() ? `?title=${encodeURIComponent(search)}` : '';
+      API.get(`/books/${query}`)
+        .then(res => {
+          setBooks(res.data);
+  
+          const byCategory = {};
+          res.data.forEach(book => {
+            if (!book.category) return;
+            if (!byCategory[book.category]) byCategory[book.category] = [];
+            byCategory[book.category].push(book);
+          });
+          setGrouped(byCategory);
+          setFeatured(res.data.slice(0, 3));
+        })
+        .catch(err => console.error(err));
+    }, 300); 
+  
+    return () => clearTimeout(delayDebounceFn);
+  }, [search]);  
 
   const handlePrev = () => setCurrent((prev) => (prev === 0 ? featured.length - 1 : prev - 1));
   const handleNext = () => setCurrent((prev) => (prev === featured.length - 1 ? 0 : prev + 1));
@@ -47,6 +52,17 @@ const BooksList = () => {
       <div className="relative z-10 flex flex-col items-center pt-8 sm:pt-12 pb-4 px-4">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-2 sm:mb-4 drop-shadow-lg text-center">Hear something amazing</h1>
         <p className="text-base sm:text-lg text-gray-300 mb-6 sm:mb-8 text-center max-w-xl px-4">Enjoy performances of bestselling titles and new releases from authors and genres you love.</p>
+        
+        <div className="relative w-full max-w-md mx-auto mt-4">
+          <input
+            type="text"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Search by title, author, or category..."
+            className="w-full px-4 py-2 rounded-full bg-gray-800 text-white border border-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-700"
+          />
+          <FaSearch className="absolute right-4 top-1/2 transform -translate-y-1/2 text-purple-400" />
+        </div>
       </div>
 
       {featured.length > 0 && (
