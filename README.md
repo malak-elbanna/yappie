@@ -1,5 +1,5 @@
 # Yappie
-You can check our [Yappie](https://frontend-production-57ab.up.railway.app/books)
+You can check our [Yappie](https://frontend-production-57ab.up.railway.app)
 
 ## Description ##
 Yappie is a scalable web application that allows users to stream and download audiobooks (aka a Spotify clone for audiobooks). This web application contains functionalities for user management, content administration, real-time notifications, and reviews and ratings. The web application is designed to be used on all devices and browsers.
