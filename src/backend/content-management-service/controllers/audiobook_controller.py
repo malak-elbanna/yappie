@@ -57,7 +57,7 @@ def add_audiobook():
     
     id = db.books.count_documents({}) + 1
     
-    data = request.get_json()
+    data = request.form.to_dict()
     files = request.files
     if 'cover_image' in files:
         cover_image = files['cover_image']
