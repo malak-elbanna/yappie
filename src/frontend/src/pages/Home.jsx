@@ -11,7 +11,7 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
-  const togglePlayback = () => setIsPlaying(!isPlaying);
+  const togglePlayback = () => setIsPlaying(!isPlaying);    
 
   useEffect(() => {
       API.get('/books/')
@@ -128,7 +128,7 @@ export default function Home() {
     ) : (
       <div className="relative">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 md:gap-6">
-          {books.slice(0, 6).map((book) => (
+          {books && books.slice(0, 6).map((book) => (
             <div 
               key={book._id}
               className="group relative h-full"
