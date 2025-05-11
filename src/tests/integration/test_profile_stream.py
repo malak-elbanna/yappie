@@ -30,34 +30,27 @@ def test_edit_bio(auth_token, profile_url):
     assert edit_bio_res.status_code == 200
 
 def test_add_preference(auth_token, profile_url):
-    headers = auth_token['headers'].copy()
-    headers['Content-Type'] = 'application/x-www-form-urlencoded'
-
     add_pref_res = requests.put(
         f"{profile_url}/{auth_token['user_id']}/add-preference",
-        data={
+        json={
             "genre": "Fantasy",
             "type": "audiobooks",
             "email": auth_token['email']
         },
-        headers=headers
+        headers=auth_token['headers']
     )
     assert add_pref_res.status_code == 200
 
 def test_remove_preference(auth_token, profile_url):
-    headers = auth_token['headers'].copy()
-    headers['Content-Type'] = 'application/x-www-form-urlencoded'
-
     remove_pref_res = requests.put(
         f"{profile_url}/{auth_token['user_id']}/remove-preference",
-        data={
+        json={
             "genre": "Fantasy",
             "type": "audiobooks"
         },
-        headers=headers
+        headers=auth_token['headers']
     )
     assert remove_pref_res.status_code == 200
-
 
 def test_get_books(auth_token, stream_url):
     res = requests.get(
