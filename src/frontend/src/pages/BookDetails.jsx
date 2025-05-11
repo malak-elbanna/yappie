@@ -8,6 +8,7 @@ import BookInfoSection from '../components/BookInfoSection';
 import ChaptersList from '../components/ChapterList';
 import ReviewSection from '../components/ReviewSection';
 import { addFavoriteBook, getFavoriteBooks } from '../Api';
+import AudioHLS from '../components/AudioHLS'
 
 const API_URL = 'http://localhost:8000';
 const REVIEW_SERVICE_URL = 'review-service';
@@ -252,7 +253,7 @@ const BookDetails = () => {
             
             <div className="bg-gray-800 bg-opacity-50 rounded-xl p-6 backdrop-blur-sm shadow-lg border border-gray-700">
               <h2 className="text-xl font-bold mb-4 text-purple-300">Chapters</h2>
-              <ChaptersList 
+              {book.chapters && <ChaptersList 
                 book={book}
                 isOffline={isOffline}
                 activeChapter={activeChapter}
@@ -267,7 +268,8 @@ const BookDetails = () => {
                 handleAutoPlayNext={handleAutoPlayNext}
                 setPositions={setPositions}
                 setIsPlaying={setIsPlaying}
-              />
+              />}
+              {book.audio_url && <AudioHLS source = {book.audio_url}/>}
             </div>
           </div>
           

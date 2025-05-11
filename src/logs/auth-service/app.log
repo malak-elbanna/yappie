@@ -4368,3 +4368,7 @@
 {"message": "172.18.0.21 - - [10/May/2025 17:57:31] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T17:57:31.694196+00:00"}
 {"message": "172.18.0.21 - - [10/May/2025 17:57:31] \"GET /health HTTP/1.0\" 200 -", "time": "2025-05-10T17:57:31.694216+00:00"}
 {"message": "172.18.0.14 - - [10/May/2025 17:57:32] \"GET /metrics HTTP/1.1\" 200 -", "time": "2025-05-10T17:57:32.755104+00:00"}
+{"message": "Auth Service started", "time": "2025-05-11T04:06:10.502927+00:00"}
+{"message": "Auth Service started", "time": "2025-05-11T04:06:10.506618+00:00"}
+{"message": "Auth Service started", "time": "2025-05-11T04:06:13.306124+00:00"}
+{"message": "Auth Service started", "time": "2025-05-11T04:06:13.309579+00:00"}

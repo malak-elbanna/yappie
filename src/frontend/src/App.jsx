@@ -20,8 +20,34 @@ import Footer from "./components/Footer";
 import CategoryBooks from './pages/CategoryBooks'; 
 import Subscription from "./pages/Subscription";
 import SubscribeForm from "./pages/SubscribeForm";
+import {io} from 'socket.io-client';    
+import  { useEffect, useState } from 'react';
 
+const subscribeTo = ['ahmed','mohamed','ali nashaat']
 const App = () => {
+    const [socket,setSocket] = useState(null)
+    useEffect(()=>{
+        if(!socket){
+            setSocket(io("http://localhost:4000"))
+        }
+    },[socket])
+
+    useEffect(() => {
+        if(!socket) return;
+        socket.on('connect', () => {
+            console.log('Connected to server with ID:', socket.id);
+            const token = sessionStorage.getItem("access_token");
+            if (token) {
+                const [header, payload, signature] = token.split('.');
+                const decodedPayload = JSON.parse(atob(payload.replace(/-/g, '+').replace(/_/g, '/')));
+                socket.emit('STARTED',subscribeTo,decodedPayload.email)
+            }
+        });
+        socket.on('RECEIVE',(message)=>{
+          console.log(`${message} was added...Check it out!`)
+          alert(`${message} was added...Check it out!`)
+        })
+    },[socket]);
   return (
     <Router>
       <Navbar />

@@ -23,6 +23,7 @@ const NotificationsTest = () => {
         });
         socket.on('RECEIVE',(message)=>{
           console.log(`${message} was added...Check it out!`)
+          console.alert(`${message} was added...Check it out!`)
         })
     },[socket]);
 
