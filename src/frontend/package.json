@@ -42,5 +42,8 @@
     "rollup": "^3.29.5",
     "tailwindcss": "^3.4.17",
     "vite": "^6.3.5"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "4.6.1"
   }
 }
