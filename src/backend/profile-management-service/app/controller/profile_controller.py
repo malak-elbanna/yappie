@@ -13,7 +13,6 @@ def get_info(user_id):
         profile = UserProfile(user_id=user_id, name="New User")
         db.session.add(profile)
         db.session.commit()
-
     logging.info("User info retrieved", extra={"user_id": str(user_id)})
     return jsonify({
         "name": profile.name,
