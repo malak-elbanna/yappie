@@ -23,14 +23,19 @@ def test_login_add_delete_book(auth_url, cms_url):
     assert login_res.status_code == 200
     token = login_res.json()['access_token']
     
+    headers= {
+        "Authorization": f"Bearer {token}",
+        "Content-Type": "application/x-www-form-urlencoded"
+    }
+
     cms_add_res = requests.post(
         f"{cms_url}",
-        json={
+        data={
             "title": "Book 1",
             "author": "Author",
             "language": "English" 
         },
-        headers={"Authorization": f"Bearer {token}"}
+        headers=headers
     )
     assert cms_add_res.status_code == 201
     book_id = cms_add_res.json()['_id']
